@@ -1,4 +1,3 @@
-
 <body id="page-top">
 
 <!-- Page Wrapper -->
@@ -29,12 +28,12 @@
     <hr class="sidebar-divider">
 
     <!-- Heading -->
-    <div class="sidebar-heading">
+<!--    <div class="sidebar-heading">
       Interface
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
+<!--    <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
         <i class="fas fa-fw fa-cog"></i>
         <span>Components</span>
@@ -49,7 +48,7 @@
     </li>
 
     <!-- Nav Item - Utilities Collapse Menu -->
-    <li class="nav-item">
+<!--    <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
         <i class="fas fa-fw fa-wrench"></i>
         <span>Utilities</span>
@@ -66,15 +65,15 @@
     </li>
 
     <!-- Divider -->
-    <hr class="sidebar-divider">
+<!--    <hr class="sidebar-divider">
 
     <!-- Heading -->
     <div class="sidebar-heading">
-      Addons
+      Home Page
     </div>
 
     <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
+<!--    <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
         <i class="fas fa-fw fa-folder"></i>
         <span>Pages</span>
@@ -100,7 +99,7 @@
 
     <!-- Nav Item - Tables -->
     <li class="nav-item active">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/tables"><i class="fas fa-fw fa-table"></i><span>Tables</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/brands"><i class="fas fa-fw fa-table"></i><span>Brands</span></a>
     </li>
 
     <li class="nav-item">

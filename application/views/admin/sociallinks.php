@@ -28,11 +28,10 @@
             <div class="row m-t-20">
               <div class="col-lg-12">
                 <div class="card-box">
-                 <h3>Social Media links</h3>
 
                  <p style="color: #258bb6;"><i class="fa fa-info-circle"></i> Do not use http or https in the URL's. Use only www in the URL's . Eg: www.facebook.com/example</p>
                         <hr>
-                   <?php echo form_open(base_url('sociallinks/storesocial_frm'), array( 'id' => 'storesocial_frm', 'method'=>'POST','enctype'=> 'multipart/form-data' ));?>
+                   <?php echo form_open(base_url('admin/sociallinks/storesocial_frm'), array( 'id' => 'storesocial_frm', 'method'=>'POST','enctype'=> 'multipart/form-data' ));?>
                     <div class="form-group">
                       <label for="userName">Twitter handle</label>
                       <input type="text" value="<?=$socials_datas->twitter_url;?>" name="twitter_url" parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
@@ -90,172 +89,9 @@
 
 
 
-                                       <div id="con-close-modal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                    <h4 class="modal-title">Payment pending</h4>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label for="field-1" class="control-label">Choose Status</label>
-                                                                <select class="form-control">
-                                                                    <option>Receive</option>
-                                                                    <option>Return</option>
-
-                                                                </select>
-                                                            </div>
-                                                        </div>
-
-                                                    </div>
-                                                    <!--<div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group">
-                                                                <label for="field-3" class="control-label">Note</label>
-                                                                <input type="text" class="form-control" id="field-3" placeholder="Quantity">
-                                                            </div>
-                                                        </div>
-                                                    </div> -->
-
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="form-group no-margin">
-                                                                <label for="field-7" class="control-label">Note</label>
-                                                                <textarea class="form-control autogrow" id="field-7" placeholder="Write something about yourself" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 104px;"></textarea>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-info waves-effect waves-light">Save changes</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div><!-- /.modal -->
-
-
-
-
-
       </div>
     </div>
   </div>
-<!--Delete-->
-
-  <div id="delete_customer" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-          <div class="modal-dialog">
-          <form method="post">
-          <div class="modal-content">
-
-          <div class="modal-header">
-
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-
-          <h4 class="modal-title">Delete Customer</h4>
-
-          </div>
-
-          <div class="modal-body">
-          <div class="row">
-            <div class="col-md-12">
-            <h4><b>Do you really want to Delete this customer ?</b></h4>
-            </div>
-          </div>
-          </div>
-
-          <div class="modal-footer">
-
-
-          <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Save</button>
-
-          <input type="submit" class="btn btn-info" name="" value="Delete">
-
-
-
-          </div>
-
-          </div>
-          </form>
-          </div>
-
-          </div>
-
-<!--change Status-->
-<div id="Change-status" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-
-        <div class="modal-dialog">
-        <form method="post">
-        <div class="modal-content">
-
-        <div class="modal-header">
-
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-
-        <h4 class="modal-title">Change Status</h4>
-
-        </div>
-
-        <div class="modal-body">
-            <div class="row">
-              <div class="col-md-12">
-
-                <div class="form-group no-margin">
-
-                <label for="field-7" class="control-label">Change Status</label>
-
-                <select class="form-control " name=""><option value="">Choose Status</option><option value="1">Active</option><option value="0">Deactive</option><option value="2">Block</option></select>
-
-                </div>
-
-              </div>
-            </div>
-
-        </div>
-
-        <div class="modal-footer">
-
-          <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-
-          <input type="submit" class="btn btn-info " name="" value="Update Status">
-
-        </div>
-
-        </div>
-        </form>
-        </div>
-
-        </div>
-
-        <div id="notify" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                      <h4 class="modal-title">Notify</h4>
-                  </div>
-                  <div class="modal-body">
-
-                      <div class="row">
-                          <div class="col-md-12">
-                              <div class="form-group">
-                                  <input type="text" class="form-control" id="field-3" placeholder="Notify">
-                              </div>
-                          </div>
-                      </div>
-
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-info waves-effect waves-light">Save changes</button>
-                  </div>
-              </div>
-          </div>
-      </div><!-- /.modal -->
 
 <?php $this->load->view('admin/Template/footer.php') ?>
 

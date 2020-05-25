@@ -5,17 +5,24 @@
           <div class="col-md-6">
             <p class="info">+91 8950000000 <span class="b "> | </span> <span class="c">Info@tirupatiinsurance.com</span></p>
           </div>
+          
           <div class="col-md-6 ">
             <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" >
               <div class="container">
                 <div class="navbar-collapse collapse justify-content-end" >
                   <ul class="navbar-nav ">
                     <li class="nav-item">
-                      <a href="#"> <i class="fa fa-youtube "></i></a>
-                      <a href="#"><i class="fa fa-twitter"></i></a>
-                      <a href="#"><i class="fa fa-linkedin"></i></a>
-                      <a href="#"><i class="fa fa-facebook"></i></a>
-                    </li>
+                    <?php
+							$socials_datas= $socials_data[0];
+							//print_r($socials_datas);
+						?>            
+                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a>
+                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a>
+                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a>
+                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a>
+                      </li>
                     <li class="nav-item">
                       <h4 class="ri"> | </h4>
                     </li>
@@ -36,6 +43,7 @@
       </div>
     </div>
     <nav class="navbar navbar-b navbar-trans navbar-expand-md bg-white nav">
+      
       <a class="navbar-brand " href="index.html"><img src="assest/img/logo.jpg" alt="Eniacoder"  ></a>
       <button class="navbar-toggler navbar-dark  bbb " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
@@ -153,12 +161,18 @@
       <h1>brands we keep</h1>
       <div class="container">
         <div class="row">
+          
+    <?php  $keys=0; foreach($brandslogo as $logo){
+								if($keys==0){echo '<li>';}
+								?>
           <div class="col-md">
             <div class="box">
-            <img src="assest/img/Tata-AIA-Logojpg.jpg" >
+            <img src="<?=$logo->image;?>" >
             </div>
           </div>
-          <div class="col-md">
+        <?php  $keys++; if($keys==6){echo '</li>';}  }?>    
+
+<!--          <div class="col-md">
             <div class="box">
             <img src="assest/img/insurance-1582354125.jpg">
             </div>
@@ -182,8 +196,8 @@
             <div class="box">
             <img src="assest/img/insurance-1582354125.jpg" >
             </div>
-          </div>
-        </div>    
+          </div>-->
+        </div>
       </div>
     </section>
     <section class="review">
@@ -270,10 +284,12 @@
         <div class="row">
           <div class="col-md" >
             <div class="res">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-youtube"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a>
+                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a>
+                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a>
+                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a>
+                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a>
             </div>
           </div>
         </div>
