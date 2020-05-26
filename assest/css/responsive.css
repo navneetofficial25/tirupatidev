@@ -1,6 +1,39 @@
+/**
+  ===========================================================================
+ * @file: responsive.css
+ *
+ * @brief: This file contains stuff realtead to website responsivenes
+ *
+ *
+ * ============================================================================
+ *
+ * Copyright © Eniacoder, 2020
+ *
+ * This material, including documentation and any related computer programs,is
+ * protected by copyright controlled by Eniacoder.All rights are
+ * reserved.Copying, including reproducing,storing, adapting or translating,any
+ * or all of this material require written consent of Eniacoder.
+ * This material may also contain confidential information,which should not be
+ * disclosed to others without prior written consent of Eniacoder.
+ *
+ * ============================================================================
+ *
+ * <b> REVISION HISTORY </b>
+ *
+ * @Version 1.0 : 25-MAY-2020 
+ * Author :Himanshu Goyal 
+ *                                          
+ *
+ *
+ *============================================================================
+ */
+
+
+
+
 @media only screen and (max-width: 450px) {
     body {
-        background-color:  rgb( 237, 237, 237 );
+        background-color:  rgba(237, 237, 237, 0.767);
         
     }
     * {
@@ -86,124 +119,190 @@
       width: 85px;
       margin-left: 18px;
     }
-     
-            .nav a {
-                float: none;
-                display: block;
-                text-align: left;
-            }
-            .nav  .bbb{
-                
-               background-color:rgb( 239, 69, 84 ) ;
-               outline: none;
-               display: block;
-               border: none;
-               
-              }
+    .nav a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .nav  .bbb{
+      background-color:rgb( 239, 69, 84 ) ;
+      outline: none;
+      display: block;
+      border: none;
+    }
+    .nav {
+      margin-top: 70px;
+    }
+    .nav .nav-link{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb( 95, 96, 96 );
+      text-transform: uppercase;
+      line-height: 1.4;
+      text-align: center;
+      font-size: 16px;
+      margin-left: 12px;
+    }   
+    .nav p{
+      float: left;
+      font-size:0px;
+      margin-top: -10px;
+    }
+    .nav img{
+      padding-left: 10px;
+    }
+    .nav .blk{
+      background-color: black;
+      padding-top: 40px;
+    }
+    .brands .col-md{
+      width: 50%;
+    }  
+    .brands  h1{
+      font-size: 200%;
+    } 
+    .brands{
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }    
+    .foot .we {
+      margin-bottom: -40px;
+    }
+    .foot input[type=email] {
+      width: 50%;
+    }
+    .foot .raj {
+      width: 70%;
+    }
+    .top-nav{
+      height: 70px;
+    }    
+    .top-nav .info{
+      font-size: 12px;
+      text-align:none;
+    }
+    .first .save {
+      font-size: 25px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgb( 239, 69, 84 );
+      font-weight: 500;
+      margin-top: 50px;
+    }   
+    .first{
+      padding-top: 150px;
+    }     
+    .first .still {
+      font-size: 20px;
+      padding-left: 10px;
+      padding-bottom: 10px;
+    }    
+    
+    .imp{
+    
+      width: 100%;
+    }
+    .imp p {
+      padding-bottom: 40px;
+      font-size: 20px;
+    }
 
-              .nav {
-               
-                margin-top: 70px;
-                
-              }
-           .nav .nav-link{
-            
-           
-             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-             color: rgb( 95, 96, 96 );
-             text-transform: uppercase;
-             line-height: 1.4;
-             text-align: center;
-             font-size: 16px;
-             margin-left: 12px;
-           }   
-           .nav p{
-           
-            
-             float: left;
-              
-          font-size:0px;
-         margin-top: -10px;
-       
+    .health_main .bu {
+      margin-left: 50px;
+      width: 50%;
+    }
+    .health_main img{
+      width:100%;
+      border-radius: 10px 10px 0px 0px;
+    }
+    .health_main h2{
+      font-size: 30px;
+      margin-top: 30px;
+    }
+    .health_main .small h6{
+      margin-left: 55px;
+      margin-top: -50px;
+    }
+    .health_main .small p{
+      margin-left: 55px;
+    }
+    .health_main .date p{
+      margin-left: -15px;
+    }
+    .health_main .detail{
+      margin-left: 0px;
+    }
+    .health_main .chck{
+      margin-top: 0px;
+    }
+    .health_main .chck .chk{
+      margin-left: 25px;
+    }
+    .health_main .chck .chk img{
+      margin-left: 60px;
+      margin-top: -50px;
+    }
+    .health_main .chck .chk .whts{
+     
+      margin-left: -100%;
+    }  
+
+
+    
+    .why_Health h2 {
+      font-size: 25px;
+      
+    }
+    .why_Health img{
+      width: 70px;
+      height: 70px;
       
      
-              
-          }
-          
-          .nav img{
-            
-            padding-left: 10px;
-        }
-          .nav .blk{
-            background-color: black;
-            padding-top: 40px;
-          }
-            
-          .brands .col-md{
-            width: 50%;
-            
-            
-        }  
-         
-        .brands  h1{
-
-          font-size: 200%;
-          
-        } 
-        .brands{
-          
-       
-          padding-top: 20px;
-          padding-bottom: 40px;
-      }    
-      .foot .we {
-       
-        margin-bottom: -40px;
-        }
-        .foot input[type=email] {
-          
-          width: 50%;
-           }
-           .foot .raj {
-            width: 70%;
-            }
-
-            .top-nav{
-              
-                         height: 70px;
-                        
-                      }    
-                      .top-nav .info{
-                        font-size: 12px;
-                       
-                       
-                        text-align:none;
-                        
-                      }
-                      .first .save {
-                        font-size: 25px;
-                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                        color: rgb( 239, 69, 84 );
-                        font-weight: 500;
-                        margin-top: 50px;
-                        
-                        
-                        
-                        
-                        }   
-                        .first{
-                       
-                          
-                          padding-top: 150px;
-                      }     
-                      
-                      
-                      .first .still {
-                        font-size: 20px;
-                        
-                        padding-left: 10px;
-                        padding-bottom: 10px;
-                        }              
+    }
+    
+    .why_Health h4 {
+      margin-left: 100px;
+      margin-top: -100px;
+      font-size: 20px;
+      
+    }
+    
+    .why_Health p{
+        font-size: 15px;
+        margin-left: 100px;
+        padding-bottom: 20px;
+    
+    }
+    .why_Health .h{
+        padding-bottom: 40px;
+    }
+    .accordion-section .panel-default > .panel-heading {
+    height: auto;
+    width: 105%;
+  }
+    .accordion-section .panel-default .panel-title a {
+      font-size: 13px;
+      padding-left: 3px;
+    }
+    .accordion-section .panel-default .panel-title a:after {
+      
+      font-size: 1.5rem;
+   
+   
+      float: right;
+      margin-right: -10px;
+      margin-top: -15px;
+     
+    }
+    
+    .accordion-section .panel-default .panel-body {
+    font-size: 15px;
+    }
+    .faq h2 {
+    
+    font-size: 25px;
+    }
+    
+    
+    
                         
   }
 
@@ -212,7 +311,7 @@
 
   @media only screen and (max-width: 770px) and (min-width: 451px) {
     body {
-        background-color:  rgb( 237, 237, 237 );
+      background-color:  rgba(237, 237, 237, 0.767);
         
     }
     * {
@@ -292,8 +391,117 @@
       padding-left: 10px;
       padding-bottom: 10px;
       }  
+      .imp{
+    
+        width: 100%;
+      }
+      .imp p {
+        padding-bottom: 40px;
+        font-size: 20px;
+      }
+  
+      .health_main .bu {
+        margin-left: 60px;
+        width: 60%;
+      }
+      .health_main img{
+        width:115%;
+        border-radius: 10px 0px 0px 0px;
+      }
+      .health_main h2{
+        margin-top: 30px;
+      }
+      
+      .health_main .small{
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      .health_main .small h6{
+        font-size: 13px;
+      }
+      .health_main .small img{
+        margin-left: -15px;
+      }
+     
+      .health_main .date p{
+        margin-left: -15px;
+      }
+      .health_main .detail{
+        margin-left: 10px;
+      }
+      .health_main .chck{
+        margin-top: 0px;
+      }
+      .health_main .chck .chk{
+        margin-left: 25px;
+      }
+      .health_main .chck .chk img{
+        margin-left: 130px;
+        margin-top: -50px;
+      }
+      .health_main .chck .chk .whts{
+       
+        margin-left: -145%;
+      }  
+  
+  
+      
+      .why_Health h2 {
+        font-size: 25px;
+        
+      }
+      .why_Health img{
+        width: 90px;
+        height: 90px;
+        
+       
+      }
+      
+      .why_Health h4 {
+        width: 70%;
+        margin-left: 20px;
+        font-size: 20px;
+        margin-top: -10px;
+        
+      }
+      
+      .why_Health p{
+          
+        margin-left: 20px;
+          padding-bottom: 20px;
+      
+      }
+      .why_Health .h{
+          padding-bottom: 40px;
+      }
+      .accordion-section .panel-default > .panel-heading {
+      height: auto;
+      width: 100%;
+    }
+      .accordion-section .panel-default .panel-title a {
+        font-size: 18px;
+        
+      }
+      .accordion-section .panel-default .panel-title a:after {
+        
+        font-size: 2rem;
+     
+     
+        float: right;
+     
+        margin-top: -10px;
+       
+      }
+      
+      .accordion-section .panel-default .panel-body {
+      font-size: 20px;
+      }
+       
                         
   }
+
+
+
 
 
 
