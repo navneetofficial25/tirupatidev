@@ -54,17 +54,15 @@
                                     <div class="card-body">
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Adults</label>
-                                            <input type="number"  id="usr" name="username" placeholder="Adult(s)-21 yeasrs and above">
+                                            <input type="number" min="1"  oninput="getNo()" id="usrVal" name="username" placeholder="Adult(s)-21 yeasrs and above">
                                             
                                         </div>
-                                        <div class="form-group date">
-                                            <label class="adults" for="usr">Adults 1 DOB</label>
-                                            <input type="text"  id="usr" name="username" placeholder="Enter Adult 1 DOB">
-                                            <p>DD/MM/YYYY</p>
+                                        <div id="firstperson" style="display:none" class="form-group date"> 
+                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="username" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
                                         </div>
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Mobile number</label>
-                                            <input type="text"  id="usr" name="username" placeholder="Enter Mobile number">
+                                            <input type="text"  id="" name="username" placeholder="Enter Mobile number">
                                         </div>
                                     </div>
                                 </div>
@@ -72,13 +70,11 @@
                                     <div class="card-body">
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Kids</label>
-                                            <input type="number"  id="usr" name="username" placeholder="Kids(3months - 20 years)">
+                                            <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="username" placeholder="Kids(3months - 20 years)">
                                            
                                         </div>
-                                        <div class="form-group date">
-                                            <label class="adults" for="usr">Kid 1 DOB </label>
-                                            <input type="text"  id="usr" name="username" placeholder="Enter Kid 1 DOB">
-                                            <p>DD/MM/YYYY</p>
+                                        <div id="secondperson" style="display:none" class="form-group date">
+                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="username" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
                                         </div>
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Email</label>
@@ -249,3 +245,30 @@
             </div>
           </section>
           </div>
+          <script>
+          function getNo(){
+          var i =  document.getElementById('usrVal').value;
+            if(i==1){
+              document.getElementById('firstperson').style.display = 'block';
+              document.getElementById('secondperson').style.display = 'none';
+              document.getElementById('usrkid').max = 2;
+            }
+            else if(i==2){
+              document.getElementById('secondperson').style.display = 'block';
+              document.getElementById('usrkid').max = 3;
+            }
+            else if(i>2){
+              alert('max number');
+              document.getElementById('usrVal').value = 2;
+            }
+          
+          }
+          function getkid(){
+            var i =  document.getElementById('usrVal').value;
+            if(i<1){
+              alert('please choose adult first');
+              document.getElementById('usrkid').value = '';
+              
+            }
+          }
+          </script>
