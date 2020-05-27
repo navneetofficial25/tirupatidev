@@ -3,7 +3,7 @@
         public function __construct()
     {
         parent::__construct();
-        $this->load->model('Socialmodel');
+        $this->load->model('admin/Socialmodel');
     }
 
         public function index(){

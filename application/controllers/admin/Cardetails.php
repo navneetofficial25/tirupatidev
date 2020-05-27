@@ -1,44 +1,56 @@
 <?php
-    class Brands extends CI_controller{
+    class Cardetails extends CI_controller{
 
         public function __construct()
         {
             parent::__construct();
-            $this->load->model('admin/Brandsmodel');
+            $this->load->model('admin/Carmodel');
         }
 
         public function index(){
             $this->load->view('admin/template/header');
             $this->load->view('admin/template/sidebar');
             $this->load->view('admin/template/topbar');
-            $this->load->view('admin/brands');
+            $this->load->view('admin/carbrand');
         }
 
         public function addinventory_api(){
-            $getPurchaseData = $this->Brandsmodel->fetchaddinventory_api();
+            $getPurchaseData = $this->Carmodel->fetchaddinventory_api();
     
             //print_r($getPurchaseData);
     
-            foreach ($getPurchaseData as $key => $value) {
+            foreach ($getPurchaseData as $key => $value) { 
+//                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
     
-                $image=$value->image;
-                 $json_image= json_decode($image);
-                 $image_url= $image;
-    
-    
-                 $short_desc=$value->short_desc;
-                 //$lst_desc=$this->word_limiter($short_desc, 4)."...";
-                 $lst_desc=$short_desc;
-    
-                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
-    
-                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->id.'">','<img class="zoom" src="'.$image_url.'">',$value->title,$value->short_desc,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-               <a class="delete_sliders" data-id="'.$value->id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
+                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->carbrand_id.'">',$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->carbrand_id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+               <a class="delete_sliders" data-id="'.$value->carbrand_id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
                 }
                  echo json_encode(array('data'=>$arrya_json));
     
     
             }
+            public function model(){
+              $this->load->view('admin/template/header');
+              $this->load->view('admin/template/sidebar');
+              $this->load->view('admin/template/topbar');
+              $this->load->view('admin/carmodel');
+          }
+          public function modeladdinventory_api(){
+            $getPurchaseData = $this->Carmodel->fetchmodelinventory_api();
+    
+            //print_r($getPurchaseData);
+    
+            foreach ($getPurchaseData as $key => $value) { 
+//                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
+    
+                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->model_id.'">',$value->model_name,$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->model_id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+               <a class="delete_sliders" data-id="'.$value->model_id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
+                }
+                 echo json_encode(array('data'=>$arrya_json));
+    
+    
+            }
+
             public function galleryedit(){
 
 

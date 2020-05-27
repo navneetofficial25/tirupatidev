@@ -98,7 +98,7 @@
     </li>
 
     <!-- Nav Item - Tables -->
-    <li class="nav-item active">
+    <li class="nav-item">
       <a class="nav-link" href="<?php echo base_url(); ?>admin/brands"><i class="fas fa-fw fa-table"></i><span>Brands</span></a>
     </li>
 
@@ -107,6 +107,25 @@
     </li>
 
     <!-- Divider -->
+    <hr class="sidebar-divider d-none d-md-block">
+
+    <div class="sidebar-heading">
+      Car Insurance
+    </div>
+
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/cardetails"><i class="fas fa-fw fa-chart-area"></i><span>Manufacturer</span></a>
+    </li>
+
+    <!-- Nav Item - Tables -->
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/cardetails/model"><i class="fas fa-fw fa-table"></i><span>Model</span></a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/sociallinks"><i class="fas fa-fw fa-table"></i><span>Varient</span></a>
+    </li>
+
     <hr class="sidebar-divider d-none d-md-block">
 
     <!-- Sidebar Toggler (Sidebar) -->

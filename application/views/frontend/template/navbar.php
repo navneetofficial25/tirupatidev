@@ -44,7 +44,7 @@
     </div>
     <nav class="navbar navbar-b navbar-trans navbar-expand-md bg-white nav">
       
-      <a class="navbar-brand " href="index.html"><img src="assest/img/logo.jpg" alt="Eniacoder"  ></a>
+      <a class="navbar-brand " href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>assest/img/logo.jpg" alt="Eniacoder"  ></a>
       <button class="navbar-toggler navbar-dark  bbb " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
