@@ -3,25 +3,25 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <img src="assest/img/health-insurance.svg">
+            <img src="<?php echo base_url()?>assest/img/health-insurance.svg">
             <p>health insurance</p>
             
           </div>
           <div class="col">
-            <img src="assest/img/term.svg" >
+            <img src="<?php echo base_url()?>assest/img/term.svg" >
             <p>term insurance</p>
           </div>
           <div class="col">
-            <a href="<?php echo base_url();?>frontend/carinsurance"><img src="assest/img/car-insurance.svg"></a> 
+            <a href="<?php echo base_url();?>frontend/carinsurance"><img src="<?php echo base_url()?>assest/img/car-insurance.svg"></a> 
             <p>car insurance</p>
           </div>
           <div class="col">
-            <img src="assest/img/car-insurance.svg" >
+            <img src="<?php echo base_url()?>assest/img/car-insurance.svg" >
             <p>bike insurance</p>
           </div>
           <div class="col">
             
-            <img src="assest/img/travel-insurance.svg" >
+            <img src="<?php echo base_url()?>assest/img/travel-insurance.svg" >
             <p>travle insurance</p>
             
           </div>
@@ -50,25 +50,25 @@
         <div class="container">    
           <div class="row">
             <div class="col-md-2">
-              <img src="assest/img/icon-3.png" >
+              <img src="<?php echo base_url()?>assest/img/icon-3.png" >
             </div>
             <div class="col-md-4">
               <p class="se">Coustomized plans</p>
             </div>
             <div class="col-md-2">
-              <img src="assest/img/icon-3.png"  >
+              <img src="<?php echo base_url()?>assest/img/icon-3.png"  >
             </div>   
             <div class="col-md-4">
               <p class="se">Dedicated Helpline</p>
             </div>
             <div class="col-md-2">
-              <img src="assest/img/icon-3.png" >
+              <img src="<?php echo base_url()?>assest/img/icon-3.png" >
             </div>
             <div class="col-md-4">
               <P class="se">Risk Consulting</P>
             </div>
             <div class="col-md-2">
-              <img src="assest/img/icon-3.png" >
+              <img src="<?php echo base_url()?>assest/img/icon-3.png" >
             </div>
             <div class="col-md-4">
               <p class="se">Cost and Quality</p>
@@ -94,27 +94,27 @@
 
 <!--          <div class="col-md">
             <div class="box">
-            <img src="assest/img/insurance-1582354125.jpg">
+            <img src="<?php echo base_url()?>assest/img/insurance-1582354125.jpg">
             </div>
           </div>
           <div class="col-md">
             <div class="box">
-            <img src="assest/img/Tata-AIA-Logojpg.jpg">
+            <img src="<?php echo base_url()?>assest/img/Tata-AIA-Logojpg.jpg">
             </div>
           </div>
           <div class="col-md">
             <div class="box">
-            <img src="assest/img/insurance-1582354125.jpg" >
+            <img src="<?php echo base_url()?>assest/img/insurance-1582354125.jpg" >
             </div>
           </div>
           <div class="col-md">
             <div class="box">
-            <img src="assest/img/Tata-AIA-Logojpg.jpg" >
+            <img src="<?php echo base_url()?>assest/img/Tata-AIA-Logojpg.jpg" >
             </div>
           </div>
           <div class="col-md">
             <div class="box">
-            <img src="assest/img/insurance-1582354125.jpg" >
+            <img src="<?php echo base_url()?>assest/img/insurance-1582354125.jpg" >
             </div>
           </div>-->
         </div>
@@ -149,7 +149,7 @@
             </br> <button>Read more...</button>
           </div>
           <div class="col-md-4">
-            <img src="assest/img/2668181.png">
+            <img src="<?php echo base_url()?>assest/img/2668181.png">
           </div>
         </div>
       </div>    

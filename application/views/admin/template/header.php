@@ -21,4 +21,22 @@
   <!-- Custom styles for this page -->
   <link href="<?php echo base_url(); ?>admin/assets/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
+		    <link rel="stylesheet" href="<?php echo base_url(); ?>admin/assets/plugins/morris/morris.css">
+
+      <link href="<?php echo base_url(); ?>admin/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!--        <link href="<?php echo base_url(); ?>admin/assets/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>admin/assets/css/core.css" rel="stylesheet" type="text/css" />
+-->        <link href="<?php echo base_url(); ?>admin/assets/css/components.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>admin/assets/css/icons.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>admin/assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>admin/assets/css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>admin/assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>admin/assets/css/vendor.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>admin/assets/css/intlTelInput.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>admin/assets/css/daterangepicker.css" type="text/css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>admin/assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?php echo base_url(); ?>admin/assets/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
+        <link href="<?php echo base_url(); ?>admin/assets/plugins/summernote/summernote.css" rel="stylesheet" />
+
+        <script src="<?php echo base_url(); ?>admin/assets/js/modernizr.min.js"></script>
 </head>

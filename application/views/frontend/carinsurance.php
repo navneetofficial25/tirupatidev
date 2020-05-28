@@ -75,14 +75,14 @@
                                             <div class="form-group date">
                                                 <label class="adults" for="comp ">Manufacturer</label>
                                                 <input list="companies" class="lis"  id="comp" name="comp" placeholder="Enter Manufacturer ">
-                                                <select id="companies">
+                                                <datalist id="companies">
                         <?php
                         foreach($company as $companies){
 
                             echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>";
                         }
                         ?>
-                                                </select>
+                                                </datalist>
   
   
                                                 

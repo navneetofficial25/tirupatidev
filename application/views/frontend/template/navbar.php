@@ -15,24 +15,31 @@
                     <?php
 							$socials_datas=Utility::getsocial();
 							//print_r($socials_datas);
-						?>            
-                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a>
-                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a>
-                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a>
-                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="fa fa-facebook"></i></a>
-                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a>
-                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a>
+            ?>            
+						<?php if($socials_datas->youtube_url) {?>
+            
+                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a><?php }?>
+						<?php if($socials_datas->twitter_url) {?>
+                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a><?php }?>
+						<?php if($socials_datas->linkedin_url) {?>
+                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a><?php }?>
+						<?php if($socials_datas->facebook_url) {?>
+                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="fa fa-facebook"></i></a><?php }?>
+						<?php if($socials_datas->instagram_url) {?>
+                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a><?php }?>
+						<?php if($socials_datas->pinterest_url) {?>
+                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a><?php }?>
                       </li>
                     <li class="nav-item">
                       <h4 class="ri"> | </h4>
                     </li>
                     <li class="nav-item">
                       <p class="refer">Refer and Earn</p>
-                      <img src="assest/img/s.png" >
+                      <img src="<?php echo base_url();?>assest/img/s.png" >
                     </li>
                     <li class="nav-item">
                       
-                      <img src="assest/img/s.png" >
+                      <img src="<?php echo base_url();?>assest/img/s.png" >
                     </li>
                   </ul>
                 </div>

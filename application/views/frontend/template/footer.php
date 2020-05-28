@@ -34,10 +34,10 @@
             <p class="get">get in touch</p>
             <hr class="style1">
             <input type="email" name="email" placeholder="Email here..." >
-            <img src="assest/img/right-arrow.svg">
+            <img src="<?php echo base_url()?>assest/img/right-arrow.svg">
             <p class="raj">Rajmahal Complex,Opp-PLA Petrol Pump,Delhi Road, Hisar-125001</p>
-            <p><span><img src="assest/img/call (2).png"></span> 8950000000</p>
-            <p><span><img src="assest/img/call (2).png"></span> info@tirupatiinsurance.com</p>
+            <p><span><img src="<?php echo base_url()?>assest/img/call (2).png"></span> 8950000000</p>
+            <p><span><img src="<?php echo base_url()?>assest/img/call (2).png"></span> info@tirupatiinsurance.com</p>
           </div>
         </div>
       </div>    
@@ -48,12 +48,23 @@
         <div class="row">
           <div class="col-md" >
             <div class="res">
-                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a>
-                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a>
-                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a>
-                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="fa fa-facebook"></i></a>
-                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a>
-                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a>
+            <?php
+							$socials_datas=Utility::getsocial();
+							//print_r($socials_datas);
+            ?>   
+						<?php if($socials_datas->youtube_url) {?>
+              
+                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a><?php }?>
+						<?php if($socials_datas->twitter_url) {?>
+                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a><?php }?>
+						<?php if($socials_datas->linkedin_url) {?>
+                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a><?php }?>
+						<?php if($socials_datas->facebook_url) {?>
+                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="fa fa-facebook"></i></a><?php }?>
+						<?php if($socials_datas->instagram_url) {?>
+                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a><?php }?>
+						<?php if($socials_datas->pinterest_url) {?>
+                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a><?php }?>
             </div>
           </div>
         </div>
