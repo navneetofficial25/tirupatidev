@@ -21,7 +21,19 @@ class Carmodel extends CI_Model {
         //$this->db->where('delete_status',$deleteid);
         $this->db->select('car_brand.brand_name,car_model.*');
         $this->db->from('car_model');
-        $this->db->join('car_brand','car_brand.carbrand_id=car_model.brand_id','left');
+        $this->db->join('car_brand','car_brand.id=car_model.id','left');
+        $query = $this->db->get();
+        return $query->result();
+
+
+        //return $getuser = $this->db->select('*')->from('tbl_subject')->get()->result();
+    }
+    public function fetchvariantinventory_api() {
+        //$deleteid='1';
+        //$this->db->where('delete_status',$deleteid);
+        $this->db->select('car_model.model_name,car_variant.*');
+        $this->db->from('car_variant');
+        $this->db->join('car_model','car_model.model_id=car_variant.model_id','left');
         $query = $this->db->get();
         return $query->result();
 

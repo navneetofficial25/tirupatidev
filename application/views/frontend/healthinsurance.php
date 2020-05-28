@@ -54,7 +54,7 @@
                                     <div class="card-body">
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Adults</label>
-                                            <input type="number" min="1"  oninput="getNo()" id="usrVal" name="username" placeholder="Adult(s)-21 yeasrs and above">
+                                            <input type="number" min="0"  oninput="getNo()" id="usrVal" name="username" placeholder="Adult(s)-21 yeasrs and above">
                                             
                                         </div>
                                         <div id="firstperson" style="display:none" class="form-group date"> 
@@ -248,13 +248,17 @@
           <script>
           function getNo(){
           var i =  document.getElementById('usrVal').value;
-            if(i==1){
+            if(i<1){
+              document.getElementById('firstperson').style.display = 'none';
+            }
+           else if(i==1){
               document.getElementById('firstperson').style.display = 'block';
               document.getElementById('secondperson').style.display = 'none';
               document.getElementById('usrkid').max = 2;
             }
             else if(i==2){
               document.getElementById('secondperson').style.display = 'block';
+              document.getElementById('firstperson').style.display = 'block';
               document.getElementById('usrkid').max = 3;
             }
             else if(i>2){

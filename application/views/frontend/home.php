@@ -3,15 +3,16 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <img src="assest/img/health-insurance.svg" >
+            <img src="assest/img/health-insurance.svg">
             <p>health insurance</p>
+            
           </div>
           <div class="col">
             <img src="assest/img/term.svg" >
             <p>term insurance</p>
           </div>
           <div class="col">
-            <img src="assest/img/car-insurance.svg" >
+            <a href="<?php echo base_url();?>frontend/carinsurance"><img src="assest/img/car-insurance.svg"></a> 
             <p>car insurance</p>
           </div>
           <div class="col">

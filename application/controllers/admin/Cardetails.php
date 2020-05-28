@@ -22,8 +22,8 @@
             foreach ($getPurchaseData as $key => $value) { 
 //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
     
-                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->carbrand_id.'">',$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->carbrand_id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-               <a class="delete_sliders" data-id="'.$value->carbrand_id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
+                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->id.'">',$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+               <a class="delete_sliders" data-id="'.$value->id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
                 }
                  echo json_encode(array('data'=>$arrya_json));
     
@@ -43,8 +43,8 @@
             foreach ($getPurchaseData as $key => $value) { 
 //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
     
-                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->model_id.'">',$value->model_name,$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->model_id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-               <a class="delete_sliders" data-id="'.$value->model_id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
+                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->id.'">',$value->model_name,$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+               <a class="delete_sliders" data-id="'.$value->id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
                 }
                  echo json_encode(array('data'=>$arrya_json));
     
