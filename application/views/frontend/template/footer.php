@@ -1,13 +1,13 @@
-<div class="foot">
+<div class="shadow-lg mt-3 foot">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
-            <p class="get">Tirupati insaurance</p>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <h5>Tirupati insaurance</h5>
             <hr class="style1">
-            <p class="we">we are an independent agency and our first priority will always be our coustomers, people, and businesses which we can help. we work with various insurance companies which offer diversity in plans and different coverage option. </p></br></br>
+            <p>we are an independent agency and our first priority will always be our coustomers, people, and businesses which we can help. we work with various insurance companies which offer diversity in plans and different coverage option. </p></br></br>
           </div>
-          <div class="col-md-3">
-            <p class="get">products</p>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <h5>products</h5>
             <hr class="style1">
             <div class="links">
               <a href="#">Health insurance</a></br>
@@ -17,8 +17,8 @@
               <a href="#">Travel insurance</a></br>
             </div>
           </div>
-          <div class="col-md-3">
-            <p class="get">quick links</p>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <h5>quick links</h5>
             <hr class="style1">
             <div class="links">
               <a href="#">covid-19 update/assitance</a></br>
@@ -30,14 +30,14 @@
               <a href="#">site map</a></br>
             </div>
           </div>
-          <div class="col-md-3">
-            <p class="get">get in touch</p>
+          <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+            <h5>get in touch</h5>
             <hr class="style1">
             <input type="email" name="email" placeholder="Email here..." >
-            <img src="assest/img/right-arrow.svg">
-            <p class="raj">Rajmahal Complex,Opp-PLA Petrol Pump,Delhi Road, Hisar-125001</p>
-            <p><span><img src="assest/img/call (2).png"></span> 8950000000</p>
-            <p><span><img src="assest/img/call (2).png"></span> info@tirupatiinsurance.com</p>
+            <i class='fa fa-location-arrow' style="transform: rotate(45deg); color: white; background-color: black;"></i>
+            <p>Rajmahal Complex,Opp-PLA Petrol Pump,Delhi Road, Hisar-125001</p>
+            <p><i class="fa fa-phone" style="margin-right: 7px; font-size: 20px;"></i> 8950000000</p>
+            <p><i class="fa fa-envelope" style="margin-right: 7px; font-size: 20px;"></i> info@tirupatiinsurance.com</p>
           </div>
         </div>
       </div>    
@@ -45,9 +45,8 @@
     <section class="last"> 
       <div class="container">
         <p>follow us on</p>
-        <div class="row">
-          <div class="col-md" >
-            <div class="res">
+        
+            <div class="text-center">
                       <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a>
                       <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a>
                       <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a>
@@ -55,8 +54,7 @@
                       <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a>
                       <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a>
             </div>
-          </div>
-        </div>
+          
         <p class="reserved">@2020 Tirupati Insurance All Rights Reserved. Developed By <span><a href="#" class="lik">hisar fever.</a></span></p>
       </div>
     </section> 
