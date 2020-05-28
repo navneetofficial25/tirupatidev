@@ -13,24 +13,28 @@
                   <ul class="nav px-2 text  px-4 ">
                     <li class="nav-item nav-top">
                     <?php
-							        $socials_datas=Utility::getsocial();
-							          //print_r($socials_datas);
-						          ?>            
-                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="ico fa fa-youtube "></i></a>
-                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="ico fa fa-twitter"></i></a>
-                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="ico fa fa-linkedin"></i></a>
-                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="ico fa fa-facebook"></i></a>
-                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="ico fa fa-instagram"></i></a>
-                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="ico fa fa-pinterest"></i></a> <span style="color:white; margin-right:5px;" >|</span>
+							$socials_datas=Utility::getsocial();
+							//print_r($socials_datas);
+            ?>            
+						<?php if($socials_datas->youtube_url) {?>
+            
+                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="ico fa fa-youtube "></i></a><?php }?>
+						<?php if($socials_datas->twitter_url) {?>
+                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class=" ico fa fa-twitter"></i></a><?php }?>
+						<?php if($socials_datas->linkedin_url) {?>
+                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="ico fa fa-linkedin"></i></a><?php }?>
+						<?php if($socials_datas->facebook_url) {?>
+                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="ico fa fa-facebook"></i></a><?php }?>
+						<?php if($socials_datas->instagram_url) {?>
+                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="ico fa fa-instagram"></i></a><?php }?>
+						<?php if($socials_datas->pinterest_url) {?>
+                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="ico fa fa-pinterest"></i></a><?php }?> <span style="color:white; margin-right:5px;" >|</span>
                       </li>
-                      
-                      <li class="nav-item nav-top">
-                        <p class="refer font m-0">Refer and Earn</p>
-                        
-                      </li>
-                     
-                      
                     
+                    <li class="nav-item nav-top">
+                      <p class="refer font m-0">Refer and Earn</p>
+                      
+                    </li>
                     
                   </ul>
                 </div>

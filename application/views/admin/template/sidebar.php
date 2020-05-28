@@ -123,7 +123,7 @@
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/sociallinks"><i class="fas fa-fw fa-table"></i><span>Varient</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/cardetails/variant"><i class="fas fa-fw fa-table"></i><span>Varient</span></a>
     </li>
 
     <hr class="sidebar-divider d-none d-md-block">

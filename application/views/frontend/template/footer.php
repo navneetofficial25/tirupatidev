@@ -45,18 +45,30 @@
     <section class="last"> 
       <div class="container">
         <p>follow us on</p>
-        
+       
+          
             <div class="text-center">
-                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a>
-                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a>
-                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a>
-                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="fa fa-facebook"></i></a>
-                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a>
-                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a>
+            <?php
+							$socials_datas=Utility::getsocial();
+							//print_r($socials_datas);
+            ?>   
+						<?php if($socials_datas->youtube_url) {?>
+              
+                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a><?php }?>
+						<?php if($socials_datas->twitter_url) {?>
+                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a><?php }?>
+						<?php if($socials_datas->linkedin_url) {?>
+                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a><?php }?>
+						<?php if($socials_datas->facebook_url) {?>
+                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="fa fa-facebook"></i></a><?php }?>
+						<?php if($socials_datas->instagram_url) {?>
+                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a><?php }?>
+						<?php if($socials_datas->pinterest_url) {?>
+                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a><?php }?>
             </div>
           
         <p class="reserved">@2020 Tirupati Insurance All Rights Reserved. Developed By <span><a href="#" class="lik">hisar fever.</a></span></p>
       </div>
-    </section> 
+    </section>  
   </body>  
 </html>
