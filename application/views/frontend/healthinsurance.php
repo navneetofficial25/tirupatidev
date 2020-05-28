@@ -274,5 +274,6 @@
               document.getElementById('usrkid').value = '';
               
             }
+            else
           }
           </script>
