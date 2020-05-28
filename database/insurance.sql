@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2020 at 03:27 PM
+-- Generation Time: May 28, 2020 at 06:32 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.5
 
@@ -45,6 +45,94 @@ INSERT INTO `brandlogo` (`id`, `title`, `image`, `short_desc`, `update_date`) VA
 (4, 'dcfv ', 'http://localhost/insurance/upload/brands/media-1590407792.jpg', 'desc', '0000-00-00 00:00:00'),
 (5, 'dnc iozd', 'http://localhost/insurance/upload/brands/media-1590407807.jpg', 'nuihio', '0000-00-00 00:00:00'),
 (6, 'fxcbg', 'http://localhost/insurance/upload/brands/media-1590407824.jpg', 'nuihibgbo', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car_brand`
+--
+
+CREATE TABLE `car_brand` (
+  `id` int(11) NOT NULL,
+  `brand_name` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `car_brand`
+--
+
+INSERT INTO `car_brand` (`id`, `brand_name`) VALUES
+(1, 'bmw'),
+(2, 'audi');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car_details`
+--
+
+CREATE TABLE `car_details` (
+  `id` int(11) NOT NULL,
+  `registration_no` varchar(11) NOT NULL,
+  `maufacturer_id` int(11) NOT NULL,
+  `modal_id` int(11) NOT NULL,
+  `fuel_type` varchar(250) NOT NULL,
+  `variant_id` int(11) NOT NULL,
+  `registration_year` int(11) NOT NULL,
+  `policy_expire` varchar(250) NOT NULL,
+  `prev_policy` varchar(250) NOT NULL,
+  `prev_insurer` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `car_details`
+--
+
+INSERT INTO `car_details` (`id`, `registration_no`, `maufacturer_id`, `modal_id`, `fuel_type`, `variant_id`, `registration_year`, `policy_expire`, `prev_policy`, `prev_insurer`) VALUES
+(1, 'sdgfdh', 1, 1, 'Opera', 1, 2019, 'Opera', 'Firefox', 'Firefox'),
+(2, 'asdfdg', 2, 2, 'Chrome', 2, 2019, 'Firefox', 'Firefox', 'Firefox');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car_model`
+--
+
+CREATE TABLE `car_model` (
+  `id` int(11) NOT NULL,
+  `model_name` varchar(250) NOT NULL,
+  `brand_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `car_model`
+--
+
+INSERT INTO `car_model` (`id`, `model_name`, `brand_id`) VALUES
+(1, 'Sedan', 1),
+(2, 'prime sedan', 2),
+(3, 'suv', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `car_variant`
+--
+
+CREATE TABLE `car_variant` (
+  `id` int(11) NOT NULL,
+  `variant_name` varchar(250) NOT NULL,
+  `model_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `car_variant`
+--
+
+INSERT INTO `car_variant` (`id`, `variant_name`, `model_id`) VALUES
+(1, 'Q7', 1),
+(2, 'Audi Z series', 2),
+(3, 'A series', 2);
 
 -- --------------------------------------------------------
 
@@ -107,6 +195,30 @@ ALTER TABLE `brandlogo`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `car_brand`
+--
+ALTER TABLE `car_brand`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `car_details`
+--
+ALTER TABLE `car_details`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `car_model`
+--
+ALTER TABLE `car_model`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `car_variant`
+--
+ALTER TABLE `car_variant`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `houdinv_social_links`
 --
 ALTER TABLE `houdinv_social_links`
@@ -127,6 +239,30 @@ ALTER TABLE `kelam_gallery`
 --
 ALTER TABLE `brandlogo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `car_brand`
+--
+ALTER TABLE `car_brand`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `car_details`
+--
+ALTER TABLE `car_details`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `car_model`
+--
+ALTER TABLE `car_model`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `car_variant`
+--
+ALTER TABLE `car_variant`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `houdinv_social_links`
