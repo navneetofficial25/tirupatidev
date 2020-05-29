@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<div class="first">
-      <p> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best quates for you </p>
-      <div class="container">
-        <div class="row">
-          <div class="col">
-            <a href="<?php echo base_url();?>frontend/healthinsurance"><img src="<?php echo base_url()?>assest/img/health-insurance.svg"></a> 
-            <p>health insurance</p>
-            
-=======
 <div class="d-inline-block container-fluid banner-padding" style="padding-bottom:30px;">
     <div class="container first ">
       
@@ -23,7 +13,6 @@
             <div class="card-content">
               <p> Health Insurance</p>
             </div>
->>>>>>> 4d98c24ddea43364d4309d963dda5851c11e5258
           </div>
         </a>
         <a  href="#">
@@ -41,6 +30,7 @@
         <a href="#">
           <div class="card">
             <div class="card-image">
+            <a href="<?php echo base_url();?>frontend/carinsurance"></a>
               <img class="img-responsive" alt="Car Insurance" src="<?php echo base_url()?>assest/img/car-insurance.svg">
 
             </div>
