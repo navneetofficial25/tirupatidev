@@ -1,88 +1,156 @@
 <body>
-    <div class="top-nav">
+    <nav class="top-nav">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <p class="info">+91 8950000000 <span class="b "> | </span> <span class="c">Info@tirupatiinsurance.com</span></p>
+          <p class="font m-0 info">+91 8950000000 | Info@tirupatiinsurance.com</p>
           </div>
           
-          <div class="col-md-6 ">
-            <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" >
-              <div class="container">
-                <div class="navbar-collapse collapse justify-content-end" >
-                  <ul class="navbar-nav ">
-                    <li class="nav-item">
+          <div class="col-md-6 px-5 show m-0 ">
+            <div class="d-flex flex-row-reverse">
+              <div class="list ">
+              
+                  <ul class="nav px-2 text  px-4 ">
+                    <li class="nav-item nav-top">
                     <?php
 							$socials_datas=Utility::getsocial();
 							//print_r($socials_datas);
             ?>            
 						<?php if($socials_datas->youtube_url) {?>
             
-                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="fa fa-youtube "></i></a><?php }?>
+                      <a href="https://<?=$socials_datas->youtube_url;?>" target="_blank"> <i class="ico fa fa-youtube "></i></a><?php }?>
 						<?php if($socials_datas->twitter_url) {?>
-                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class="fa fa-twitter"></i></a><?php }?>
+                      <a href="https://<?=$socials_datas->twitter_url;?>" target="_blank"><i class=" ico fa fa-twitter"></i></a><?php }?>
 						<?php if($socials_datas->linkedin_url) {?>
-                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="fa fa-linkedin"></i></a><?php }?>
+                      <a href="https://<?=$socials_datas->linkedin_url;?>" target="_blank"><i class="ico fa fa-linkedin"></i></a><?php }?>
 						<?php if($socials_datas->facebook_url) {?>
-                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="fa fa-facebook"></i></a><?php }?>
+                      <a href="https://<?=$socials_datas->facebook_url;?>" target="_blank"><i class="ico fa fa-facebook"></i></a><?php }?>
 						<?php if($socials_datas->instagram_url) {?>
-                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="fa fa-instagram"></i></a><?php }?>
+                      <a href="https://<?=$socials_datas->instagram_url;?>" target="_blank"><i class="ico fa fa-instagram"></i></a><?php }?>
 						<?php if($socials_datas->pinterest_url) {?>
-                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a><?php }?>
+                      <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="ico fa fa-pinterest"></i></a><?php }?> <span style="color:white; margin-right:5px;" >|</span>
                       </li>
-                    <li class="nav-item">
-                      <h4 class="ri"> | </h4>
-                    </li>
-                    <li class="nav-item">
-                      <p class="refer">Refer and Earn</p>
-                      <img src="<?php echo base_url();?>assest/img/s.png" >
-                    </li>
-                    <li class="nav-item">
+                    
+                    <li class="nav-item nav-top">
+                      <p class="refer font m-0">Refer and Earn</p>
                       
-                      <img src="<?php echo base_url();?>assest/img/s.png" >
                     </li>
+                    
                   </ul>
                 </div>
               </div>
-            </nav>  
+              
           </div> 
         </div>
       </div>
-    </div>
-    <nav class="navbar navbar-b navbar-trans navbar-expand-md bg-white nav">
-      
-      <a class="navbar-brand " href="<?php echo base_url();?>"><img src="<?php echo base_url(); ?>assest/img/logo.jpg" alt="Eniacoder"  ></a>
-      <button class="navbar-toggler navbar-dark  bbb " type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="container">
-        <div class="navbar-collapse collapse justify-content-end" id="collapsibleNavbar" >
-          <ul class="navbar-nav blk">
-            <li class="nav-item">
-              
-              <p> | <span><a class="nav-link  active" href="#">Home</a></span></p>
-            </li>
-            <li class="nav-item">
-            
-              <p> | <span><a class="nav-link" href="#">about us</a></span></p>
-            </li>
-            <li class="nav-item">
-            
-              <p> | <span><a class="nav-link " href="#">services & solutions</a></span></p>
-            </li>
-            <li class="nav-item">
-              
-              <p> | <span><a class="nav-link " href="#">blogs</a></span></p>
-            </li>
-            <li class="nav-item">
-              
-              <p> | <span><a class="nav-link " href="#">careers</a></span></p>
-            </li>
-            <li class="nav-item">
-              
-              <p> | <span><a class="nav-link " href="#">Contact us</a></span> </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+</nav>
+    <header class="header-area bg-white meu ">
+
+      <div class="navbar-area ">
+
+          <div class="container">
+
+              <div class="row">
+
+                  <div class="col-lg-12">
+
+                      <nav class="navbar navbar-expand-lg">
+
+                          <div class="logo">
+                          <a class="custom-logo-link " rel="home" href="<?php echo base_url();?>"><img width="133" height="55" src="<?php echo base_url(); ?>assest/img/logo.jpg" alt="Tirupati insurance" class="custom-logo" ></a>
+                             
+                                  <a class="navbar-brand"  href="#" rel="home">
+
+                                        
+
+                                  </a>
+
+                                  
+                          </div>
+
+                          
+
+                          <button class="navbar-toggler nav-dark bbb" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fa fa-bars"></i>
+                              
+
+                          </button>
+
+
+
+                          <div id="navbarSupportedContent" class="collapse navbar-collapse sub-menu-bar">
+                            <ul id="nav" class="navbar-nav ml-auto ">
+                            <li   class="  nav-item m-1 brk ">
+                                |
+                              </li>
+                              <li class=" nav-item">
+                                <a title="Home" href="#" class="nav-link">
+                                 Home
+                                </a>
+                              </li>
+                              <li   class="  nav-item m-1 brk ">
+                                |
+                              </li>
+                              <li class=" nav-item">
+                                <a title="About Us" href="#" class="nav-link">
+                                About Us
+                                </a>
+                              </li>
+                              <li   class="  nav-item m-1 brk ">
+                                |
+                              </li>
+                              <li class=" nav-item">
+                                <a title="Services & solutions" href="#" class="nav-link">
+                                Services & solutions
+                                </a>
+                              </li>
+                              <li   class="  nav-item m-1 brk ">
+                                |
+                              </li>
+                              <li class=" nav-item">
+                                <a title="Blogs" href="#" class="nav-link">
+                               Blogs
+                                </a>
+                              </li>
+                              <li   class="  nav-item m-1 brk ">
+                                |
+                              </li>
+                              <li class=" nav-item ">
+                                <a title="career" href="#" class="nav-link">
+                                careers
+                                </a>
+                              </li>
+                              <li   class="  nav-item m-1 brk ">
+                                |
+                              </li>
+                              <li   class="  nav-item">
+                              
+                                <a title="Contact Us" href="#" class="nav-link">
+                                Contact Us
+                                </a>
+                                 
+                              </li>
+                              <li   class="  nav-item m-1 brk " >
+                                |
+                              </li>
+                            </ul>
+                          </div>
+                          
+                            
+
+
+
+
+
+                      </nav> <!-- navbar -->
+
+                  </div>
+
+              </div> <!-- row -->
+
+          </div> <!-- container -->
+
+      </div> <!-- navbar area -->
+
+  </header>
+    

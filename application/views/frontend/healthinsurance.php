@@ -118,10 +118,10 @@
         </section>
 
         <section class="why_Health">
-            <div class="container">
-              <h2>Why Health Insurance from Tirupati Insurance ?</h2>
-              <div class="h">
+          <div class="container">
+            <h2>Why Health Insurance from Tirupati Insurance ?</h2>
               <div class="row">
+<<<<<<< HEAD
                 <div class="col-md-2">
                   <img src="<?php echo base_url();?>assest/img/discount.png">
                 </div>
@@ -135,9 +135,18 @@
                 </div>
                 <div class="col-md-4">
                     <h4>80% discouns</h4>
+=======
+                <div class="col-md-6 col-12">
+                  <div class="lft">
+                    <div class="point">
+                      <img src="assest/img/discount.png">
+>>>>>>> 4d98c24ddea43364d4309d963dda5851c11e5258
                     
+                      <h4>80% discouns</h4>
+                    <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
+<<<<<<< HEAD
                 </div> 
                 <div class="col-md-2">
                   <img src="<?php echo base_url();?>assest/img/faster-icon-png-0.png">
@@ -150,17 +159,42 @@
                 </div> 
                 <div class="col-md-2">
                   <img src="<?php echo base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
-                </div>
-                <div class="col-md-4">
-                    <h4>80% discouns</h4>
-                    
+=======
+                    </div>
+    
+                    <div class="point">
+                      <img src="assest/img/faster-icon-png-0.png">
+                      <h4>80% discouns</h4>
+                      <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
-                </div>     
-              </div>  
+                    </div>
+                  </div>
+>>>>>>> 4d98c24ddea43364d4309d963dda5851c11e5258
+                </div>
+                <div class="col-md-6 col-12 ">
+                  <div class="rgt ">
+                    <div class="point">
+                      <img src="assest/img/PngItem_690697.png" >
+                      <h4>80% discouns</h4>
+                      <hr class="style1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                
+                    </div>
+                    <div class="point">
+                      <img src="assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
+                      <h4>80% discouns</h4>
+                      <hr class="style1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                
+                    </div>
+                  </div>
+                </div>
+                
               </div>
-            </div>  
-          </section> 
+           
+          </div>          
+        </section>
 
 
 

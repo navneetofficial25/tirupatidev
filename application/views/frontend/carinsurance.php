@@ -296,9 +296,8 @@
         </section>
 
         <section class="why_Health">
-            <div class="container">
-              <h2>Why Health Insurance from Tirupati Insurance ?</h2>
-              <div class="h">
+          <div class="container">
+            <h2>Why Health Insurance from Tirupati Insurance ?</h2>
               <div class="row">
                 <div class="col-md-2">
                   <img src="<?= base_url();?>assest/img/discount.png">
@@ -314,6 +313,8 @@
                 <div class="col-md-4">
                     <h4>80% discouns</h4>
                     
+                      <h4>80% discouns</h4>
+                    <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
                 </div> 
@@ -329,13 +330,25 @@
                 <div class="col-md-2">
                   <img src="<?= base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
                 </div>
-                <div class="col-md-4">
-                    <h4>80% discouns</h4>
-                    
+                <div class="col-md-6 col-12 ">
+                  <div class="rgt ">
+                    <div class="point">
+                      <img src="assest/img/PngItem_690697.png" >
+                      <h4>80% discouns</h4>
+                      <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
-                </div>     
-              </div>  
+                    </div>
+                    <div class="point">
+                      <img src="assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
+                      <h4>80% discouns</h4>
+                      <hr class="style1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                
+                    </div>
+                  </div>
+                </div>
+                
               </div>
             </div>  
           </section> 
