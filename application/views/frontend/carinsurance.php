@@ -60,7 +60,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content" >
                                 <div id="renew" class="container tab-pane active">
-  <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails/'), array('method'=>'POST'));?>
+  <?php echo form_open(base_url( 'frontend/insurance/renewDetails/'), array('method'=>'POST'));?>
 
                                     <div class="row">
 
@@ -100,8 +100,8 @@
                                                 </datalist>
                                             </div>
                                             <div class="form-group date">
-                                                <label class="adults" for="usr">Registration year</label>
-                                                <input type="text"  id="usr" name="regyr" placeholder="Select a Registration year">
+                                                <label class="adults" for="regyr">Registration year</label>
+                                                <input type="text"  id="regyr" name="regyr" placeholder="Select a Registration year">
                                                 
                                             </div>
                                             <div class="form-group date">
@@ -169,7 +169,7 @@
 
 
                                 <div id="new" class="container tab-pane fade">
-<?php echo form_open(base_url( 'frontend/carinsurance/renewDetails/'), array('method'=>'POST'));?>
+<?php echo form_open(base_url( 'frontend/insurance/renewDetails/'), array('method'=>'POST'));?>
 
                                     <div class="row">
 
@@ -183,7 +183,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group date">
                                                 <label class="adults" for="comps">Manufacturer</label>
-                                                <input list="compaies" class="lis"  id="comp" name="comp" placeholder="Enter Manufacturer ">
+                                                <input list="compaies" class="lis"  id="comps" name="comp" placeholder="Enter Manufacturer ">
                                                 <datalist id="companies">
                                                 <?php
                         foreach($company as $companies){
@@ -227,14 +227,14 @@
                                         <div class="col-md-6">
                                             <div class="form-group date">
                                                 <label class="adults" for="modl">Modal</label>
-                                                <input list="modls"  class="lis"   id="modal" name="modal" placeholder="Enter Model">
-                                                <datalist id="modals">
+                                                <input list="modls"  class="lis"   id="modl" name="modal" placeholder="Enter Model">
+                                                <datalist id="modls">
                                                 </datalist>
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="var">Varient</label>
-                                                <input list="vars"  class="lis"   id="vari" name="vari" placeholder="Enter Varient">
-                                                <datalist id="varis">
+                                                <input list="vars"  class="lis"   id="var" name="vari" placeholder="Enter Varient">
+                                                <datalist id="vars">
                                                 </datalist>
                                             </div>
                                             <div class="form-group date">
@@ -333,14 +333,14 @@
                 <div class="col-md-6 col-12 ">
                   <div class="rgt ">
                     <div class="point">
-                      <img src="assest/img/PngItem_690697.png" >
+                      <img src="<?php echo base_url();?>assest/img/PngItem_690697.png" >
                       <h4>80% discouns</h4>
                       <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
                     </div>
                     <div class="point">
-                      <img src="assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
+                      <img src="<?php echo base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
                       <h4>80% discouns</h4>
                       <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
@@ -360,7 +360,7 @@
         <?php $this->load->view('frontend/Template/footer.php') ?>
 
 
-<script type='text/javascript'>
+        <script type='text/javascript'>
     // baseURL variable
     var baseURL= "<?php echo base_url();?>";
     
@@ -370,7 +370,7 @@
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getCompany',
+                url:'<?=base_url()?>/frontend/insurance/getCompany',
                 method: 'post',
                 data: {comp: comp},
                 dataType: 'json',
@@ -394,7 +394,7 @@
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getModel',
+                url:'<?=base_url()?>/frontend/insurance/getModel',
                 method: 'post',
                 data: {modal: modal},
                 dataType: 'json',
@@ -406,6 +406,60 @@
                     // Add options
                     $.each(response,function(index,data){
                         $('#varis').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
+                    });
+                }
+            });
+        });
+        
+    });
+</script>
+
+<script type='text/javascript'>
+    // baseURL variable
+    var baseURL= "<?php echo base_url();?>";
+    
+    $(document).ready(function(){
+        $('#comps').change(function(){
+            var comp = $(this).val();
+
+            // AJAX request
+            $.ajax({
+                url:'<?=base_url()?>/frontend/insurance/getCompany',
+                method: 'post',
+                data: {comp: comp},
+                dataType: 'json',
+                success: function(response){
+
+                    // Remove options
+                    $('#modls').find('option').not(':first').remove();
+                    $('#varis').find('option').not(':first').remove();
+
+                    // Add options
+                    $.each(response,function(index,data){
+                        $('#modls').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                    });
+                }
+            });
+        });
+        
+        // Department change
+        $('#modl').change(function(){
+            var modal = $(this).val();
+
+            // AJAX request
+            $.ajax({
+                url:'<?=base_url()?>/frontend/insurance/getModel',
+                method: 'post',
+                data: {modal: modal},
+                dataType: 'json',
+                success: function(response){
+                    
+                    // Remove options
+                    $('#vars').find('option').not(':first').remove();
+
+                    // Add options
+                    $.each(response,function(index,data){
+                        $('#vars').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
                     });
                 }
             });

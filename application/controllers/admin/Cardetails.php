@@ -34,11 +34,10 @@
 
             public function addcompany(){
                 
-        $this->input->post('formSubmit');
+      //  $this->input->post('formSubmit');
         $brand_name = $this->input->post('bname');
-        
-        $this->Carmodel->insert_brand($brand_name);
-        redirect(base_url().'admin/cardetails');
+        $gradedetails=array('brand_name'=>$brand_name);
+        $this->Carmodel->insert_brand($gradedetails);
 
             }
 

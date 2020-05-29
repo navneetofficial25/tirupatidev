@@ -40,8 +40,9 @@ class Carmodel extends CI_Model {
 
         //return $getuser = $this->db->select('*')->from('tbl_subject')->get()->result();
     }
-    public function insert_brand($brand_name){
-        $this->db->insert('car_brand',$brand_name);
+    public function insert_brand($gradedetails){
+        $getInsertData = $this->db->insert('car_brand',$gradedetails);
+               return true;
     }
 
 }
