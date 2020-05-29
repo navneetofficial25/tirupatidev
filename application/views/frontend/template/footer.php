@@ -1,10 +1,14 @@
 <div class="shadow-lg mt-3 foot">
       <div class="container">
         <div class="row">
+        <?php
+							$sitedata=Utility::sitedata();
+						//	print_r($sitedata);
+            ?>
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-            <h5>Tirupati insaurance</h5>
+            <h5><?=$sitedata->heading;?></h5>
             <hr class="style1">
-            <p>we are an independent agency and our first priority will always be our coustomers, people, and businesses which we can help. we work with various insurance companies which offer diversity in plans and different coverage option. </p></br></br>
+            <p><?=$sitedata->description;?></p>
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 col-12">
             <h5>products</h5>

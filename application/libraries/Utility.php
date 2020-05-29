@@ -9,6 +9,13 @@
             return $getSearchsocial;
 
         }
+        public static function sitedata(){
+            $CI =& get_instance();
+            $CI->db->select('*')->from('site_setting');
+            $getSite = $CI->db->get()->row();
+            return $getSite;
+
+        }
     }
 
 ?>

@@ -1,4 +1,4 @@
-<section class="health_main">
+<section class="car">
             <div class="container">
                 <h2>Now Buying Health Insurance is Much Simpleir</h2>
                 <div class="sho">
@@ -53,14 +53,14 @@
                                     </li>
                                    
                                   </ul>
-                                <hr style="border-width: 2px; margin-top: -52px;">
+                                <hr style="border-width: 2px; margin-top: 0px;">
 
 
                       
                             <!-- Tab panes -->
                             <div class="tab-content" >
                                 <div id="renew" class="container tab-pane active">
-  <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails/'), array('method'=>'POST'));?>
+  <?php echo form_open(base_url( 'frontend/insurance/renewDetails/'), array('method'=>'POST'));?>
 
                                     <div class="row">
 
@@ -89,78 +89,78 @@
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="type">Fuel type</label>
-                                                <input list="types"  class="lis"   id="type" name="type" placeholder="Enter Fuel Type">
-                                                <datalist id="types">
-                                                    <option value="Edge">
-                                                    <option value="Firefox">
-                                                    <option value="Chrome">
-                                                    <option value="Opera">
-                                                    <option value="Safari">
                                                 
-                                                </datalist>
+                                                <select class="lis"   id="type" name="type">
+                                                    <option >Enter Fuel Type</option>
+                                                    <option value="#">A</option>
+                                                    <option value="#">B</option>
+                                                    
+                                                
+                                                </select>
                                             </div>
                                             <div class="form-group date">
-                                                <label class="adults" for="usr">Registration year</label>
-                                                <input type="text"  id="usr" name="regyr" placeholder="Select a Registration year">
+                                                <label class="adults" for="regyr">Registration year</label>
+                                                <input type="text"  id="regyr" name="regyr" placeholder="Select a Registration year">
                                                 
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="ptype">Select Previous Policy Type</label>
-                                                <input list="ptypes"   class="lis"  id="ptype" name="ptype" placeholder="Enter Policy Type">
-                                                <datalist id="ptypes">
-                                                    <option value="Edge">
-                                                    <option value="Firefox">
-                                                    <option value="Chrome">
-                                                    <option value="Opera">
-                                                    <option value="Safari">
-                                                </datalist>
+                                                
+                                                <select class="lis"  id="ptype" name="ptype">
+                                                    <option value="#">Enter Policy Type</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                    
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group date">
                                                 <label class="adults" for="modal">Modal</label>
-                                                <input list="modals"  class="lis"   id="modal" name="modal" placeholder="Enter Model">
-                                                <datalist id="modals">
-                                                </datalist>
+                                             
+                                                <select class="lis"   id="modal" name="modal">
+                                                    <option value="#">Enter Model</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="vari">Varient</label>
-                                                <input list="varis"  class="lis"   id="vari" name="vari" placeholder="Enter Varient">
-                                                <datalist id="varis">
-                                                </datalist>
+                                                
+                                                <select class="lis"   id="vari" name="vari">
+                                                    <option value="#">Enter Varient</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="pexpire">Select Policy Expire</label>
-                                                <input list="pexpires"  class="lis"   id="pexpire" name="pexpire" placeholder="Not Expire">
-                                                <datalist id="pexpires">
-                                                    <option value="Edge">
-                                                    <option value="Firefox">
-                                                    <option value="Chrome">
-                                                    <option value="Opera">
-                                                    <option value="Safari">
-                                                </datalist>
+                                                
+                                                <select class="lis"   id="pexpire" name="pexpire">
+                                                    <option value="#">Not Expire</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="pinsur">Select Previous Insurer</label>
-                                                <input list="pinsurs"  class="lis"   id="pinsur" name="pinsur" placeholder="Select Insurer">
-                                                <datalist id="pinsurs">
-                                                    <option value="Edge">
-                                                    <option value="Firefox">
-                                                    <option value="Chrome">
-                                                    <option value="Opera">
-                                                    <option value="Safari">
-                                                </datalist>
+                                                
+                                                <select class="lis"   id="pinsur" name="pinsur">
+                                                    <option value="#">Select Insurer</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="container chckb">
+                                      
                                           
-                                                <div class="form-group ">
+                                             
                                                   
                                                     
-                                                </br><button class="bu" name="formSubmit">Get Quote</button>
-                                                </div>
-                                              
-                                        </div>
+                                                <button class="bu text-center" name="formSubmit">Get Quote</button>
+                                               
+                                           
+                                       
 
                                     </div>    
 <?php echo form_close(); ?>
@@ -169,7 +169,7 @@
 
 
                                 <div id="new" class="container tab-pane fade">
-<?php echo form_open(base_url( 'frontend/carinsurance/renewDetails/'), array('method'=>'POST'));?>
+<?php echo form_open(base_url( 'frontend/insurance/renewDetails/'), array('method'=>'POST'));?>
 
                                     <div class="row">
 
@@ -183,29 +183,27 @@
                                         <div class="col-md-6">
                                             <div class="form-group date">
                                                 <label class="adults" for="comps">Manufacturer</label>
-                                                <input list="compaies" class="lis"  id="comp" name="comp" placeholder="Enter Manufacturer ">
-                                                <datalist id="companies">
+                                                
+                                                <select class="lis"  id="comps" name="comp">
                                                 <?php
                         foreach($company as $companies){
 
                             echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>";
                         }
                         ?>
-                                                </datalist>
+                                                </select>
   
   
                                                 
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="typ">Fuel type</label>
-                                                <input list="tpes"  class="lis"   id="typ" name="type" placeholder="Enter Fuel Type">
-                                                <datalist id="tpes">
-                                                    <option value="Edge">
-                                                    <option value="Firefox">
-                                                    <option value="Chrome">
-                                                    <option value="Opera">
-                                                    <option value="Safari">
-                                                </datalist>
+                                                
+                                                <select class="lis"   id="typ" name="type">
+                                                    <option value="#">Enter Fuel Type</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="r">Registration year</label>
@@ -214,61 +212,61 @@
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="ptpe">Select Previous Policy Type</label>
-                                                <input list="ptpes"   class="lis"  id="ptpe" name="ptype" placeholder="Enter Policy Type">
-                                                <datalist id="ptpes">
-                                                    <option value="Edge">
-                                                    <option value="Firefox">
-                                                    <option value="Chrome">
-                                                    <option value="Opera">
-                                                    <option value="Safari">
-                                                </datalist>
+                                                
+                                                <select class="lis"  id="ptpe" name="ptype">
+                                                    <option value="#">Enter Policy Type</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group date">
                                                 <label class="adults" for="modl">Modal</label>
-                                                <input list="modls"  class="lis"   id="modal" name="modal" placeholder="Enter Model">
-                                                <datalist id="modals">
-                                                </datalist>
+                                               
+                                                <select class="lis"   id="modl" name="modal">
+                                                    <option value="#">Enter Model</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="var">Varient</label>
-                                                <input list="vars"  class="lis"   id="vari" name="vari" placeholder="Enter Varient">
-                                                <datalist id="varis">
-                                                </datalist>
+                                                
+                                                <select class="lis"   id="var" name="vari">
+                                                    <option value="#">Enter Varient</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="pexire">Select Policy Expire</label>
-                                                <input list="pexires"  class="lis"   id="pexire" name="pexpire" placeholder="Not Expire">
-                                                <datalist id="pexires">
-                                                    <option value="Edge">
-                                                    <option value="Firefox">
-                                                    <option value="Chrome">
-                                                    <option value="Opera">
-                                                    <option value="Safari">
-                                                </datalist>
+                                               
+                                                <select class="lis"   id="pexire" name="pexpire">
+                                                    <option value="#">Not Expire</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="pisur">Select Previous Insurer</label>
-                                                <input list="pisurs"  class="lis"   id="pisur" name="pinsur" placeholder="Select Insurer">
-                                                <datalist id="pisurs">
-                                                    <option value="Edge">
-                                                    <option value="Firefox">
-                                                    <option value="Chrome">
-                                                    <option value="Opera">
-                                                    <option value="Safari">
-                                                </datalist>
+                                                
+                                                <select class="lis"   id="pisur" name="pinsur">
+                                                    <option value="#">Select Insurer</option>
+                                                    <option value="#">a</option>
+                                                    <option value="#">b</option>
+                                                </select>
                                             </div>
                                         </div>
-                                        <div class="container chckb">
+                                        
                                           
-                                                <div class="form-group ">
-                                                 
+                                                
+                                               
                                                     
-                                                </br><button class="bu" name="formSubmit">Get Quote</button>
-                                                </div>
-                                              
-                                        </div>
+                                                <button class="bu text-center" name="formSubmit">Get Quote</button>
+                                               
+                                     
+                                        
 
                                     </div>
 <?php echo form_close(); ?>
@@ -352,7 +350,7 @@
         <?php $this->load->view('frontend/Template/footer.php') ?>
 
 
-<script type='text/javascript'>
+        <script type='text/javascript'>
     // baseURL variable
     var baseURL= "<?php echo base_url();?>";
     
@@ -362,7 +360,7 @@
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getCompany',
+                url:'<?=base_url()?>/frontend/insurance/getCompany',
                 method: 'post',
                 data: {comp: comp},
                 dataType: 'json',
@@ -386,7 +384,7 @@
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getModel',
+                url:'<?=base_url()?>/frontend/insurance/getModel',
                 method: 'post',
                 data: {modal: modal},
                 dataType: 'json',
@@ -398,6 +396,60 @@
                     // Add options
                     $.each(response,function(index,data){
                         $('#varis').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
+                    });
+                }
+            });
+        });
+        
+    });
+</script>
+
+<script type='text/javascript'>
+    // baseURL variable
+    var baseURL= "<?php echo base_url();?>";
+    
+    $(document).ready(function(){
+        $('#comps').change(function(){
+            var comp = $(this).val();
+
+            // AJAX request
+            $.ajax({
+                url:'<?=base_url()?>/frontend/insurance/getCompany',
+                method: 'post',
+                data: {comp: comp},
+                dataType: 'json',
+                success: function(response){
+
+                    // Remove options
+                    $('#modls').find('option').not(':first').remove();
+                    $('#varis').find('option').not(':first').remove();
+
+                    // Add options
+                    $.each(response,function(index,data){
+                        $('#modls').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                    });
+                }
+            });
+        });
+        
+        // Department change
+        $('#modl').change(function(){
+            var modal = $(this).val();
+
+            // AJAX request
+            $.ajax({
+                url:'<?=base_url()?>/frontend/insurance/getModel',
+                method: 'post',
+                data: {modal: modal},
+                dataType: 'json',
+                success: function(response){
+                    
+                    // Remove options
+                    $('#vars').find('option').not(':first').remove();
+
+                    // Add options
+                    $.each(response,function(index,data){
+                        $('#vars').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
                     });
                 }
             });

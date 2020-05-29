@@ -45,6 +45,8 @@
                         </div>
                     </div>
                     <div class="col-md-8 detail" >
+<?php echo form_open(base_url( 'frontend/insurance/healthdata'), array('method'=>'POST'));?>
+
                         <div class="card" >
                             <div class="card-header">
                                 <button class="head">Personal Details</button>
@@ -54,15 +56,15 @@
                                     <div class="card-body">
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Adults</label>
-                                            <input type="number" min="0"  oninput="getNo()" id="usrVal" name="username" placeholder="Adult(s)-21 yeasrs and above">
+                                            <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="Adult(s)-21 yeasrs and above">
                                             
                                         </div>
                                         <div id="firstperson" style="display:none" class="form-group date"> 
-                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="username" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="fdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
                                         </div>
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Mobile number</label>
-                                            <input type="text"  id="" name="username" placeholder="Enter Mobile number">
+                                            <input type="text"  id="" name="mob" placeholder="Enter Mobile number">
                                         </div>
                                     </div>
                                 </div>
@@ -70,15 +72,15 @@
                                     <div class="card-body">
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Kids</label>
-                                            <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="username" placeholder="Kids(3months - 20 years)">
+                                            <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="knum" placeholder="Kids(3months - 20 years)">
                                            
                                         </div>
                                         <div id="secondperson" style="display:none" class="form-group date">
-                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="username" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="sdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
                                         </div>
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Email</label>
-                                            <input type="email"  id="usr" name="username" placeholder="Enter email">
+                                            <input type="email"  id="usr" name="email" placeholder="Enter email">
                                         </div>
                                     </div>
                                 </div>
@@ -94,12 +96,14 @@
                                     <input type="checkbox" value="none" id="checkbox_2" name="contact2"/>
                                     <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my quote and policy details on <span><img src="<?php echo base_url();?>assest/img/whatsapp.svg" width="15px" height="15px"></span><span class="whts"> whatsapp</span></span></label>
                                   </div>
-                                    
-                                </br><button class="bu">Get Quote</button>
+  
+                                </br><button class="bu" name="formSubmit">Get Quote</button>
                                 </div>
                             </div>    
                             </div>
-                        </div> 
+                        </div>
+<?php echo form_close(); ?>
+
                     </div>    
                 </div>
                 </div>
@@ -248,6 +252,9 @@
             </div>
           </section>
           </div>
+
+        <?php $this->load->view('frontend/Template/footer.php') ?>
+
           <script>
           function getNo(){
           var i =  document.getElementById('usrVal').value;
@@ -275,4 +282,4 @@
             }
           }
           </script>
-           </div> 
+                     </div> 
