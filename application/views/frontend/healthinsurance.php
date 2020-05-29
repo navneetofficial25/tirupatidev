@@ -127,8 +127,8 @@
                       <img src="<?php echo base_url();?>assest/img/discount.png">
                     
                       <h4>80% discouns</h4>
-                    <hr class="style1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                      <hr class="style1">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
                     </div>
     
@@ -136,7 +136,7 @@
                       <img src="<?php echo base_url();?>assest/img/faster-icon-png-0.png">
                       <h4>80% discouns</h4>
                       <hr class="style1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
                     </div>
                   </div>

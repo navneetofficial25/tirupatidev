@@ -74,15 +74,15 @@
                                         <div class="col-md-6">
                                             <div class="form-group date">
                                                 <label class="adults" for="comp ">Manufacturer</label>
-                                                <input list="companies" class="lis"  id="comp" name="comp" placeholder="Enter Manufacturer ">
-                                                <datalist id="companies">
+                                                
+                                                <select id="comp" class="lis" name="comp">
                         <?php
                         foreach($company as $companies){
 
                             echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>";
                         }
                         ?>
-                                                </datalist>
+                                                </select>
   
   
                                                 
@@ -298,58 +298,50 @@
         <section class="why_Health">
           <div class="container">
             <h2>Why Health Insurance from Tirupati Insurance ?</h2>
-              <div class="row">
-                <div class="col-md-2">
-                  <img src="<?= base_url();?>assest/img/discount.png">
-                </div>
-                <div class="col-md-4">
-                  <h4>80% discouns</h4>
-                   
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
-                </div>
-                <div class="col-md-2">
-                  <img src="<?= base_url();?>assest/img/PngItem_690697.png">
-                </div>
-                <div class="col-md-4">
-                    <h4>80% discouns</h4>
+                <div class="row">
+                    <div class="col-md-6 col-12">
+                        <div class="point">
+                            <img src="<?= base_url();?>assest/img/discount.png">
                     
-                      <h4>80% discouns</h4>
-                    <hr class="style1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                            <h4>80% discouns</h4>
+                            <hr class="style1">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
-                </div> 
-                <div class="col-md-2">
-                  <img src="<?= base_url();?>assest/img/faster-icon-png-0.png">
-                </div>
-                <div class="col-md-4">
-                    <h4>80% discouns</h4>
+                        </div>
+                        <div class="point">
+                            <img src="<?= base_url();?>assest/img/faster-icon-png-0.png">
+                            <h4>80% discouns</h4>
+                            <hr class="style1">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                
+                        </div>
+                  
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="point">
+                            <img src="<?= base_url();?>assest/img/PngItem_690697.png">
                     
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                            <h4>80% discouns</h4>
+                            <hr class="style1">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
-                </div> 
-                <div class="col-md-2">
-                  <img src="<?= base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
-                </div>
-                <div class="col-md-6 col-12 ">
-                  <div class="rgt ">
-                    <div class="point">
-                      <img src="assest/img/PngItem_690697.png" >
-                      <h4>80% discouns</h4>
-                      <hr class="style1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                        </div>
+                        <div class="point">
+                            <img src="<?= base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
+                            <h4>80% discouns</h4>
+                            <hr class="style1">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
+                        </div>
+                  
                     </div>
-                    <div class="point">
-                      <img src="assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
-                      <h4>80% discouns</h4>
-                      <hr class="style1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
-                
-                    </div>
-                  </div>
                 </div>
                 
-              </div>
+                
+                
+                
+            
+                
             </div>  
           </section> 
 
