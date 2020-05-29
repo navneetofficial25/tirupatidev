@@ -3,7 +3,7 @@
       <div class="container">
         <div class="row">
           <div class="col">
-            <img src="<?php echo base_url()?>assest/img/health-insurance.svg">
+            <a href="<?php echo base_url();?>frontend/healthinsurance"><img src="<?php echo base_url()?>assest/img/health-insurance.svg"></a> 
             <p>health insurance</p>
             
           </div>

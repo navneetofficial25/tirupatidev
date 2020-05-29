@@ -63,7 +63,7 @@
        
                    $this->data['error'] = $this->upload->display_errors();
                  $this->session->set_flashdata('error',$this->upload->display_errors());
-               $this->load->view('admin/slideredit/'.$this->uri->segment(4));
+               $this->load->view('admin/brandsedit/'.$this->uri->segment(4));
                } else {
                 $dataimage_return = $this->upload->data();
                 $imageurl=base_url().'/upload/brands/'.$dataimage_return['file_name'];

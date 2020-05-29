@@ -93,8 +93,10 @@
     </li>
 
     <!-- Nav Item - Charts -->
+    
+    
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/tablest"><i class="fas fa-fw fa-chart-area"></i><span>tables2</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/sitedesc"><i class="fas fa-fw fa-chart-area"></i><span>Aboutus</span></a>
     </li>
 
     <!-- Nav Item - Tables -->

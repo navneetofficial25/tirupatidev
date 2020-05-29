@@ -7,12 +7,12 @@
                 <div class="sho">
                 <div class="row">
                     <div class="col-md-4" style="margin-right: -10px;">
-                        <img src="assest/img/health-insurance-top-up.jpg" >
+                        <img src="<?php echo base_url();?>assest/img/health-insurance-top-up.jpg" >
                         <div class="to">
                         <div class=" small">
                             <div class="row">
                                 <div class="col-md-4">
-                            <img src="assest/img/save-money.png">
+                            <img src="<?php echo base_url();?>assest/img/save-money.png">
                             </div>
                             <div class="col-md-8">
                             <h6>Save Upto 80%</h6>
@@ -23,7 +23,7 @@
                         <div class=" small">
                             <div class="row">
                                 <div class="col-md-4">
-                            <img src="assest/img/life-insurance.png" >
+                            <img src="<?php echo base_url();?>assest/img/life-insurance.png" >
                             </div>
                             <div class="col-md-8">
                             <h6>Save Upto 80%</h6>
@@ -34,7 +34,7 @@
                         <div class=" small">
                             <div class="row">
                                 <div class="col-md-4">
-                            <img src="assest/img/family (1).svg">
+                            <img src="<?php echo base_url();?>assest/img/family (1).svg">
                             </div>
                             <div class="col-md-8">
                             <h6>Save Upto 80%</h6>
@@ -92,7 +92,7 @@
                                   </div>
                                   <div>
                                     <input type="checkbox" value="none" id="checkbox_2" name="contact2"/>
-                                    <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my quote and policy details on <span><img src="assest/img/whatsapp.svg" width="15px" height="15px"></span><span class="whts"> whatsapp</span></span></label>
+                                    <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my quote and policy details on <span><img src="<?php echo base_url();?>assest/img/whatsapp.svg" width="15px" height="15px"></span><span class="whts"> whatsapp</span></span></label>
                                   </div>
                                     
                                 </br><button class="bu">Get Quote</button>
@@ -123,7 +123,7 @@
               <div class="h">
               <div class="row">
                 <div class="col-md-2">
-                  <img src="assest/img/discount.png">
+                  <img src="<?php echo base_url();?>assest/img/discount.png">
                 </div>
                 <div class="col-md-4">
                   <h4>80% discouns</h4>
@@ -131,7 +131,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 </div>
                 <div class="col-md-2">
-                  <img src="assest/img/PngItem_690697.png">
+                  <img src="<?php echo base_url();?>assest/img/PngItem_690697.png">
                 </div>
                 <div class="col-md-4">
                     <h4>80% discouns</h4>
@@ -140,7 +140,7 @@
                 
                 </div> 
                 <div class="col-md-2">
-                  <img src="assest/img/faster-icon-png-0.png">
+                  <img src="<?php echo base_url();?>assest/img/faster-icon-png-0.png">
                 </div>
                 <div class="col-md-4">
                     <h4>80% discouns</h4>
@@ -149,7 +149,7 @@
                 
                 </div> 
                 <div class="col-md-2">
-                  <img src="assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
+                  <img src="<?php echo base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
                 </div>
                 <div class="col-md-4">
                     <h4>80% discouns</h4>
@@ -248,17 +248,13 @@
           <script>
           function getNo(){
           var i =  document.getElementById('usrVal').value;
-            if(i<1){
-              document.getElementById('firstperson').style.display = 'none';
-            }
-           else if(i==1){
+            if(i==1){
               document.getElementById('firstperson').style.display = 'block';
               document.getElementById('secondperson').style.display = 'none';
               document.getElementById('usrkid').max = 2;
             }
             else if(i==2){
               document.getElementById('secondperson').style.display = 'block';
-              document.getElementById('firstperson').style.display = 'block';
               document.getElementById('usrkid').max = 3;
             }
             else if(i>2){
@@ -274,6 +270,6 @@
               document.getElementById('usrkid').value = '';
               
             }
-            else
           }
           </script>
+           </div> 
