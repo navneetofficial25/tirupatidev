@@ -84,7 +84,7 @@
                                 |
                               </li>
                               <li class=" nav-item">
-                                <a title="Home" href="#" class="nav-link">
+                                <a title="Home" href="<?php echo base_url(); ?>" class="nav-link">
                                  Home
                                 </a>
                               </li>
@@ -92,7 +92,7 @@
                                 |
                               </li>
                               <li class=" nav-item">
-                                <a title="About Us" href="#" class="nav-link">
+                                <a title="About Us" href="<?php echo base_url(); ?>frontend/about" class="nav-link">
                                 About Us
                                 </a>
                               </li>
