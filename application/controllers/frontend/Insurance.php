@@ -1,54 +1,42 @@
 <?php
-    class Carinsurance extends CI_controller{
+    class Insurance extends CI_controller{
         public function __construct()
     {
         parent::__construct();
+
     }
 
- /*       public function index(){
-            $getsocials['brandnames'] = $this->Carmodel->fetchaddinventory_api();
-            $getsocials['brandmodels'] = $this->Carmodel->fetchmodelinventory_api();
-            $getsocials['brandsvariant'] = $this->Carmodel->fetchvariantinventory_api();
-            $this->load->view('frontend/template/header');
-            $this->load->view('frontend/template/navbar');
-            $this->load->view('frontend/carinsurance',$getsocials);
-         //   print_r($getsocials);
-        }*/
-
-        public function index(){
+//car insurance
+        public function carInsurance(){
         $this->load->model('frontend/Carmodel');
         
-            // get cities
             $data['company'] = $this->Carmodel->fetchComp();
         
             $this->load->view('frontend/template/header');
             $this->load->view('frontend/template/navbar');
-            // load view
             $this->load->view('frontend/carinsurance',$data);
         }
         public function getCompany(){
         $this->load->model('frontend/Carmodel');
-        // POST data
 
             $postData = $this->input->post();        
-            // get data
             $data = $this->Carmodel->fetchModels($postData);
         
             echo json_encode($data);
         }
+
         public function getModel(){
         $this->load->model('frontend/Carmodel');
 
-            // POST data
             $postData = $this->input->post();        
-            // get data
             $data = $this->Carmodel->fetchVariants($postData);
         
             echo json_encode($data);
         }
 
+
     public function renewDetails(){
-        $this->load->model('frontend/Cardata_model');
+        $this->load->model('frontend/Insurance_model');
         $this->input->post('formSubmit');
 
 
@@ -64,10 +52,45 @@
             'prev_insurer' => $this->input->post('pinsur'),
         );
 
-        $this->Cardata_model->data_insert($data);
-        redirect(base_url().'frontend/carinsurance');
+        $this->Insurance_model->car_data($data);
+        redirect(base_url().'frontend/insurance/carinsurance');
         //$this->load->view('frontend/carinsurance');
     }
-    
+
+//healthinsurance
+    public function healthInsurance(){
+            $this->load->view('frontend/healthinsurance');
+        }
+
+    public function healthData(){
+        
+        $this->load->model('frontend/Insurance_model');
+        $this->input->post('formSubmit');
+        $this->form_validation->set_rules('contact1', '', 'required');
+        $this->form_validation->set_rules('contact2', '', 'required');
+
+        if ($this->form_validation->run()){ 
+
+    //    $check1 = $this->input->post('contact1');
+    //    $check2 = $this->input->post('contact2');
+
+        $datas = array(
+            'adults_num' => $this->input->post('anum'),
+            'kid_num' => $this->input->post('knum'),
+            'mob' => $this->input->post('mob'),
+            'email' => $this->input->post('email'),
+            'f_dob' => $this->input->post('fdob'),
+            's_dob' => $this->input->post('sdob')
+        );
+        
+        $this->Insurance_model->health_insert($datas);
+        $this->load->view('frontend/healthinsurance');
+//        redirect(base_url().'frontend/insurance/healthinsurance');
+
     }
+    else{
+        $this->load->view('frontend/healthinsurance');
+    }
+ }
+}
 ?>

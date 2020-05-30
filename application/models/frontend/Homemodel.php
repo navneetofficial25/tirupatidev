@@ -9,4 +9,11 @@ class Homemodel extends CI_Model{
     return $getSlider = $this->db->select('*')->from('brandlogo')->get()->result();
 
 }
+public function fetchaboutus(){
+      
+    return $getSlider = $this->db->select('*')->from('site_setting')->get()->result();
+   
+
+
+}
 }

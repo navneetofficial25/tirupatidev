@@ -18,7 +18,7 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item">
+    <!--<li class="nav-item">
       <a class="nav-link" href="index.html">
         <i class="fas fa-fw fa-tachometer-alt"></i>
         <span>Dashboard</span></a>
@@ -96,7 +96,7 @@
     
     
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/sitedesc"><i class="fas fa-fw fa-chart-area"></i><span>Aboutus</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/sitedesc"><i class="fas fa-fw fa-chart-area"></i><span>Site setting</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
@@ -108,27 +108,31 @@
       <a class="nav-link" href="<?php echo base_url(); ?>admin/sociallinks"><i class="fas fa-fw fa-table"></i><span>Social Links</span></a>
     </li>
 
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Car Insurance</span>
+      </a>
+      <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="<?php echo base_url(); ?>admin/cardetails">Manufacturer</a>
+          <a class="collapse-item" href="<?php echo base_url(); ?>admin/cardetails/model">Model</a>
+          <a class="collapse-item" href="<?php echo base_url(); ?>admin/cardetails/variant">Varient</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
-
     <div class="sidebar-heading">
-      Car Insurance
+      User Data
     </div>
-
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/cardetails"><i class="fas fa-fw fa-chart-area"></i><span>Manufacturer</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/userdata/healthdata"><i class="fas fa-fw fa-table"></i><span>Health Data</span></a>
     </li>
-
-    <!-- Nav Item - Tables -->
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/cardetails/model"><i class="fas fa-fw fa-table"></i><span>Model</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/userdata/cardata"><i class="fas fa-fw fa-table"></i><span>Car Ins Data</span></a>
     </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/cardetails/variant"><i class="fas fa-fw fa-table"></i><span>Varient</span></a>
-    </li>
-
-    <hr class="sidebar-divider d-none d-md-block">
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">

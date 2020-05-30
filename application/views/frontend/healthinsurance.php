@@ -45,6 +45,8 @@
                         </div>
                     </div>
                     <div class="col-md-8 detail" >
+<?php echo form_open(base_url( 'frontend/insurance/healthdata'), array('method'=>'POST'));?>
+
                         <div class="card" >
                             <div class="card-header">
                                 <button class="head">Personal Details</button>
@@ -54,15 +56,15 @@
                                     <div class="card-body">
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Adults</label>
-                                            <input type="number" min="0"  oninput="getNo()" id="usrVal" name="username" placeholder="Adult(s)-21 yeasrs and above">
+                                            <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="Adult(s)-21 yeasrs and above">
                                             
                                         </div>
                                         <div id="firstperson" style="display:none" class="form-group date"> 
-                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="username" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="fdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
                                         </div>
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Mobile number</label>
-                                            <input type="text"  id="" name="username" placeholder="Enter Mobile number">
+                                            <input type="text"  id="" name="mob" placeholder="Enter Mobile number">
                                         </div>
                                     </div>
                                 </div>
@@ -70,15 +72,15 @@
                                     <div class="card-body">
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Kids</label>
-                                            <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="username" placeholder="Kids(3months - 20 years)">
+                                            <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="knum" placeholder="Kids(3months - 20 years)">
                                            
                                         </div>
                                         <div id="secondperson" style="display:none" class="form-group date">
-                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="username" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="sdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
                                         </div>
                                         <div class="form-group date">
                                             <label class="adults" for="usr">Email</label>
-                                            <input type="email"  id="usr" name="username" placeholder="Enter email">
+                                            <input type="email"  id="usr" name="email" placeholder="Enter email">
                                         </div>
                                     </div>
                                 </div>
@@ -94,12 +96,14 @@
                                     <input type="checkbox" value="none" id="checkbox_2" name="contact2"/>
                                     <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my quote and policy details on <span><img src="<?php echo base_url();?>assest/img/whatsapp.svg" width="15px" height="15px"></span><span class="whts"> whatsapp</span></span></label>
                                   </div>
-                                    
-                                </br><button class="bu">Get Quote</button>
+  
+                                </br><button class="bu" name="formSubmit">Get Quote</button>
                                 </div>
                             </div>    
                             </div>
-                        </div> 
+                        </div>
+<?php echo form_close(); ?>
+
                     </div>    
                 </div>
                 </div>
@@ -121,68 +125,37 @@
           <div class="container">
             <h2>Why Health Insurance from Tirupati Insurance ?</h2>
               <div class="row">
-<<<<<<< HEAD
-                <div class="col-md-2">
-                  <img src="<?php echo base_url();?>assest/img/discount.png">
-                </div>
-                <div class="col-md-4">
-                  <h4>80% discouns</h4>
-                   
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
-                </div>
-                <div class="col-md-2">
-                  <img src="<?php echo base_url();?>assest/img/PngItem_690697.png">
-                </div>
-                <div class="col-md-4">
-                    <h4>80% discouns</h4>
-=======
                 <div class="col-md-6 col-12">
                   <div class="lft">
                     <div class="point">
-                      <img src="assest/img/discount.png">
->>>>>>> 4d98c24ddea43364d4309d963dda5851c11e5258
+                      <img src="<?php echo base_url();?>assest/img/discount.png">
                     
                       <h4>80% discouns</h4>
-                    <hr class="style1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                      <hr class="style1">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
-<<<<<<< HEAD
-                </div> 
-                <div class="col-md-2">
-                  <img src="<?php echo base_url();?>assest/img/faster-icon-png-0.png">
-                </div>
-                <div class="col-md-4">
-                    <h4>80% discouns</h4>
-                    
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
-                
-                </div> 
-                <div class="col-md-2">
-                  <img src="<?php echo base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
-=======
                     </div>
     
                     <div class="point">
-                      <img src="assest/img/faster-icon-png-0.png">
+                      <img src="<?php echo base_url();?>assest/img/faster-icon-png-0.png">
                       <h4>80% discouns</h4>
                       <hr class="style1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
                     </div>
                   </div>
->>>>>>> 4d98c24ddea43364d4309d963dda5851c11e5258
                 </div>
                 <div class="col-md-6 col-12 ">
                   <div class="rgt ">
                     <div class="point">
-                      <img src="assest/img/PngItem_690697.png" >
+                      <img src="<?php echo base_url();?>assest/img/PngItem_690697.png" >
                       <h4>80% discouns</h4>
                       <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
                     </div>
                     <div class="point">
-                      <img src="assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
+                      <img src="<?php echo base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
                       <h4>80% discouns</h4>
                       <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
@@ -279,6 +252,9 @@
             </div>
           </section>
           </div>
+
+        <?php $this->load->view('frontend/Template/footer.php') ?>
+
           <script>
           function getNo(){
           var i =  document.getElementById('usrVal').value;
@@ -306,4 +282,4 @@
             }
           }
           </script>
-           </div> 
+                     </div> 

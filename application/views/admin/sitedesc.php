@@ -1,3 +1,5 @@
+<?php $this->load->view('admin/template/header.php') ?>
+<?php $this->load->view('admin/template/sidebar.php') ?>
 <style>
 .thunbnail_image{
 height: 86px;
@@ -63,32 +65,29 @@ margin-top: -11px;}
         </div>
         </div>
            <?php
+           //$coursedt=$coursedt[0];
+           //print_r($aboutus[0]);
 
-         $socials_datas=$socials_data[0];
-         //print_r($socials_datas);
-
-        ?>
-
-  <?php echo form_open(base_url('admin/sitedesc/galleryedit'), array( 'id' => 'courseadd', 'method'=>'POST','enctype'=> 'multipart/form-data' ));?>
+           ?>
+  <?php echo form_open(base_url('admin/sitedesc/slidereditsve'), array( 'id' => 'courseadd', 'method'=>'POST','enctype'=> 'multipart/form-data' ));?>
 
         <div class="row">
         <div class="col-sm-12 m-t-20">
         <div class="card-box">
 
-        <div class="form-group">
+          <div class="form-group">
             <label>Name <sup>*</sup></label>
-            <input type="text" class="form-control required_validation_for_product"  value="<?=$socials_datas->heading;?>" name="name" placeholder="Enter  something About Us" />
+            <input type="text" class="form-control required_validation_for_product"  value="<?php echo $aboutus[0]->heading; ?>" name="name" placeholder="Enter  something About Us" />
           </div>
-
 
           <div class="form-group">
             <label>About Us </label>
-         <textarea rows="15" cols="70" class="" name="short_desc" id="mytextarea" placeholder="About Us " ><?=$socials_datas->description;?></textarea>
+         <textarea rows="20" cols="70" class="" name="cdesc" id="mytextarea" placeholder="About Us " ><?php echo $aboutus[0]->description;?></textarea>
            </div>
 
            <?php $fclss_dd='';
-          if($socials_datas->image){
-             $fsrc='src="'.$socials_datas->logo.'"';
+          if($aboutus[0]->logo){
+             $fsrc='src="'.base_url().'/upload/sitelogo/'.$aboutus[0]->logo.'"';
           }else{
             $fsrc='src="'.base_url().'assest/img/PngItem_690697.png"';
             $fclss_dd='images_class first_image';
@@ -98,7 +97,7 @@ margin-top: -11px;}
             <label>Course Image <sup>*</sup></label>
            <input type="file"  id="fileupload" class="form-control <?=$fclss_dd?> "  name="images" style="border:0px solid !important;padding: 7px 0px 0px 0px;" />
            </div>
-           <div class="errorMessage"><?php echo form_error('images'); ?></div>
+           <div class="errorMessage"><?php echo form_error('logo'); ?></div>
            <div class="form-group">
             <label>preview</label>
            <span  class="dvPreview" id="dvPreview" >
