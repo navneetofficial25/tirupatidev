@@ -77,13 +77,38 @@
         </div>
         <div class="col-md-5 text-center">
           
-          <button  >get a call back</button> 
+          <button data-toggle="modal" data-target="#myModal" type="button" >get a call back</button> 
+          
         </div>
     
     </div>
     </div>
   </div>
-
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4>Get A Call Back</h4>
+          <button type="button" class="close" data-dismiss="modal" style="outline:none;">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <input type="text" class="mod_input" placeholder="Enter Your Name"></br>
+          <input type="text" class="mod_input" placeholder="Enter Your Name"></br>
+          <select class="mod_input"></br>
+            <option>Service Intrested</option>
+            <option>A</option>
+            <option>B</option>
+            <option>S</option>
+          </select>  
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-default text-center" data-dismiss="modal">submit</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
   
     <section class="why">
       <div class="container">
