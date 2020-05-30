@@ -44,5 +44,51 @@ class Carmodel extends CI_Model {
         $getInsertData = $this->db->insert('car_brand',$gradedetails);
                return true;
     }
+    public function insert_model($gradedetails){
+        $getInsertData = $this->db->insert('car_model',$gradedetails);
+               return true;
+    }
+    
+    
+    public function insert_variant($gradedetails){
+        $getInsertData = $this->db->insert('car_variant',$gradedetails);
+               return true;
+    }
+    public function deleteData($data)
+    {
+        $explodData = explode(',',$data);
+        $this->db->where_in('id',$explodData);
+        $getDeleteStatus = $this->db->delete('car_brand');
+        if($getDeleteStatus == 1)
+        {
+            return array('message'=>'yes');
+      }else{
+        return array('message'=>'no');
+      }
+      }
 
+      public function deletemod($data)
+  {
+      $explodData = explode(',',$data);
+      $this->db->where_in('id',$explodData);
+      $getDeleteStatus = $this->db->delete('car_model');
+      if($getDeleteStatus == 1)
+      {
+          return array('message'=>'yes');
+    }else{
+      return array('message'=>'no');
+    }
+    }
+    public function deletevar($data)
+    {
+        $explodData = explode(',',$data);
+        $this->db->where_in('id',$explodData);
+        $getDeleteStatus = $this->db->delete('car_variant');
+        if($getDeleteStatus == 1)
+        {
+            return array('message'=>'yes');
+      }else{
+        return array('message'=>'no');
+      }
+      }
 }
