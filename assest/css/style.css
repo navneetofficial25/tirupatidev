@@ -1273,3 +1273,115 @@ border: 1px solid rgb( 190, 190, 190 );
 
 
 /* contact us form end */
+
+
+
+
+  /* refer start */
+  
+  .refer-top{
+    
+    width: 100%;
+  }
+  .refer-top .overlay2{
+    background-color: rgba(0, 0, 0, 0.349);
+  }
+  .refer-top h2{
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .refer-top p{
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+
+  
+
+
+  .refer-form{
+    padding-bottom: 50px;
+  }
+  .refer{
+    background-color: white;
+    position: relative;
+    z-index: +1;
+    box-shadow: 0px 0px 10px 5px rgba( 0, 0, 0 , 0.2);
+    width: 70%;
+    padding-top: 30px;
+    
+  }
+  .refer .lis{
+    width: 100%;
+  border: 1px solid rgb( 190, 190, 190 );
+    padding-left: 15px;
+    margin-bottom: 20px;
+    background-color: rgb( 255, 255, 255 );
+    border-radius: 6px;
+    color: rgb(165, 154, 154);
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    padding:10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .refer .lis::placeholder{
+      color: rgb(165, 154, 154);
+    }
+  
+    .refer .bu {
+      padding: 5px;
+      
+    
+      border-radius: 6px;
+      background-color: rgb( 227, 31, 36 );
+      text-align: center;
+      width: 100%;
+      height: auto;
+      outline: none;
+      border: none;
+      color: rgb( 255, 255, 255 );
+      
+      text-transform: uppercase;
+      font-weight: bolder;
+      font-size: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+   .refer .bu:hover{
+    background-color: rgb( 95, 96, 96 );
+   }
+   
+  
+  
+
+
+   .refer .fa {
+      padding: 20px;
+      font-size: 20px;
+      width: 15%;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    
+   .refer .fa:hover {
+        opacity: 0.7;
+    }
+   .refer .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+   .refer .fa-twitter {
+      background: #55ACEE;
+      color: white;
+    }
+    .refer .fa-whatsapp {
+      background: #25d366;
+      color: white;
+    }
+  /* refer end */
