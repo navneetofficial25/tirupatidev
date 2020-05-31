@@ -20,10 +20,10 @@
                 <div class="col-md-12">
                     <div class="right-blog">
                         <div class="blog-view">
-                                                            <div class="blog-cont">
+                                                            <div class="blog-cont" >
                                
                                 </div>
-                                <h1 style="text-align: center;"><strong><span style="color: #ff0000;">Digital Marketing</span> Agency in Hisar</strong></h1>
+                                <h1 style="text-align: center; padding-top:50px;"><strong><span style="color: #ff0000;">Digital Marketing</span> Agency in Hisar</strong></h1>
 <hr />
 <p>Are you looking for a Digital marketing agency in Hisar that can help you to get more Relevant Traffic and warm leads for Your Business?. Let us help you to achieve your targeted leads. Get started with one of the Best Digital marketing companies in Hisar &#8211; Hisar Fever.</p>
 <p>The 21st Century is the age of technology and almost everything is technologically driven, whether someone wants to buy or sell any product, learn or explore, Entertain or Act most of the people go to the internet to do it, How it feels when your brands get top of the internet? &#8211; I think Great, isn&#8217;t?</p>

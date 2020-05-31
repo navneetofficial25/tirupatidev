@@ -1,115 +1,101 @@
 <?php $this->load->view('frontend/Template/header.php') ?>
 <?php $this->load->view('frontend/Template/navbar.php') ?>
-
-<section class="health_main">
-            <div class="container">
-                <h2>Now Buying Health Insurance is Much Simpleir</h2>
-                <div class="sho">
-                <div class="row">
-                    <div class="col-md-4" style="margin-right: -10px;">
-                        <img src="<?php echo base_url();?>assest/img/health-insurance-top-up.jpg" >
-                        <div class="to">
-                        <div class=" small">
-                            <div class="row">
-                                <div class="col-md-4">
-                            <img src="<?php echo base_url();?>assest/img/save-money.png">
-                            </div>
-                            <div class="col-md-8">
-                            <h6>Save Upto 80%</h6>
-                            <p>Lowest Premiums</p>
-                            </div>
-                            </div>
-                        </div>   
-                        <div class=" small">
-                            <div class="row">
-                                <div class="col-md-4">
-                            <img src="<?php echo base_url();?>assest/img/life-insurance.png" >
-                            </div>
-                            <div class="col-md-8">
-                            <h6>Save Upto 80%</h6>
-                            <p>Lowest Premiums</p>
-                            </div>
-                            </div>
-                        </div> 
-                        <div class=" small">
-                            <div class="row">
-                                <div class="col-md-4">
-                            <img src="<?php echo base_url();?>assest/img/family (1).svg">
-                            </div>
-                            <div class="col-md-8">
-                            <h6>Save Upto 80%</h6>
-                            <p>Lowest Premiums</p>
-                            </div>
-                            </div>
-                        </div>  
-                        </div>
-                    </div>
-                    <div class="col-md-8 detail" >
-<?php echo form_open(base_url( 'frontend/insurance/healthdata'), array('method'=>'POST'));?>
-
-                        <div class="card" >
-                            <div class="card-header">
-                                <button class="head">Personal Details</button>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <div class="form-group date">
-                                            <label class="adults" for="usr">Adults</label>
-                                            <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="Adult(s)-21 yeasrs and above">
+<h2 class="main_heading">Now Buying Health Insurance is Much Simpleir</h2>
+<div class="container health_main">
+  <div class="">
+    
+    <div class="box_sh ">
+    <div class="row">
+      <div class="col-lg-4 col-xs-12 " style="padding:0px;">
+        <img src="<?php echo base_url();?>assest/img/health-insurance-top-up.jpg" >
+        <div class="to">
+        <div class="row">
+                                      <div class="col-md-12 col-12">
+                                        <div class=" small">
+                                          <img src="<?php echo base_url();?>assest/img/save-money.png">
+                                            <h6>Save Upto 80%</h6>
+                                            <p>Lowest Premiums</p>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-12 col-12" >
+                                        <div class=" small">
+                                        <img src="<?php echo base_url();?>assest/img/life-insurance.png" >
+                                            <h6>Save Upto 80%</h6>
+                                            <p>Lowest Premiums</p>
+                                        </div>
+                                     
+                                      </div>
+                                      <div class="col-md-12 col-12" >
+                                        <div class=" small">
+                                        <img src="<?php echo base_url();?>assest/img/family (1).svg">
+                                            <h6>Save Upto 80%</h6>
+                                            <p>Lowest Premiums</p>
+                                        </div>
+                                     
+                                      </div>
+                                      
+                                    </div>
+        </div>
+      </div>  
+      <div class="col-lg-8 col-xs-12"style="padding:0px;"  >
+        <?php echo form_open(base_url( 'frontend/insurance/healthdata'), array('method'=>'POST'));?>
+        <div class="card">
+          <div class="card-header">
+            <h3 >Personal Details</h3>
+            <hr class="style1 ">
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="date">
+                    <label class="adults" for="usr">Adults</label>
+                    <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="Adult(s)-21 yeasrs and above">
                                             
-                                        </div>
-                                        <div id="firstperson" style="display:none" class="form-group date"> 
-                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="fdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
-                                        </div>
-                                        <div class="form-group date">
-                                            <label class="adults" for="usr">Mobile number</label>
-                                            <input type="text"  id="" name="mob" placeholder="Enter Mobile number">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="card-body">
-                                        <div class="form-group date">
-                                            <label class="adults" for="usr">Kids</label>
-                                            <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="knum" placeholder="Kids(3months - 20 years)">
+                  </div>
+                  <div id="firstperson" style="display:none" class="form-group date"> 
+                    <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="fdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                  </div>
+                  <div class="form-group date">
+                    <label class="adults" for="usr">Mobile number</label>
+                    <input type="text"  id="" name="mob" placeholder="Enter Mobile number">
+                  </div>
+                </div>  
+                <div class="col-md-6 ">
+                  <div class="date">
+                    <label class="adults" for="usr">Kids</label>
+                    <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="knum" placeholder="Kids(3months - 20 years)">
                                            
-                                        </div>
-                                        <div id="secondperson" style="display:none" class="form-group date">
-                                        <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="sdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
-                                        </div>
-                                        <div class="form-group date">
-                                            <label class="adults" for="usr">Email</label>
-                                            <input type="email"  id="usr" name="email" placeholder="Enter email">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="container chck">
-                            <div class="card-body">
-                                <div class="form-group ">
-                                  <div>
-                                    <input type="checkbox" value="none" id="checkbox_1" name="contact1"/>
-                                    <label for="checkbox_1" class="checkbox"><span class="chk">I agree to the Term and Conditon</span></label>
-                                  </div>
-                                  <div>
-                                    <input type="checkbox" value="none" id="checkbox_2" name="contact2"/>
-                                    <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my quote and policy details on <span><img src="<?php echo base_url();?>assest/img/whatsapp.svg" width="15px" height="15px"></span><span class="whts"> whatsapp</span></span></label>
-                                  </div>
-  
-                                </br><button class="bu" name="formSubmit">Get Quote</button>
-                                </div>
-                            </div>    
-                            </div>
-                        </div>
-<?php echo form_close(); ?>
 
-                    </div>    
-                </div>
-                </div>
-            </div>
-        </section>  
 
+                  </div>  
+                  <div id="secondperson" style="display:none" class="form-group date">
+                    <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="sdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                  </div>
+                  <div class="form-group date">
+                    <label class="adults" for="usr">Email</label>
+                    <input type="email"  id="usr" name="email" placeholder="Enter email">
+                  </div>
+                </div>
+              </div> 
+              <div class="chck">
+                <input type="checkbox" value="none" id="checkbox_1" name="contact1"/>
+                <label for="checkbox_1" class="checkbox"><span class="chk">I agree to the Term and Conditon</span></label>
+                <input type="checkbox" value="none" id="checkbox_2" name="contact2"/>
+                <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my quote and policy details on <i class="fa fa-whatsapp" style="background:color:#25d366"></i><span> whatsapp</label>
+                </br>
+                <div class="text-center ">
+                  <button>Get Quote</button> 
+                </div>  
+              </div>                  
+            </div>  
+          </div>  
+        </div>
+      </div>  
+    </div>
+    </div>
+  </div>  
+</div>
 
 
         <section class="imp">

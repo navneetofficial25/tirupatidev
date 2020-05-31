@@ -40,7 +40,7 @@
                                 <input class="lis" type="tel" name="text-677" value="" size="40" aria-invalid="false" placeholder="Your Phone" required></br>
                                 <input type="submit" value="Generate LinkS" class="bu"  />
                             </div>
-                            <h6>And Shared Via:</h6>
+                            <h6 style="margin-top:30px; color:rgb( 190, 190, 190 );">And Shared Via:</h6>
                             <div class="text-center">
                                 <a href="#" class="fa fa-facebook"></a>
                                 <a href="#" class="fa fa-twitter"></a>
@@ -52,3 +52,5 @@
                 </div>
             </div>
         </div>
+
+        <?php $this->load->view('frontend/Template/footer.php') ?>

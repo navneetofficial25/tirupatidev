@@ -1,64 +1,55 @@
-<section class="car">
-            <div class="container">
-                <h2>Now Buying Health Insurance is Much Simpleir</h2>
-                <div class="sho">
-                    <div class="row">
-                        <div class="col-md-4" style="margin-right: -10px;">
-                            <img src="<?= base_url();?>assest/img/health-insurance-top-up.jpg" width="110%" style="border-radius: 10px 0px 0px 0px;">
-                            <div class="to">
-                                <div class=" small">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="<?= base_url();?>assest/img/save-money.png">
-                                        </div>
-                                        <div class="col-md-8">
+<h2 class="main_heading">Now Buying Health Insurance is Much Simpleir</h2>
+
+
+<div class="container car">
+  <div class="">
+    
+    <div class="box_sh ">
+    <div class="row">
+      <div class="col-lg-4 col-xs-12 " style="padding:0px;">
+        <img src="<?php echo base_url();?>assest/img/health-insurance-top-up.jpg" >
+        <div class="to">
+        <div class="row">
+                                      <div class="col-md-12 col-12">
+                                        <div class=" small">
+                                          <img src="<?php echo base_url();?>assest/img/save-money.png">
                                             <h6>Save Upto 80%</h6>
                                             <p>Lowest Premiums</p>
                                         </div>
-                                    </div>
-                                </div>   
-                                <div class=" small">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="<?= base_url();?>assest/img/life-insurance.png" >
-                                        </div>
-                                        <div class="col-md-8">
+                                      </div>
+                                      <div class="col-md-12 col-12" >
+                                        <div class=" small">
+                                        <img src="<?php echo base_url();?>assest/img/life-insurance.png" >
                                             <h6>Save Upto 80%</h6>
                                             <p>Lowest Premiums</p>
                                         </div>
-                                    </div>
-                                </div> 
-                                <div class=" small">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <img src="<?= base_url();?>assest/img/family (1).svg">
-                                        </div>
-                                        <div class="col-md-8">
+                                     
+                                      </div>
+                                      <div class="col-md-12 col-12" >
+                                        <div class=" small">
+                                        <img src="<?php echo base_url();?>assest/img/family (1).svg">
                                             <h6>Save Upto 80%</h6>
                                             <p>Lowest Premiums</p>
                                         </div>
+                                     
+                                      </div>
+                                      
                                     </div>
-                                </div>  
-                            </div>
-                        </div>
-                        <div class="col-md-8 car" >
-                            
-                                
-                                <ul class="nav " role="tablist">
-                                    <li class="nav-item">
-                                      <a class=" active" data-toggle="tab" href="#renew">Renew Details</a>
-                                    </li>
-                                    <li class="nav-item">
-                                      <a class="" data-toggle="tab" href="#new">New Car</a>
-                                    </li>
+        </div>
+      </div>  
+      <div class="col-lg-8 col-xs-12"style="padding:0px;"  >
+        <?php echo form_open(base_url( 'frontend/insurance/healthdata'), array('method'=>'POST'));?>
+        <ul class="nav " role="tablist">
+            <li class="nav-item">
+                <a class=" active" data-toggle="tab" href="#renew">Renew Details</a>
+            </li>
+            <li class="nav-item">
+                <a class="" data-toggle="tab" href="#new">New Car</a>
+            </li>
                                    
-                                  </ul>
-                                <hr style="border-width: 2px; margin-top: 0px;">
-
-
-                      
-                            <!-- Tab panes -->
-                            <div class="tab-content" >
+        </ul>
+        <hr style="border-width: 2px; margin-top: 0px;">
+        <div class="tab-content" >
                                 <div id="renew" class="container tab-pane active">
   <?php echo form_open(base_url( 'frontend/insurance/renewDetails'), array('method'=>'POST'));?>
 
@@ -251,15 +242,17 @@
                                                     <option value="#">a</option>
                                                     <option value="#">b</option>
                                                 </select>
+                                                <div class="text-center">    
+                                                    <button  name="formSubmit">Get Quote</button>
                                             </div>
+                                            </div>
+                                            
                                         </div>
                                         
                                           
                                                 
                                                
-                                                    
-                                                <button class="bu text-center" name="formSubmit">Get Quote</button>
-                                               
+                                                
                                      
                                         
 
@@ -272,10 +265,12 @@
                             </div>
 
                         </div> 
-                    </div>
-                </div>
-            </div>
-        </section>  
+                    </div> 
+    </div>
+    </div>
+  </div>  
+</div>
+
 
 
 

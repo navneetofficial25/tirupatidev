@@ -5,8 +5,8 @@
                      <div class="banner-text text-center size-banner">
   <?phpprint_r ($companies);?>
                         <div class="contect fliter-heading">
-                            <h1>Enough about us, <b>lets talk about you now !</b></h1>
-                            <p>We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here. We’ll be sure to get back to you as soon as we can.</p>
+                            <h1 style="margin-top:40px;"><span style="color:rgb( 239, 69, 84 ); mar-top:40px;">Enough about us,</span> <b>lets talk about you now !</b></h1>
+                            <p style="font-size:18px; color:rgb( 95, 96, 96 );">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here. We’ll be sure to get back to you as soon as we can.</p>
                         </div>
                       </div>
                  </div>
@@ -14,7 +14,7 @@
             
         </div> 
         <div class="">
-            <div class="container contect-form">
+            <div class="container contect-form" style="margin-top:50px; margin-bottom:50px;">
                 <div class="row">
                     <div class="col-lg-7 col-xs-12">
                         <div class="group-form">
