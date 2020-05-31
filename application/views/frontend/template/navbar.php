@@ -32,8 +32,8 @@
                       </li>
                     
                     <li class="nav-item nav-top">
-                      <p class="refer font m-0">Refer and Earn</p>
                       
+                      <a href="<?php echo base_url(); ?>frontend/refer"><p class="refer font m-0">Refer and Earn</p></a>
                     </li>
                     
                   </ul>
@@ -125,7 +125,7 @@
                               </li>
                               <li   class="  nav-item">
                               
-                                <a title="Contact Us" href="#" class="nav-link">
+                                <a title="Contact Us" href="<?php echo base_url(); ?>frontend/contactus" class="nav-link">
                                 Contact Us
                                 </a>
                                  

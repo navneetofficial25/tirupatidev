@@ -4,7 +4,6 @@
     transition-duration: 5s;
     margin: 0 auto;
 }
-
 a.edit {
     display: none;
 }
@@ -103,9 +102,8 @@ img {
               <table id="lowinventory"  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
                 <thead>
                 <tr>    <th><input type="checkbox" class="masterSupplierCheck"></th>
-                    <th style="width: 15%">Variant Name</th>
-                    <th>Model Name</th>
-                    <th>Company Name</th>
+                    <th style="width: 15%">Model Name</th>
+                    <th>Brand Name</th>
                     <th>Action</th>
 
 
@@ -125,11 +123,12 @@ img {
     </div>
   </div>
 <!--Delete-->
-<!--Delete-->
 
-<div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <!--Delete-->
+
+    <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/cardetails/deletevariant'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/bikedetails/deletemodel'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -167,14 +166,16 @@ img {
                                 </div>
 
                                 <div class="modal-body">
-                                        
+                                        <div class="form-group">
+                                          <label for="exampleFormControlTextarea1">Add Model name</label>
+                                          <textarea class="form-control" id="mname" rows="1" name="mname"></textarea>
+                                        </div>
+                                      </form>
+                                </div>
                                 <div class="col-md-6">
                                                             <div class="form-group">
                                                                 <label for="field-1" class="control-label">Select Product</label>
-                                                <select id="comp" class="form-control" name="comp">
-                                                                
-                        <option>-- Select Company --</option>
-
+                                                                <select class="form-control" id="companies">
                                                                     <?php
                         foreach($company as $companies){
 
@@ -183,28 +184,7 @@ img {
                         ?>
                                                                 </select>
                                                             </div>
-                                                            
                                                         </div>
-
-
-                                                        
-                                        <div class="col-md-6">
-                                            <div class="form-group ">
-                                                <label class="adults" for="modal">Modal</label>
-
-                                                <select class="form-control"   id="modals" name="modal">
-                        <option>-- Select Model --</option>
-                                                </select>
-                                            </div>
-
-
-
-                                            </form>
-                                            </div>
-                                            <div class="form-group">
-                                          <label for="exampleFormControlTextarea1">Add Model name</label>
-                                          <textarea class="form-control" id="vname" rows="1" name="vname"></textarea>
-                                        </div>
                                 <div class="modal-footer">
                                 <div class="form-group">    
 
@@ -218,11 +198,13 @@ img {
                             </div>
                         </div>
 
+
+
 <?php $this->load->view('admin/Template/footer.php') ?>
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/Cardetails/variantaddinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/bikedetails/modeladdinventory_api"
     } );
 
 
@@ -236,71 +218,15 @@ img {
 });
 
   </script>
-
-  
-<script type='text/javascript'>
-    // baseURL variable
-    var baseURL= "<?php echo base_url();?>";
-    
-    $(document).ready(function(){
-        $('#comp').change(function(){
-            var comp = $(this).val();
-
-            // AJAX request
-            $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getCompany',
-                method: 'post',
-                data: {comp: comp},
-                dataType: 'json',
-                success: function(response){
-
-                    // Remove options
-                    $('#modals').find('option').not(':first').remove();
-                    $('#varis').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#modals').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
-                    });
-                }
-            });
-        });
-        
-        // Department change
-        $('#modals').change(function(){
-            var modal = $(this).val();
-
-            // AJAX reques
-            $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getModel',
-                method: 'post',
-                data: {modal: modal},
-                dataType: 'json',
-                success: function(response){
-                   
-                    // Remove options
-                    $('#varis').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#varis').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
-                    });
-                }
-            });
-        });
-        
-    });
-</script>
   
   <script type="text/javascript">
 $('#formSubmit').click(function() {
-    var vname = $('#vname').val()
-    var comp = $('#comp').val()
-    var modals = $('#modals').val()
+    var mname = $('#mname').val()
+    var companies = $('#companies').val()
     $.ajax({
-        url: "<?php echo base_url(); ?>admin/Cardetails/addvariant",
+        url: "<?php echo base_url(); ?>admin/bikedetails/addmodel",
         type: 'POST',
-        data:{'vname':vname,'comp':comp,'modals':modals},
+        data:{'mname':mname,'companies':companies},
         success: function(msg) {
            // console.log(data);
             if (msg == 'YES')

@@ -40,7 +40,7 @@
             </div>
           </div>
         </a>
-        <a href="#">
+        <a href="<?php echo base_url()?>frontend/insurance/bikeinsurance">
           <div class="card">
             <div class="card-image">
               <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/car-insurance.svg">
@@ -93,17 +93,21 @@
           
         </div>
         <div class="modal-body">
-          <input type="text" class="mod_input" placeholder="Enter Your Name"></br>
-          <input type="text" class="mod_input" placeholder="Enter Your Name"></br>
-          <select class="mod_input"></br>
-            <option>Service Intrested</option>
-            <option>A</option>
-            <option>B</option>
-            <option>S</option>
-          </select>  
+          <input type="text" class="mod_input" id="pname" name="pname"placeholder="Enter Your Name"></br>
+          <input type="text" class="mod_input" id="mob" name="mob" placeholder="Enter Mobile Number"></br>
+           
+          <select class="mod_input" id="services" name = "services">
+                                    <option >Select Insurance</option>
+
+                        <?php
+                        foreach($company as $companies){
+                            echo "<option value='".$companies['id']."'>".$companies['insurance']."</option>";
+                        }
+                        ?>
+                                                </select> 
         </div>
         <div class="modal-footer">
-        <button type="button" class="btn btn-default text-center" data-dismiss="modal">submit</button>
+        <button type="button" class="btn btn-default text-center" id="formSubmit" data-dismiss="modal">submit</button>
           
         </div>
       </div>
@@ -225,3 +229,28 @@
         </div>
       </div>    
     </section>
+    <?php $this->load->view('frontend/Template/footer.php') ?>
+
+    <script type="text/javascript">
+$('#formSubmit').click(function() {
+    var pname = $('#pname').val()
+    var mob = $('#mob').val()
+    var services = $('#services').val()
+    $.ajax({
+        url: "<?php echo base_url(); ?>home/callmodel",
+        type: 'POST',
+        data:{'pname':pname,'services':services,'mob':mob},
+        success: function(msg) {
+           // console.log(data);
+            if (msg == 'YES')
+                $('#alert-msg').html('<div class="alert alert-success text-center">Your mail has been sent successfully!</div>');
+            else if (msg == 'NO')
+                $('#alert-msg').html('<div class="alert alert-danger text-center">Error in sending your message! Please try again later.</div>');
+            else
+                $('#alert-msg').html('<div class="alert alert-danger">' + msg + '</div>');
+        }
+    });
+    return false;
+});
+</script>
+

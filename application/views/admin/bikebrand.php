@@ -4,7 +4,6 @@
     transition-duration: 5s;
     margin: 0 auto;
 }
-
 a.edit {
     display: none;
 }
@@ -90,22 +89,20 @@ img {
           <div class="col-md-12">
 
             <div class="card-box table-responsive">
-             
-              <div class="btn-group pull-right m-t-10 m-b-20">
+                    
+            <div class="btn-group pull-right m-t-10 m-b-20">
 
-              <a class="btn btn-default m-r-5" title="Add Gallery" data-toggle="modal" data-target="#formModal"><i class="fa fa-plus"></i></a>
-                   <button type="button" class="btn btn-default m-r-5 setSupplierMultiBtn deleteMultiplePurchase" title="Delete" style="display:none"><i class="fa fa-trash"></i></button>
-
-
+<a class="btn btn-default m-r-5" title="Add Gallery" data-toggle="modal" data-target="#formModal"><i class="fa fa-plus"></i></a>
+<button type="button" class="btn btn-default m-r-5 setSupplierMultiBtn deleteMultiplePurchase" title="Delete" style="display:none"><i class="fa fa-trash"></i></button>
 
 
-              </div>
+
+
+</div>
               <table id="lowinventory"  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
                 <thead>
                 <tr>    <th><input type="checkbox" class="masterSupplierCheck"></th>
-                    <th style="width: 15%">Variant Name</th>
-                    <th>Model Name</th>
-                    <th>Company Name</th>
+                    <th style="width: 15%">Manufacturer Name</th>
                     <th>Action</th>
 
 
@@ -125,11 +122,12 @@ img {
     </div>
   </div>
 <!--Delete-->
-<!--Delete-->
 
-<div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+   <!--Delete-->
+
+    <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/cardetails/deletevariant'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/bikedetails/deletegallery'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -152,7 +150,6 @@ img {
     </div>
     </div>
 
-    
                       
                         <!-- Modal -->
                         <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -167,44 +164,12 @@ img {
                                 </div>
 
                                 <div class="modal-body">
-                                        
-                                <div class="col-md-6">
-                                                            <div class="form-group">
-                                                                <label for="field-1" class="control-label">Select Product</label>
-                                                <select id="comp" class="form-control" name="comp">
-                                                                
-                        <option>-- Select Company --</option>
-
-                                                                    <?php
-                        foreach($company as $companies){
-
-                            echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>";
-                        }
-                        ?>
-                                                                </select>
-                                                            </div>
-                                                            
-                                                        </div>
-
-
-                                                        
-                                        <div class="col-md-6">
-                                            <div class="form-group ">
-                                                <label class="adults" for="modal">Modal</label>
-
-                                                <select class="form-control"   id="modals" name="modal">
-                        <option>-- Select Model --</option>
-                                                </select>
-                                            </div>
-
-
-
-                                            </form>
-                                            </div>
-                                            <div class="form-group">
-                                          <label for="exampleFormControlTextarea1">Add Model name</label>
-                                          <textarea class="form-control" id="vname" rows="1" name="vname"></textarea>
+                                        <div class="form-group">
+                                          <label for="exampleFormControlTextarea1">Add company name</label>
+                                          <textarea class="form-control" id="bname" rows="1" name="bname"></textarea>
                                         </div>
+                                      </form>
+                                </div>
                                 <div class="modal-footer">
                                 <div class="form-group">    
 
@@ -218,11 +183,13 @@ img {
                             </div>
                         </div>
 
+      <!-- end of form -->
+
 <?php $this->load->view('admin/Template/footer.php') ?>
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/Cardetails/variantaddinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/Bikedetails/addinventory_api"
     } );
 
 
@@ -235,72 +202,15 @@ img {
 
 });
 
-  </script>
-
-  
-<script type='text/javascript'>
-    // baseURL variable
-    var baseURL= "<?php echo base_url();?>";
-    
-    $(document).ready(function(){
-        $('#comp').change(function(){
-            var comp = $(this).val();
-
-            // AJAX request
-            $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getCompany',
-                method: 'post',
-                data: {comp: comp},
-                dataType: 'json',
-                success: function(response){
-
-                    // Remove options
-                    $('#modals').find('option').not(':first').remove();
-                    $('#varis').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#modals').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
-                    });
-                }
-            });
-        });
-        
-        // Department change
-        $('#modals').change(function(){
-            var modal = $(this).val();
-
-            // AJAX reques
-            $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getModel',
-                method: 'post',
-                data: {modal: modal},
-                dataType: 'json',
-                success: function(response){
-                   
-                    // Remove options
-                    $('#varis').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#varis').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
-                    });
-                }
-            });
-        });
-        
-    });
 </script>
-  
-  <script type="text/javascript">
+
+    <script type="text/javascript">
 $('#formSubmit').click(function() {
-    var vname = $('#vname').val()
-    var comp = $('#comp').val()
-    var modals = $('#modals').val()
+    var bname = $('#bname').val()
     $.ajax({
-        url: "<?php echo base_url(); ?>admin/Cardetails/addvariant",
+        url: "<?php echo base_url(); ?>admin/Bikedetails/addcompany",
         type: 'POST',
-        data:{'vname':vname,'comp':comp,'modals':modals},
+        data:{'bname':bname},
         success: function(msg) {
            // console.log(data);
             if (msg == 'YES')

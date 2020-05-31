@@ -1,23 +1,9 @@
-<html>
-    <head>
-        <title>services</title>
-          <meta charset="utf-8">
-          <meta name="viewport" content="width=device-width, initial-scale=1">
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-          <link rel="stylesheet" href="assest/css/style.css">
-         
-          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-      </head>
-    <body>
-
 
         <div class="contact-us">
             <div class="hdr">
                 <div class="container">
                      <div class="banner-text text-center size-banner">
+  <?phpprint_r ($companies);?>
                         <div class="contect fliter-heading">
                             <h1>Enough about us, <b>lets talk about you now !</b></h1>
                             <p>We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here. We’ll be sure to get back to you as soon as we can.</p>
@@ -33,21 +19,25 @@
                     <div class="col-lg-7 col-xs-12">
                         <div class="group-form">
                             <div class="screen-reader-response" aria-live="polite"></div>
-                            <form action="#" method="post"  novalidate="novalidate">
+  <?php echo form_open(base_url( 'frontend/contactus/contactDetails'), array('method'=>'POST'));?>
+
                                 <input class="lis" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Name Here"></br>
                                 <input class="lis" type="email" name="email" value="" size="40"  placeholder="Enter Your Mail"></br>
-                                <input class="lis" type="tel" name="tel-331" value="" size="40" aria-invalid="false" placeholder="Enter Your Mobile Number"></br>
-                                <input class="lis" type="text" name="text-677" value="" size="40" aria-invalid="false" placeholder="Your Insurance Pack"></br>
-                                <select class="lis" class="lis">
-                                    <option >Health Insurance</option>
-                                    <option value="#">Term Insurance</option>
-                                    <option value="#">Car Insurance</option>
-                                    <option value="#">Bike Insurance</option>
-                                    <option value="#">Travle Insurance</option>
-                                </select></br>
-                                <textarea class="lis" name="textarea-760" cols="40" rows="3"  aria-invalid="false" placeholder="Brief Requirement"></textarea></br>
-                                <input type="submit" value="Send" class="bu"  />
-                            </form>    
+                                <input class="lis" type="tel" name="tel" value="" size="40" aria-invalid="false" placeholder="Enter Your Mobile Number"></br>
+                                <input class="lis" type="text" name="pack" value="" size="40" aria-invalid="false" placeholder="Your Insurance Pack"></br>
+                                <select class="lis" id="comp" name = "comp">
+                                    <option >Select Insurance</option>
+
+                        <?php
+                        foreach($company as $companies){
+                            echo "<option value='".$companies['id']."'>".$companies['insurance']."</option>";
+                        }
+                        ?>
+                                                </select></br>
+                                <textarea class="lis" name="text" cols="40" rows="3"  aria-invalid="false" placeholder="Brief Requirement"></textarea></br>
+                                <input type="submit" name="formSubmit"  class="bu"  />
+<?php echo form_close(); ?>
+                                
                         </div>
 
                     </div>  
@@ -107,9 +97,5 @@
                 </div>    
             </div>
         </div>
-            
+    <?php $this->load->view('frontend/Template/footer.php') ?>
        
-    
-
-</body>
-</html>

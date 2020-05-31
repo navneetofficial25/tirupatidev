@@ -1,5 +1,5 @@
 <?php
-    class Cardetails extends CI_controller{
+    class Bikedetails extends CI_controller{
 
         public function __construct()
         {
@@ -10,13 +10,13 @@
             $this->load->view('admin/template/header');
             $this->load->view('admin/template/sidebar');
             $this->load->view('admin/template/topbar');
-            $this->load->view('admin/carbrand');
+            $this->load->view('admin/bikebrand');
         }
 
         public function addinventory_api(){
-            $this->load->model('admin/Carmodel');
+            $this->load->model('admin/Bikemodel');
 
-            $getPurchaseData = $this->Carmodel->fetchaddinventory_api();
+            $getPurchaseData = $this->Bikemodel->fetchaddinventory_api();
     
             //print_r($getPurchaseData);
     
@@ -34,19 +34,19 @@
 
 
             public function addcompany(){
-            $this->load->model('admin/Carmodel');
+            $this->load->model('admin/Bikemodel');
 
                 
       //  $this->input->post('formSubmit');
         $brand_name = $this->input->post('bname');
         $gradedetails=array('brand_name'=>$brand_name);
-        $this->Carmodel->insert_brand($gradedetails);
-        redirect(base_url()."admin/cardetails");
+        $this->Bikemodel->insert_brand($gradedetails);
+        redirect(base_url()."admin/bikedetails");
 
             }
 
             public function deletegallery(){
-            $this->load->model('admin/Carmodel');
+            $this->load->model('admin/Bikemodel');
 
 
                 if($this->input->post('deletesliderId'))
@@ -54,59 +54,59 @@
               $this->form_validation->set_rules('deletesliderId','text','required');
               if($this->form_validation->run() == true)
               {
-                $getDeleteStatus = $this->Carmodel->deleteData($this->input->post('deletesliderId'));
+                $getDeleteStatus = $this->Bikemodel->deleteData($this->input->post('deletesliderId'));
                 if($getDeleteStatus['message'] == 'yes')
                 {
                   $this->session->set_flashdata('success','Gallery  deleted successfully');
-                  redirect(base_url()."admin/cardetails");
+                  redirect(base_url()."admin/bikedetails");
                 }
                 else
                 {
                   $this->session->set_flashdata('error','Something went wrong. Please try again');
-                redirect(base_url()."admin/cardetails");
+                redirect(base_url()."admin/bikedetails");
                   
                 }
               }
               else
               {
                 $this->session->set_flashdata('error','Something went wrong. Please try again');
-                redirect(base_url()."admin/cardetails");
+                redirect(base_url()."admin/bikedetails");
 
               }
             }
           }
 
             public function model(){
-            $this->load->model('frontend/Carmodel');
+            $this->load->model('frontend/Bikemodel');
 
-            $data['company'] = $this->Carmodel->fetchComp();
+            $data['company'] = $this->Bikemodel->fetchComp();
 
               $this->load->view('admin/template/header');
               $this->load->view('admin/template/sidebar');
               $this->load->view('admin/template/topbar');
-              $this->load->view('admin/carmodel',$data);
+              $this->load->view('admin/bikemodel',$data);
           }
 
 
           public function addmodel(){
-            $this->load->model('admin/Carmodel');
+            $this->load->model('admin/Bikemodel');
 
                 
       //  $this->input->post('formSubmit');
         $model_name = $this->input->post('mname');
         $brand_id = $this->input->post('companies');
         $gradedetails=array('model_name'=>$model_name,'brand_id'=>$brand_id);
-        $this->Carmodel->insert_model($gradedetails);
-        redirect(base_url()."admin/cardetails/model");
+        $this->Bikemodel->insert_model($gradedetails);
+        redirect(base_url()."admin/bikedetails/model");
 
             }
 
 
 
           public function modeladdinventory_api(){
-            $this->load->model('admin/Carmodel');
+            $this->load->model('admin/Bikemodel');
 
-            $getPurchaseData = $this->Carmodel->fetchmodelinventory_api();
+            $getPurchaseData = $this->Bikemodel->fetchmodelinventory_api();
     
             //print_r($getPurchaseData);
     
@@ -121,7 +121,7 @@
 
             
             public function deletemodel(){
-                $this->load->model('admin/Carmodel');
+                $this->load->model('admin/Bikemodel');
     
     
                     if($this->input->post('deletesliderId'))
@@ -129,40 +129,40 @@
                   $this->form_validation->set_rules('deletesliderId','text','required');
                   if($this->form_validation->run() == true)
                   {
-                    $getDeleteStatus = $this->Carmodel->deletemod($this->input->post('deletesliderId'));
+                    $getDeleteStatus = $this->Bikemodel->deletemod($this->input->post('deletesliderId'));
                     if($getDeleteStatus['message'] == 'yes')
                     {
                       $this->session->set_flashdata('success','Gallery  deleted successfully');
-                      redirect(base_url()."admin/cardetails/model");
+                      redirect(base_url()."admin/bikedetails/model");
                     }
                     else
                     {
                       $this->session->set_flashdata('error','Something went wrong. Please try again');
-                    redirect(base_url()."admin/cardetails/model");
+                    redirect(base_url()."admin/bikedetails/model");
                       
                     }
                   }
                   else
                   {
                     $this->session->set_flashdata('error','Something went wrong. Please try again');
-                    redirect(base_url()."admin/cardetails/model");
+                    redirect(base_url()."admin/bikedetails/model");
     
                   }
                 }
               }
 
             public function variant(){
-            $this->load->model('frontend/Carmodel');
-            $data['company'] = $this->Carmodel->fetchComp();
+            $this->load->model('frontend/Bikemodel');
+            $data['company'] = $this->Bikemodel->fetchComp();
 
               $this->load->view('admin/template/header');
               $this->load->view('admin/template/sidebar');
               $this->load->view('admin/template/topbar');
-              $this->load->view('admin/carvariant',$data);
+              $this->load->view('admin/bikevariant',$data);
           }
           
           public function addvariant(){
-            $this->load->model('admin/Carmodel');
+            $this->load->model('admin/Bikemodel');
 
                 
       //  $this->input->post('formSubmit');
@@ -170,14 +170,14 @@
         $brand_id = $this->input->post('comp');
         $model_id = $this->input->post('modals');
         $gradedetails=array('variant_name'=>$variant_name,'model_id'=>$model_id,'brand_id'=>$brand_id);
-        $this->Carmodel->insert_variant($gradedetails);
-        redirect(base_url()."admin/cardetails/variant");
+        $this->Bikemodel->insert_variant($gradedetails);
+        redirect(base_url()."admin/bikedetails/variant");
 
             }
 
           public function variantaddinventory_api(){
-            $this->load->model('admin/Carmodel');
-            $getPurchaseData = $this->Carmodel->fetchvariantinventory_api();
+            $this->load->model('admin/Bikemodel');
+            $getPurchaseData = $this->Bikemodel->fetchvariantinventory_api();
     
             //print_r($getPurchaseData);
     
@@ -190,7 +190,7 @@
                  echo json_encode(array('data'=>$arrya_json));
             }
             public function deletevariant(){
-                $this->load->model('admin/Carmodel');
+                $this->load->model('admin/Bikemodel');
     
     
                     if($this->input->post('deletesliderId'))
@@ -198,23 +198,23 @@
                   $this->form_validation->set_rules('deletesliderId','text','required');
                   if($this->form_validation->run() == true)
                   {
-                    $getDeleteStatus = $this->Carmodel->deletevar($this->input->post('deletesliderId'));
+                    $getDeleteStatus = $this->Bikemodel->deletevar($this->input->post('deletesliderId'));
                     if($getDeleteStatus['message'] == 'yes')
                     {
                       $this->session->set_flashdata('success','Gallery  deleted successfully');
-                      redirect(base_url()."admin/cardetails/variant");
+                      redirect(base_url()."admin/bikedetails/variant");
                     }
                     else
                     {
                       $this->session->set_flashdata('error','Something went wrong. Please try again');
-                    redirect(base_url()."admin/cardetails/variant");
+                    redirect(base_url()."admin/bikedetails/variant");
                       
                     }
                   }
                   else
                   {
                     $this->session->set_flashdata('error','Something went wrong. Please try again');
-                    redirect(base_url()."admin/cardetails/variant");
+                    redirect(base_url()."admin/bikedetails/variant");
     
                   }
                 }

@@ -129,7 +129,7 @@ img {
 
 <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/cardetails/deletevariant'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/bikedetails/deletevariant'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -222,7 +222,7 @@ img {
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/Cardetails/variantaddinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/bikedetails/variantaddinventory_api"
     } );
 
 
@@ -248,7 +248,7 @@ img {
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getCompany',
+                url:'<?=base_url()?>/frontend/insurance/getbikeCompany',
                 method: 'post',
                 data: {comp: comp},
                 dataType: 'json',
@@ -272,7 +272,7 @@ img {
 
             // AJAX reques
             $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getModel',
+                url:'<?=base_url()?>/frontend/insurance/getbikeModel',
                 method: 'post',
                 data: {modal: modal},
                 dataType: 'json',
@@ -298,7 +298,7 @@ $('#formSubmit').click(function() {
     var comp = $('#comp').val()
     var modals = $('#modals').val()
     $.ajax({
-        url: "<?php echo base_url(); ?>admin/Cardetails/addvariant",
+        url: "<?php echo base_url(); ?>admin/bikedetails/addvariant",
         type: 'POST',
         data:{'vname':vname,'comp':comp,'modals':modals},
         success: function(msg) {

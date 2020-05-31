@@ -8,5 +8,8 @@ class Insurance_model extends CI_Model {
         $this->db->insert('health_insurance',$datas);
         return true;
     }
+    function bike_data($data){
+        $this->db->insert('bike_insurance',$data);
+    }
 
 }

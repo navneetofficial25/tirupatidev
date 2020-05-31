@@ -49,7 +49,7 @@ img {
             <div class="row">
                 <div class="col-sm-12">
                 <div class="col-md-8">
-                   <h4 class="page-title">Manufacturer</h4>
+                   <h4 class="page-title">Car Data</h4>
                    <ol class="breadcrumb">
                   <li><a href="<?php echo base_url(); ?>">Dashboard</a></li>
 
@@ -89,20 +89,16 @@ img {
           <div class="col-md-12">
 
             <div class="card-box table-responsive">
-                    
-            <div class="btn-group pull-right m-t-10 m-b-20">
-
-<a class="btn btn-default m-r-5" title="Add Gallery" data-toggle="modal" data-target="#formModal"><i class="fa fa-plus"></i></a>
-<button type="button" class="btn btn-default m-r-5 setSupplierMultiBtn deleteMultiplePurchase" title="Delete" style="display:none"><i class="fa fa-trash"></i></button>
-
-
-
-
-</div>
+             
               <table id="lowinventory"  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
                 <thead>
                 <tr>    <th><input type="checkbox" class="masterSupplierCheck"></th>
-                    <th style="width: 15%">Manufacturer Name</th>
+                    <th style="width: 15%">Name</th>
+                    <th>Email</th>
+                    <th>Telephone</th>
+                    <th>Insurance Pack</th>
+                    <th>Interested Insurance</th>
+                    <th>Short Note</th>
                     <th>Action</th>
 
 
@@ -127,7 +123,7 @@ img {
 
     <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/cardetails/deletegallery'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/userdata/deletecontactdetail'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -150,46 +146,12 @@ img {
     </div>
     </div>
 
-                      
-                        <!-- Modal -->
-                        <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-
-                                <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Company Name</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                </div>
-
-                                <div class="modal-body">
-                                        <div class="form-group">
-                                          <label for="exampleFormControlTextarea1">Add company name</label>
-                                          <textarea class="form-control" id="bname" rows="1" name="bname"></textarea>
-                                        </div>
-                                      </form>
-                                </div>
-                                <div class="modal-footer">
-                                <div class="form-group">    
-
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary" name="formSubmit" id="formSubmit">Save changes</button>
-                                </div>
-                                </div>
-
-                            </div>
-
-                            </div>
-                        </div>
-
-      <!-- end of form -->
 
 <?php $this->load->view('admin/Template/footer.php') ?>
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/Cardetails/addinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/Userdata/contactinventory_api"
     } );
 
 
@@ -202,26 +164,4 @@ img {
 
 });
 
-</script>
-
-    <script type="text/javascript">
-$('#formSubmit').click(function() {
-    var bname = $('#bname').val()
-    $.ajax({
-        url: "<?php echo base_url(); ?>admin/Cardetails/addcompany",
-        type: 'POST',
-        data:{'bname':bname},
-        success: function(msg) {
-           // console.log(data);
-            if (msg == 'YES')
-                $('#alert-msg').html('<div class="alert alert-success text-center">Your mail has been sent successfully!</div>');
-            else if (msg == 'NO')
-                $('#alert-msg').html('<div class="alert alert-danger text-center">Error in sending your message! Please try again later.</div>');
-            else
-                $('#alert-msg').html('<div class="alert alert-danger">' + msg + '</div>');
-        }
-    });
-    return false;
-});
-</script>
-
+  </script>

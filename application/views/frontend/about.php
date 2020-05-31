@@ -72,7 +72,7 @@
                 </div>
             </div>
             
-                <div class="content-area">
+      <!--          <div class="content-area">
       
                     <div class="container">
                       <h3>If we have already had the pleasure of assisting you then please</h3>
@@ -90,5 +90,5 @@
                       <h3>to see what our clients feel about us</h3>
                     </div> 
                     
-                </div>
+                </div>-->
 

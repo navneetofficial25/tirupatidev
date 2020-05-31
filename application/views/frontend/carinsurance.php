@@ -60,7 +60,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content" >
                                 <div id="renew" class="container tab-pane active">
-  <?php echo form_open(base_url( 'frontend/insurance/renewDetails/'), array('method'=>'POST'));?>
+  <?php echo form_open(base_url( 'frontend/insurance/renewDetails'), array('method'=>'POST'));?>
 
                                     <div class="row">
 
@@ -76,6 +76,8 @@
                                                 <label class="adults" for="comp ">Manufacturer</label>
                                                 
                                                 <select id="comp" class="lis" name="comp">
+                                                <option value="#">Enter Company</option>
+
                         <?php
                         foreach($company as $companies){
 
@@ -117,20 +119,16 @@
                                         <div class="col-md-6">
                                             <div class="form-group date">
                                                 <label class="adults" for="modal">Modal</label>
-                                             
-                                                <select class="lis"   id="modal" name="modal">
+
+                                                <select class="lis"   id="modals" name="modal">
                                                     <option value="#">Enter Model</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
                                                 </select>
                                             </div>
                                             <div class="form-group date">
-                                                <label class="adults" for="vari">Varient</label>
+                                                <label class="adults" for="varis">Varient</label>
                                                 
-                                                <select class="lis"   id="vari" name="vari">
+                                                <select class="lis"   id="varis" name="vari">
                                                     <option value="#">Enter Varient</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
                                                 </select>
                                             </div>
                                             <div class="form-group date">
@@ -169,7 +167,7 @@
 
 
                                 <div id="new" class="container tab-pane fade">
-<?php echo form_open(base_url( 'frontend/insurance/renewDetails/'), array('method'=>'POST'));?>
+<?php echo form_open(base_url( 'frontend/insurance/renewDetails'), array('method'=>'POST'));?>
 
                                     <div class="row">
 
@@ -185,6 +183,7 @@
                                                 <label class="adults" for="comps">Manufacturer</label>
                                                 
                                                 <select class="lis"  id="comps" name="comp">
+
                                                 <?php
                         foreach($company as $companies){
 
@@ -222,21 +221,17 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="form-group date">
-                                                <label class="adults" for="modl">Modal</label>
+                                                <label class="adults" for="modls">Modal</label>
                                                
-                                                <select class="lis"   id="modl" name="modal">
+                                                <select class="lis"   id="modls" name="modal">
                                                     <option value="#">Enter Model</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
                                                 </select>
                                             </div>
                                             <div class="form-group date">
-                                                <label class="adults" for="var">Varient</label>
+                                                <label class="adults" for="vars">Varient</label>
                                                 
-                                                <select class="lis"   id="var" name="vari">
+                                                <select class="lis"   id="vars" name="vari">
                                                     <option value="#">Enter Varient</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
                                                 </select>
                                             </div>
                                             <div class="form-group date">
@@ -379,17 +374,17 @@
         });
         
         // Department change
-        $('#modal').change(function(){
+        $('#modals').change(function(){
             var modal = $(this).val();
 
-            // AJAX request
+            // AJAX reques
             $.ajax({
                 url:'<?=base_url()?>/frontend/insurance/getModel',
                 method: 'post',
                 data: {modal: modal},
                 dataType: 'json',
                 success: function(response){
-                    
+                   
                     // Remove options
                     $('#varis').find('option').not(':first').remove();
 
@@ -422,7 +417,7 @@
 
                     // Remove options
                     $('#modls').find('option').not(':first').remove();
-                    $('#varis').find('option').not(':first').remove();
+                    $('#vars').find('option').not(':first').remove();
 
                     // Add options
                     $.each(response,function(index,data){
@@ -433,7 +428,7 @@
         });
         
         // Department change
-        $('#modl').change(function(){
+        $('#modls').change(function(){
             var modal = $(this).val();
 
             // AJAX request

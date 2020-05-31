@@ -122,6 +122,21 @@
         </div>
       </div>
     </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true" aria-controls="collapsePages">
+        <i class="fas fa-fw fa-folder"></i>
+        <span>Bike Insurance</span>
+      </a>
+      <div id="collapsePage" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div class="bg-white py-2 collapse-inner rounded">
+          <a class="collapse-item" href="<?php echo base_url(); ?>admin/bikedetails">Manufacturer</a>
+          <a class="collapse-item" href="<?php echo base_url(); ?>admin/bikedetails/model">Model</a>
+          <a class="collapse-item" href="<?php echo base_url(); ?>admin/bikedetails/variant">Varient</a>
+          <div class="collapse-divider"></div>
+        </div>
+      </div>
+    </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
     <div class="sidebar-heading">
@@ -134,6 +149,9 @@
       <a class="nav-link" href="<?php echo base_url(); ?>admin/userdata/cardata"><i class="fas fa-fw fa-table"></i><span>Car Ins Data</span></a>
     </li>
 
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/userdata/contactdata"><i class="fas fa-fw fa-table"></i><span>Contact Data</span></a>
+    </li>
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
       <button class="rounded-circle border-0" id="sidebarToggle"></button>
