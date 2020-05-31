@@ -143,15 +143,22 @@
       User Data
     </div>
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/userdata/healthdata"><i class="fas fa-fw fa-table"></i><span>Health Data</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/healthdata"><i class="fas fa-fw fa-table"></i><span>Health Data</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/userdata/cardata"><i class="fas fa-fw fa-table"></i><span>Car Ins Data</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/cardata"><i class="fas fa-fw fa-table"></i><span>Car Ins Data</span></a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/userdata/contactdata"><i class="fas fa-fw fa-table"></i><span>Contact Data</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/contactdata"><i class="fas fa-fw fa-table"></i><span>Contact Data</span></a>
     </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/callbackdata"><i class="fas fa-fw fa-table"></i><span>Callback Data</span></a>
+    </li>
+    
+    <hr class="sidebar-divider">
+
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">
       <button class="rounded-circle border-0" id="sidebarToggle"></button>

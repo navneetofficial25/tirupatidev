@@ -1,6 +1,3 @@
-<?php $this->load->view('frontend/Template/header.php') ?>
-<?php $this->load->view('frontend/Template/navbar.php') ?>
-
 <section class="health_main">
             <div class="container">
                 <h2>Now Buying Health Insurance is Much Simpleir</h2>
@@ -45,7 +42,7 @@
                         </div>
                     </div>
                     <div class="col-md-8 detail" >
-<?php echo form_open(base_url( 'frontend/insurance/healthdata'), array('method'=>'POST'));?>
+<?php echo form_open(base_url( 'frontend/healthinsurance'), array('method'=>'POST'));?>
 
                         <div class="card" >
                             <div class="card-header">
@@ -253,7 +250,6 @@
           </section>
           </div>
 
-        <?php $this->load->view('frontend/Template/footer.php') ?>
 
           <script>
           function getNo(){

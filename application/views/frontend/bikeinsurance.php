@@ -61,7 +61,7 @@
                     <div class="tab-content" >
                         <div id="renew" class="container tab-pane active">
 
-<?php echo form_open(base_url( 'frontend/insurance/renewbikeDetails'), array('method'=>'POST'));?>
+<?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('method'=>'POST'));?>
 
 <div class="row">
 
@@ -168,7 +168,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
 
 
                         <div id="new" class="container tab-pane fade">
-<?php echo form_open(base_url( 'frontend/insurance/renewbikeDetails'), array('method'=>'POST'));?>
+<?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('method'=>'POST'));?>
 
                                     <div class="row">
 
@@ -342,7 +342,6 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
 
            
 <!-- Script -->
-<?php $this->load->view('frontend/Template/footer.php') ?>
 
 
 <script type='text/javascript'>
@@ -355,7 +354,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>frontend/insurance/getbikeCompany',
+                url:'<?=base_url()?>frontend/bikeinsurance/getbikeCompany',
                 method: 'post',
                 data: {comp: comp},
                 dataType: 'json',
@@ -379,7 +378,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
 
             // AJAX reques
             $.ajax({
-                url:'<?=base_url()?>frontend/insurance/getbikeModel',
+                url:'<?=base_url()?>frontend/bikeinsurance/getbikeModel',
                 method: 'post',
                 data: {modal: modal},
                 dataType: 'json',
@@ -409,7 +408,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>frontend/insurance/getbikeCompany',
+                url:'<?=base_url()?>frontend/bikeinsurance/getbikeCompany',
                 method: 'post',
                 data: {comp: comp},
                 dataType: 'json',
@@ -433,7 +432,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>frontend/insurance/getbikeModel',
+                url:'<?=base_url()?>frontend/bikeinsurance/getbikeModel',
                 method: 'post',
                 data: {modal: modal},
                 dataType: 'json',

@@ -60,7 +60,7 @@
                             <!-- Tab panes -->
                             <div class="tab-content" >
                                 <div id="renew" class="container tab-pane active">
-  <?php echo form_open(base_url( 'frontend/insurance/renewDetails'), array('method'=>'POST'));?>
+  <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails'), array('method'=>'POST'));?>
 
                                     <div class="row">
 
@@ -167,7 +167,7 @@
 
 
                                 <div id="new" class="container tab-pane fade">
-<?php echo form_open(base_url( 'frontend/insurance/renewDetails'), array('method'=>'POST'));?>
+<?php echo form_open(base_url( 'frontend/carinsurance/renewDetails'), array('method'=>'POST'));?>
 
                                     <div class="row">
 
@@ -342,7 +342,6 @@
 
                    
         <!-- Script -->
-        <?php $this->load->view('frontend/Template/footer.php') ?>
 
 
         <script type='text/javascript'>
@@ -355,7 +354,7 @@
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getCompany',
+                url:'<?=base_url()?>/frontend/carinsurance/getCompany',
                 method: 'post',
                 data: {comp: comp},
                 dataType: 'json',
@@ -379,7 +378,7 @@
 
             // AJAX reques
             $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getModel',
+                url:'<?=base_url()?>/frontend/carinsurance/getModel',
                 method: 'post',
                 data: {modal: modal},
                 dataType: 'json',
@@ -409,7 +408,7 @@
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getCompany',
+                url:'<?=base_url()?>/frontend/carinsurance/getCompany',
                 method: 'post',
                 data: {comp: comp},
                 dataType: 'json',
@@ -433,7 +432,7 @@
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getModel',
+                url:'<?=base_url()?>/frontend/carinsurance/getModel',
                 method: 'post',
                 data: {modal: modal},
                 dataType: 'json',
