@@ -11,7 +11,8 @@
                 $this->load->view('frontend/template/header');
             $this->load->view('frontend/template/navbar');
             $this->load->view('frontend/contactus',$data);
-        }
+            $this->load->view('frontend/template/footer');
+}
 
 
 public function contactDetails(){

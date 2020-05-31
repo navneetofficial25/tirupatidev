@@ -123,7 +123,7 @@ img {
 
     <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/userdata/deletecontactdetail'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/contactdata/deletecontactdetail'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -151,7 +151,7 @@ img {
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/Userdata/contactinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/contactdata/contactinventory_api"
     } );
 
 

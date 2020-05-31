@@ -3,8 +3,8 @@
       
       <p style="margin-top:30px; margin-bottom:30px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best quates for you </p>
       <div class="flex">
-        <a  href="<?php echo base_url()?>frontend/insurance/healthInsurance">
-          <div class="card ">
+        <a  href="<?php echo base_url()?>frontend/healthinsurance">
+          <div class="card">
             <div class="card-image">
               <img class="img-responsive" alt="Health Insurance" src="<?php echo base_url()?>assest/img/health-insurance.svg">
 
@@ -27,7 +27,7 @@
             </div>
           </div>
         </a>
-        <a href="<?php echo base_url();?>frontend/insurance/carInsurance">
+        <a href="<?php echo base_url();?>frontend/carinsurance">
           <div class="card">
             <div class="card-image">
             
@@ -40,7 +40,7 @@
             </div>
           </div>
         </a>
-        <a href="<?php echo base_url()?>frontend/insurance/bikeinsurance">
+        <a href="<?php echo base_url()?>frontend/bikeinsurance">
           <div class="card">
             <div class="card-image">
               <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/car-insurance.svg">

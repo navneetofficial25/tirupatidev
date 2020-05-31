@@ -7,7 +7,7 @@
     <div class="box_sh ">
     <div class="row">
       <div class="col-lg-4 col-xs-12 " style="padding:0px;">
-        <img src="<?php echo base_url();?>assest/img/health-insurance-top-up.jpg" >
+      <img src="<?php echo base_url();?>assest/img/health-insurance-top-up.jpg" >
         <div class="to">
         <div class="row">
                                       <div class="col-md-12 col-12">
@@ -38,7 +38,7 @@
         </div>
       </div>  
       <div class="col-lg-8 col-xs-12"style="padding:0px;"  >
-        <?php echo form_open(base_url( 'frontend/insurance/healthdata'), array('method'=>'POST'));?>
+      <?php echo form_open(base_url( 'frontend/healthinsurance'), array('method'=>'POST'));?>
         <div class="card">
           <div class="card-header">
             <h3 >Personal Details</h3>
@@ -51,7 +51,7 @@
                   <div class="date">
                     <label class="adults" for="usr">Adults</label>
                     <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="Adult(s)-21 yeasrs and above">
-                                            
+                                                                    
                   </div>
                   <div id="firstperson" style="display:none" class="form-group date"> 
                     <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="fdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
@@ -239,7 +239,6 @@
           </section>
           </div>
 
-        <?php $this->load->view('frontend/Template/footer.php') ?>
 
           <script>
           function getNo(){

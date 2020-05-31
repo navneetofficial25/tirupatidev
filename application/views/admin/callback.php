@@ -49,7 +49,7 @@ img {
             <div class="row">
                 <div class="col-sm-12">
                 <div class="col-md-8">
-                   <h4 class="page-title">Manufacturer</h4>
+                   <h4 class="page-title">Car Data</h4>
                    <ol class="breadcrumb">
                   <li><a href="<?php echo base_url(); ?>">Dashboard</a></li>
 
@@ -93,12 +93,9 @@ img {
               <table id="lowinventory"  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
                 <thead>
                 <tr>    <th><input type="checkbox" class="masterSupplierCheck"></th>
-                    <th style="width: 15%">Number of adults</th>
-                    <th>Number of kids</th>
-                    <th>Mobile number</th>
-                    <th>Email</th>
-                    <th>First adult dob</th>
-                    <th>Second adult dob</th>
+                    <th style="width: 15%">Name</th>
+                    <th>Telephone</th>
+                    <th>Insurance Pack</th>
                     <th>Action</th>
 
 
@@ -123,7 +120,7 @@ img {
 
     <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/healthdata/deletemodel'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/callbackdata/deletecallback'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -151,7 +148,7 @@ img {
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/healthdata/modeladdinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/callbackdata/callinventory_api"
     } );
 
 
