@@ -7,12 +7,7 @@
             <div class="row">
 
                 <div class="col-md-8">
-                   <h4 class="page-title">Social Media</h4>
-                   <ol class="breadcrumb">
-                  <li><a href="#">Dashboard</a></li>
-
-                  <li class="active">Social Media</li>
-                  </ol>
+                   <h4 class="page-title">Social Links</h4><hr>
                   </div>
 
             </div>

@@ -10,6 +10,9 @@
         {
           //  $aboutusData['Sitetitle'] ="Aboutus -";
              $aboutusData['aboutus'] = $this->Sitedesc_model->fetchaboutus();
+             $this->load->view('admin/template/header');
+             $this->load->view('admin/template/sidebar');
+             $this->load->view('admin/template/topbar');
             $this->load->view('admin/sitedesc',$aboutusData);
         }
     

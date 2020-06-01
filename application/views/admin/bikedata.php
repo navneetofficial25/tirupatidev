@@ -49,7 +49,7 @@ img {
             <div class="row">
                 <div class="col-sm-12">
                 <div class="col-md-8">
-                   <h4 class="page-title">Call Back data</h4><hr>
+                   <h4 class="page-title">Bike Insurance Data</h4><hr>
                   </div>
                   <div class="col-md-4">
                  </div>
@@ -88,9 +88,15 @@ img {
               <table id="lowinventory"  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
                 <thead>
                 <tr>    <th><input type="checkbox" class="masterSupplierCheck"></th>
-                    <th style="width: 15%">Name</th>
-                    <th>Telephone</th>
-                    <th>Insurance Pack</th>
+                    <th style="width: 15%">Registration Number</th>
+                    <th>Brand Name</th>
+                    <th>Model Name</th>
+                    <th>Variant Name</th>
+                    <th>Fuel type</th>
+                    <th>Registration year</th>
+                    <th>Policy Expiry</th>
+                    <th>Previous policy type</th>
+                    <th>policy insurer</th>
                     <th>Action</th>
 
 
@@ -115,7 +121,7 @@ img {
 
     <div id="deletePurchaseModal" class="modal fade in" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-    <?php echo form_open(base_url('admin/callbackdata/deletecallback'), array('method'=>'post'));?>
+    <?php echo form_open(base_url('admin/bikedata/deletebikedetail'), array('method'=>'post'));?>
     <div class="modal-content">
     <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">�</button>
@@ -143,7 +149,7 @@ img {
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {
-        "ajax": "<?php echo base_url(); ?>admin/callbackdata/callinventory_api"
+        "ajax": "<?php echo base_url(); ?>admin/bikedata/addinventory_api"
     } );
 
 

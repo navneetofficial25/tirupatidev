@@ -49,12 +49,7 @@ img {
             <div class="row">
                 <div class="col-sm-12">
                 <div class="col-md-8">
-                   <h4 class="page-title">Manufacturer</h4>
-                   <ol class="breadcrumb">
-                  <li><a href="<?php echo base_url(); ?>">Dashboard</a></li>
-
-                  <li class="active">Manufacturer</li>
-                  </ol>
+                   <h4 class="page-title">Bike Models</h4><br>
                   </div>
                   <div class="col-md-4">
                  </div>
