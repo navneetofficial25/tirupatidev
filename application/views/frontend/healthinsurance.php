@@ -1,5 +1,4 @@
-<?php $this->load->view('frontend/Template/header.php') ?>
-<?php $this->load->view('frontend/Template/navbar.php') ?>
+
 <h2 class="main_heading">Now Buying Health Insurance is Much Simpleir</h2>
 <div class="container health_main">
   <div class="">

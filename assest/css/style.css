@@ -943,258 +943,155 @@ padding-bottom: 30px;
 
 /* car form */
 .car{
-              
-  background-color:black;    
+  background-color:transparent;    
 
-   width:100%;
-   height: auto;
-   box-shadow: 0px 0px 10px 2px rgba( 0, 0, 0 , 0.2);
-   border-radius: 10px 10px 10px 10px;
-   margin-bottom: 60px;
-   margin-left: 50px;
-  
+width:100%;
+height: auto;
+box-shadow: 0px 0px 10px 2px rgba( 0, 0, 0 , 0.2);
+border-radius: 10px 10px 10px 10px;
+margin-bottom: 60px;
 }
-
-.car img{
-  border-radius: 10px 10px 0px 0px;
- width: 100%;
-}
-
 .car .box_sh{
   width: 100%;
   
 }
-.car button{
-  border-radius: 10px;
-  background-color: rgb( 227, 31, 36 );
-  font-size: 15px;
-  text-transform: uppercase;
-  text-align: center;
-  width: 35%;
+.car img{
+  border-radius: 10px 10px 0px 0px;
+ width: 100%;
+}
+.car .to{
+  padding-left: 70px;
+  padding-top: 20px;
+  }
+  
+  .car .small {
+  border-radius: 6px;
+  background-color: rgb( 255, 255, 255 );
+  box-shadow: 0px 0px 10px 2px rgba( 0, 0, 0 , 0.2);
+  padding: 5px;
+  width: 65%;
   height: auto;
-  color: rgb( 254, 254, 254 );
-  margin-top: 15px;
-  outline: none;
-  padding: 10px;
-  border: none;
-  margin-top: 30px;
-  margin-bottom: 80px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  }
+  .car .small img{
+  width: 40px;
+  height: 40px;
+  }
+  .car .small h6{
+  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb( 33, 33, 33 );
+  line-height: 1.463;
+  margin-left: 60px;
+  margin-top: -45px;
   }
-  .car button:hover{
-    background-color: rgb( 95, 96, 96 );
-  }
+  .car .small p{
   
-  
-  .car .to{
-padding-left: 70px;
-padding-top: 20px;
-}
-
-.car .small {
-border-radius: 6px;
-background-color: rgb( 255, 255, 255 );
-box-shadow: 0px 0px 10px 2px rgba( 0, 0, 0 , 0.2);
-padding: 5px;
-width: 65%;
-height: auto;
-margin-top: 20px;
-margin-bottom: 15px;
-}
-.car .small img{
-width: 40px;
-height: 40px;
-}
-.car .small h6{
-
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-color: rgb( 33, 33, 33 );
-line-height: 1.463;
-margin-left: 60px;
-margin-top: -45px;
-}
-.car .small p{
-
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-color: rgb( 95, 96, 96 );
-line-height: 1.463;
-margin-left: 60px;
-margin-top: -10px;
-font-size: 12px;
-}
-
-.car .chck{
-  margin-top: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb( 95, 96, 96 );
+  line-height: 1.463;
+  margin-left: 60px;
+  margin-top: -10px;
+  font-size: 12px;
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.car .adults {
-font-size: 17px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-color: rgb( 95, 96, 96 );
-line-height: 1.463;
-text-align: left;
-margin-top: 15px;
-
-}
-
-
-.car .date input[type=text], input[type=number],input[type=email]{
-width: 100%;
-border-top: none;
-padding-left: 15px;
-border-bottom: 2px solid rgb( 190, 190, 190 );
-outline: none;
-border-left: none;
-border-right: none;
-color: rgb( 190, 190, 190 );
-text-align: left;
-font-size: 15px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.car .date .lis{
-width: 100%;
-border-top: none;
-padding-left: 15px;
-
-outline: none;
-border-left: none;
-border-right: none;
-color: rgb( 190, 190, 190 );
-text-align: left;
-font-size: 15px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.car .date p{
-
-font-size: 10px;
-padding-left: 79%;
-margin-top: -20px;
-}
-
-
-
-
-.car .tab-content .bu {
-
-padding:7px;
-margin-top: 40px;
-border-radius: 6px;
-background-color: rgb( 227, 31, 36 );
-text-align: center;
-width: 40%;
-height: auto;
-outline: none;
-border: none;
-color: rgb( 255, 255, 255 );
-
-
-
-font-size: 15px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-.car .bu:hover{
-  background-color: rgb( 95, 96, 96 );
-}
-.car input[type=checkbox]  {
-  display: none;
-  }
-  .car input[type=text]::placeholder  {
-    color:rgb( 190, 190, 190 );
+  .car .adults {
+    font-size: 17px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb( 95, 96, 96 );
+    line-height: 1.463;
+    text-align: left;
+    margin-top: 15px;
+    
     }
- .car label.checkbox {
-  position: relative;
-  display: inline-block;
-  margin: 0px 20px 15px 0;
-  cursor: pointer;
-  }
-  
-  .car label.checkbox:before{
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 17px;
-  height: 17px;
- margin-top: 5px;
-  border: 2px solid black;
-  }
-  
 
-  .car input[type=checkbox]:checked + label:before, label.chekbox:hover:before {
-  border: 2px solid black;
-  }
-  .car label.checkbox:after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 5px;
-  width: 18px;
-  height: 8px;
-  border: 2px solid rgb( 227, 31, 36 );
-  border-top: none;
-  border-right: none;
-  transform: rotate(-45deg);
-  opacity: 0;
-  }
-  .car input[type=checkbox]:checked + label:after {
-  opacity: 1;
-  }
-  .car{
-      background-color:white;
-      margin-left: 10px;
-  }
-  .car .nav{
-      position: relative;
-      z-index: 0px;
-  }
-.car  a{
-text-decoration: none;
-color: red;
 
-font-size: 20px;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-color: rgb( 95, 96, 96 );
-line-height: 1.463;
-text-align: left;
-} 
+    .car .date input[type=text], input[type=number],input[type=email]{
+      width: 100%;
+      border-top: none;
+      padding-left: 15px;
+      
+      outline: none;
+      border-left: none;
+      border-right: none;
+      color: rgb( 190, 190, 190 );
+      text-align: left;
+      font-size: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
 
-.car a:hover{
-text-decoration: none;
-color:black
-}
-.car .active{
+      .car .date .lis{
+        width: 100%;
+        border-top: none;
+        padding-left: 15px;
+        
+        outline: none;
+        border-left: none;
+        border-right: none;
+        color: rgb( 190, 190, 190 );
+        text-align: left;
+        font-size: 13px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
 
-border-bottom: 2px solid red;
-}
-.car .tab-content .active{
-border-bottom: none;
-}
-.car .nav-item{
-margin-top: 10px;
-margin-right: 25px;
-}
-.car .chckb{
-margin-top: 30px;
-}
+        .car .date p{
 
+          font-size: 10px;
+          padding-left: 79%;
+          margin-top: -20px;
+          }
+          .car button{
+            border-radius: 10px;
+            background-color: rgb( 227, 31, 36 );
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;
+            width: 35%;
+            height: auto;
+            color: rgb( 254, 254, 254 );
+            margin-top: 15px;
+            outline: none;
+            padding: 10px;
+            border: none;
+            margin-top: 30px;
+            margin-bottom: 80px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            .car button:hover{
+              background-color: rgb( 95, 96, 96 );
+            }
+            .car .nav{
+              position: relative;
+              z-index: 0px;
+          }
+        .car  a{
+        text-decoration: none;
+        color: red;
+        
+        font-size: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: rgb( 95, 96, 96 );
+        line-height: 1.463;
+        text-align: left;
+        } 
+        
+        .car a:hover{
+        text-decoration: none;
+        color:black
+        }
+        .car .active{
+        
+        border-bottom: 2px solid red;
+        }
+        .car .tab-content .active{
+        border-bottom: none;
+        }
+        .car .nav-item{
+        margin-top: 15px;
+        margin-right: 25px;
+        margin-left: 10px;
+        }      
 /* car form end */
 
 /* health page end */
@@ -1385,7 +1282,7 @@ border: 1px solid rgb( 190, 190, 190 );
     .refer .bu {
       padding: 5px;
       
-    
+   
       border-radius: 6px;
       background-color: rgb( 227, 31, 36 );
       text-align: center;
@@ -1434,3 +1331,54 @@ border: 1px solid rgb( 190, 190, 190 );
       color: white;
     }
   /* refer end */
+
+
+
+  /* modal box */
+  
+    .modal h4{
+      
+      font-size: 25px;
+      text-align: center;
+      color:white;
+      padding:0px;
+     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .modal input[type=button]{
+      border-radius: 10px;
+      
+      font-size: 13px;
+      text-transform: uppercase;
+     
+      margin-bottom: 20px;
+      width: 40%;
+      height: auto;
+      padding: 10px;
+      color: rgb( 254, 254, 254 );
+      background-color: rgb( 95, 96, 96 );
+      outline: none;
+      
+      border: none;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      .modal input[type=button]:hover{
+        background-color: rgb( 239, 69, 84 );
+      }
+      .modal .lis{
+        width: 100%;
+      border: 1px solid rgb( 190, 190, 190 );
+        padding-left: 15px;
+        margin-bottom: 20px;
+        background-color: rgb( 255, 255, 255 );
+        border-radius: 6px;
+        color: rgb(165, 154, 154);
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        padding:10px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .modal .lis::placeholder{
+          color: rgb(165, 154, 154);
+        }
+  /* modal box end */

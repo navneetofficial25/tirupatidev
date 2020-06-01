@@ -1,187 +1,142 @@
-<section class="car">
-    <div class="container">
-        <h2>Now Buying Health Insurance is Much Simpleir</h2>
-        <div class="sho">
+<h2 class="main_heading">Now Buying Health Insurance is Much Simpleir</h2>
+<div class="container car">
+    <div class="">
+        <div class="box_sh ">
             <div class="row">
-                <div class="col-md-4" style="margin-right: -10px;">
-                    <img src="<?= base_url();?>assest/img/health-insurance-top-up.jpg" width="110%" style="border-radius: 10px 0px 0px 0px;">
+                <div class="col-lg-4 col-xs-12 " style="padding:0px;">
+                <img src="<?= base_url();?>assest/img/health-insurance-top-up.jpg" >
                     <div class="to">
-                        <div class=" small">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="<?= base_url();?>assest/img/save-money.png">
-                                </div>
-                                <div class="col-md-8">
+                        <div class="row">
+                            <div class="col-md-12 col-12">
+                                <div class=" small">
+                                <img src="<?= base_url();?>assest/img/save-money.png">
                                     <h6>Save Upto 80%</h6>
                                     <p>Lowest Premiums</p>
                                 </div>
                             </div>
-                        </div>   
-                        <div class=" small">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="<?= base_url();?>assest/img/life-insurance.png" >
-                                </div>
-                                <div class="col-md-8">
+                            <div class="col-md-12 col-12">
+                                <div class=" small">
+                                <img src="<?= base_url();?>assest/img/life-insurance.png" >
                                     <h6>Save Upto 80%</h6>
                                     <p>Lowest Premiums</p>
                                 </div>
                             </div>
-                        </div> 
-                        <div class=" small">
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <img src="<?= base_url();?>assest/img/family (1).svg">
-                                </div>
-                                <div class="col-md-8">
+                            <div class="col-md-12 col-12">
+                                <div class=" small">
+                                <img src="<?= base_url();?>assest/img/family (1).svg">
                                     <h6>Save Upto 80%</h6>
                                     <p>Lowest Premiums</p>
                                 </div>
                             </div>
-                        </div>  
-                    </div>
+                        </div>    
+                    </div>    
                 </div>
-                <div class="col-md-8 car" >
-                    
-                        
-                        <ul class="nav " role="tablist">
-                            <li class="nav-item">
-                              <a class=" active" data-toggle="tab" href="#renew">Renew Details</a>
-                            </li>
-                            <li class="nav-item">
-                              <a class="" data-toggle="tab" href="#new">New Bike</a>
-                            </li>
-                           
-                          </ul>
-                        <hr style="border-width: 2px; margin-top: 0px;">
-
-
-              
-                    <!-- Tab panes -->
+                <div class="col-lg-8 col-xs-12 " style="padding:0px; background-color:white;">
+                    <ul class="nav " role="tablist">
+                        <li class="nav-item">
+                            <a class=" active" data-toggle="tab" href="#renew">Renew Details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="" data-toggle="tab" href="#new">New Bike</a>
+                        </li>
+                    </ul>
+                    <hr style="border-width: 2px; margin-top: 0px;">
                     <div class="tab-content" >
                         <div id="renew" class="container tab-pane active">
+                            <?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('method'=>'POST'));?>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group date">
+                                        <label class="adults" for="usr">Registration Number</label>
+                                        <input type="text"  id="usr" name="regno" placeholder="Enter Registration Number">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="comp ">Manufacturer</label>
+                                        <select id="comp" class="lis" name="comp">
+                                            <option value="#">Enter Company</option>
 
-<?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('method'=>'POST'));?>
-
-<div class="row">
-
-    <div class="col-md-8">
-        <div class="form-group date">
-            <label class="adults" for="usr">Registration Number</label>
-            <input type="text"  id="usr" name="regno" placeholder="Enter Registration Number">
-            
-        </div>
-     </div> 
-    <div class="col-md-6">
-        <div class="form-group date">
-            <label class="adults" for="comp ">Manufacturer</label>
-            
-            <select id="comp" class="lis" name="comp">
-            <option value="#">Enter Company</option>
-
-<?php
+                                            <?php
 foreach($company as $companies){
 
 echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>";
 }
 ?>
-            </select>
+                                        </select>
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="type">Fuel type</label>
+                                        <select class="lis"   id="type" name="type">
+                                            <option >Enter Fuel Type</option>
+                                            <option value="#">A</option>
+                                            <option value="#">B</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="regyr">Registration year</label>
+                                        <input type="text"  id="regyr" name="regyr" placeholder="Select a Registration year">
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="ptype">Select Previous Policy Type</label>
+                                        <select class="lis"  id="ptype" name="ptype">
+                                            <option value="#">Enter Policy Type</option>
+                                            <option value="#">a</option>
+                                            <option value="#">b</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="modal">Modal</label>
+                                        <select class="lis"   id="modals" name="modal">
+                                            <option value="#">Enter Model</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="varis">Varient</label>
+                                        <select class="lis"   id="varis" name="vari">
+                                            <option value="#">Enter Varient</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="pexpire">Select Policy Expire</label>
+                                        <select class="lis"   id="pexpire" name="pexpire">
+                                            <option value="#">Not Expire</option>
+                                            <option value="#">a</option>
+                                            <option value="#">b</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="pinsur">Select Previous Insurer</label>
+                                        <select class="lis"   id="pinsur" name="pinsur">
+                                            <option value="#">Select Insurer</option>
+                                            <option value="#">a</option>
+                                            <option value="#">b</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                    
+                            </div>
 
-
-            
-        </div>
-        <div class="form-group date">
-            <label class="adults" for="type">Fuel type</label>
-            
-            <select class="lis"   id="type" name="type">
-                <option >Enter Fuel Type</option>
-                <option value="#">A</option>
-                <option value="#">B</option>
-                
-            
-            </select>
-        </div>
-        <div class="form-group date">
-            <label class="adults" for="regyr">Registration year</label>
-            <input type="text"  id="regyr" name="regyr" placeholder="Select a Registration year">
-            
-        </div>
-        <div class="form-group date">
-            <label class="adults" for="ptype">Select Previous Policy Type</label>
-            
-            <select class="lis"  id="ptype" name="ptype">
-                <option value="#">Enter Policy Type</option>
-                <option value="#">a</option>
-                <option value="#">b</option>
-                
-            </select>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group date">
-            <label class="adults" for="modal">Modal</label>
-
-            <select class="lis"   id="modals" name="modal">
-                <option value="#">Enter Model</option>
-            </select>
-        </div>
-        <div class="form-group date">
-            <label class="adults" for="varis">Varient</label>
-            
-            <select class="lis"   id="varis" name="vari">
-                <option value="#">Enter Varient</option>
-            </select>
-        </div>
-        <div class="form-group date">
-            <label class="adults" for="pexpire">Select Policy Expire</label>
-            
-            <select class="lis"   id="pexpire" name="pexpire">
-                <option value="#">Not Expire</option>
-                <option value="#">a</option>
-                <option value="#">b</option>
-            </select>
-        </div>
-        <div class="form-group date">
-            <label class="adults" for="pinsur">Select Previous Insurer</label>
-            
-            <select class="lis"   id="pinsur" name="pinsur">
-                <option value="#">Select Insurer</option>
-                <option value="#">a</option>
-                <option value="#">b</option>
-            </select>
-        </div>
-    </div>
-  
-      
-         
-              
-                
-            <button class="bu text-center" name="formSubmit">Get Quote</button>
-           
-       
-   
-
-</div>    
-<?php echo form_close(); ?>
-
+                            <div class="text-center">
+                                <button name="formSubmit">Get Quote</button>
+                            </div>
+                            <?php echo form_close(); ?>
                         </div>
-
-
                         <div id="new" class="container tab-pane fade">
-<?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('method'=>'POST'));?>
-
-                                    <div class="row">
-
-                                        <div class="col-md-8">
-                                            <div class="form-group date">
-                                                <label class="adults" for="us">Registration Number</label>
-                                                <input type="text"  id="us" name="regno" placeholder="Enter Registration Number">
-                                                
-                                            </div>
-                                         </div>   
-                                        <div class="col-md-6">
-                                            <div class="form-group date">
-                                                <label class="adults" for="comps">Manufacturer</label>
+                            <?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('method'=>'POST'));?>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group date">
+                                        <label class="adults" for="us">Registration Number</label>
+                                        <input type="text"  id="us" name="regno" placeholder="Enter Registration Number">
+                                    </div>
+                                </div> 
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="comps">Manufacturer</label>
                                                 
                                                 <select class="lis"  id="comps" name="comp">
 
@@ -195,87 +150,78 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
   
   
                                                 
-                                            </div>
-                                            <div class="form-group date">
-                                                <label class="adults" for="typ">Fuel type</label>
-                                                
-                                                <select class="lis"   id="typ" name="type">
-                                                    <option value="#">Enter Fuel Type</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group date">
-                                                <label class="adults" for="r">Registration year</label>
-                                                <input type="text"  id="r" name="regyr" placeholder="Select a Registration year">
-                                                
-                                            </div>
-                                            <div class="form-group date">
-                                                <label class="adults" for="ptpe">Select Previous Policy Type</label>
-                                                
-                                                <select class="lis"  id="ptpe" name="ptype">
-                                                    <option value="#">Enter Policy Type</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group date">
-                                                <label class="adults" for="modls">Modal</label>
-                                               
-                                                <select class="lis"   id="modls" name="modal">
-                                                    <option value="#">Enter Model</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group date">
-                                                <label class="adults" for="vars">Varient</label>
-                                                
-                                                <select class="lis"   id="vars" name="vari">
-                                                    <option value="#">Enter Varient</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group date">
-                                                <label class="adults" for="pexire">Select Policy Expire</label>
-                                               
-                                                <select class="lis"   id="pexire" name="pexpire">
-                                                    <option value="#">Not Expire</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group date">
-                                                <label class="adults" for="pisur">Select Previous Insurer</label>
-                                                
-                                                <select class="lis"   id="pisur" name="pinsur">
-                                                    <option value="#">Select Insurer</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        
-                                          
-                                                
-                                               
-                                                    
-                                                <button class="bu text-center" name="formSubmit">Get Quote</button>
-                                               
-                                     
-                                        
-
                                     </div>
-<?php echo form_close(); ?>
+                                    <div class="form-group date">
+                                        <label class="adults" for="type">Fuel type</label>
+                                        <select class="lis"   id="type" name="type">
+                                            <option >Enter Fuel Type</option>
+                                            <option value="#">A</option>
+                                            <option value="#">B</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="regyr">Registration year</label>
+                                        <input type="text"  id="regyr" name="regyr" placeholder="Select a Registration year">
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="ptype">Select Previous Policy Type</label>
+                                        <select class="lis"  id="ptype" name="ptype">
+                                            <option value="#">Enter Policy Type</option>
+                                            <option value="#">a</option>
+                                            <option value="#">b</option>
+                                        </select>
+                                    </div>
+                                </div> 
+                                <div class="col-md-6"> 
+                                    <div class="form-group date">
+                                        <label class="adults" for="modal">Modal</label>
+                                        <select class="lis"   id="modals" name="modal">
+                                            <option value="#">Enter Model</option>
+                                            
+                                        </select>
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="varis">Varient</label>
+                                        <select class="lis"   id="varis" name="vari">
+                                            <option value="#">Enter Varient</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="pexpire">Select Policy Expire</label>
+                                        <select class="lis"   id="pexpire" name="pexpire">
+                                            <option value="#">Not Expire</option>
+                                            <option value="#">a</option>
+                                            <option value="#">b</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group date">
+                                        <label class="adults" for="pinsur">Select Previous Insurer</label>
+                                        <select class="lis"   id="pinsur" name="pinsur">
+                                            <option value="#">Select Insurer</option>
+                                            <option value="#">a</option>
+                                            <option value="#">b</option>
+                                        </select>
+                                    </div>
+                                </div>         
+                            </div>  
+                            <div class="text-center">
+                                <button name="formSubmit">Get Quote</button>
+                            </div>  
+                            <?php echo form_close(); ?>
                         </div>
 
-                      
                     </div>
+                    
+                </div>
 
-                </div> 
-            </div>
+            </div>    
+
         </div>
+
     </div>
-</section>  
+
+
+</div>  
 
 
 

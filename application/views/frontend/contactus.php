@@ -72,8 +72,7 @@
                                             </div>
                                           </div>
                                        
-                                      </div>
-                                      <div class="col-md-12 col-12 ">
+                                      
                                         
                                           <div class="address">
                                             <i class="fa fa-envelope" style="font-size: 40px; color: rgb( 227, 31, 36 );" aria-hidden="true"></i>
