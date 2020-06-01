@@ -31,474 +31,251 @@
 
 
 
-@media only screen and (max-width: 450px) {
-    body {
-        background-color:  rgba(237, 237, 237, 0.767);
+@media only screen and (max-width: 380px) {
+    
+    
+    .top-nav .refer {
+       height: auto;
+        width: 100px;
+        font-size: 10px;
+      
+      
         
+      }
+     .top-nav .earn{
+       margin-left: 130px;
+       margin-top: -20px;
+     }
+    
+    .meu .brk{
+      display: none;
     }
-    * {
-      box-sizing: border-box;
+            
+    .first .card{
+      width: 100%;
+      margin-right: 0px;
+      margin-left: 0px;
+      margin-bottom: 20px;
+      
     }
-    .last .res{
-        float: left;
-        padding-left: 28%;
+    .brands .card{
+      width: 100%;
+      margin-right: 0px;
+      margin-left: 0px;
+      margin-bottom: 20px;
+      
+    }
+    .health_main{
+      width:90%;
+    }
+
+
+    .health_main button{
+      width: 50%;
+    }
+    .health_main .to{
+      padding-left: 50px;
+    }
+    .health_main .small{
+      width: 80%;
+    }
+    .car{
+      width:90%;
+    }
+    .car button{
+      width: 50%;
+    }
+    .car .to{
+      padding-left: 50px;
+    }
+    .car .small{
+      width: 80%;
+    }
+
+    .why p {
+      font-size: 20px;
+      
+      
+      
+      } 
+    .review h3{
+      font-size: 20px;
+    }  
+    .about p {
+      font-size: 20px;
+    }
+    .about h3{
+      font-size: 24px;
+    }
+    .imp p {
+      font-size: 18px;
+    }
+    .why_Health p{
+     font-size: 15px;
+    }
+    .why_Health h4{
+      font-size: 20px;
+      width: 60%;
+    }
+    .why_Health img{
+      width: 80px;
+      height: 80px;
+     
+    }
+    .refer{
+      width: 80%;
+    }
+    .refer .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .refer .fa {
+      padding: 15px;
+      font-size: 15px;
+      width: 20%;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+    .contect-form .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .contect-form .contact-info .uper-info p{
+      padding-top: 10px;
+      font-size: 20px;
+    }
+    
+  }
+
+
+
+  @media only screen and (max-width: 426px) and (min-width:376px){
+    .meu .brk{
+      display: none;
+    }
+    .first .card{
+      width: 160px;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 20px;
+      
+    }
+    .brands .card{
+      width: 160px;
+      margin-right: 10px;
+      margin-left: 10px;
+      margin-bottom: 20px;
+      
     }
     .about p {
-        font-size: 22px;
-      }
-    .about h3 {
-      text-align: center;
-    }
-    .about img{
-      width: 100%;
-      padding-left:50px;
-      padding-top: 90px;
-      padding-bottom: 10px;
-    }
-    .review .give{
-      margin-left: 25px;
-      float: left;
-      width: 35%;
-      height: 40px;
-      margin-bottom: -35px;
-      font-size: 1rem;
-    }
-    .review .take{
-      margin-top: -50px;
-      float:right;
-      width: 35%;
-      height: 40px;
-      margin-right: 25px;
-      font-size: 1rem;
-    }
-    .review .or {
       font-size: 20px;
+    }
+    .about h3{
+      font-size: 24px;
+    }
+    .why p {
+      font-size: 20px;
+    } 
+    .contect-form .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .health_main{
+      width:90%;
+    }
+
+
+    .health_main button{
+      width: 50%;
+    }
+    .health_main .to{
+      padding-left: 50px;
+    }
+    .health_main .small{
+      width: 80%;
+    }
+    .car{
+      width:90%;
+    }
+    .car button{
+      width: 50%;
+    }
+    .car .to{
+      padding-left: 50px;
+    }
+    .car .small{
+      width: 80%;
     }
     .review h3{
       font-size: 20px;
     }
-    .first .give{
-      margin-left: 25px;
-      float: left;
-      width: 35%;
-      height: 40px;
-      margin-bottom: -35px;
-      font-size: 70%;
-    }
-    .first .take{
-      margin-top: -50px;
-      float:right;
-      width: 35%;
-      height: 40px;
-      margin-right: 25px;
-      font-size: 70%;
-    }
-    .first .or {
-      font-size: 20px;
-    }
-    .why p {
-      font-size: 22px;
-    } 
-    .why img{
-      float: left;
-      padding-left: 20px;
-      width: 45px;
-      height: 25px;
-    }  
-    .why .se{
-      margin-left: 55px;
-      margin-top: -30px;
-    }
-    .first .col{
-      width: 40%;
-      margin-bottom: 20px;
-      margin-left: 10px;
-      margin-right:10px ;
-    }
-    .first .col img{
-      width: 85px;
-      margin-left: 18px;
-    }
-    .nav a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .nav  .bbb{
-      background-color:rgb( 239, 69, 84 ) ;
-      outline: none;
-      display: block;
-      border: none;
-    }
-    .nav {
-      margin-top: 70px;
-    }
-    .nav .nav-link{
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: rgb( 95, 96, 96 );
-      text-transform: uppercase;
-      line-height: 1.4;
-      text-align: center;
-      font-size: 16px;
-      margin-left: 12px;
-    }   
-    .nav p{
-      float: left;
-      font-size:0px;
-      margin-top: -10px;
-    }
-    .nav img{
-      padding-left: 10px;
-    }
-    .nav .blk{
-      background-color: black;
-      padding-top: 40px;
-    }
-    .brands .col-md{
-      width: 50%;
-    }  
-    .brands  h1{
-      font-size: 200%;
-    } 
-    .brands{
-      padding-top: 20px;
-      padding-bottom: 40px;
-    }    
-    .foot .we {
-      margin-bottom: -40px;
-    }
-    .foot input[type=email] {
-      width: 50%;
-    }
-    .foot .raj {
-      width: 70%;
-    }
-    .top-nav{
-      height: 70px;
-    }    
-    .top-nav .info{
-      font-size: 12px;
-      text-align:none;
-    }
-    .first .save {
-      font-size: 25px;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: rgb( 239, 69, 84 );
-      font-weight: 500;
-      margin-top: 50px;
-    }   
-    .first{
-      padding-top: 150px;
-    }     
-    .first .still {
-      font-size: 20px;
-      padding-left: 10px;
-      padding-bottom: 10px;
-    }    
-    
-    .imp{
-    
-      width: 100%;
-    }
     .imp p {
-      padding-bottom: 40px;
+      font-size: 18px;
+    }
+    .why_Health p{
+     font-size: 15px;
+    }
+    .why_Health h4{
       font-size: 20px;
-    }
-
-    .health_main .bu {
-      margin-left: 50px;
-      width: 50%;
-    }
-    .health_main img{
-      width:100%;
-      border-radius: 10px 10px 0px 0px;
-    }
-    .health_main h2{
-      font-size: 30px;
-      margin-top: 30px;
-    }
-    .health_main .small h6{
-      margin-left: 55px;
-      margin-top: -50px;
-    }
-    .health_main .small p{
-      margin-left: 55px;
-    }
-    .health_main .date p{
-      margin-left: -15px;
-    }
-    .health_main .detail{
-      margin-left: 0px;
-    }
-    .health_main .chck{
-      margin-top: 0px;
-    }
-    .health_main .chck .chk{
-      margin-left: 25px;
-    }
-    .health_main .chck .chk img{
-      margin-left: 60px;
-      margin-top: -50px;
-    }
-    .health_main .chck .chk .whts{
-     
-      margin-left: -100%;
-    }  
-
-
-    
-    .why_Health h2 {
-      font-size: 25px;
-      
+      width: 60%;
     }
     .why_Health img{
-      width: 70px;
-      height: 70px;
-      
+      width: 80px;
+      height: 80px;
      
     }
-    
-    .why_Health h4 {
-      margin-left: 100px;
-      margin-top: -100px;
-      font-size: 20px;
-      
+    .refer{
+      width: 80%;
     }
-    
-    .why_Health p{
-        font-size: 15px;
-        margin-left: 100px;
-        padding-bottom: 20px;
-    
-    }
-    .why_Health .h{
-        padding-bottom: 40px;
-    }
-    .accordion-section .panel-default > .panel-heading {
-    height: auto;
-    width: 105%;
-  }
-    .accordion-section .panel-default .panel-title a {
-      font-size: 13px;
-      padding-left: 3px;
-    }
-    .accordion-section .panel-default .panel-title a:after {
-      
-      font-size: 1.5rem;
-   
-   
-      float: right;
-      margin-right: -10px;
-      margin-top: -15px;
-     
-    }
-    
-    .accordion-section .panel-default .panel-body {
-    font-size: 15px;
-    }
-    .faq h2 {
-    
-    font-size: 25px;
-    }
-    
-    
-    
-                        
-  }
-
-
-
-
-  @media only screen and (max-width: 770px) and (min-width: 451px) {
-    body {
-      background-color:  rgba(237, 237, 237, 0.767);
-        
-    }
-    * {
-      box-sizing: border-box;
-    }
-    .last .res{
-        float: left;
-        padding-left: 40%;
-    }
-    .review .give{
-      margin-left: 55px;
-      float: left;
-      width: 90%;
-      height: 40px;
-      margin-bottom: -35px;
-      font-size: 23px;
-    }
-    .review .take{
-      margin-top: 0px;
-      float:right;
-      width: 90%;
-      height: 40px;
-      margin-right: 55px;
-      font-size: 23px;
-    }
-    .review .or {
-      font-size: 25px;
-    }   
-    .first .give{
-      margin-left: 55px;
-      float: left;
-      width: 90%;
-      height: 40px;
-      margin-bottom: -35px;
-      font-size: 23px;
-    }
-    .first .take{
-      margin-top: 0px;
-      float:right;
-      width: 90%;
-      height: 40px;
-      margin-right: 55px;
-      font-size: 23px;
-    }
-    .first .or {
-      font-size: 25px;
-    }    
-    .about h3 {
-      text-align: center;
-      font-size: 30px;
-    }
-    .about img{
-      width: 130%;
-      height: 350px;
-      margin-left:-50px;
-      padding-top: 90px;
-      padding-bottom: 10px;
-  }   
-    .about p {
-      font-size: 20px;
-     
-      
-    }   
-    .first .col{
-      width: 10%;
-      margin-bottom: 20px;
-      margin-left: 10px;
-      margin-right:10px ;
-    }
-    .first .col img{
-      width: 50px;
-      margin-left: 18px;
-    }
-    .first .still {
-      font-size: 25px;
-      
-      padding-left: 10px;
-      padding-bottom: 10px;
-      }  
-      .imp{
-    
-        width: 100%;
-      }
-      .imp p {
-        padding-bottom: 40px;
-        font-size: 20px;
-      }
-  
-      .health_main .bu {
-        margin-left: 60px;
-        width: 60%;
-      }
-      .health_main img{
-        width:115%;
-        border-radius: 10px 0px 0px 0px;
-      }
-      .health_main h2{
-        margin-top: 30px;
-      }
-      
-      .health_main .small{
-        width: 100%;
-        margin-bottom: 40px;
-      }
-      .health_main .small h6{
-        font-size: 13px;
-      }
-      .health_main .small img{
-        margin-left: -15px;
-      }
-     
-      .health_main .date p{
-        margin-left: -15px;
-      }
-      .health_main .detail{
-        margin-left: 10px;
-      }
-      .health_main .chck{
-        margin-top: 0px;
-      }
-      .health_main .chck .chk{
-        margin-left: 25px;
-      }
-      .health_main .chck .chk img{
-        margin-left: 130px;
-        margin-top: -50px;
-      }
-      .health_main .chck .chk .whts{
-       
-        margin-left: -145%;
-      }  
-  
-  
-      
-      .why_Health h2 {
-        font-size: 25px;
-        
-      }
-      .why_Health img{
-        width: 90px;
-        height: 90px;
-        
-       
-      }
-      
-      .why_Health h4 {
-        width: 70%;
-        margin-left: 20px;
-        font-size: 20px;
-        margin-top: -10px;
-        
-      }
-      
-      .why_Health p{
-          
-        margin-left: 20px;
-          padding-bottom: 20px;
-      
-      }
-      .why_Health .h{
-          padding-bottom: 40px;
-      }
-      .accordion-section .panel-default > .panel-heading {
-      height: auto;
+    .refer .bu {
       width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
     }
-      .accordion-section .panel-default .panel-title a {
-        font-size: 18px;
-        
-      }
-      .accordion-section .panel-default .panel-title a:after {
-        
-        font-size: 2rem;
-     
-     
-        float: right;
-     
-        margin-top: -10px;
-       
-      }
-      
-      .accordion-section .panel-default .panel-body {
-      font-size: 20px;
-      }
-       
-                        
+    .refer .fa {
+      padding: 15px;
+      font-size: 15px;
+      width: 20%;
+      text-align: center;
+      text-decoration: none;
+      margin-top: 20px;
+    }
   }
+
+  @media only screen and (max-width: 1000px) and (min-width:768px){
+    .meu .brk{
+      display: none;
+    }
+    .top-nav .earn{
+      margin-left: 130px;
+      margin-top: -25px;
+    }
+    .refer .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    .contect-form .bu {
+      width: 100%;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+  }
+
+
+
+  
+
+
+
+
+
+  
+    
 
 
 

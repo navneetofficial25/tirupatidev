@@ -10,7 +10,7 @@
             <div class="d-flex flex-row-reverse">
               <div class="list ">
               
-                  <ul class="nav px-2 text  px-4 ">
+                  <ul class="nav  text  ">
                     <li class="nav-item nav-top">
                     <?php
 							$socials_datas=Utility::getsocial();
@@ -31,9 +31,9 @@
                       <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="ico fa fa-pinterest"></i></a><?php }?> <span style="color:white; margin-right:5px;" >|</span>
                       </li>
                     
-                    <li class="nav-item nav-top">
+                    <li class="nav-item earn nav-top">
                       
-                      <a href="<?php echo base_url(); ?>frontend/refer"><p class="refer font m-0">Refer and Earn</p></a>
+                      <a  href="<?php echo base_url(); ?>frontend/refer"><p class="refer font m-0">Refer and Earn</p></a>
                     </li>
                     
                   </ul>

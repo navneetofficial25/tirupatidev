@@ -85,18 +85,20 @@
     </div>
   </div>
   <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-md">
       <div class="modal-content">
-        <div class="modal-header">
+        <div class="modal-header" style="background-color:rgb( 239, 69, 84 ); height:60px;">
+          
           <h4>Get A Call Back</h4>
+          
           <button type="button" class="close" data-dismiss="modal" style="outline:none;">&times;</button>
           
         </div>
         <div class="modal-body">
-          <input type="text" class="mod_input" id="pname" name="pname"placeholder="Enter Your Name"></br>
-          <input type="text" class="mod_input" id="mob" name="mob" placeholder="Enter Mobile Number"></br>
+          <input type="text" class="lis" id="pname" name="pname"placeholder="Enter Your Name"></br>
+          <input type="text" class="lis" id="mob" name="mob" placeholder="Enter Mobile Number"></br>
            
-          <select class="mod_input" id="services" name = "services">
+          <select class="lis" id="services" name = "services">
                                     <option >Select Insurance</option>
 
                         <?php
@@ -106,10 +108,9 @@
                         ?>
                                                 </select> 
         </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-default text-center" id="formSubmit" data-dismiss="modal">submit</button>
-          
-        </div>
+        <div class="text-center">
+        <input type="button"  id="formSubmit" value="submit" data-dismiss="modal">
+                      </div>
       </div>
     </div>
   </div>

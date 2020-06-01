@@ -53,4 +53,4 @@
             </div>
         </div>
 
-        <?php $this->load->view('frontend/Template/footer.php') ?>
+    
