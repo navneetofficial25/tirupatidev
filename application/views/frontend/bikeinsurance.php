@@ -103,7 +103,13 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
         </div>
         <div class="form-group date">
             <label class="adults" for="regyr">Registration year</label>
-            <input type="text"  id="regyr" name="regyr" placeholder="Select a Registration year">
+            <select class="lis"  id="regyr" name="regyr">
+                                                    <option selected disabled value="#">Select Year</option>
+                                                    <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
+                                                        <option  value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                                    <?php } ?>
+                                                    
+                                                </select>
             
         </div>
         <div class="form-group date">
@@ -134,12 +140,8 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
         </div>
         <div class="form-group date">
             <label class="adults" for="pexpire">Select Policy Expire</label>
-            
-            <select class="lis"   id="pexpire" name="pexpire">
-                <option value="#">Not Expire</option>
-                <option value="#">a</option>
-                <option value="#">b</option>
-            </select>
+            <input type="date" class="lis"  placeholder="Policy Expire" id="ptpe" name="ptype">
+
         </div>
         <div class="form-group date">
             <label class="adults" for="pinsur">Select Previous Insurer</label>
@@ -207,17 +209,20 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="r">Registration year</label>
-                                                <input type="text"  id="r" name="regyr" placeholder="Select a Registration year">
+                                                <select class="lis"  id="regyr" name="regyr">
+                                                    <option selected disabled value="#">Select Year</option>
+                                                    <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
+                                                        <option  value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                                    <?php } ?>
+                                                    
+                                                </select>
                                                 
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="ptpe">Select Previous Policy Type</label>
                                                 
-                                                <select class="lis"  id="ptpe" name="ptype">
-                                                    <option value="#">Enter Policy Type</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
-                                                </select>
+                                                <input type="date" class="lis"  placeholder="Policy Expire" id="ptpe" name="ptype">
+
                                             </div>
                                         </div>
                                         <div class="col-md-6">

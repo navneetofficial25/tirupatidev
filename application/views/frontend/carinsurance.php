@@ -93,7 +93,13 @@
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="regyr">Registration year</label>
-                                                <input type="text"  id="regyr" name="regyr" placeholder="Select a Registration year">
+                                                <select class="lis"  id="regyr" name="regyr">
+                                                    <option selected disabled value="#">Select Year</option>
+                                                    <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
+                                                        <option  value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                                    <?php } ?>
+                                                    
+                                                </select>
                                                 
                                             </div>
                                             <div class="form-group date">
@@ -125,11 +131,8 @@
                                             <div class="form-group date">
                                                 <label class="adults" for="pexpire">Select Policy Expire</label>
                                                 
-                                                <select class="lis"   id="pexpire" name="pexpire">
-                                                    <option value="#">Not Expire</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
-                                                </select>
+                                                <input type="date" class="lis" placeholder="Expire Date"  id="pexpire" name="pexpire">
+                                                   
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="pinsur">Select Previous Insurer</label>
@@ -228,11 +231,8 @@
                                             <div class="form-group date">
                                                 <label class="adults" for="pexire">Select Policy Expire</label>
                                                
-                                                <select class="lis"   id="pexire" name="pexpire">
-                                                    <option value="#">Not Expire</option>
-                                                    <option value="#">a</option>
-                                                    <option value="#">b</option>
-                                                </select>
+                                                <input type="date" class="lis" placeholder="Expire Date"  id="pexpire" name="pexpire">
+
                                             </div>
                                             <div class="form-group date">
                                                 <label class="adults" for="pisur">Select Previous Insurer</label>
