@@ -1,5 +1,3 @@
-<?php $this->load->view('admin/template/header.php') ?>
-<?php $this->load->view('admin/template/sidebar.php') ?>
 <style>
 .thunbnail_image{
 height: 86px;
@@ -36,14 +34,8 @@ margin-top: -11px;}
             <div class="row">
                 <div class="col-sm-12">
                 <div class="col-md-8">
-                   <h4 class="page-title">About Us </h4>
-                   <ol class="breadcrumb">
+                   <h4 class="page-title">Site Description </h4><hr>
 
-                   <li><a href="<?php echo base_url(); ?>">Dashboard</a></li>
-                  <li><a href="<?php echo base_url(); ?>Aboutus"> About Us </a></li>
-
-                  <li class="active">Edit About Us </li>
-                  </ol>
                   </div>
 
 

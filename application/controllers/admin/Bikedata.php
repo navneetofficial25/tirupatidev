@@ -1,22 +1,22 @@
 <?php
-    class Cardata extends CI_controller{
+    class Bikedata extends CI_controller{
 
         public function __construct()
         {
             parent::__construct();
-            $this->load->model('admin/CardataModel');
+            $this->load->model('admin/BikedataModel');
         }
               
         public function index(){
             $this->load->view('admin/template/header');
             $this->load->view('admin/template/sidebar');
             $this->load->view('admin/template/topbar');
-            $this->load->view('admin/cardata');
+            $this->load->view('admin/bikedata');
         }
         
         public function addinventory_api(){
 
-            $getPurchaseData = $this->CardataModel->fetchinventory_api();
+            $getPurchaseData = $this->BikedataModel->fetchinventory_api();
     
             //print_r($getPurchaseData);
     
@@ -29,30 +29,30 @@
                  echo json_encode(array('data'=>$arrya_json));
             }
             
-            public function deletecardetail(){ 
+            public function deletebikedetail(){ 
     
                     if($this->input->post('deletesliderId'))
                 {
                   $this->form_validation->set_rules('deletesliderId','text','required');
                   if($this->form_validation->run() == true)
                   {
-                    $getDeleteStatus = $this->CardataModel->deletecardata($this->input->post('deletesliderId'));
+                    $getDeleteStatus = $this->BikedataModel->deletebikedata($this->input->post('deletesliderId'));
                     if($getDeleteStatus['message'] == 'yes')
                     {
                       $this->session->set_flashdata('success','Gallery  deleted successfully');
-                      redirect(base_url()."admin/cardata");
+                      redirect(base_url()."admin/bikedata");
                     }
                     else
                     {
                       $this->session->set_flashdata('error','Something went wrong. Please try again');
-                    redirect(base_url()."admin/cardata");
+                    redirect(base_url()."admin/bikedata");
                       
                     }
                   }
                   else
                   {
                     $this->session->set_flashdata('error','Something went wrong. Please try again');
-                    redirect(base_url()."admin/cardata");
+                    redirect(base_url()."admin/bikedata");
     
                   }
                 }

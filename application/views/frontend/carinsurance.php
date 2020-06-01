@@ -43,7 +43,7 @@
                     <hr style="border-width: 2px; margin-top: 0px;">
                     <div class="tab-content" >
                         <div id="renew" class="container tab-pane active">
-                            <?php echo form_open(base_url( 'frontend/insurance/renewDetails'), array('method'=>'POST'));?>
+                            <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails'), array('method'=>'POST'));?>
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group date">
@@ -126,7 +126,7 @@
                             <?php echo form_close(); ?>
                         </div>
                         <div id="new" class="container tab-pane fade">
-                            <?php echo form_open(base_url( 'frontend/insurance/renewDetails'), array('method'=>'POST'));?>
+                            <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails'), array('method'=>'POST'));?>
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group date">
