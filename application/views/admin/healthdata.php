@@ -38,7 +38,17 @@ img {
 .btn {
     color: #4e73df;
 }
-
+#lowinventory_filter label{
+    color:grey;
+    font-size:15px;
+}
+#lowinventory_filter input[type=search]{
+    border: 1px solid grey;
+    outline:none;
+    padding:5px;
+    font-size:15px;
+    margin-right:5px;
+}
 
 </style>
 <div class="content-page">

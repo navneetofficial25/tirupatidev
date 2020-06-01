@@ -1,7 +1,7 @@
 <style type="text/css">
 .zoom img{
 
-    transition-duration: 5s;
+    transition-duration: 2s;
     margin: 0 auto;
 }
 img {
@@ -19,9 +19,9 @@ img {
 
 }
 .zoom:hover {
-    -ms-transform: scale(2); /* IE 9 */
-    -webkit-transform: scale(2); /* Safari 3-8 */
-    transform: scale(2);
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2);
     margin-left: 40px;
 }
 
@@ -35,8 +35,25 @@ img {
 .btn {
     color: #4e73df;
 }
-
-
+.btn-group .plus {
+    background-color:rgb( 239, 69, 84 );
+    
+}
+.btn-group .plus:hover {
+    background-color:rgb( 95, 96, 96 );
+    
+}
+#lowinventory_filter label{
+    color:grey;
+    font-size:15px;
+}
+#lowinventory_filter input[type=search]{
+    border: 1px solid grey;
+    outline:none;
+    padding:5px;
+    font-size:15px;
+    margin-right:5px;
+}
 </style>
 <div class="content-page">
     <!-- Start content -->
@@ -46,7 +63,7 @@ img {
             <div class="row">
                 <div class="col-sm-12">
                 <div class="col-md-8">
-                   <h4 class="page-title">Our Clients and Brands</h4> <hr>
+                   <h4 class="page-title" style="color:grey;">Our Clients and Brands</h4> <hr>
                   </div>
                   <div class="col-md-4">
                  </div>
@@ -84,8 +101,8 @@ img {
              
               <div class="btn-group pull-right m-t-10 m-b-20">
 
-                   <a href="<?php echo base_url(); ?>admin/brands/galleryadd" class="btn btn-default m-r-5" title="Add Gallery"><i class="fa fa-plus"></i></a>
-                   <button type="button" class="btn btn-default m-r-5 setSupplierMultiBtn deleteMultiplePurchase" title="Delete" style="display:none"><i class="fa fa-trash"></i></button>
+                   <a href="<?php echo base_url(); ?>admin/brands/galleryadd" class="btn plus  m-r-5" title="Add Gallery"><i class="fa fa-plus" style="color:white;"></i></a>
+                   <button type="button" class="btn plus m-r-5 setSupplierMultiBtn deleteMultiplePurchase" title="Delete" style="display:none"><i class="fa fa-trash" style="color:white;"></i></button>
 
 
 

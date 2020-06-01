@@ -1,3 +1,15 @@
+<style>
+  .update{
+    color: white;
+    background-color:rgb( 239, 69, 84 );
+    
+  }
+  .update:hover{
+    background-color:rgb( 95, 96, 96 );
+    color:white;
+  }
+</style>  
+
 <div class="content-page">
     <!-- Start content -->
     <div class="content">
@@ -69,7 +81,7 @@
 
 
                     <div class="form-group m-b-0">
-                      <button class="btn btn-primary waves-effect waves-light" type="submit">
+                      <button class="btn update" type="submit">
                         Update
                       </button>
 
@@ -88,7 +100,7 @@
     </div>
   </div>
 
-<?php $this->load->view('admin/Template/footer.php') ?>
+
 
 <script>
 $(document).ready(function(){

@@ -1,5 +1,10 @@
-<footer class="footer text-right">
+<footer class="footer text-center " style="padding-bottom:20px;">
+
+    <hr style="border:1px solid black;">
     © 2018. All rights reserved.
+
+    <p style="color:rgba(197, 190, 190, 0.61);">
+ POWERED BY <a target="_blank" href="http://www.eniacoder.com/" style="text-decoration:none; color:rgba(197, 190, 190, 0.61);">ENIACODER</a></p>
 </footer>
 
 </div>

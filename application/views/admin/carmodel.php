@@ -38,7 +38,25 @@ img {
 .btn {
     color: #4e73df;
 }
-
+#lowinventory_filter label{
+    color:grey;
+    font-size:15px;
+}
+#lowinventory_filter input[type=search]{
+    border: 1px solid grey;
+    outline:none;
+    padding:5px;
+    font-size:15px;
+    margin-right:5px;
+}
+.btn-group .plus {
+    background-color:rgb( 239, 69, 84 );
+    
+}
+.btn-group .plus:hover {
+    background-color:rgb( 95, 96, 96 );
+    
+}
 
 </style>
 <div class="content-page">
@@ -87,8 +105,8 @@ img {
              
               <div class="btn-group pull-right m-t-10 m-b-20">
 
-              <a class="btn btn-default m-r-5" title="Add Gallery" data-toggle="modal" data-target="#formModal"><i class="fa fa-plus"></i></a>
-                   <button type="button" class="btn btn-default m-r-5 setSupplierMultiBtn deleteMultiplePurchase" title="Delete" style="display:none"><i class="fa fa-trash"></i></button>
+              <a class="btn plus m-r-5" title="Add Gallery" data-toggle="modal" data-target="#formModal"><i class="fa fa-plus" style="color:white;"></i></a>
+                   <button type="button" class="btn plus m-r-5 setSupplierMultiBtn deleteMultiplePurchase" title="Delete" style="display:none"><i class="fa fa-trash" style="color:white;"></i></button>
 
 
 
