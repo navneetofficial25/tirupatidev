@@ -111,6 +111,19 @@
         <div class="text-center">
         <input type="button"  id="formSubmit" value="submit" data-dismiss="modal">
                       </div>
+                      <?php
+      if($this->session->flashdata('success'))
+      {
+      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+      }
+      else if($this->session->flashdata('error'))
+      {
+      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+      }
+
+
+      ?>                         
+
       </div>
     </div>
   </div>

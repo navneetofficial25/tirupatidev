@@ -73,7 +73,7 @@
                   </div>
                   <div class="form-group date">
                     <label class="adults" for="usr">Email</label>
-                    <input type="email"  id="usr" name="email" placeholder="Enter email">
+                    <input type="email"  id="usr" name="mail" placeholder="Enter email">
                   </div>
                 </div>
               </div> 
@@ -85,7 +85,19 @@
                 </br>
                 <div class="text-center ">
                   <button>Get Quote</button> 
-                </div>  
+                </div> 
+                <?php
+      if($this->session->flashdata('success'))
+      {
+      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+      }
+      else if($this->session->flashdata('error'))
+      {
+      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+      }
+
+
+      ?> 
               </div>                  
             </div>  
           </div>  

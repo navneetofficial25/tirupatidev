@@ -15,7 +15,10 @@
         }
         
         public function callmodel(){
-
+    $this->form_validation->set_rules('pname', '', 'required');
+    $this->form_validation->set_rules('services', '', 'required');
+    $this->form_validation->set_rules('mob', '', 'required');
+    if ($this->form_validation->run()){ 
                 
       //  $this->input->post('formSubmit');
         $name = $this->input->post('pname');
@@ -23,10 +26,16 @@
         $mob = $this->input->post('mob');
         $gradedetails=array('name'=>$name,'service'=>$service,'mob'=>$mob);
         $this->Homemodel->insert_model($gradedetails);
-        redirect(base_url());
+               $this->session->set_flashdata('success','Gallery  Successfully Add');
+               redirect(base_url());
             
+            }
+            else{
+                $this->session->set_flashdata('error','Please enter all fields');
+                redirect(base_url());
             }
 
     }
+}
 
 ?>  

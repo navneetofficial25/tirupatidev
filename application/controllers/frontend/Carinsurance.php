@@ -41,6 +41,16 @@
         $this->input->post('formSubmit');
 
 
+        $this->form_validation->set_rules('regno', '', 'required');
+        $this->form_validation->set_rules('comp', '', 'required');
+        $this->form_validation->set_rules('type', '', 'required');
+        $this->form_validation->set_rules('regyr', '', 'required');
+        $this->form_validation->set_rules('modal', '', 'required');
+        $this->form_validation->set_rules('vari', '', 'required');
+        $this->form_validation->set_rules('pexpire', '', 'required');
+        $this->form_validation->set_rules('pinsur', '', 'required');
+
+        if ($this->form_validation->run()){ 
         $data = array(
             'registration_no' => $this->input->post('regno'),
             'maufacturer_id' => $this->input->post('comp'),
@@ -54,8 +64,13 @@
         );
 
         $this->Carmodel->car_data($data);
-        redirect(base_url().'frontend/carinsurance');
+               $this->session->set_flashdata('success','Request sent Successfully');
+               redirect(base_url().'frontend/carinsurance');
     }
-
+    else{
+                $this->session->set_flashdata('error','Please enter all fields');
+                $this->load->view('frontend/carinsurance');
+    }
+    }
 }
 ?>

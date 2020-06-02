@@ -22,7 +22,7 @@
   <?php echo form_open(base_url( 'frontend/contactus/contactDetails'), array('method'=>'POST'));?>
 
                                 <input class="lis" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Name Here"></br>
-                                <input class="lis" type="email" name="email" value="" size="40"  placeholder="Enter Your Mail"></br>
+                                <input class="lis" type="email" name="mail" value="" size="40"  placeholder="Enter Your Mail"></br>
                                 <input class="lis" type="tel" name="tel" value="" size="40" aria-invalid="false" placeholder="Enter Your Mobile Number"></br>
                                 <input class="lis" type="text" name="pack" value="" size="40" aria-invalid="false" placeholder="Your Insurance Pack"></br>
                                 <select class="lis" id="comp" name = "comp">
@@ -37,7 +37,18 @@
                                 <textarea class="lis" name="text" cols="40" rows="3"  aria-invalid="false" placeholder="Brief Requirement"></textarea></br>
                                 <input type="submit" name="formSubmit"  class="bu"  />
 <?php echo form_close(); ?>
-                                
+<?php
+      if($this->session->flashdata('success'))
+      {
+      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+      }
+      else if($this->session->flashdata('error'))
+      {
+      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+      }
+
+
+      ?>                         
                         </div>
 
                     </div>  

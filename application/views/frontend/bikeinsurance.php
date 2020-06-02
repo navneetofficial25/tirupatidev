@@ -55,7 +55,7 @@
                                     <div class="form-group date">
                                         <label class="adults" for="comp ">Manufacturer</label>
                                         <select id="comp" class="lis" name="comp">
-                                            <option value="#">Enter Company</option>
+                                            <option value="#">Enter Company</option> 
 
                                             <?php
 foreach($company as $companies){
@@ -96,20 +96,20 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="modal">Modal</label>
-                                        <select class="lis"   id="modals" name="modal">
+                                        <select class="lis"   id="modal" name="modal">
                                             <option value="#">Enter Model</option>
                                             
                                         </select>
                                     </div>
                                     <div class="form-group date">
-                                        <label class="adults" for="varis">Varient</label>
-                                        <select class="lis"   id="varis" name="vari">
+                                        <label class="adults" for="vari">Varient</label>
+                                        <select class="lis"   id="vari" name="vari">
                                             <option value="#">Enter Varient</option>
                                         </select>
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Select Policy Expire</label>
-                                        <input type="date" class="lis"  placeholder="Policy Expire" id="ptpe" name="ptype">
+                                        <input type="date" class="lis"  placeholder="Policy Expire" id="pexpire" name="pexpire">
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pinsur">Select Previous Insurer</label>
@@ -127,6 +127,18 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                                 <button name="formSubmit">Get Quote</button>
                             </div>
                             <?php echo form_close(); ?>
+                            <?php
+      if($this->session->flashdata('success'))
+      {
+      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+      }
+      else if($this->session->flashdata('error'))
+      {
+      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+      }
+
+
+      ?> 
                         </div>
                         <div id="new" class="container tab-pane fade">
                             <?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('method'=>'POST'));?>
@@ -142,6 +154,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                                         <label class="adults" for="comps">Manufacturer</label>
                                                 
                                                 <select class="lis"  id="comps" name="comp">
+                                                <option value="#">Enter Company</option>
 
                                                 <?php
                         foreach($company as $companies){
@@ -156,7 +169,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="type">Fuel type</label>
-                                        <select class="lis"   id="type" name="type">
+                                        <select class="lis"   id="types" name="type">
                                             <option >Enter Fuel Type</option>
                                             <option value="#">A</option>
                                             <option value="#">B</option>
@@ -164,7 +177,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                                     </div>
                                     <div class="form-group date">
             <label class="adults" for="regyr">Registration year</label>
-            <select class="lis"  id="regyr" name="regyr">
+            <select class="lis"  id="regyrs" name="regyr">
                                                     <option selected disabled value="#">Select Year</option>
                                                     <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
                                                         <option  value="<?php echo $i; ?>"><?php echo $i; ?></option>
@@ -175,7 +188,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
         </div>
                                     <div class="form-group date">
                                         <label class="adults" for="ptype">Select Previous Policy Type</label>
-                                        <select class="lis"  id="ptype" name="ptype">
+                                        <select class="lis"  id="ptypes" name="ptype">
                                             <option value="#">Enter Policy Type</option>
                                             <option value="#">a</option>
                                             <option value="#">b</option>
@@ -184,7 +197,7 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                                 </div> 
                                 <div class="col-md-6"> 
                                     <div class="form-group date">
-                                        <label class="adults" for="modal">Modal</label>
+                                        <label class="adults" for="modals">Modal</label>
                                         <select class="lis"   id="modals" name="modal">
                                             <option value="#">Enter Model</option>
                                             
@@ -197,12 +210,12 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                                         </select>
                                     </div>
                                     <div class="form-group date">
-                                        <label class="adults" for="pexpire">Select Policy Expire</label>
-                                        <input type="date" class="lis"  placeholder="Policy Expire" id="ptpe" name="policy_expire">
+                                        <label class="adults" for="pexpires">Select Policy Expire</label>
+                                        <input type="date" class="lis"  placeholder="Policy Expire" id="pexpires" name="pexpire">
                                     </div>
                                     <div class="form-group date">
-                                        <label class="adults" for="pinsur">Select Previous Insurer</label>
-                                        <select class="lis"   id="pinsur" name="pinsur">
+                                        <label class="adults" for="pinsurs">Select Previous Insurer</label>
+                                        <select class="lis"   id="pinsurs" name="pinsur">
                                             <option value="#">Select Insurer</option>
                                             <option value="#">a</option>
                                             <option value="#">b</option>
@@ -214,6 +227,18 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                                 <button name="formSubmit">Get Quote</button>
                             </div>  
                             <?php echo form_close(); ?>
+                            <?php
+      if($this->session->flashdata('success'))
+      {
+      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
+      }
+      else if($this->session->flashdata('error'))
+      {
+      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
+      }
+
+
+      ?> 
                         </div>
 
                     </div>
@@ -313,19 +338,19 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                 success: function(response){
 
                     // Remove options
-                    $('#modals').find('option').not(':first').remove();
-                    $('#varis').find('option').not(':first').remove();
+                    $('#modal').find('option').not(':first').remove();
+                    $('#vari').find('option').not(':first').remove();
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#modals').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                        $('#modal').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
                     });
                 }
             });
         });
         
         // Department change
-        $('#modals').change(function(){
+        $('#modal').change(function(){
             var modal = $(this).val();
 
             // AJAX reques
@@ -337,11 +362,11 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                 success: function(response){
                    
                     // Remove options
-                    $('#varis').find('option').not(':first').remove();
+                    $('#vari').find('option').not(':first').remove();
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#varis').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
+                        $('#vari').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
                     });
                 }
             });
@@ -367,19 +392,19 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                 success: function(response){
 
                     // Remove options
-                    $('#modls').find('option').not(':first').remove();
-                    $('#vars').find('option').not(':first').remove();
+                    $('#modals').find('option').not(':first').remove();
+                    $('#varis').find('option').not(':first').remove();
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#modls').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                        $('#modals').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
                     });
                 }
             });
         });
         
         // Department change
-        $('#modls').change(function(){
+        $('#modals').change(function(){
             var modal = $(this).val();
 
             // AJAX request
@@ -391,11 +416,11 @@ echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>
                 success: function(response){
                     
                     // Remove options
-                    $('#vars').find('option').not(':first').remove();
+                    $('#varis').find('option').not(':first').remove();
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#vars').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
+                        $('#varis').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
                     });
                 }
             });

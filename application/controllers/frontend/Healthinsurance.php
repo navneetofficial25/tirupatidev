@@ -20,6 +20,11 @@
         
         $this->load->model('frontend/Healthmodel');
         $this->input->post('formSubmit');
+        $this->form_validation->set_rules('anum', '', 'required');
+        $this->form_validation->set_rules('knum', '', 'required');
+        $this->form_validation->set_rules('mob', '', 'required');
+        $this->form_validation->set_rules('mail', '', 'required');
+        $this->form_validation->set_rules('fdob', '', 'required');
         $this->form_validation->set_rules('contact1', '', 'required');
         $this->form_validation->set_rules('contact2', '', 'required');
 
@@ -32,18 +37,20 @@
             'adults_num' => $this->input->post('anum'),
             'kid_num' => $this->input->post('knum'),
             'mob' => $this->input->post('mob'),
-            'email' => $this->input->post('email'),
+            'email' => $this->input->post('mail'),
             'f_dob' => $this->input->post('fdob'),
             's_dob' => $this->input->post('sdob')
         );
         
         $this->Healthmodel->health_insert($datas);
-        $this->load->view('frontend/healthinsurance');
+               $this->session->set_flashdata('success','Gallery  Successfully Add');
+               $this->load->view('frontend/healthinsurance');
 //        redirect(base_url().'frontend/insurance/healthinsurance');
 
     }
     else{
-        $this->load->view('frontend/healthinsurance');
+                $this->session->set_flashdata('error','Please enter all fields');
+                $this->load->view('frontend/healthinsurance');
     }
  }
 }

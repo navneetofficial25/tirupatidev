@@ -38,7 +38,17 @@ public function index(){
 
 public function renewbikeDetails(){
     $this->load->model('frontend/Bikemodel');
-    $this->input->post('formSubmit');
+   // $this->input->post('formSubmit');
+    $this->form_validation->set_rules('regno', '', 'required');
+    $this->form_validation->set_rules('comp', '', 'required');
+    $this->form_validation->set_rules('type', '', 'required');
+    $this->form_validation->set_rules('regyr', '', 'required');
+    $this->form_validation->set_rules('modal', '', 'required');
+    $this->form_validation->set_rules('vari', '', 'required');
+    $this->form_validation->set_rules('pexpire', '', 'required');
+    $this->form_validation->set_rules('pinsur', '', 'required');
+
+    if ($this->form_validation->run()){ 
 
 
     $data = array(
@@ -54,10 +64,18 @@ public function renewbikeDetails(){
     );
     if($this->send($data)){
     $this->Bikemodel->bike_data($data);
-    redirect(base_url().'frontend/bikeinsurance');
-    }else{
-
+               $this->session->set_flashdata('success','Gallery  Successfully Add');
+               redirect(base_url().'frontend/bikeinsurance');
     }
+    else{
+                    $this->session->set_flashdata('error','Something went wrong, please try again.');
+        $this->load->view('frontend/bikeinsurance');
+    }
+}
+else{
+                $this->session->set_flashdata('error','Please enter all fields');
+    $this->load->view('frontend/bikeinsurance');
+}
 }
 
 // Email Functionality//
