@@ -1,31 +1,31 @@
-<h2 class="main_heading">Now Buying Health Insurance is Much Simpleir</h2>
+<h2 class="main_heading">Now Buying Car Insurance is Much Simpleir</h2>
 <div class="container car">
     <div class="">
         <div class="box_sh ">
             <div class="row">
                 <div class="col-lg-4 col-xs-12 " style="padding:0px;">
-                <img src="<?= base_url();?>assest/img/health-insurance-top-up.jpg">
+                <img src="<?= base_url();?>assest/img/car.jpg">
                     <div class="to">
                         <div class="row">
                             <div class="col-md-12 col-12">
                                 <div class=" small">
                                     <img src="<?= base_url();?>assest/img/save-money.png">
-                                    <h6>Save Upto 80%</h6>
-                                    <p>Lowest Premiums</p>
+                                    <h6>Save Upto 80%*</h6>
+                                    <p>Lowest car Premiums</p>
                                 </div>
                             </div>
                             <div class="col-md-12 col-12">
                                 <div class=" small">
                                     <img src="<?= base_url();?>assest/img/life-insurance.png" >
-                                    <h6>Save Upto 80%</h6>
-                                    <p>Lowest Premiums</p>
+                                    <h6>20+ Insurers</h6>
+                                    <p>To Choose From</p>
                                 </div>
                             </div>
                             <div class="col-md-12 col-12">
                                 <div class=" small">
                                     <img src="<?= base_url();?>assest/img/family (1).svg">
-                                    <h6>Save Upto 80%</h6>
-                                    <p>Lowest Premiums</p>
+                                    <h6>10 Thousand+</h6>
+                                    <p>Vehicles Insured</p>
                                 </div>
                             </div>
                         </div>    
@@ -54,57 +54,68 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comp ">Manufacturer</label>
-                                        <select id="comp" class="lis" name="comp">
-                                            <option value="#">Enter Company</option>
+                                        <input list="comps"  class="lis"   id="comp" name="comp" placeholder="Enter Company">
+                                        <datalist id="comps" >
+                                        
 
                                             <?php
                                                 foreach($company as $companies){
 
-                                                echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>";
+                                                echo "<option value='".$companies['brand_name']."'>";
                                                 }
                                             ?>
-                                        </select>
+                                        </datalist>
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="type">Fuel type</label>
-                                        <select class="lis"   id="type" name="type">
-                                            <option >Enter Fuel Type</option>
-                                            <option value="#">A</option>
-                                            <option value="#">B</option>
-                                        </select>
+                                        <input list="types"  class="lis"   id="type" name="comp" placeholder="Enter Fuel Type">
+                                        <datalist   id="types">
+                                            
+                                            <option value="A">
+                                            <option value="B">
+                                        </datalist>
                                     </div>
                                     <div class="form-group date">
-                                                <label class="adults" for="regyr">Registration year</label>
-                                                <select class="lis"  id="regyr" name="regyr">
-                                                    <option selected disabled value="#">Select Year</option>
+                                                <label class="adults" for="regyrss">Registration year</label>
+                                                <input list="regyr"  class="lis"   id="regyrss" name="comp" placeholder="Select Year">
+                                                <datalist   id="regyr" >
+                                                    
                                                     <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
-                                                        <option  value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                                        <option  value="<?php echo $i; ?>">
                                                     <?php } ?>
                                                     
-                                                </select>
+                                                </datalist>
                                                     </div>
                                     <div class="form-group date">
-                                        <label class="adults" for="ptype">Select Previous Policy Type</label>
-                                        <select class="lis"  id="ptype" name="ptype">
-                                            <option value="#">Enter Policy Type</option>
-                                            <option value="#">a</option>
-                                            <option value="#">b</option>
-                                        </select>
+                                        <label class="adults" for="ptypes">Select Previous Policy Type</label>
+                                        <input list="ptype"  class="lis"   id="ptypes" name="comp" placeholder="Enter Policy Type">
+                                        <datalist  id="ptype" >
+                                            <option value="w">
+                                            <option value="r">
+                                            <option value="a">
+                                        </datalist>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="modal">Modal</label>
-                                        <select class="lis"   id="modal" name="modal">
-                                            <option value="#">Enter Model</option>
+                                        <input list="modal" class="lis" id="modals" name="modl" placeholder="Enter Model">
+                                        <datalist  id="modal" >
+                                            <option value="dd">
+                                            <option value="dd">
+                                            <option value="dd">
                                             
-                                        </select>
+                                        </datalist>
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="vari">Varient</label>
-                                        <select class="lis"   id="vari" name="vari">
-                                            <option value="#">Enter Varient</option>
-                                        </select>
+                                        <input list="m" class="lis" id="vari" name="modl" placeholder="Enter Varient">
+                                        <datalist  id="m" >
+                                            <option value="dd">
+                                            <option value="dd">
+                                            <option value="dd">
+                                            
+                                        </datalist>
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Select Policy Expire</label>
@@ -112,12 +123,13 @@
 
                                     </div>
                                     <div class="form-group date">
-                                        <label class="adults" for="pinsur">Select Previous Insurer</label>
-                                        <select class="lis"   id="pinsur" name="pinsur">
-                                            <option value="#">Select Insurer</option>
-                                            <option value="#">a</option>
-                                            <option value="#">b</option>
-                                        </select>
+                                        <label class="adults" for="inur">Select Previous Insurer</label>
+                                        <input class="lis" list="pinsur" id="inur" placeholder="Select Insurer">
+                                        <datalist class="lis"   id="pinsur" name="pinsur">
+                                            <option value="4">
+                                            <option value="5">
+                                            <option value="2">
+                                        </datalist>
                                     </div>
                                 </div>
                                     
@@ -143,17 +155,12 @@
                         <div id="new" class="container tab-pane fade">
                             <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails'), array('method'=>'POST'));?>
                             <div class="row">
-                                <div class="col-md-8">
-                                    <div class="form-group date">
-                                        <label class="adults" for="us">Registration Number</label>
-                                        <input type="text"  id="us" name="regno" placeholder="Enter Registration Number">
-                                    </div>
-                                </div> 
+                                
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comps">Manufacturer</label>
-                                                <input list="pexpires"  class="lis"   id="comps" name="comp" placeholder="Not Expire">
-                                                <datalist id="pexpires">
+                                                <input list="compnies"  class="lis"   id="comps" name="comp" placeholder="Not Expire">
+                                                <datalist id="compnies">
                                                 <?php
                             foreach($company as $companies){
 
@@ -168,44 +175,54 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="types">Fuel type</label>
-                                        <select class="lis"   id="types" name="type">
-                                            <option >Enter Fuel Type</option>
-                                            <option value="#">A</option>
-                                            <option value="#">B</option>
-                                        </select>
+                                        <input list="typs"  class="lis"   id="types" name="comp" placeholder="Enter Fuel Type">
+                                        <datalist   id="typs" >
+                                            <option value="kuch bhi" >
+                                            <option value="A">
+                                            <option value="B">
+                                        </datalist>
                                     </div>
                                     <div class="form-group date">
                                                 <label class="adults" for="regyrs">Registration year</label>
-                                                <select class="lis"  id="regyrs" name="regyr">
-                                                    <option selected disabled value="#">Select Year</option>
+                                                <input list="regyr"  class="lis"   id="regyrs" name="comp" placeholder="Select Year">
+                                                <datalist  id="regyr">
+                                                    
                                                     <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
-                                                        <option  value="<?php echo $i; ?>"><?php echo $i; ?></option>
+                                                        <option  value="<?php echo $i; ?>">
                                                     <?php } ?>
                                                     
-                                                </select>
+                                                    </datalist>
                                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="ptypes">Select Previous Policy Type</label>
-                                        <select class="lis"  id="ptyps" name="ptype">
-                                            <option value="#">Enter Policy Type</option>
-                                            <option value="#">a</option>
-                                            <option value="#">b</option>
-                                        </select>
+                                        <input list="ptyps"  class="lis"   id="ptypes" name="comp" placeholder="Enter Policy Type">
+                                        <datalist   id="ptyps" >
+                                            <option value="1">
+                                            <option value="2">
+                                            <option value="3">
+                                        </datalisst>
                                     </div>
                                 </div> 
                                 <div class="col-md-6"> 
                                     <div class="form-group date">
                                         <label class="adults" for="modals">Modal</label>
-                                        <select class="lis"   id="modals" name="modal">
-                                            <option value="#">Enter Model</option>
+                                        <input list="modls"  class="lis"   id="modals" name="comp" placeholder="Enter Model">
+                                        <datalist    id="modls" >
+                                            <option value="2">
+                                            <option value="3">
+                                            <option value="4">
+                                            <option value="5">
                                             
-                                        </select>
+                                        </datalist>
                                     </div>
                                     <div class="form-group date">
-                                        <label class="adults" for="varis">Varient</label>
-                                        <select class="lis"   id="varis" name="vari">
-                                            <option value="#">Enter Varient</option>
-                                        </select>
+                                        <label class="adults" for="vari">Varient</label>
+                                        <input list="varis"  class="lis"   id="vari" name="comp" placeholder="Enter Varient">
+                                        <datalist   id="varis" >
+                                            <option value="4">
+                                            <option value="5">
+                                            <option value="7">
+                                        </datalist>
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Select Policy Expire</label>
@@ -214,11 +231,12 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pinsur">Select Previous Insurer</label>
-                                        <select class="lis"   id="pinsur" name="pinsur">
-                                            <option value="#">Select Insurer</option>
-                                            <option value="#">a</option>
-                                            <option value="#">b</option>
-                                        </select>
+                                        <input list="pinsurs"  class="lis"   id="pinsur" name="comp" placeholder="Select Insurer">
+                                        <datalist   id="pinsurs">
+                                            <option value="4">
+                                            <option value="5">
+                                            <option value="7">
+                                        </datalist>
                                     </div>
                                 </div>         
                             </div>  
@@ -245,7 +263,7 @@
 
         <section class="imp">
             <div class="container">
-                <h2>Importance of Health Insurance</h2>
+                <h2>Importance of Car Insurance</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
         
             </div>    
@@ -254,7 +272,7 @@
 
         <section class="why_Health">
           <div class="container">
-            <h2>Why Health Insurance from Tirupati Insurance ?</h2>
+            <h2>Why Car Insurance from Tirupati Insurance ?</h2>
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="point">
@@ -267,7 +285,7 @@
                         </div>
                         <div class="point">
                             <img src="<?= base_url();?>assest/img/faster-icon-png-0.png">
-                            <h4>80% discouns</h4>
+                            <h4>UNBIASED EXPERT ADVISE</h4>
                             <hr class="style1">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
@@ -278,14 +296,14 @@
                         <div class="point">
                             <img src="<?= base_url();?>assest/img/PngItem_690697.png">
                     
-                            <h4>80% discouns</h4>
+                            <h4>EXPRESS CLAIMS SERVICES</h4>
                             <hr class="style1">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
                         </div>
                         <div class="point">
                             <img src="<?= base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
-                            <h4>80% discouns</h4>
+                            <h4>24*7 COUSTOMER SUPPORT</h4>
                             <hr class="style1">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
