@@ -17,9 +17,9 @@
         }
         
         public function callmodel(){
-    $this->form_validation->set_rules('pname', 'Your Name', 'required');
-    $this->form_validation->set_rules('services', 'Your Serives', 'required');
-    $this->form_validation->set_rules('mob', 'Your Phone', 'required');
+    $this->form_validation->set_rules('pname', 'Name', 'required');
+    $this->form_validation->set_rules('services', 'Serives', 'required');
+    $this->form_validation->set_rules('mob', 'Phone', 'required|regex_match[/^[0-9]{10}$/]');
     if ($this->form_validation->run()){ 
                 
       //  $this->input->post('formSubmit');
