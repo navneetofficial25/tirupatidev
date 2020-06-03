@@ -38,7 +38,7 @@
             <h5>get in touch</h5>
             <hr class="style1">
             <input type="email" name="email" placeholder="Email here..." >
-            <i class='fa fa-location-arrow' style="transform: rotate(45deg); color: white; background-color: black;"></i>
+            <span class=" arrow"><a class="fa fa-location-arrow" ></a></span>
             <p>Rajmahal Complex,Opp-PLA Petrol Pump,Delhi Road, Hisar-125001</p>
             <p><i class="fa fa-phone" style="margin-right: 7px; font-size: 20px;"></i> 8950000000</p>
             <p><i class="fa fa-envelope" style="margin-right: 7px; font-size: 20px;"></i> info@tirupatiinsurance.com</p>
