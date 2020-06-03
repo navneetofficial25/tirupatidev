@@ -12,23 +12,23 @@
                                       <div class="col-md-12 col-12">
                                         <div class=" small">
                                           <img src="<?php echo base_url();?>assest/img/save-money.png">
-                                            <h6>Save Upto 80%</h6>
+                                            <h6>Save Upto 80%*</h6>
                                             <p>Lowest Premiums</p>
                                         </div>
                                       </div>
                                       <div class="col-md-12 col-12" >
                                         <div class=" small">
                                         <img src="<?php echo base_url();?>assest/img/life-insurance.png" >
-                                            <h6>Save Upto 80%</h6>
-                                            <p>Lowest Premiums</p>
+                                        <h6>20+ Insurers</h6>
+                                        <p>To Choose From</p>
                                         </div>
                                      
                                       </div>
                                       <div class="col-md-12 col-12" >
                                         <div class=" small">
                                         <img src="<?php echo base_url();?>assest/img/family (1).svg">
-                                            <h6>Save Upto 80%</h6>
-                                            <p>Lowest Premiums</p>
+                                        <h6>10 Thousand+</h6>
+                                        <p>Famlies Insured</p>
                                         </div>
                                      
                                       </div>
