@@ -64,12 +64,12 @@
         );
 
         $this->Carmodel->car_data($data);
-               $this->session->set_flashdata('success','Request sent Successfully');
                redirect(base_url().'frontend/carinsurance');
     }
     else{
-                $this->session->set_flashdata('error','Please enter all fields');
-                $this->load->view('frontend/carinsurance');
+               
+                $this->index();
+               
     }
     }
 }

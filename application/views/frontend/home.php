@@ -1,3 +1,4 @@
+
 <div class="d-inline-block container-fluid banner-padding" style="padding-bottom:30px;">
     <div class="container first ">
       
@@ -68,7 +69,7 @@
       <p class="still">Still in Doubt? Why Don't We Speak On Call?</p> 
       <div class="row ">
         <div class="col-md-5 text-center">
-          <button >give us a call</button>
+         <a href="tel:+918950000000"> <button>give us a call</button></a>
         </div>
         <div class="col-md-2">
           <div class="or">
@@ -95,8 +96,12 @@
           
         </div>
         <div class="modal-body">
-          <input type="text" class="lis" id="pname" name="pname"placeholder="Enter Your Name"></br>
-          <input type="text" class="lis" id="mob" name="mob" placeholder="Enter Mobile Number"></br>
+        <span id="success_message"></span>
+        <form id="myForm">
+          <input type="text" class="lis" id="pname" name="pname"placeholder="Enter Your Name">
+          <span id="name_error" class="text-danger m-0 p-0"></span></br>
+          <input type="text" class="lis" id="mob" name="mob" placeholder="Enter Mobile Number">
+          <span id="mobile_error" class="text-danger m-0 p-0"></span></br>
            
           <select class="lis" id="services" name = "services">
                                     <option >Select Insurance</option>
@@ -106,7 +111,8 @@
                             echo "<option value='".$companies['id']."'>".$companies['insurance']."</option>";
                         }
                         ?>
-                                                </select> 
+                                                </select>
+                                                <span id="list_error m-0 p-0" class="text-danger"></span> 
         </div>
         <div class="text-center">
         <input type="button"  id="formSubmit" value="submit" data-dismiss="modal">
@@ -253,15 +259,27 @@ $('#formSubmit').click(function() {
     $.ajax({
         url: "<?php echo base_url(); ?>home/callmodel",
         type: 'POST',
+        dataType:"json",
         data:{'pname':pname,'services':services,'mob':mob},
         success: function(msg) {
-           // console.log(data);
-            if (msg == 'YES')
-                $('#alert-msg').html('<div class="alert alert-success text-center">Your mail has been sent successfully!</div>');
-            else if (msg == 'NO')
-                $('#alert-msg').html('<div class="alert alert-danger text-center">Error in sending your message! Please try again later.</div>');
-            else
-                $('#alert-msg').html('<div class="alert alert-danger">' + msg + '</div>');
+         console.log(msg)
+         if(msg.error){
+           $('#name_error').html(msg.pname);
+           $('#mobile_error').html(msg.mob);
+           $('#list_error').html(msg.services);
+         }
+         if(!msg.error){
+          $('#name_error').html('');
+           $('#mobile_error').html('');
+           $('#list_error').html('');
+           $('#success_message').html(msg.success);
+           $("#myForm").trigger("reset");
+           setTimeout(function(){
+            $('#success_message').html('');
+            $('#myModal').modal('hide');
+          
+          }, 1500);
+         }
         }
     });
     return false;

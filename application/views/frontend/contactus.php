@@ -19,12 +19,16 @@
                     <div class="col-lg-7 col-xs-12">
                         <div class="group-form">
                             <div class="screen-reader-response" aria-live="polite"></div>
-  <?php echo form_open(base_url( 'frontend/contactus/contactDetails'), array('method'=>'POST'));?>
-
-                                <input class="lis" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Name Here"></br>
-                                <input class="lis" type="email" name="mail" value="" size="40"  placeholder="Enter Your Mail"></br>
-                                <input class="lis" type="tel" name="tel" value="" size="40" aria-invalid="false" placeholder="Enter Your Mobile Number"></br>
-                                <input class="lis" type="text" name="pack" value="" size="40" aria-invalid="false" placeholder="Your Insurance Pack"></br>
+  <?php echo form_open(base_url( 'frontend/contactus/contactDetails'), array('id'=>'contactFrm','method'=>'POST'));?>
+                            <span id="success_m" class="text-success"></span>
+                                <input class="lis" type="text" name="name" value="" size="40" aria-required="true" aria-invalid="false" placeholder="Enter Your Name Here">
+                                <span id="name_error" class="text-danger m-0 p-0"></span></br>
+                                <input class="lis" type="email" name="mail" value="" size="40"  placeholder="Enter Your Mail">
+                                <span id="email_error" class="text-danger m-0 p-0"></span></br>
+                                <input class="lis" type="tel" name="tel" value="" size="40" aria-invalid="false" placeholder="Enter Your Mobile Number">
+                                <span id="tel_error" class="text-danger m-0 p-0"></span></br>
+                                <input class="lis" type="text" name="pack" value="" size="40" aria-invalid="false" placeholder="Your Insurance Pack">
+                                <span id="pack_error" class="text-danger m-0 p-0"></span></br>
                                 <select class="lis" id="comp" name = "comp">
                                     <option >Select Insurance</option>
 
@@ -33,22 +37,13 @@
                             echo "<option value='".$companies['id']."'>".$companies['insurance']."</option>";
                         }
                         ?>
-                                                </select></br>
-                                <textarea class="lis" name="text" cols="40" rows="3"  aria-invalid="false" placeholder="Brief Requirement"></textarea></br>
+                                                </select>
+                                                <span id="comp_error" class="text-danger m-0 p-0"></span></br>
+                                <textarea class="lis" name="text" cols="40" rows="3"  aria-invalid="false" placeholder="Brief Requirement"></textarea>
+                                <span id="text_error" class="text-danger m-0 p-0"></span></br>
                                 <input type="submit" name="formSubmit"  class="bu"  />
 <?php echo form_close(); ?>
-<?php
-      if($this->session->flashdata('success'))
-      {
-      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
-      }
-      else if($this->session->flashdata('error'))
-      {
-      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
-      }
-
-
-      ?>                         
+                         
                         </div>
 
                     </div>  
@@ -107,4 +102,35 @@
                 </div>    
             </div>
         </div>
+        <script>
+
+    $("#contactFrm").submit(function(event){
+	event.preventDefault();
+	var post_url = $(this).attr("action"); 
+	var request_method = $(this).attr("method"); 
+	var form_data = $(this).serialize(); 
+	
+	$.ajax({
+		url : post_url,
+        type: request_method,
+        dataType:"json",
+        data : form_data, 
+    }).done(function(response){ //
+		if(response.error){
+            console.log(response.name);
+            $('#name_error').html(response.name);
+            $('#email_error').html(response.mail);
+            $('#tel_error').html(response.tel);
+            $('#pack_error').html(response.pack);
+            $('#comp_error').html(response.comp);
+            $('#text_error').html(response.text);
+        }
+        if(!response.error){
+            $('#success_m').html(response.success);
+            $('.text-danger').html('');
+            $('#contactFrm').trigger('reset');
+        }
+	});
+});
+</script>
        

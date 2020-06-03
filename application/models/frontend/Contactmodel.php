@@ -2,7 +2,7 @@
 
 class Contactmodel extends CI_Model {
     function contact_data($data){
-        $this->db->insert('contactus',$data);
+      return  $this->db->insert('contactus',$data);
     }
     function fetchins(){
 

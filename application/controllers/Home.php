@@ -7,17 +7,19 @@
     }
 
         public function index(){
+
             $getsocials['brandslogo'] = $this->Homemodel->fetchaddinventory_api();
             $getsocials['company'] = $this->Homemodel->fetchins();
             $this->load->view('frontend/template/header');
             $this->load->view('frontend/template/navbar');
             $this->load->view('frontend/home',$getsocials);
+
         }
         
         public function callmodel(){
-    $this->form_validation->set_rules('pname', '', 'required');
-    $this->form_validation->set_rules('services', '', 'required');
-    $this->form_validation->set_rules('mob', '', 'required');
+    $this->form_validation->set_rules('pname', 'Your Name', 'required');
+    $this->form_validation->set_rules('services', 'Your Serives', 'required');
+    $this->form_validation->set_rules('mob', 'Your Phone', 'required');
     if ($this->form_validation->run()){ 
                 
       //  $this->input->post('formSubmit');
@@ -25,15 +27,28 @@
         $service = $this->input->post('services');
         $mob = $this->input->post('mob');
         $gradedetails=array('name'=>$name,'service'=>$service,'mob'=>$mob);
-        $this->Homemodel->insert_model($gradedetails);
-               $this->session->set_flashdata('success','Gallery  Successfully Add');
-               redirect(base_url());
-            
-            }
-            else{
-                $this->session->set_flashdata('error','Please enter all fields');
-                redirect(base_url());
-            }
+    
+        if($this->Homemodel->insert_model($gradedetails)){
+            $array = array(
+                'error' => false,
+                'success' => '<div class="alert alert-success">Thank you for Contact Us</div>'
+            );
+        }else{
+            $array = array(
+                'error' => true
+            );
+        }
+        }
+    else{
+         $array = array(
+            'error'   => true,
+            'pname' => form_error('pname'),
+            'services' => form_error('services'),
+            'mob' => form_error('mob'),
+           );
+           
+        }
+        echo json_encode($array);
 
     }
 }

@@ -18,12 +18,12 @@
 public function contactDetails(){
     $this->load->model('frontend/Contactmodel');
     $this->input->post('formSubmit');
-    $this->form_validation->set_rules('name', '', 'required');
-    $this->form_validation->set_rules('mail', '', 'required');
-    $this->form_validation->set_rules('tel', '', 'required');
-    $this->form_validation->set_rules('pack', '', 'required');
-    $this->form_validation->set_rules('comp', '', 'required');
-    $this->form_validation->set_rules('text', '', 'required');
+    $this->form_validation->set_rules('name', 'Name', 'required');
+    $this->form_validation->set_rules('mail', 'Email', 'required');
+    $this->form_validation->set_rules('tel', 'Phone', 'required');
+    $this->form_validation->set_rules('pack', 'Insurance Pack', 'required');
+    $this->form_validation->set_rules('comp', 'Company', 'required');
+    $this->form_validation->set_rules('text', 'Requirement', 'required');
 
     if ($this->form_validation->run()){ 
 
@@ -35,17 +35,31 @@ public function contactDetails(){
         'ins' => $this->input->post('comp'),
         'text' => $this->input->post('text')
         );
-
-    $this->Contactmodel->contact_data($data);
-               $this->session->set_flashdata('success','Request sent Successfully');
-               redirect(base_url().'frontend/contactus');
-    //$this->load->view('frontend/carinsurance');
+    
+        if($this->Contactmodel->contact_data($data)){
+        $array = array(
+            'error'   => false,
+            'success' => 'Our Team Will Soon Contact You'
+           );
+            }else{
+                    $array = array(
+                    'error'   => true,
+           );
+    }
+          
 }
 else{
-                $this->session->set_flashdata('error','Please enter all fields');
-            $this->load->view('frontend/contactus');
+    $array = array(
+        'error'   => true,
+        'name' => form_error('name'),
+        'mail' => form_error('mail'),
+        'tel' => form_error('tel'),
+        'pack' => form_error('pack'),
+        'comp' => form_error('comp'),
+        'text' => form_error('text'),
+       );
 }
-
+        echo json_encode($array);
 
     }
 }

@@ -152,16 +152,16 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comps">Manufacturer</label>
-                                                
-                                                <select class="lis"  id="comps" name="comp">
-
+                                                <input list="pexpires"  class="lis"   id="comps" name="comp" placeholder="Not Expire">
+                                                <datalist id="pexpires">
                                                 <?php
                             foreach($company as $companies){
 
-                            echo "<option value='".$companies['id']."'>".$companies['brand_name']."</option>";
+                            echo "<option value='".$companies['brand_name']."'>";
                             }
-                            ?>
-                                                </select>
+                            ?> 
+                                                </datalist> 
+                    
   
   
                                                 
@@ -226,18 +226,7 @@
                                 <button name="formSubmit">Get Quote</button>
                             </div>  
                             <?php echo form_close(); ?>
-                            <?php
-      if($this->session->flashdata('success'))
-      {
-      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
-      }
-      else if($this->session->flashdata('error'))
-      {
-      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
-      }
-
-
-      ?> 
+                           <?php echo validation_errors(); ?>
                         </div>
 
                     </div>
