@@ -105,8 +105,7 @@
                                         <input list="modals" class="lis" id="modal" name="modal" placeholder="Enter Model">
                                         <datalist  id="modals" >
                                             <option value="dd">
-                                            <option value="dd">
-                                            <option value="dd">
+                                          
                                             
                                         </datalist>
                                     </div>
@@ -114,7 +113,7 @@
                                         <label class="adults" for="vari">Varient</label>
                                         <input list="m" class="lis" id="vari" name="vari" placeholder="Enter Varient">
                                         <datalist  id="m" >
-                                            <option value="dd">
+                                            <option value="dd">ehfehew</option>
                                             <option value="dd">
                                             <option value="dd">
                                             
@@ -168,9 +167,8 @@
                                         <label class="adults" for="types">Fuel type</label>
                                         <input list="typs"  class="lis"  name="fuel_type" placeholder="Enter Fuel Type">
                                         <datalist   id="typs" >
-                                            <option value="kuch bhi" >
-                                            <option value="A">
-                                            <option value="B">
+                                            <option selected disabled value="Select" >
+                                           
                                         </datalist>
                                     </div>
                                     <div class="form-group date">

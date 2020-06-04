@@ -2,12 +2,15 @@
 <div class="d-inline-block container-fluid banner-padding" style="padding-bottom:30px;">
     <div class="container first ">
       
-      <p style="margin-top:30px; margin-bottom:30px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best quates for you </p>
-      <div class="flex">
+      <p style=" margin-bottom:30px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best quates for you </p>
+      
+    
+        <div class="flex">
+          
         <a  href="<?php echo base_url()?>frontend/healthinsurance">
           <div class="card">
             <div class="card-image">
-              <img class="img-responsive" alt="Health Insurance" src="<?php echo base_url()?>assest/img/health-insurance.svg">
+              <img alt="Health Insurance" src="<?php echo base_url()?>assest/img/health-insurance.svg">
 
             </div>
     
@@ -65,7 +68,10 @@
             </div>
           </div>
         </a>
-      </div>
+
+        </div>
+
+     
       <p class="still">Still in Doubt? Why Don't We Speak On Call?</p> 
       <div class="row ">
         <div class="col-md-5 text-center">

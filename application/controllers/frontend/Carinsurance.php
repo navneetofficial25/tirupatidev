@@ -63,8 +63,6 @@
             'policy_expire' => $this->input->post('policy_expire'),
             'prev_insurer' => $this->input->post('pinsur'),
         );
-        
-        
             if($this->Carmodel->car_data($data)){
                 echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
             }
@@ -76,7 +74,7 @@
     }
     else{
                
-        echo validation_errors();
+        echo "<h6 class='text-danger text-center'>PLease Fill All Fields</h6>";
                
     }
     }
