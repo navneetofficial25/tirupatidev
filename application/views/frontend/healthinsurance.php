@@ -53,7 +53,12 @@
                                                                     
                   </div>
                   <div id="firstperson" style="display:none" class="form-group date"> 
-                    <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="fdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                    <label class="adults" for="usr">Adults 1 DOB</label>
+                    <input type="text"  id="usr" name="fdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
+                  </div>
+                  <div id="secondperson" style="display:none" class="form-group date">
+                    <label class="adults" for="usr">Adults 2 DOB</label>
+                    <input type="text"  id="usr" name="sdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
                   </div>
                   <div class="form-group date">
                     <label class="adults" for="usr">Mobile number</label>
@@ -64,13 +69,7 @@
                   <div class="date">
                     <label class="adults" for="usr">Kids</label>
                     <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="knum" placeholder="Kids(3months - 20 years)">
-                                           
-
-
                   </div>  
-                  <div id="secondperson" style="display:none" class="form-group date">
-                    <label class="adults" for="usr">Adults 1 DOB</label><input type="text"  id="usr" name="sdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
-                  </div>
                   <div class="form-group date">
                     <label class="adults" for="usr">Email</label>
                     <input type="email"  id="usr" name="mail" placeholder="Enter email">
@@ -271,10 +270,15 @@
           }
           function getkid(){
             var i =  document.getElementById('usrVal').value;
+            var j= document.getElementById('usrkid').value;
             if(i<1){
               alert('please choose adult first');
               document.getElementById('usrkid').value = '';
-              
+            }
+            if(j>3)
+            {
+              alert('Not More Then Three Kids are allowed');
+              document.getElementById('usrkid').value = '';
             }
           }
           </script>
