@@ -99,8 +99,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="modal">Modal</label>
-                                        <input list="modal" class="lis" id="modals" name="modl" placeholder="Enter Model">
-                                        <datalist  id="modal" >
+                                        <input list="modals" class="lis" id="modal" name="modl" placeholder="Enter Model">
+                                        <datalist  id="modals" >
                                             <option value="dd">
                                             <option value="dd">
                                             <option value="dd">
@@ -276,7 +276,7 @@
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="point">
-                            <img src="<?= base_url();?>assest/img/discount.png">
+                            <img src="<?= base_url();?>assest/img/discount.svg">
                     
                             <h4>80% discouns</h4>
                             <hr class="style1">
@@ -329,7 +329,7 @@
         <script type='text/javascript'>
     // baseURL variable
     var baseURL= "<?php echo base_url();?>";
-    
+
     $(document).ready(function(){
         $('#comp').change(function(){
             var comp = $(this).val();
@@ -348,7 +348,7 @@
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#modal').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                        $('#modal').append('<option value="'+data['model_name']+'">');
                     });
                 }
             });
