@@ -20,7 +20,7 @@ public function contactDetails(){
     $this->input->post('formSubmit');
     $this->form_validation->set_rules('name', 'Name', 'required');
     $this->form_validation->set_rules('mail', 'Email', 'required');
-    $this->form_validation->set_rules('tel', 'Phone', 'required');
+    $this->form_validation->set_rules('tel', 'Phone', 'required|regex_match[/^[0-9]{10}$/]');
     $this->form_validation->set_rules('pack', 'Insurance Pack', 'required');
     $this->form_validation->set_rules('comp', 'Company', 'required');
     $this->form_validation->set_rules('text', 'Requirement', 'required');
