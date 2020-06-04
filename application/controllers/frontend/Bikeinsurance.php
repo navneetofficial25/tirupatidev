@@ -38,45 +38,85 @@ public function index(){
 
 public function renewbikeDetails(){
     $this->load->model('frontend/Bikemodel');
-   // $this->input->post('formSubmit');
-    $this->form_validation->set_rules('regno', '', 'required');
-    $this->form_validation->set_rules('comp', '', 'required');
-    $this->form_validation->set_rules('type', '', 'required');
-    $this->form_validation->set_rules('regyr', '', 'required');
-    $this->form_validation->set_rules('modal', '', 'required');
-    $this->form_validation->set_rules('vari', '', 'required');
-    $this->form_validation->set_rules('pexpire', '', 'required');
-    $this->form_validation->set_rules('pinsur', '', 'required');
+   $this->input->post('formSubmit');
+
+    $this->form_validation->set_rules('reg', 'Registration', 'required');
+    $this->form_validation->set_rules('compa', 'Company Name', 'required');
+    $this->form_validation->set_rules('fultype', 'Fuel Type', 'required');
+    $this->form_validation->set_rules('regisyr', 'Registrtion Year', 'required');
+    $this->form_validation->set_rules('moda', 'Modal', 'required');
+    $this->form_validation->set_rules('pptype', 'Policy Type', 'required');
+    $this->form_validation->set_rules('varnt', 'Varient', 'required');
+    $this->form_validation->set_rules('pexre', 'Policy Expire', 'required');
+    $this->form_validation->set_rules('piur', 'Policy Insurer', 'required');
 
     if ($this->form_validation->run()){ 
 
 
     $data = array(
-        'registration_no' => $this->input->post('regno'),
-        'maufacturer_id' => $this->input->post('comp'),
-        'fuel_type' => $this->input->post('type'),
-        'registration_year' => $this->input->post('regyr'),
-        'prev_policy' => $this->input->post('ptype'),
-        'modal_id' => $this->input->post('modal'),
-        'variant_id' => $this->input->post('vari'),
-        'policy_expire' => $this->input->post('pexpire'),
-        'prev_insurer' => $this->input->post('pinsur'),
+        'registration_no' => $this->input->post('reg'),
+        'maufacturer_id' => $this->input->post('compa'),
+        'fuel_type' => $this->input->post('fultype'),
+        'registration_year' => $this->input->post('regisyr'),
+        'prev_policy' => $this->input->post('pptype'),
+        'modal_id' => $this->input->post('moda'),
+        'variant_id' => $this->input->post('varnt'),
+        'policy_expire' => $this->input->post('pexre'),
+        'prev_insurer' => $this->input->post('piur'),
     );
-    if($this->send($data)){
-    $this->Bikemodel->bike_data($data);
-               $this->session->set_flashdata('success','Gallery  Successfully Add');
-               redirect(base_url().'frontend/bikeinsurance');
+    if($this->Bikemodel->bike_data($data)){
+        echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
     }
     else{
-                    $this->session->set_flashdata('error','Something went wrong, please try again.');
-        $this->load->view('frontend/bikeinsurance');
+        echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
     }
 }
 else{
-                $this->session->set_flashdata('error','Please enter all fields');
-    $this->load->view('frontend/bikeinsurance');
+    echo "<h6 class='text-danger text-center'>PLease Fill All Fields</h6>";
 }
 }
+
+
+
+public function newBike(){
+    $this->load->model('frontend/Bikemodel');
+    $this->input->post('formSubmit');
+
+    $this->form_validation->set_rules('compa', 'Company Name', 'required');
+    $this->form_validation->set_rules('fultype', 'Fuel Type', 'required');
+    $this->form_validation->set_rules('regisyr', 'Registrtion Year', 'required');
+    $this->form_validation->set_rules('moda', 'Modal', 'required');
+    $this->form_validation->set_rules('varnt', 'Varient', 'required');
+    $this->form_validation->set_rules('pexre', 'Policy Expire', 'required');
+    if ($this->form_validation->run()){ 
+        $data = array(
+            'maufacturer_id' => $this->input->post('compa'),
+            'fuel_type' => $this->input->post('fultype'),
+            'registration_year' => $this->input->post('regisyr'),
+            'modal_id' => $this->input->post('moda'),
+            'variant_id' => $this->input->post('varnt'),
+            'policy_expire' => $this->input->post('pexre'),
+        );
+        
+        if($this->Bikemodel->bike_data($data)){
+            echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
+        }
+        else{
+            echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
+        }
+     
+          
+}
+else{
+           
+    echo "<h6 class='text-danger text-center'>PLease Fill All Fields</h6>";
+           
+}
+}
+
+
+
+
 
 // Email Functionality//
 

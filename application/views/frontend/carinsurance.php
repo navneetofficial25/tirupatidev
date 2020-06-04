@@ -127,7 +127,7 @@
                                     <div class="form-group date">
                                         <label class="adults" for="inur">Select Previous Insurer</label>
                                         <input class="lis" list="pinsur" name="pinsur" id="inur" placeholder="Select Insurer">
-                                        <datalist>
+                                        <datalist id="pinsur" >
                                             <option value="4">
                                             <option value="5">
                                             <option value="2">

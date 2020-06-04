@@ -43,18 +43,18 @@
                     <hr style="border-width: 2px; margin-top: 0px;">
                     <div class="tab-content" >
                         <div id="renew" class="container tab-pane active">
-                            <?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('method'=>'POST'));?>
+                            <?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('id'=>'bikeform','method'=>'POST'));?>
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group date">
                                         <label class="adults" for="usrg">Registration Number</label>
-                                        <input type="text"  id="usrg" name="regno" placeholder="Enter Registration Number">
+                                        <input type="text"  id="usrg" name="reg" placeholder="Enter Registration Number">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                     <label class="adults" for="compg ">Manufacturer</label>
-                                        <input list="compsg"  class="lis"   id="compg" name="comp" placeholder="Enter Company">
+                                        <input list="compsg"  class="lis"   id="compg" name="compa" placeholder="Enter Company">
                                         <datalist id="compsg" >
                                         
 
@@ -68,7 +68,7 @@
                                     </div>
                                     <div class="form-group date">
                                     <label class="adults" for="typeg">Fuel type</label>
-                                        <input list="typesg"  class="lis"   id="typeg" name="comp" placeholder="Enter Fuel Type">
+                                        <input list="typesg"  class="lis"   id="typeg" name="fultype" placeholder="Enter Fuel Type">
                                         <datalist   id="typesg">
                                             
                                             <option value="A">
@@ -77,7 +77,7 @@
                                     </div>
                                     <div class="form-group date">
                                     <label class="adults" for="regyrssg">Registration year</label>
-                                                <input list="regyrg"  class="lis"   id="regyrssg" name="comp" placeholder="Select Year">
+                                                <input list="regyrg"  class="lis"   id="regyrssg" name="regisyr" placeholder="Select Year">
                                                 <datalist   id="regyrg" >
                                                     
                                                     <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
@@ -89,7 +89,7 @@
         </div>
                                     <div class="form-group date">
                                     <label class="adults" for="ptypesg">Select Previous Policy Type</label>
-                                        <input list="ptypeg"  class="lis"   id="ptypesg" name="comp" placeholder="Enter Policy Type">
+                                        <input list="ptypeg"  class="lis"   id="ptypesg" name="pptype" placeholder="Enter Policy Type">
                                         <datalist  id="ptypeg" >
                                             <option value="w">
                                             <option value="r">
@@ -100,7 +100,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                     <label class="adults" for="modalsg">Modal</label>
-                                        <input list="modalg" class="lis" id="modalsg" name="modl" placeholder="Enter Model">
+                                        <input list="modalg" class="lis" id="modalsg" name="moda" placeholder="Enter Model">
                                         <datalist  id="modalg" >
                                             <option value="dd">
                                             <option value="dd">
@@ -110,7 +110,7 @@
                                     </div>
                                     <div class="form-group date">
                                     <label class="adults" for="varig">Varient</label>
-                                        <input list="mg" class="lis" id="varig" name="modl" placeholder="Enter Varient">
+                                        <input list="mg" class="lis" id="varig" name="varnt" placeholder="Enter Varient">
                                         <datalist  id="mg" >
                                             <option value="dd">
                                             <option value="dd">
@@ -120,12 +120,12 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pexpie">Select Policy Expire</label>
-                                        <input type="date" class="lis"  placeholder="Policy Expire" id="pexpie" name="pexpire">
+                                        <input type="date" class="lis"  placeholder="Policy Expire" id="pexpie" name="pexre">
                                     </div>
                                     <div class="form-group date">
                                     <label class="adults" for="inuri">Select Previous Insurer</label>
-                                        <input class="lis" list="pinsuri" id="inuri" placeholder="Select Insurer">
-                                        <datalist class="lis"   id="pinsuri" name="pinsur">
+                                        <input class="lis" list="pinsuri" id="inuri"  name="piur" placeholder="Select Insurer">
+                                        <datalist   id="pinsuri" >
                                             <option value="4">
                                             <option value="5">
                                             <option value="2">
@@ -139,27 +139,16 @@
                                 <button name="formSubmit">Get Quote</button>
                             </div>
                             <?php echo form_close(); ?>
-                            <?php
-      if($this->session->flashdata('success'))
-      {
-      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
-      }
-      else if($this->session->flashdata('error'))
-      {
-      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
-      }
-
-
-      ?> 
+                            
                         </div>
                         <div id="new" class="container tab-pane fade">
-                            <?php echo form_open(base_url( 'frontend/bikeinsurance/renewbikeDetails'), array('method'=>'POST'));?>
+                            <?php echo form_open(base_url( 'frontend/bikeinsurance/newBike'), array('id'=>'newbikefrm','method'=>'POST'));?>
                             <div class="row">
                                 
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                     <label class="adults" for="compsi">Manufacturer</label>
-                                                <input list="compniesi"  class="lis"   id="compsi" name="comp" placeholder="Not Expire">
+                                                <input list="compniesi"  class="lis"   id="compsi" name="compa" placeholder="Not Expire">
                                                 <datalist id="compniesi">
                                                 <?php
                             foreach($company as $companies){
@@ -174,7 +163,7 @@
                                     </div>
                                     <div class="form-group date">
                                     <label class="adults" for="typesi">Fuel type</label>
-                                        <input list="typsi"  class="lis"   id="typesi" name="comp" placeholder="Enter Fuel Type">
+                                        <input list="typsi"  class="lis"   id="typesi" name="fultype" placeholder="Enter Fuel Type">
                                         <datalist   id="typsi" >
                                             <option value="kuch bhi" >
                                             <option value="A">
@@ -183,7 +172,7 @@
                                     </div>
                                     <div class="form-group date">
                                     <label class="adults" for="regyrsi">Registration year</label>
-                                                <input list="regyri"  class="lis"   id="regyrsi" name="comp" placeholder="Select Year">
+                                                <input list="regyri"  class="lis"   id="regyrsi" name="regisyr" placeholder="Select Year">
                                                 <datalist  id="regyri">
                                                     
                                                     <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
@@ -192,21 +181,13 @@
                                                     
                                                     </datalist>
             
-        </div>
-                                    <div class="form-group date">
-                                    <label class="adults" for="ptypesi">Select Previous Policy Type</label>
-                                        <input list="ptypsi"  class="lis"   id="ptypesi" name="comp" placeholder="Enter Policy Type">
-                                        <datalist   id="ptypsi" >
-                                            <option value="1">
-                                            <option value="2">
-                                            <option value="3">
-                                        </datalisst>
                                     </div>
+                                    
                                 </div> 
                                 <div class="col-md-6"> 
                                     <div class="form-group date">
                                     <label class="adults" for="modalsi">Modal</label>
-                                        <input list="modlsi"  class="lis"   id="modalsi" name="comp" placeholder="Enter Model">
+                                        <input list="modlsi"  class="lis"   id="modalsi" name="moda" placeholder="Enter Model">
                                         <datalist    id="modlsi" >
                                             <option value="2">
                                             <option value="3">
@@ -217,7 +198,7 @@
                                     </div>
                                     <div class="form-group date">
                                     <label class="adults" for="varii">Varient</label>
-                                        <input list="variis"  class="lis"   id="varii" name="comp" placeholder="Enter Varient">
+                                        <input list="variis"  class="lis"   id="varii" name="varnt" placeholder="Enter Varient">
                                         <datalist   id="variis" >
                                             <option value="4">
                                             <option value="5">
@@ -226,35 +207,16 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pepires">Select Policy Expire</label>
-                                        <input type="date" class="lis"  placeholder="Policy Expire" id="pepires" name="pexpire">
+                                        <input type="date" class="lis"  placeholder="Policy Expire" id="pexre" name="pexpire">
                                     </div>
-                                    <div class="form-group date">
-                                    <label class="adults" for="pisur">Select Previous Insurer</label>
-                                        <input list="pnsurs"  class="lis"   id="pisur" name="comp" placeholder="Select Insurer">
-                                        <datalist   id="pnsurs">
-                                            <option value="4">
-                                            <option value="5">
-                                            <option value="7">
-                                        </datalist>
-                                    </div>
+                                    
                                 </div>         
                             </div>  
                             <div class="text-center">
-                                <button name="formSubmit">Get Quote</button>
+                                <button name="">Get Quote</button>
                             </div>  
                             <?php echo form_close(); ?>
-                            <?php
-      if($this->session->flashdata('success'))
-      {
-      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
-      }
-      else if($this->session->flashdata('error'))
-      {
-      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
-      }
-
-
-      ?> 
+                        
                         </div>
 
                     </div>
@@ -342,7 +304,7 @@
     var baseURL= "<?php echo base_url();?>";
     
     $(document).ready(function(){
-        $('#comp').change(function(){
+        $('#compg').change(function(){
             var comp = $(this).val();
 
             // AJAX request
@@ -354,19 +316,19 @@
                 success: function(response){
 
                     // Remove options
-                    $('#modal').find('option').not(':first').remove();
-                    $('#vari').find('option').not(':first').remove();
+                    $('#modalsg').find('option').not(':first').remove();
+                    $('#varig').find('option').not(':first').remove();
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#modal').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                        $('#modalsg').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
                     });
                 }
             });
         });
         
         // Department change
-        $('#modal').change(function(){
+        $('#modalsg').change(function(){
             var modal = $(this).val();
 
             // AJAX reques
@@ -378,11 +340,11 @@
                 success: function(response){
                    
                     // Remove options
-                    $('#vari').find('option').not(':first').remove();
+                    $('#varig').find('option').not(':first').remove();
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#vari').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
+                        $('#varig').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
                     });
                 }
             });
@@ -396,7 +358,7 @@
     var baseURL= "<?php echo base_url();?>";
     
     $(document).ready(function(){
-        $('#comps').change(function(){
+        $('#compsi').change(function(){
             var comp = $(this).val();
 
             // AJAX request
@@ -408,19 +370,19 @@
                 success: function(response){
 
                     // Remove options
-                    $('#modals').find('option').not(':first').remove();
-                    $('#varis').find('option').not(':first').remove();
+                    $('#modalsi').find('option').not(':first').remove();
+                    $('#varii').find('option').not(':first').remove();
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#modals').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                        $('#modalsi').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
                     });
                 }
             });
         });
         
         // Department change
-        $('#modals').change(function(){
+        $('#modalsi').change(function(){
             var modal = $(this).val();
 
             // AJAX request
@@ -432,11 +394,11 @@
                 success: function(response){
                     
                     // Remove options
-                    $('#varis').find('option').not(':first').remove();
+                    $('#varii').find('option').not(':first').remove();
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#varis').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
+                        $('#varii').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
                     });
                 }
             });
@@ -444,3 +406,4 @@
         
     });
 </script>
+
