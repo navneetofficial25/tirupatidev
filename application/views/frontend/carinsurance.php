@@ -1,7 +1,8 @@
 <h2 class="main_heading">Now Buying Car Insurance is Much Simpleir</h2>
+
 <div class="container car">
     <div class="">
-        <div class="box_sh ">
+        <div class="box_sh">
             <div class="row">
                 <div class="col-lg-4 col-xs-12 " style="padding:0px;">
                 <img src="<?= base_url();?>assest/img/car.jpg">
@@ -26,11 +27,13 @@
                                     <img src="<?= base_url();?>assest/img/family (1).svg">
                                     <h6>10 Thousand+</h6>
                                     <p>Vehicles Insured</p>
+
                                 </div>
                             </div>
                         </div>    
                     </div>    
                 </div>
+                
                 <div class="col-lg-8 col-xs-12 " style="padding:0px; background-color:white;">
                     <ul class="nav " role="tablist">
                         <li class="nav-item">
@@ -43,18 +46,18 @@
                     <hr style="border-width: 2px; margin-top: 0px;">
                     <div class="tab-content" >
                         <div id="renew" class="container tab-pane active">
-                            <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails'), array('method'=>'POST'));?>
+                            <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails'), array('id'=>'carform','method'=>'POST'));?>
                             <div class="row">
                                 <div class="col-md-8">
                                     <div class="form-group date">
                                         <label class="adults" for="usr">Registration Number</label>
-                                        <input type="text"  id="usr" name="regno" placeholder="Enter Registration Number">
+                                        <input type="text"  id="usr" name="registraion" placeholder="Enter Registration Number">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comp ">Manufacturer</label>
-                                        <input list="comps"  class="lis"   id="comp" name="comp" placeholder="Enter Company">
+                                        <input list="comps"  class="lis"   id="type" name="company" placeholder="Enter Fuel Type">
                                         <datalist id="comps" >
                                         
 
@@ -68,7 +71,7 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="type">Fuel type</label>
-                                        <input list="types"  class="lis"   id="type" name="comp" placeholder="Enter Fuel Type">
+                                        <input list="types"  class="lis"   id="type" name="fuel_type" placeholder="Enter Fuel Type">
                                         <datalist   id="types">
                                             
                                             <option value="A">
@@ -77,7 +80,7 @@
                                     </div>
                                     <div class="form-group date">
                                                 <label class="adults" for="regyrss">Registration year</label>
-                                                <input list="regyr"  class="lis"   id="regyrss" name="comp" placeholder="Select Year">
+                                                <input list="regyr"  class="lis"   id="regyrss" name="regyr" placeholder="Select Year">
                                                 <datalist   id="regyr" >
                                                     
                                                     <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
@@ -88,7 +91,7 @@
                                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="ptypes">Select Previous Policy Type</label>
-                                        <input list="ptype"  class="lis"   id="ptypes" name="comp" placeholder="Enter Policy Type">
+                                        <input list="ptype"  class="lis"   id="" name="ptypes" placeholder="Enter Policy Type">
                                         <datalist  id="ptype" >
                                             <option value="w">
                                             <option value="r">
@@ -99,8 +102,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="modal">Modal</label>
-                                        <input list="modal" class="lis" id="modals" name="modl" placeholder="Enter Model">
-                                        <datalist  id="modal" >
+                                        <input list="modals" class="lis" id="modal" name="modal" placeholder="Enter Model">
+                                        <datalist  id="modals" >
                                             <option value="dd">
                                             <option value="dd">
                                             <option value="dd">
@@ -109,7 +112,7 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="vari">Varient</label>
-                                        <input list="m" class="lis" id="vari" name="modl" placeholder="Enter Varient">
+                                        <input list="m" class="lis" id="vari" name="vari" placeholder="Enter Varient">
                                         <datalist  id="m" >
                                             <option value="dd">
                                             <option value="dd">
@@ -119,13 +122,13 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Select Policy Expire</label>
-                                        <input type="date" class="lis" placeholder="Expire Date"  id="pexpire" name="pexpire">
+                                        <input type="date" class="lis" placeholder="Expire Date"  id="" name="policy_expire">
 
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="inur">Select Previous Insurer</label>
-                                        <input class="lis" list="pinsur" id="inur" placeholder="Select Insurer">
-                                        <datalist class="lis"   id="pinsur" name="pinsur">
+                                        <input class="lis" list="pinsur" name="pinsur" id="inur" placeholder="Select Insurer">
+                                        <datalist>
                                             <option value="4">
                                             <option value="5">
                                             <option value="2">
@@ -139,27 +142,15 @@
                                 <button name="formSubmit">Get Quote</button>
                             </div>
                             <?php echo form_close(); ?>
-                            <?php
-      if($this->session->flashdata('success'))
-      {
-      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
-      }
-      else if($this->session->flashdata('error'))
-      {
-      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
-      }
-
-
-      ?> 
                         </div>
                         <div id="new" class="container tab-pane fade">
-                            <?php echo form_open(base_url( 'frontend/carinsurance/renewDetails'), array('method'=>'POST'));?>
+                            <?php echo form_open(base_url( 'frontend/carinsurance/newCar'), array('id'=>'newfrm','method'=>'POST'));?>
                             <div class="row">
                                 
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comps">Manufacturer</label>
-                                                <input list="compnies"  class="lis"   id="comps" name="comp" placeholder="Not Expire">
+                                                <input list="compnies"  class="lis"   id="" name="company" placeholder="Not Expire">
                                                 <datalist id="compnies">
                                                 <?php
                             foreach($company as $companies){
@@ -175,7 +166,7 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="types">Fuel type</label>
-                                        <input list="typs"  class="lis"   id="types" name="comp" placeholder="Enter Fuel Type">
+                                        <input list="typs"  class="lis"  name="fuel_type" placeholder="Enter Fuel Type">
                                         <datalist   id="typs" >
                                             <option value="kuch bhi" >
                                             <option value="A">
@@ -184,7 +175,7 @@
                                     </div>
                                     <div class="form-group date">
                                                 <label class="adults" for="regyrs">Registration year</label>
-                                                <input list="regyr"  class="lis"   id="regyrs" name="comp" placeholder="Select Year">
+                                                <input list="regyr"  class="lis"  name="regyr" placeholder="Select Year">
                                                 <datalist  id="regyr">
                                                     
                                                     <?php for($i=1990; $i<=date("Y"); $i++ ) { ?>
@@ -193,20 +184,12 @@
                                                     
                                                     </datalist>
                                                     </div>
-                                    <div class="form-group date">
-                                        <label class="adults" for="ptypes">Select Previous Policy Type</label>
-                                        <input list="ptyps"  class="lis"   id="ptypes" name="comp" placeholder="Enter Policy Type">
-                                        <datalist   id="ptyps" >
-                                            <option value="1">
-                                            <option value="2">
-                                            <option value="3">
-                                        </datalisst>
-                                    </div>
+                            
                                 </div> 
                                 <div class="col-md-6"> 
                                     <div class="form-group date">
                                         <label class="adults" for="modals">Modal</label>
-                                        <input list="modls"  class="lis"   id="modals" name="comp" placeholder="Enter Model">
+                                        <input list="modls"  class="lis"  name="modal" placeholder="Enter Model">
                                         <datalist    id="modls" >
                                             <option value="2">
                                             <option value="3">
@@ -217,7 +200,7 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="vari">Varient</label>
-                                        <input list="varis"  class="lis"   id="vari" name="comp" placeholder="Enter Varient">
+                                        <input list="varis"  class="lis"   name="vari" placeholder="Enter Varient">
                                         <datalist   id="varis" >
                                             <option value="4">
                                             <option value="5">
@@ -226,25 +209,17 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Select Policy Expire</label>
-                                        <input type="date" class="lis" placeholder="Expire Date"  id="pexpire" name="pexpire">
+                                        <input type="date" class="lis" placeholder="Expire Date" name="policy_expire">
 
                                     </div>
-                                    <div class="form-group date">
-                                        <label class="adults" for="pinsur">Select Previous Insurer</label>
-                                        <input list="pinsurs"  class="lis"   id="pinsur" name="comp" placeholder="Select Insurer">
-                                        <datalist   id="pinsurs">
-                                            <option value="4">
-                                            <option value="5">
-                                            <option value="7">
-                                        </datalist>
-                                    </div>
+                                    
                                 </div>         
                             </div>  
                             <div class="text-center">
-                                <button name="formSubmit">Get Quote</button>
+                                <button name="">Get Quote</button>
                             </div>  
                             <?php echo form_close(); ?>
-                           <?php echo validation_errors(); ?>
+            
                         </div>
 
                     </div>
@@ -276,7 +251,7 @@
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="point">
-                            <img src="<?= base_url();?>assest/img/discount.png">
+                            <img src="<?= base_url();?>assest/img/discount.svg">
                     
                             <h4>80% discouns</h4>
                             <hr class="style1">
@@ -311,7 +286,22 @@
                   
                     </div>
                 </div>
-                
+                <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+     
+        <!-- Modal body -->
+        <div class="modal-body">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <span id="validation" class="form_errors"></span>
+        </div>
+        
+     
+      </div>
+    </div>
+  </div>
                 
                 
                 
@@ -329,7 +319,7 @@
         <script type='text/javascript'>
     // baseURL variable
     var baseURL= "<?php echo base_url();?>";
-    
+
     $(document).ready(function(){
         $('#comp').change(function(){
             var comp = $(this).val();
@@ -348,7 +338,7 @@
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#modal').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                        $('#modal').append('<option value="'+data['model_name']+'">');
                     });
                 }
             });
@@ -432,4 +422,23 @@
         });
         
     });
+</script>
+<script>
+    $("#carform,#newfrm").submit(function(event){
+	event.preventDefault();
+	var post_url = $(this).attr("action"); 
+	var request_method = $(this).attr("method"); 
+	var form_data = $(this).serialize(); 
+	
+	$.ajax({
+		url : post_url,
+		type: request_method,
+		data : form_data,
+	}).done(function(response){ //
+        console.log(response);
+        $('#validation').html(response);
+        $('#myModal').modal('show').fadeIn('slow');
+        $("#carform,#newfrm").trigger("reset");
+	});
+});
 </script>

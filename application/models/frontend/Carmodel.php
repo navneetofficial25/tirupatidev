@@ -51,7 +51,8 @@ class Carmodel extends CI_Model {
         return $response;
     }
     function car_data($data){
-        $this->db->insert('car_insurance',$data);
+        return $this->db->insert('car_insurance',$data);
+         
     }
 
 }

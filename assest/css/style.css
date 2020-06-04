@@ -311,6 +311,11 @@ padding-left: 10%;
   text-align: center;
   
 }
+#validation p{
+  color: red;
+  text-align: center;
+  margin-left: 0;
+}
 .brands img{
     width: 85%;
     height:auto;

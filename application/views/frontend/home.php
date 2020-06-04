@@ -104,7 +104,7 @@
           <span id="mobile_error" class="text-danger m-0 p-0"></span></br>
            
           <select class="lis" id="services" name = "services">
-                                    <option >Select Insurance</option>
+                                    <option selected disabled>Select Insurance</option>
 
                         <?php
                         foreach($company as $companies){

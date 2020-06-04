@@ -41,34 +41,76 @@
         $this->input->post('formSubmit');
 
 
-        $this->form_validation->set_rules('regno', '', 'required');
-        $this->form_validation->set_rules('comp', '', 'required');
-        $this->form_validation->set_rules('type', '', 'required');
-        $this->form_validation->set_rules('regyr', '', 'required');
-        $this->form_validation->set_rules('modal', '', 'required');
-        $this->form_validation->set_rules('vari', '', 'required');
-        $this->form_validation->set_rules('pexpire', '', 'required');
-        $this->form_validation->set_rules('pinsur', '', 'required');
+        $this->form_validation->set_rules('registraion', 'Registration', 'required');
+        $this->form_validation->set_rules('company', 'Company Name', 'required');
+        $this->form_validation->set_rules('fuel_type', 'Fuel Type', 'required');
+        $this->form_validation->set_rules('regyr', 'Registrtion Year', 'required');
+        $this->form_validation->set_rules('modal', 'Modal', 'required');
+        $this->form_validation->set_rules('ptypes', 'Policy Type', 'required');
+        $this->form_validation->set_rules('vari', 'Varient', 'required');
+        $this->form_validation->set_rules('policy_expire', 'Policy Expire', 'required');
+        $this->form_validation->set_rules('pinsur', 'Policy Insurer', 'required');
 
         if ($this->form_validation->run()){ 
         $data = array(
-            'registration_no' => $this->input->post('regno'),
-            'maufacturer_id' => $this->input->post('comp'),
-            'fuel_type' => $this->input->post('type'),
+            'registration_no' => $this->input->post('registraion'),
+            'maufacturer_id' => $this->input->post('company'),
+            'fuel_type' => $this->input->post('fuel_type'),
             'registration_year' => $this->input->post('regyr'),
-            'prev_policy' => $this->input->post('ptype'),
+            'prev_policy' => $this->input->post('ptypes'),
             'modal_id' => $this->input->post('modal'),
             'variant_id' => $this->input->post('vari'),
-            'policy_expire' => $this->input->post('pexpire'),
+            'policy_expire' => $this->input->post('policy_expire'),
             'prev_insurer' => $this->input->post('pinsur'),
         );
-
-        $this->Carmodel->car_data($data);
-               redirect(base_url().'frontend/carinsurance');
+        
+        
+            if($this->Carmodel->car_data($data)){
+                echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
+            }
+            else{
+                echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
+            }
+         
+              
     }
     else{
                
-                $this->index();
+        echo validation_errors();
+               
+    }
+    }
+    public function newCar(){
+        $this->load->model('frontend/Carmodel');
+        $this->input->post('formSubmit');
+        $this->form_validation->set_rules('company', 'Company Name', 'required');
+        $this->form_validation->set_rules('fuel_type', 'Fuel Type', 'required');
+        $this->form_validation->set_rules('regyr', 'Registrtion Year', 'required');
+        $this->form_validation->set_rules('modal', 'Modal', 'required');
+        $this->form_validation->set_rules('vari', 'Varient', 'required');
+        $this->form_validation->set_rules('policy_expire', 'Policy Expire', 'required');
+        if ($this->form_validation->run()){ 
+            $data = array(
+                'maufacturer_id' => $this->input->post('company'),
+                'fuel_type' => $this->input->post('fuel_type'),
+                'registration_year' => $this->input->post('regyr'),
+                'modal_id' => $this->input->post('modal'),
+                'variant_id' => $this->input->post('vari'),
+                'policy_expire' => $this->input->post('policy_expire'),
+            );
+            
+            if($this->Carmodel->car_data($data)){
+                echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
+            }
+            else{
+                echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
+            }
+         
+              
+    }
+    else{
+               
+        echo validation_errors();
                
     }
     }
