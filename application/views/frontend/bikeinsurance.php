@@ -316,111 +316,87 @@
 
 <script type='text/javascript'>
     // baseURL variable
-    var baseURL= "<?php echo base_url();?>";
-    
-    $(document).ready(function(){
-        $('#compg').change(function(){
-            var comp = $(this).val();
+     $(document).ready(function(){
 
+        $("#compg").on('input', function (){
+            var comp = $(this).val();
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>frontend/bikeinsurance/getbikeCompany',
+                url:'<?=base_url()?>/frontend/carinsurance/getbikeCompany',
+                method: 'post',
+                data: {comp},
+                success: function(response){
+                    console.log(response);
+                    response = $.parseJSON(response);
+                    $.each(response, function (i,v)
+                    {
+                        $("#modalg").append("<option value='"+v.model_name+"'></option>");   
+                    }); 
+                }
+            });
+        });
+        $("#modalsg").on('input', function (){
+            var comp = $(this).val();
+            $.ajax({
+                url:'<?=base_url()?>/frontend/carinsurance/getbikeModel',
                 method: 'post',
                 data: {comp: comp},
-                dataType: 'json',
                 success: function(response){
-
-                    // Remove options
-                    $('#modalsg').find('option').not(':first').remove();
-                    $('#varig').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#modalsg').append('<option value="'+data['model_name']+'">');
+                    console.log(response);
+                    response = $.parseJSON(response);
+                    $.each(response, function (i,v)
+                    {
+                        $("#mg").append("<option value='"+v.variant_name+"'></option>");   
                     });
                 }
             });
         });
-        
-        // Department change
-        $('#modalsg').change(function(){
-            var modal = $(this).val();
-
-            // AJAX reques
-            $.ajax({
-                url:'<?=base_url()?>frontend/bikeinsurance/getbikeModel',
-                method: 'post',
-                data: {modal: modal},
-                dataType: 'json',
-                success: function(response){
-                   
-                    // Remove options
-                    $('#varig').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#varig').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
-                    });
-                }
-            });
+    
         });
         
-    });
 </script>
-
 <script type='text/javascript'>
     // baseURL variable
-    var baseURL= "<?php echo base_url();?>";
-    
-    $(document).ready(function(){
-        $('#compsi').change(function(){
-            var comp = $(this).val();
+     $(document).ready(function(){
 
+        $("#compsi").on('input', function (){
+            var comp = $(this).val();
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>frontend/bikeinsurance/getbikeCompany',
+                url:'<?=base_url()?>/frontend/carinsurance/getbikeCompany',
                 method: 'post',
                 data: {comp: comp},
-                dataType: 'json',
                 success: function(response){
-
-                    // Remove options
-                    $('#modalsi').find('option').not(':first').remove();
-                    $('#varii').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#modalsi').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                    console.log(response);
+                    response = $.parseJSON(response);
+                    $.each(response, function (i,v)
+                    {
+                        $("#modlsi").append("<option value='"+v.model_name+"'></option>");   
                     });
                 }
             });
         });
-        
-        // Department change
-        $('#modalsi').change(function(){
-            var modal = $(this).val();
-
-            // AJAX request
+        $("#modalsi").on('input', function (){
+            var comp = $(this).val();
             $.ajax({
-                url:'<?=base_url()?>frontend/bikeinsurance/getbikeModel',
+                url:'<?=base_url()?>/frontend/carinsurance/getbikeModel',
                 method: 'post',
-                data: {modal: modal},
-                dataType: 'json',
+                data: {comp: comp},
                 success: function(response){
-                    
-                    // Remove options
-                    $('#varii').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#varii').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
+                    console.log(response);
+                    response = $.parseJSON(response);
+                    $.each(response, function (i,v)
+                    {
+                        $("#variis").append("<option value='"+v.variant_name+"'></option>");   
                     });
                 }
             });
         });
+    
+        });
         
-    });
 </script>
+
 <script>
     $("#bikeform,#newbikefrm").submit(function(event){
 	event.preventDefault();
@@ -436,7 +412,7 @@
         console.log(response);
         $('#validation').html(response);
         $('#myModal').modal('show').fadeIn('slow');
-        $("#bikeform,#newbikefrm").trigger("reset");
+        // $("#bikeform,#newbikefrm").trigger("reset");
 	});
 });
 </script>
