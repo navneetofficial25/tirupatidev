@@ -9,7 +9,7 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url(); ?>welcome">
       <div class=" ">
-        <img src="admin/assets/images/logo_dark.png">
+        <img src="<?php echo base_url();?>admin/assets/images/logo_dark.png">
       </div>
       
     </a>
