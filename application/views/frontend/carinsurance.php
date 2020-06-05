@@ -54,10 +54,12 @@
                                         <input type="text"  id="usr" name="registraion" placeholder="Enter Registration Number">
                                     </div>
                                 </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comp ">Manufacturer</label>
-                                        <input list="comps"  class="lis"   id="company_name" name="company" placeholder="Enter Fuel Type">
+                                        <input list="comps"  class="lis"   id="company_name" name="company" placeholder="Enter Manufacturer">
                                         <datalist id="comps" >
                                         
 
@@ -69,13 +71,43 @@
                                             ?>
                                         </datalist>
                                     </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="modal">Modal</label>
+                                        <input list="modalss" class="lis" id="modal_list" name="modl" placeholder="Enter Model">
+                                        <datalist  id="modalss" >
+                                           
+                                        </datalist>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="type">Fuel type</label>
                                         <input list="types"  class="lis"   id="type" name="fuel_type" placeholder="Enter Fuel Type">
                                         <datalist   id="types">
-                                                
+                                            <option value="Petrol">
+                                            <option value="Diesel">
+                                            <option value="Electric">
+                                            <option value="CNG/LPG Externally Fitted">
                                         </datalist>
                                     </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="vari">Varient</label>
+                                        <input list="mvarient" class="lis" id="vari" name="vari" placeholder="Enter Varient">
+                                        <datalist  id="mvarient" >
+                                          
+                                        </datalist>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
                                     <div class="form-group date">
                                                 <label class="adults" for="regyrss">Registration year</label>
                                                 <input list="regyr"  class="lis"   id="regyrss" name="regyr" placeholder="Select Year">
@@ -86,7 +118,18 @@
                                                     <?php } ?>
                                                     
                                                 </datalist>
-                                                    </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="pexpire">Select Policy Expire</label>
+                                        <input type="date" class="lis" placeholder="Expire Date"  id="" name="policy_expire">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="ptypes">Select Previous Policy Type</label>
                                         <input list="ptype"  class="lis"   id="" name="ptypes" placeholder="Enter Policy Type">
@@ -97,36 +140,43 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group date">
-                                        <label class="adults" for="modal">Modal</label>
-                                        <input list="modalss" class="lis" id="modal_list" name="modl" placeholder="Enter Model">
-                                        <datalist  id="modalss" >
-                                           
-                                        </datalist>
-                                    </div>
-                                    <div class="form-group date">
-                                        <label class="adults" for="vari">Varient</label>
-                                        <input list="mvarient" class="lis" id="vari" name="vari" placeholder="Enter Varient">
-                                        <datalist  id="mvarient" >
-                                          
-                                        </datalist>
-                                    </div>
-                                    <div class="form-group date">
-                                        <label class="adults" for="pexpire">Select Policy Expire</label>
-                                        <input type="date" class="lis" placeholder="Expire Date"  id="" name="policy_expire">
-
-                                    </div>
-                                    <div class="form-group date">
                                         <label class="adults" for="inur">Select Previous Insurer</label>
                                         <input class="lis" list="pinsur" name="pinsur" id="inur" placeholder="Select Insurer">
                                         <datalist id="pinsur" >
-                                            <option value="4">
-                                            <option value="5">
-                                            <option value="2">
+                                            <option value="ACKO">
+                                            <option value="Bajaj Allianz">
+                                            <option value="Bharti-Axa">
+                                            <option value="Cholamandalam">   
+                                            <option value="Digit">  
+                                            <option value="Edelweiss">  
+                                            <option value="Future Generali">  
+                                            <option value="HDFC ERGO">  
+                                            <option value="ICICI Lombard">   
+                                            <option value="IFFCO Tokio">  
+                                            <option value="Kotak Mahindra">  
+                                            <option value="L &amp; T">  
+                                            <option value="Liberty">  
+                                            <option value="MAGMA">  
+                                            <option value="National Insurance">  
+                                            <option value="NAVI">  
+                                            <option value="New India">  
+                                            <option value="Oriental">  
+                                            <option value="Raheja QBE General">
+                                            <option value="Reliance">
+                                            <option value="Royal Sundaram">
+                                            <option value="SBI General">
+                                            <option value="Shriram General Insurance">
+                                            <option value="Tata AIG">
+                                            <option value="United India">
+                                            <option value="Universal Sompo">
                                         </datalist>
                                     </div>
                                 </div>
-                                    
-                            </div>
+                            </div>                            
+                            
+                            
+                            
+                            
 
                             <div class="text-center">
                                 <button name="formSubmit">Get Quote</button>
@@ -136,7 +186,6 @@
                         <div id="new" class="container tab-pane fade">
                             <?php echo form_open(base_url( 'frontend/carinsurance/newCar'), array('id'=>'newfrm','method'=>'POST'));?>
                             <div class="row">
-                                
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comps">Manufacturer</label>
@@ -154,14 +203,44 @@
   
                                                 
                                     </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="modals">Modal</label>
+                                        <input list="modls"  class="lis" id="new_model" name="modal" placeholder="Enter Model">
+                                        <datalist    id="modls" >
+                                
+                                            
+                                        </datalist>
+                                    </div>
+                                </div> 
+                            </div> 
+                            <div class="row">
+                                <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="types">Fuel type</label>
                                         <input list="typs"  class="lis"  name="fuel_type" placeholder="Enter Fuel Type">
                                         <datalist   id="typs" >
                                             <option selected disabled value="Select" >
-                                           
+                                            <option value="Petrol">
+                                            <option value="Diesel">
+                                            <option value="Electric">
+                                            <option value="CNG/LPG Externally Fitted">
                                         </datalist>
                                     </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="vari">Varient</label>
+                                        <input list="new_varis"  class="lis"   name="vari" placeholder="Enter Varient">
+                                        <datalist   id="new_varis" >
+                                            
+                                        </datalist>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
                                     <div class="form-group date">
                                                 <label class="adults" for="regyrs">Registration year</label>
                                                 <input list="regyr"  class="lis"  name="regyr" placeholder="Select Year">
@@ -172,33 +251,21 @@
                                                     <?php } ?>
                                                     
                                                     </datalist>
-                                                    </div>
-                            
-                                </div> 
-                                <div class="col-md-6"> 
-                                    <div class="form-group date">
-                                        <label class="adults" for="modals">Modal</label>
-                                        <input list="modls"  class="lis" id="new_model" name="modal" placeholder="Enter Model">
-                                        <datalist    id="modls" >
-                                
-                                            
-                                        </datalist>
                                     </div>
-                                    <div class="form-group date">
-                                        <label class="adults" for="vari">Varient</label>
-                                        <input list="new_varis"  class="lis"   name="vari" placeholder="Enter Varient">
-                                        <datalist   id="new_varis" >
-                                            
-                                        </datalist>
-                                    </div>
+                                </div>   
+                                <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Select Policy Expire</label>
                                         <input type="date" class="lis" placeholder="Expire Date" name="policy_expire">
 
                                     </div>
-                                    
-                                </div>         
-                            </div>  
+                                </div> 
+                            </div>   
+                            
+                            
+                            
+                            
+                             
                             <div class="text-center">
                                 <button name="">Get Quote</button>
                             </div>  
