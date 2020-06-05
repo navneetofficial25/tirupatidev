@@ -89,4 +89,28 @@ return $q;
         
         return $q;
       }
+      function fetchComp(){
+
+        $response = array();
+        
+        // Select record
+        $this->db->select('*');
+        $q = $this->db->get('car_brand');
+        $response = $q->result_array();
+
+        return $response;
+    }
+    // Get City departments
+    function fetchModels($postData){
+        $response = array();
+        
+        // Select record
+        $this->db->select('id,model_name');
+        $this->db->where('brand_id', $postData['comp']);
+        $q = $this->db->get('car_model');
+        $response = $q->result_array();
+
+        return $response;
+    }
 }
+?>

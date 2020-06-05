@@ -25,7 +25,7 @@
             foreach ($getPurchaseData as $key => $value) { 
 //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
     
-                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->id.'">',$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+                $arrya_json[] = array($value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
                <a class="delete_sliders" data-id="'.$value->id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
                 }
                  echo json_encode(array('data'=>$arrya_json));
@@ -79,7 +79,7 @@
           }
 
             public function model(){
-            $this->load->model('frontend/Bikemodel');
+            $this->load->model('admin/Bikemodel');
 
             $data['company'] = $this->Bikemodel->fetchComp();
 
@@ -115,7 +115,7 @@
             foreach ($getPurchaseData as $key => $value) { 
 //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
     
-                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->id.'">',$value->model_name,$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+                $arrya_json[] = array($value->model_name,$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
                <a class="delete_sliders" data-id="'.$value->id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
                 }
                  echo json_encode(array('data'=>$arrya_json));
@@ -154,7 +154,7 @@
               }
 
             public function variant(){
-            $this->load->model('frontend/Bikemodel');
+            $this->load->model('admin/Bikemodel');
             $data['company'] = $this->Bikemodel->fetchComp();
 
               $this->load->view('admin/template/header');
@@ -186,11 +186,12 @@
             foreach ($getPurchaseData as $key => $value) { 
 //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
     
-                $arrya_json[] = array('<input type="checkbox" class="childSupplierCheck" data-id="'.$value->id.'">',$value->variant_name,$value->model_name,$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+                $arrya_json[] = array($value->variant_name,$value->model_name,$value->brand_name,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
                <a class="delete_sliders" data-id="'.$value->id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
                 }
                  echo json_encode(array('data'=>$arrya_json));
             }
+
             public function deletevariant(){
                 $this->load->model('admin/Bikemodel');
     
@@ -208,7 +209,7 @@
                     }
                     else
                     {
-                      $this->session->set_flashdata('error','Something went wrong. Please try again');
+                      $this->session->set_flashdata('success','Deleted successfully');
                     redirect(base_url()."admin/bikedetails/variant");
                       
                     }
@@ -221,6 +222,16 @@
                   }
                 }
               }
+    public function getbikeCompany(){
+        $this->load->model('admin/Bikemodel');
+
+            $postData = $this->input->post();        
+            $data = $this->Bikemodel->fetchModels($postData);
+        
+            echo json_encode($data);
+        }
+    
+
 
     }
 
