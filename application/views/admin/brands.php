@@ -110,7 +110,7 @@ img {
               </div>
               <table id="lowinventory"  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
                 <thead>
-                <tr>    <th><input type="checkbox" class="masterSupplierCheck"></th>
+                <tr>   
                     <th style="width: 15%">Image</th>
                     <th>Image Title</th>
                     <th>Image description</th>
