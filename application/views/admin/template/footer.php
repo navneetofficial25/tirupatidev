@@ -91,7 +91,11 @@
 
     });
 </script>
-
+<script>
+      $('#sidebarToggleTop').click(function(){
+        $('#accordionSidebar').toggle();
+      });
+  </script>
 
 
 

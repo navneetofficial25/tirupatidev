@@ -240,16 +240,13 @@ margin-top: 10px;
 }
 
 .first  img{
-  width: 50%;
+  width: 75%;
   height:auto;
-  margin-top: 20px;
-  margin-left: 23%;
-  margin-bottom: 20px;
+
 }
 .first .flex {
   display: flex;
   flex-wrap: wrap;
-  width: 64%;
   margin: 0px auto;
   
 }
@@ -306,9 +303,8 @@ padding-left: 10%;
 /*third section */
 .brands .card{
   width: 168px;
-  margin-right: 7px;
-  margin-left: 8px;
-  margin-bottom: 20px;
+  margin: 6px 8px;
+
 }
 .brands .flex{
   display: flex;

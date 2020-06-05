@@ -4,15 +4,10 @@
 <div id="wrapper">
 
   <!-- Sidebar -->
-  <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion p-1" id="accordionSidebar"  >
+  <ul class="navbar-nav bg-dark sidebar sidebar-dark accordion" id="accordionSidebar"  >
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?php echo base_url(); ?>welcome">
-      <div class=" ">
-        <img src="<?php echo base_url();?>admin/assets/images/logo_dark.png">
-      </div>
-      
-    </a>
+
 
     <!-- Divider -->
     <hr class="sidebar-divider my-0">
@@ -21,7 +16,7 @@
     <li class="nav-item" >
       <a class="nav-link" href="<?php echo base_url(); ?>welcome" >
         <i class="fas fa-fw fa-tachometer-alt" style="color:white; font-size:1.5rem;"></i>
-        <span style="font-size:1.5rem; color:white;">Dashboard</span></a>
+        <span >Dashboard</span></a>
     </li>
 
     <!-- Divider -->
@@ -33,7 +28,7 @@
   <!--    <hr class="sidebar-divider">
 
     <! -- Heading -->
-    <div class="sidebar-heading" style="font-size:1.5rem; color:white;">
+    <div class="sidebar-heading" >
       Home Page
     </div>
 
@@ -41,22 +36,22 @@
     
     
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/sitedesc" ><i class="fas fa-fw fa-chart-area" style="color:white; font-size:1.3rem;"></i><span style="font-size:1.3rem; color:white;">Site setting</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/sitedesc" ><i class="fas fa-fw fa-chart-area" ></i><span >Site setting</span></a>
     </li>
 
     <!-- Nav Item - Tables -->
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/brands"><i class="fas fa-fw fa-table" style="color:white; font-size:1.3rem;"></i><span style="font-size:1.3rem; color:white;">Brands</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/brands"><i class="fas fa-fw fa-table" ></i><span >Brands</span></a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/sociallinks"><i class="fas fa-fw fa-table" style="color:white; font-size:1.3rem;"></i><span style="font-size:1.3rem; color:white;">Social Links</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/sociallinks"><i class="fas fa-fw fa-table" ></i><span >Social Links</span></a>
     </li>
 
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-        <i class="fas fa-fw fa-folder" style="color:white; font-size:1.3rem;"></i>
-        <span style="font-size:1.3rem; color:white;"> Car Insurance</span>
+        <i class="fas fa-fw fa-folder" ></i>
+        <span > Car Insurance</span>
       </a>
       <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
@@ -71,7 +66,7 @@
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePage" aria-expanded="true" aria-controls="collapsePages">
         <i class="fas fa-fw fa-folder" style="color:white; font-size:1.3rem; hover:red;"></i>
-        <span style="font-size:1.3rem; color:white;">Bike Insurance</span>
+        <span >Bike Insurance</span>
       </a>
       <div id="collapsePage" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
@@ -84,25 +79,25 @@
     </li>
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
-    <div class="sidebar-heading" style="font-size:1.5rem; color:white;">
+    <div class="sidebar-heading" >
       User Data
     </div>
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/healthdata"><i class="fas fa-fw fa-table" style="color:white; font-size:1.3rem;"></i><span style="font-size:1.3rem; color:white;">Health Data</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/healthdata"><i class="fas fa-fw fa-table" ></i><span >Health Data</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/cardata"><i class="fas fa-fw fa-table" style="color:white; font-size:1.3rem;"></i><span style="font-size:1.3rem; color:white;">Car Ins Data</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/cardata"><i class="fas fa-fw fa-table" ></i><span >Car Ins Data</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/bikedata"><i class="fas fa-fw fa-table" style="color:white; font-size:1.3rem;"></i><span style="font-size:1.3rem; color:white;">Bike Ins Data</span></a>
-    </li>
-
-    <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/contactdata"><i class="fas fa-fw fa-table" style="color:white; font-size:1.3rem;"></i><span style="font-size:1.3rem; color:white;">Contact Data</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/bikedata"><i class="fas fa-fw fa-table" ></i><span >Bike Ins Data</span></a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="<?php echo base_url(); ?>admin/callbackdata"><i class="fas fa-fw fa-table" style="color:white; font-size:1.3rem;"></i><span style="font-size:1.3rem; color:white;">Callback Data</span></a>
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/contactdata"><i class="fas fa-fw fa-table" ></i><span >Contact Data</span></a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/callbackdata"><i class="fas fa-fw fa-table" ></i><span >Callback Data</span></a>
     </li>
     
     <hr class="sidebar-divider">

@@ -412,6 +412,9 @@ h6, .h6 {
   font-weight: 300;
   line-height: 1.2;
 }
+.navbar-nav{
+  margin: inherit !important;
+}
 
 .display-3 {
   font-size: 4.5rem;
@@ -3989,7 +3992,6 @@ input[type="button"].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-  
 }
 
 .navbar-nav .nav-link {
@@ -9566,7 +9568,6 @@ a:focus {
 
 #wrapper {
   display: flex;
-  
 }
 
 #wrapper #content-wrapper {
@@ -9932,13 +9933,12 @@ a:focus {
 
 .sidebar .nav-item .nav-link .img-profile,
 .topbar .nav-item .nav-link .img-profile {
-  height: 4rem;
-  width: 4rem;
+  height: 2rem;
+  width: 2rem;
 }
 
 .topbar {
-  height: auto;
-  padding: 10px;
+  height: 4.375rem;
 }
 
 .topbar #sidebarToggleTop {
@@ -9947,7 +9947,7 @@ a:focus {
 }
 
 .topbar #sidebarToggleTop:hover {
-  background-color: #eaf4f3;
+  background-color: #eaecf4;
 }
 
 .topbar #sidebarToggleTop:active {
@@ -9992,7 +9992,6 @@ a:focus {
 .topbar .dropdown .dropdown-menu {
   width: calc(100% - 1.5rem);
   right: 0.75rem;
- 
 }
 
 .topbar .dropdown-list {
@@ -10017,7 +10016,6 @@ a:focus {
   border-right: 1px solid #e3e6f0;
   border-bottom: 1px solid #e3e6f0;
   line-height: 1.3rem;
-
 }
 
 .topbar .dropdown-list .dropdown-item .dropdown-list-image {
@@ -10050,13 +10048,7 @@ a:focus {
   background-color: #eaecf4;
   color: #3a3b45;
 }
-.topbar .dropdown .dropdown-menu .dropdown-item{
-  color: white;
-  font-size: 1.2rem;
-}
-.topbar .dropdown .dropdown-menu .dropdown-item:hover{
-  background-color: rgb( 239, 69, 84 );
-}
+
 @media (min-width: 576px) {
   .topbar .dropdown {
     position: relative;
@@ -10086,7 +10078,7 @@ a:focus {
 }
 
 .sidebar {
-  width: 500px;
+  width: 6.5rem;
   min-height: 100vh;
 }
 
@@ -10103,19 +10095,11 @@ a:focus {
   padding: 0.75rem 1rem;
   width: 6.5rem;
 }
-.sidebar .nav-item .nav-link:hover {
- background-color: rgb( 239, 69, 84 );
- width: 100%;
- height: auto;
- border-radius: 5px;
-
-}
 
 .sidebar .nav-item .nav-link span {
   font-size: 0.65rem;
   display: block;
 }
-
 
 .sidebar .nav-item.active .nav-link {
   font-weight: 700;
@@ -10170,13 +10154,12 @@ a:focus {
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:hover,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:hover {
-  background-color: rgb( 239, 69, 84 );
-  color:white;
+  background-color: #eaecf4;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item:active,
 .sidebar .nav-item .collapsing .collapse-inner .collapse-item:active {
-  background-color: rgb( 95, 96, 96 );
+  background-color: #dddfeb;
 }
 
 .sidebar .nav-item .collapse .collapse-inner .collapse-item.active,
@@ -10220,20 +10203,17 @@ a:focus {
 }
 
 .sidebar .sidebar-brand {
- 
- 
-  
-  
+  height: 4.375rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 800;
   padding: 1.5rem 1rem;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
-  
+  z-index: 1;
 }
-.sidebar .sidebar-brand img{
-  height: 30px;
-  width: 100px;
-}
+
 .sidebar .sidebar-brand .sidebar-brand-icon i {
   font-size: 2rem;
 }
@@ -10250,12 +10230,12 @@ a:focus {
   text-align: center;
   padding: 0 1rem;
   font-weight: 800;
-  font-size: 0.65rem;
+  font-size: 1rem;
 }
 
 @media (min-width: 768px) {
   .sidebar {
-    width: 14rem !important;
+    width: 22rem !important;
   }
   .sidebar .nav-item .collapse {
     position: relative;
@@ -10282,14 +10262,14 @@ a:focus {
     width: 100%;
     text-align: left;
     padding: 1rem;
-    width: 14rem;
+    /* width: 14rem; */
   }
   .sidebar .nav-item .nav-link i {
-    font-size: 0.85rem;
+    font-size: 14px;
     margin-right: 0.25rem;
   }
   .sidebar .nav-item .nav-link span {
-    font-size: 0.85rem;
+    font-size: 14px;
     display: inline;
   }
   .sidebar .nav-item .nav-link[data-toggle="collapse"]::after {

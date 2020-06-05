@@ -61,10 +61,7 @@
       width: 100%;
     }
     .brands .card{
-      width: 100%;
-      margin-right: 0px;
-      margin-left: 0px;
-      margin-bottom: 20px;
+      width: 115px;
       
     }
     .health_main{
@@ -160,10 +157,7 @@
     }
     
     .brands .card{
-      width: 160px;
-      margin-right: 10px;
-      margin-left: 10px;
-      margin-bottom: 20px;
+      width: 140px;
       
     }
     .first .card{
@@ -173,7 +167,7 @@
       
     }
     .first .flex{
-      width: 70%;
+
     }
     .about p {
       font-size: 20px;
