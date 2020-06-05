@@ -37,29 +37,17 @@ public function contactDetails(){
         );
     
         if($this->Contactmodel->contact_data($data)){
-        $array = array(
-            'error'   => false,
-            'success' => 'Our Team Will Soon Contact You'
-           );
+        
+           echo "<h6 class='text-success text-center'>Our Team Will Soon Contact You</h6>";
             }else{
-                    $array = array(
-                    'error'   => true,
-           );
+                echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
     }
           
 }
 else{
-    $array = array(
-        'error'   => true,
-        'name' => form_error('name'),
-        'mail' => form_error('mail'),
-        'tel' => form_error('tel'),
-        'pack' => form_error('pack'),
-        'comp' => form_error('comp'),
-        'text' => form_error('text'),
-       );
+    echo "<h6 class='text-danger text-center'>PLease Fill All Fields</h6>";
 }
-        echo json_encode($array);
+   
 
     }
 }

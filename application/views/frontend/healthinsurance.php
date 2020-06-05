@@ -46,7 +46,8 @@
           <div class="card-body">
             <div class="form-group">
               <div class="row">
-                <div class="col-md-6 ">
+
+                <div class="col-md-6">
                   <div class="date">
                     <label class="adults" for="usr">Adults</label>
                     <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="Adult(s)-21 yeasrs and above">
@@ -60,27 +61,43 @@
                     <label class="adults" for="usr">Adults 2 DOB</label>
                     <input type="text"  id="usr" name="sdob" placeholder="Enter Adult 1 DOB"><p>DD/MM/YYYY</p>
                   </div>
+                </div>
+                 
+                 
+                <div class="col-md-6">
+                
+                  <div class="date">
+                    <label class="adults" for="usr">Kids</label>
+                    <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="knum" placeholder="Kids(3months - 20 years)">
+                  </div>
+                  
+                </div>  
+              </div>
+              
+              <div class="row">
+                <div class="col-md-6">
                   <div class="form-group date">
                     <label class="adults" for="usr">Mobile number</label>
                     <input type="text"  id="" name="mob" placeholder="Enter Mobile number">
                   </div>
-                </div>  
-                <div class="col-md-6 ">
-                  <div class="date">
-                    <label class="adults" for="usr">Kids</label>
-                    <input type="number" oninput="getkid()" min="1" max="3" id="usrkid" name="knum" placeholder="Kids(3months - 20 years)">
-                  </div>  
+                </div> 
+                <div class="col-md-6">
                   <div class="form-group date">
                     <label class="adults" for="usr">Email</label>
                     <input type="email"  id="usr" name="mail" placeholder="Enter email">
                   </div>
-                </div>
-              </div> 
+                </div> 
+
+              </div>
+
+
+
+              
               <div class="chck">
                 <input type="checkbox" value="none" id="checkbox_1" name="contact1"/>
                 <label for="checkbox_1" class="checkbox"><span class="chk">I agree to the Term and Conditon</span></label>
                 <input type="checkbox" value="none" id="checkbox_2" name="contact2"/>
-                <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my quote and policy details on <i class="fa fa-whatsapp" style="background:color:#25d366"></i><span> whatsapp</label>
+                <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my quote and policy details on <i class="fa fa-whatsapp" ></i><span> whatsapp</label>
                 </br>
                 <div class="text-center ">
                   <button>Get Quote</button> 

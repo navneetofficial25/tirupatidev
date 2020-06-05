@@ -6,6 +6,8 @@ class Profile extends CI_Controller
     function __construct()
 	{
 		parent::__construct();
+        if(! $this->session->userdata('vendorAuth')){
+        redirect('login');}
         $this->load->helper('url');
         $this->perPage = 100;
         $this->load->model('admin/Profilemodel');

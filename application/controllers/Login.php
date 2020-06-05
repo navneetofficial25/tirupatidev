@@ -41,7 +41,7 @@ class Login extends CI_Controller
                     $this->session->set_userdata('vendorAuth',$getVendorLoginStatus['token']);
                     $this->session->set_userdata('vendorRole',$getVendorLoginStatus['role']);
                     $this->load->helper('url');
-                    redirect(base_url()."welcome", 'refresh');
+                    redirect(base_url()."welcome");
                 }
                 else
                 {

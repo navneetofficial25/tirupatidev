@@ -115,7 +115,7 @@ img {
               </div>
               <table id="lowinventory"  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
                 <thead>
-                <tr>    <th><input type="checkbox" class="masterSupplierCheck"></th>
+                <tr>    
                     <th style="width: 15%">Variant Name</th>
                     <th>Model Name</th>
                     <th>Company Name</th>
@@ -261,7 +261,7 @@ img {
 
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getCompany',
+                url:'<?=base_url()?>admin/cardetails/getCompany',
                 method: 'post',
                 data: {comp: comp},
                 dataType: 'json',
@@ -279,28 +279,6 @@ img {
             });
         });
         
-        // Department change
-        $('#modals').change(function(){
-            var modal = $(this).val();
-
-            // AJAX reques
-            $.ajax({
-                url:'<?=base_url()?>/frontend/insurance/getModel',
-                method: 'post',
-                data: {modal: modal},
-                dataType: 'json',
-                success: function(response){
-                   
-                    // Remove options
-                    $('#varis').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#varis').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
-                    });
-                }
-            });
-        });
         
     });
 </script>

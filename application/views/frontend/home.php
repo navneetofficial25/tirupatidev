@@ -47,7 +47,7 @@
         <a href="<?php echo base_url()?>frontend/bikeinsurance">
           <div class="card">
             <div class="card-image text-center p-3">
-              <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/car-insurance.svg">
+              <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/bike.svg">
 
             </div>
     

@@ -57,5 +57,14 @@ public function updte_course_img($vl){
        }
 }
 
+public function deleteData($data)
+{   
+    $q= $this->db->query("DELETE c.*
+    FROM brandlogo c
+    WHERE c.id = $data ");
+    
+    return $q;
+  }
+
 }
 ?>

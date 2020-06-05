@@ -99,8 +99,25 @@
                               
                         </div>
                     </div>  
-                </div>    
+                </div>
+                    
             </div>
+            <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+      
+        <!-- Modal Header -->
+     
+        <!-- Modal body -->
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <span id="validation" class="form_errors"></span>
+                    </div>
+        
+     
+      </div>
+    </div>
+  </div>
         </div>
         <script>
 
@@ -113,23 +130,13 @@
 	$.ajax({
 		url : post_url,
         type: request_method,
-        dataType:"json",
+        
         data : form_data, 
     }).done(function(response){ //
-		if(response.error){
-            console.log(response.name);
-            $('#name_error').html(response.name);
-            $('#email_error').html(response.mail);
-            $('#tel_error').html(response.tel);
-            $('#pack_error').html(response.pack);
-            $('#comp_error').html(response.comp);
-            $('#text_error').html(response.text);
-        }
-        if(!response.error){
-            $('#success_m').html(response.success);
-            $('.text-danger').html('');
-            $('#contactFrm').trigger('reset');
-        }
+		console.log(response);
+        $('#validation').html(response);
+        $('#myModal').modal('show').fadeIn('slow');
+        $("#contactFrm").trigger("reset");
 	});
 });
 </script>

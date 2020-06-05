@@ -98,7 +98,7 @@ img {
              
               <table id="lowinventory"  style="width:100%" class="table table-striped table-bordered table_shop_custom display">
                 <thead>
-                <tr>    <th><input type="checkbox" class="masterSupplierCheck"></th>
+                <tr>    
                     <th style="width: 15%">Registration Number</th>
                     <th>Brand Name</th>
                     <th>Model Name</th>
