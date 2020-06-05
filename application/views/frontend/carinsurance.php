@@ -57,13 +57,13 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comp ">Manufacturer</label>
-                                        <input list="comps"  class="lis"   id="type" name="company" placeholder="Enter Fuel Type">
+                                        <input list="comps"  class="lis"   id="company_name" name="company" placeholder="Enter Fuel Type">
                                         <datalist id="comps" >
                                         
 
                                             <?php
                                                 foreach($company as $companies){
-
+                                                    
                                                 echo "<option value='".$companies['brand_name']."'>";
                                                 }
                                             ?>
@@ -73,9 +73,7 @@
                                         <label class="adults" for="type">Fuel type</label>
                                         <input list="types"  class="lis"   id="type" name="fuel_type" placeholder="Enter Fuel Type">
                                         <datalist   id="types">
-                                            
-                                            <option value="A">
-                                            <option value="B">
+                                                
                                         </datalist>
                                     </div>
                                     <div class="form-group date">
@@ -93,30 +91,23 @@
                                         <label class="adults" for="ptypes">Select Previous Policy Type</label>
                                         <input list="ptype"  class="lis"   id="" name="ptypes" placeholder="Enter Policy Type">
                                         <datalist  id="ptype" >
-                                            <option value="w">
-                                            <option value="r">
-                                            <option value="a">
+                                            
                                         </datalist>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="modal">Modal</label>
-                                        <input list="modals" class="lis" id="modal" name="modal" placeholder="Enter Model">
-                                        <datalist  id="modals" >
-                                            <option value="dd">
-                                          
-                                            
+                                        <input list="modalss" class="lis" id="modal_list" name="modl" placeholder="Enter Model">
+                                        <datalist  id="modalss" >
+                                           
                                         </datalist>
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="vari">Varient</label>
-                                        <input list="m" class="lis" id="vari" name="vari" placeholder="Enter Varient">
-                                        <datalist  id="m" >
-                                            <option value="dd">ehfehew</option>
-                                            <option value="dd">
-                                            <option value="dd">
-                                            
+                                        <input list="mvarient" class="lis" id="vari" name="vari" placeholder="Enter Varient">
+                                        <datalist  id="mvarient" >
+                                          
                                         </datalist>
                                     </div>
                                     <div class="form-group date">
@@ -149,7 +140,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comps">Manufacturer</label>
-                                                <input list="compnies"  class="lis"   id="" name="company" placeholder="Not Expire">
+                                                <input list="compnies"  class="lis"   id="new_company" name="company" placeholder="Not Expire">
                                                 <datalist id="compnies">
                                                 <?php
                             foreach($company as $companies){
@@ -187,22 +178,17 @@
                                 <div class="col-md-6"> 
                                     <div class="form-group date">
                                         <label class="adults" for="modals">Modal</label>
-                                        <input list="modls"  class="lis"  name="modal" placeholder="Enter Model">
+                                        <input list="modls"  class="lis" id="new_model" name="modal" placeholder="Enter Model">
                                         <datalist    id="modls" >
-                                            <option value="2">
-                                            <option value="3">
-                                            <option value="4">
-                                            <option value="5">
+                                
                                             
                                         </datalist>
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="vari">Varient</label>
-                                        <input list="varis"  class="lis"   name="vari" placeholder="Enter Varient">
-                                        <datalist   id="varis" >
-                                            <option value="4">
-                                            <option value="5">
-                                            <option value="7">
+                                        <input list="new_varis"  class="lis"   name="vari" placeholder="Enter Varient">
+                                        <datalist   id="new_varis" >
+                                            
                                         </datalist>
                                     </div>
                                     <div class="form-group date">
@@ -314,113 +300,89 @@
         <!-- Script -->
 
 
-        <script type='text/javascript'>
-    // baseURL variable
-    var baseURL= "<?php echo base_url();?>";
-
-    $(document).ready(function(){
-        $('#comp').change(function(){
-            var comp = $(this).val();
-
-            // AJAX request
-            $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getCompany',
-                method: 'post',
-                data: {comp: comp},
-                dataType: 'json',
-                success: function(response){
-
-                    // Remove options
-                    $('#modal').find('option').not(':first').remove();
-                    $('#vari').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#modal').append('<option value="'+data['model_name']+'">');
-                    });
-                }
-            });
-        });
-        
-        // Department change
-        $('#modal').change(function(){
-            var modal = $(this).val();
-
-            // AJAX reques
-            $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getModel',
-                method: 'post',
-                data: {modal: modal},
-                dataType: 'json',
-                success: function(response){
-                   
-                    // Remove options
-                    $('#vari').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#vari').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
-                    });
-                }
-            });
-        });
-        
-    });
-</script>
-
 <script type='text/javascript'>
     // baseURL variable
-    var baseURL= "<?php echo base_url();?>";
-    
-    $(document).ready(function(){
-        $('#comps').change(function(){
-            var comp = $(this).val();
+     $(document).ready(function(){
 
+        $("#company_name").on('input', function (){
+            var comp = $(this).val();
+            // AJAX request
+            $.ajax({
+                url:'<?=base_url()?>/frontend/carinsurance/getCompany',
+                method: 'post',
+                data: {comp},
+                success: function(response){
+                    console.log(response);
+                    response = $.parseJSON(response);
+                    $.each(response, function (i,v)
+                    {
+                        $("#modalss").append("<option value='"+v.model_name+"'></option>");   
+                    }); 
+                }
+            });
+        });
+        $("#modal_list").on('input', function (){
+            var comp = $(this).val();
+            $.ajax({
+                url:'<?=base_url()?>/frontend/carinsurance/getModel',
+                method: 'post',
+                data: {comp: comp},
+                success: function(response){
+                    console.log(response);
+                    response = $.parseJSON(response);
+                    $.each(response, function (i,v)
+                    {
+                        $("#mvarient").append("<option value='"+v.variant_name+"'></option>");   
+                    });
+                }
+            });
+        });
+    
+        });
+        
+</script>
+<script type='text/javascript'>
+    // baseURL variable
+     $(document).ready(function(){
+
+        $("#new_company").on('input', function (){
+            var comp = $(this).val();
             // AJAX request
             $.ajax({
                 url:'<?=base_url()?>/frontend/carinsurance/getCompany',
                 method: 'post',
                 data: {comp: comp},
-                dataType: 'json',
                 success: function(response){
-
-                    // Remove options
-                    $('#modals').find('option').not(':first').remove();
-                    $('#varis').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#modals').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                    console.log(response);
+                    response = $.parseJSON(response);
+                    $.each(response, function (i,v)
+                    {
+                        $("#modls").append("<option value='"+v.model_name+"'></option>");   
                     });
                 }
             });
         });
-        
-        // Department change
-        $('#modals').change(function(){
-            var modal = $(this).val();
-
-            // AJAX request
+        $("#new_model").on('input', function (){
+            var comp = $(this).val();
             $.ajax({
                 url:'<?=base_url()?>/frontend/carinsurance/getModel',
                 method: 'post',
-                data: {modal: modal},
-                dataType: 'json',
+                data: {comp: comp},
                 success: function(response){
-                    
-                    // Remove options
-                    $('#varis').find('option').not(':first').remove();
-
-                    // Add options
-                    $.each(response,function(index,data){
-                        $('#varis').append('<option value="'+data['id']+'">'+data['variant_name']+'</option>');
+                    console.log(response);
+                    response = $.parseJSON(response);
+                    $.each(response, function (i,v)
+                    {
+                        $("#new_varis").append("<option value='"+v.variant_name+"'></option>");   
                     });
                 }
             });
         });
+    
+        });
         
-    });
 </script>
+
 <script>
     $("#carform,#newfrm").submit(function(event){
 	event.preventDefault();

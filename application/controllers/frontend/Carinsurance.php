@@ -20,19 +20,16 @@
         public function getCompany(){
         $this->load->model('frontend/Carmodel');
 
-            $postData = $this->input->post();        
+            $postData = $this->input->post('comp');        
             $data = $this->Carmodel->fetchModels($postData);
-        
             echo json_encode($data);
         }
 
         public function getModel(){
         $this->load->model('frontend/Carmodel');
-
-            $postData = $this->input->post();        
-            $data = $this->Carmodel->fetchVariants($postData);
-        
-            echo json_encode($data);
+        $postData = $this->input->post('comp');        
+        $data = $this->Carmodel->fetchVariants($postData);
+        echo json_encode($data);
         }
 
 
@@ -45,7 +42,7 @@
         $this->form_validation->set_rules('company', 'Company Name', 'required');
         $this->form_validation->set_rules('fuel_type', 'Fuel Type', 'required');
         $this->form_validation->set_rules('regyr', 'Registrtion Year', 'required');
-        $this->form_validation->set_rules('modal', 'Modal', 'required');
+        $this->form_validation->set_rules('modl', 'Modal', 'required');
         $this->form_validation->set_rules('ptypes', 'Policy Type', 'required');
         $this->form_validation->set_rules('vari', 'Varient', 'required');
         $this->form_validation->set_rules('policy_expire', 'Policy Expire', 'required');
@@ -58,7 +55,7 @@
             'fuel_type' => $this->input->post('fuel_type'),
             'registration_year' => $this->input->post('regyr'),
             'prev_policy' => $this->input->post('ptypes'),
-            'modal_id' => $this->input->post('modal'),
+            'modal_id' => $this->input->post('modl'),
             'variant_id' => $this->input->post('vari'),
             'policy_expire' => $this->input->post('policy_expire'),
             'prev_insurer' => $this->input->post('pinsur'),

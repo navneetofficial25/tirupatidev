@@ -41,16 +41,18 @@
             'f_dob' => $this->input->post('fdob'),
             's_dob' => $this->input->post('sdob')
         );
-        
-        $this->Healthmodel->health_insert($datas);
-               $this->session->set_flashdata('success','Gallery  Successfully Add');
-               $this->load->view('frontend/healthinsurance');
-//        redirect(base_url().'frontend/insurance/healthinsurance');
+
+        if($this->Healthmodel->health_insert($datas)){
+            echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
+        }
+        else{
+            echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
+        }
+         
 
     }
     else{
-                $this->session->set_flashdata('error','Please enter all fields');
-                $this->load->view('frontend/healthinsurance');
+        echo "<h6 class='text-danger text-center'>PLease Fill All Fields</h6>";
     }
  }
 }

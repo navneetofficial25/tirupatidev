@@ -27,28 +27,21 @@ class Carmodel extends CI_Model {
 
     // Get City departments
     function fetchModels($postData){
-        $response = array();
-        
-        // Select record
-        $this->db->select('id,model_name');
-        $this->db->where('brand_id', $postData['comp']);
-        $q = $this->db->get('car_model');
-        $response = $q->result_array();
+        $response = $this->db->query("SELECT id FROM car_brand WHERE brand_name = '$postData'");
+        $id =  $response->result_array();
+        $id =  $id[0]['id']; 
+        $response = $this->db->query("SELECT model_name FROM car_model WHERE brand_id = '$id'");
+        return $response->result_array();
 
-        return $response;
     }
 
     // Get Department user
     function fetchVariants($postData){
-        $response = array();
-        
-        // Select record
-        $this->db->select('id,variant_name');
-        $this->db->where('model_id', $postData['modal']);
-        $q = $this->db->get('car_variant');
-        $response = $q->result_array();
-
-        return $response;
+        $response = $this->db->query("SELECT id FROM car_model WHERE model_name = '$postData'");
+        $id =  $response->result_array();
+        $id =  $id[0]['id']; 
+        $response = $this->db->query("SELECT variant_name FROM car_variant WHERE model_id = '$id'");
+        return $response->result_array();
     }
     function car_data($data){
         return $this->db->insert('car_insurance',$data);

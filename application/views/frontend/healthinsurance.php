@@ -37,7 +37,7 @@
         </div>
       </div>  
       <div class="col-lg-8 col-xs-12"style="padding:0px;"  >
-      <?php echo form_open(base_url( 'frontend/healthinsurance'), array('method'=>'POST'));?>
+      <?php echo form_open(base_url( 'frontend/healthinsurance/healthData'), array('id'=>'healthform','method'=>'POST'));?>
         <div class="card">
           <div class="card-header">
             <h3 >Personal Details</h3>
@@ -86,18 +86,8 @@
                 <div class="text-center ">
                   <button>Get Quote</button> 
                 </div> 
-                <?php
-      if($this->session->flashdata('success'))
-      {
-      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
-      }
-      else if($this->session->flashdata('error'))
-      {
-      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
-      }
+                    <?php echo form_close(); ?>
 
-
-      ?> 
               </div>                  
             </div>  
           </div>  
@@ -247,11 +237,44 @@
                 </div>
               </div>
             </div>
+            <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+     
+        <!-- Modal body -->
+        <div class="modal-body">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <span id="validation" class="form_errors"></span>
+        </div>
+        
+     
+      </div>
+    </div>
+  </div>
           </section>
           </div>
-
+          <script>
+    $("#healthform").submit(function(event){
+	event.preventDefault();
+	var post_url = $(this).attr("action"); 
+	var request_method = $(this).attr("method"); 
+	var form_data = $(this).serialize(); 
+	
+	$.ajax({
+		url : post_url,
+		type: request_method,
+		data : form_data,
+	}).done(function(response){ //
+    $('#validation').html(response);
+        $('#myModal').modal('show').fadeIn('slow');
+	});
+});
+</script>
 
           <script>
+          
           function getNo(){
           var i =  document.getElementById('usrVal').value;
             if(i==1){
