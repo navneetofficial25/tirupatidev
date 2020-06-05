@@ -105,7 +105,7 @@
     }
     else{
                
-        echo validation_errors();
+        echo "<h6 class='text-danger text-center'>PLease Fill All Fields</h6>";
                
     }
     }

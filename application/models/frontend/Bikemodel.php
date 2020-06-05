@@ -51,7 +51,7 @@ class Bikemodel extends CI_Model {
         return $response;
     }
     function bike_data($data){
-        $this->db->insert('bike_insurance',$data);
+       return $this->db->insert('bike_insurance',$data);
     }
 
 
