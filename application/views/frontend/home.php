@@ -2,7 +2,7 @@
 <div class="d-inline-block container-fluid banner-padding" style="padding-bottom:30px;">
     <div class="container first ">
       
-      <p style=" margin-bottom:30px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best quates for you </p>
+      <p style="margin-top:30px; margin-bottom:30px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best quates for you </p>
       
      
         <div class="flex justify-content-center">
@@ -14,7 +14,7 @@
 
             </div>
     
-            <div class="card-content">
+            <div class="card-content text-center">
               <p> Health Insurance</p>
             </div>
           </div>
@@ -47,11 +47,11 @@
         <a href="<?php echo base_url()?>frontend/bikeinsurance">
           <div class="card">
             <div class="card-image text-center p-3">
-              <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/bike.svg">
+              <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/car-insurance.svg">
 
             </div>
     
-            <div class="card-content">
+            <div class="card-content text-center">
               <p>Bike Insurance</p>
             </div>
           </div>
@@ -72,17 +72,17 @@
         </div>
 
      
-      <p class="still">Still in Doubt? Why Don't We Speak On Call?</p> 
-      <div class="row ">
-        <div class="col-md-5 text-center">
+      <p class="still my-3"><b>Still in Doubt? Why Don't We Speak On Call?</b></p> 
+      <div class="row justify-content-center ">
+        <div class="col-md-2 ">
          <a href="tel:+918950000000"> <button>give us a call</button></a>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-1">
           <div class="or">
                 <p>or</p>
             </div>
         </div>
-        <div class="col-md-5 text-center">
+        <div class="col-md-2">
           
           <button data-toggle="modal" data-target="#myModal" type="button" >get a call back</button> 
           
@@ -223,16 +223,16 @@
     </div>
     <section class="review">
       
-      <div class="container">
+      <div class="container ">
         <h3>If we have already had the pleasure of assisting you then please</h3>
-        <div class="row">
-          <div class="col-md-5 text-center">
+        <div class="row justify-content-center ">
+          <div class="col-md-2">
             <button>review us</button> 
           </div>  
-          <div class="col-md-2">
+          <div class="col-md-1">
             <p class="or">or</p>
           </div>
-          <div class="col-md-5 text-center">
+          <div class="col-md-2">
             <button>see review</button> 
           </div> 
         </div>
