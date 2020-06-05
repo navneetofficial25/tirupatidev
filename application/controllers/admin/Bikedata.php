@@ -4,7 +4,10 @@
         public function __construct()
         {
             parent::__construct();
+            if(! $this->session->userdata('vendorAuth'));
+            redirect('login');
             $this->load->model('admin/BikedataModel');
+            
         }
               
         public function index(){

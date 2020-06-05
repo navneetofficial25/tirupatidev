@@ -4,6 +4,8 @@
         public function __construct()
         {
             parent::__construct();
+            if(! $this->session->userdata('vendorAuth'));
+            redirect('login');
         }
 
         public function index(){
