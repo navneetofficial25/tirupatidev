@@ -207,7 +207,7 @@
                                     </div>
                                     <div class="form-group date">
                                         <label class="adults" for="pepires">Select Policy Expire</label>
-                                        <input type="date" class="lis"  placeholder="Policy Expire" id="pexre" name="pexpire">
+                                        <input type="date" class="lis"  placeholder="Policy Expire" id="pepires" name="pexre">
                                     </div>
                                     
                                 </div>         
@@ -284,7 +284,22 @@
           
             </div>
         </div>
+        <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+     
+        <!-- Modal body -->
+        <div class="modal-body">
+         <button type="button" class="close" data-dismiss="modal">&times;</button>
+         <span id="validation" class="form_errors"></span>
+        </div>
         
+     
+      </div>
+    </div>
+  </div>
         
         
         
@@ -321,7 +336,7 @@
 
                     // Add options
                     $.each(response,function(index,data){
-                        $('#modalsg').append('<option value="'+data['id']+'">'+data['model_name']+'</option>');
+                        $('#modalsg').append('<option value="'+data['model_name']+'">');
                     });
                 }
             });
@@ -406,4 +421,22 @@
         
     });
 </script>
-
+<script>
+    $("#bikeform,#newbikefrm").submit(function(event){
+	event.preventDefault();
+	var post_url = $(this).attr("action"); 
+	var request_method = $(this).attr("method"); 
+	var form_data = $(this).serialize(); 
+	
+	$.ajax({
+		url : post_url,
+		type: request_method,
+		data : form_data,
+	}).done(function(response){ //
+        console.log(response);
+        $('#validation').html(response);
+        $('#myModal').modal('show').fadeIn('slow');
+        $("#bikeform,#newbikefrm").trigger("reset");
+	});
+});
+</script>
