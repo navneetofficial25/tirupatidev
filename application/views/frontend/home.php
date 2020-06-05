@@ -139,21 +139,7 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="myMap" role="dialog">
-    <div class="modal-dialog modal-md">
-      <div class="modal-content">
-        <div class="modal-header" style="background-color:rgb( 239, 69, 84 ); height:60px;">
-          
-          <h4>Get A Call Back</h4>
-          
-          <button type="button" class="close" data-dismiss="modal" style="outline:none;">&times;</button>
-          
-        </div>
-        <div class="modal-body">
-    
-    </div>
-  </div>
-    </div></div>  
+  
     <section class="why">
       <div class="container">
         <h3>Why <span style="color: rgb( 239, 69, 84 ); font-style: normal;">Tirupati insurance ?</span></h3></br>
@@ -247,7 +233,7 @@
             <p class="or">or</p>
           </div>
           <div class="col-md-5 text-center">
-            <button type="button" data-toggle="modal" data-target="#myMap" data-lat='10.85' data-lng='106.62'>see review</button> 
+            <button>see review</button> 
           </div> 
         </div>
         <h3>to see what our clients feel about us</h3>
@@ -269,8 +255,6 @@
         </div>
       </div>    
     </section>
-
-
     <?php $this->load->view('frontend/Template/footer.php') ?>
 
     <script type="text/javascript">
@@ -307,44 +291,4 @@ $('#formSubmit').click(function() {
     return false;
 });
 </script>
-<script>
-  // Code goes here
 
-$(document).ready(function() {
-  var map = null;
-  var myMarker;
-  var myLatlng;
-
-  function initializeGMap(lat, lng) {
-    myLatlng = new google.maps.LatLng(lat, lng);
-
-    var myOptions = {
-      zoom: 12,
-      zoomControl: true,
-      center: myLatlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-
-    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-
-    myMarker = new google.maps.Marker({
-      position: myLatlng
-    });
-    myMarker.setMap(map);
-  }
-
-  // Re-init map before show modal
-  $('#myMap').on('show.bs.modal', function(event) {
-    var button = $(event.relatedTarget);
-    initializeGMap(button.data('lat'), button.data('lng'));
-    $("#location-map").css("width", "100%");
-    $("#map_canvas").css("width", "100%");
-  });
-
-  // Trigger map resize event after modal shown
-  $('#myMap').on('shown.bs.modal', function() {
-    google.maps.event.trigger(map, "resize");
-    map.setCenter(myLatlng);
-  });
-});
-</script>
