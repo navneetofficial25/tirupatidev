@@ -4,12 +4,12 @@
       
       <p style=" margin-bottom:30px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best quates for you </p>
       
-    
-        <div class="flex">
+     
+        <div class="flex justify-content-center">
           
         <a  href="<?php echo base_url()?>frontend/healthinsurance">
           <div class="card">
-            <div class="card-image">
+            <div class="card-image text-center p-3">
               <img alt="Health Insurance" src="<?php echo base_url()?>assest/img/health-insurance.svg">
 
             </div>
@@ -21,7 +21,7 @@
         </a>
         <a  href="#">
           <div class="card">
-            <div class="card-image">
+            <div class="card-image text-center p-3">
               <img class="img-responsive" alt="Term Insurance" src="<?php echo base_url()?>assest/img/term.svg">
 
             </div>
@@ -33,7 +33,7 @@
         </a>
         <a href="<?php echo base_url();?>frontend/carinsurance">
           <div class="card">
-            <div class="card-image">
+            <div class="card-image text-center p-3">
             
               <img class="img-responsive" alt="Car Insurance" src="<?php echo base_url()?>assest/img/car-insurance.svg">
 
@@ -46,8 +46,8 @@
         </a>
         <a href="<?php echo base_url()?>frontend/bikeinsurance">
           <div class="card">
-            <div class="card-image">
-              <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/car-insurance.svg">
+            <div class="card-image text-center p-3">
+              <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/bike.svg">
 
             </div>
     
@@ -58,7 +58,7 @@
         </a>
         <a  href="#">
           <div class="card">
-            <div class="card-image">
+            <div class="card-image text-center p-3">
               <img class="img-responsive" alt="Travle Insurance" src="<?php echo base_url()?>assest/img/travel-insurance.svg">
 
             </div>
@@ -179,9 +179,9 @@
     
     <div class="d-inline-block container-fluid banner-padding">
       
-      <div class="container brands">
+      <div class="container brands py-5">
         <h1>brands we keep</h1>
-        <div class="flex">
+        <div class="flex justify-content-center">
           
     <?php   foreach($brandslogo as $logo){
 	
