@@ -191,7 +191,7 @@
             <img src="<?=$logo->image;?>" >
             </div>
           </div>
-        <?php   }?>    
+        <?php }?>    
 
 <!--          <div class="col-md">
             <div class="box">
