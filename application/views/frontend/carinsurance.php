@@ -59,7 +59,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="comp ">Manufacturer</label>
-                                        <input list="comps"  class="lis"   id="company_name" name="company" placeholder="Enter Manufacturer">
+                                        <input list="comps"  onclick="clear_model()" class="lis"   id="company_name" name="company" placeholder="Enter Manufacturer">
                                         <datalist id="comps" >
                                         
 
@@ -75,7 +75,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="modal">Modal</label>
-                                        <input list="modalss" class="lis" id="modal_list" name="modl" placeholder="Enter Model">
+                                        <input list="modalss" onclick="clear_variant();" class="lis" id="modal_list" name="modl" placeholder="Enter Model">
                                         <datalist  id="modalss" >
                                            
                                         </datalist>
@@ -354,7 +354,22 @@
     </div>
   </div>
                 
-                
+<script>
+function clear_model(){
+var select =document.getElementById("modalss");
+var length = select.options.length;
+for (i = length-1; i >= 0; i--) {
+  select.options[i].remove();
+}
+}
+function clear_variant(){
+var select =document.getElementById("mvarient");
+var length = select.options.length;
+for (i = length-1; i >= 0; i--) {
+  select.options[i].remove();
+}
+}
+</script>                
                 
             
                 

@@ -19,7 +19,7 @@ public function index(){
     public function getbikeCompany(){
         $this->load->model('frontend/Bikemodel');
 
-            $postData = $this->input->post();        
+            $postData = $this->input->post('comp');        
             $data = $this->Bikemodel->fetchModels($postData);
         
             echo json_encode($data);
@@ -29,7 +29,7 @@ public function index(){
     public function getbikeModel(){
     $this->load->model('frontend/Bikemodel');
 
-        $postData = $this->input->post();        
+        $postData = $this->input->post('comp');        
         $data = $this->Bikemodel->fetchVariants($postData);
     
         echo json_encode($data);
