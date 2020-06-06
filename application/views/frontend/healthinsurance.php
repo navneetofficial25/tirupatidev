@@ -254,24 +254,44 @@
               </div>
             </div>
             <div class="modal" id="myModal">
-    <div class="modal-dialog">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-     
-        <!-- Modal body -->
-        <div class="modal-body">
-         <button type="button" class="close" data-dismiss="modal">&times;</button>
-         <span id="validation" class="form_errors"></span>
-        </div>
-        
-     
-      </div>
-    </div>
-  </div>
-          </section>
-          </div>
-          <script>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <!-- Modal Header -->
+                  <!-- Modal body -->
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="validation" class="form_errors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="myModal1">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                <h6 class='text-success text-center'>OOPS!! You can select upto 3 adults</h6>
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="validation" class="form_errors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal" id="myModal2">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                <h6 class='text-success text-center'>OOPS!! Please select adult first</h6>
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <span id="validation" class="form_errors"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+</section>
+ </div>
+ <script>
+
     $("#healthform").submit(function(event){
 	event.preventDefault();
 	var post_url = $(this).attr("action"); 
@@ -299,11 +319,12 @@
               document.getElementById('usrkid').max = 2;
             }
             else if(i==2){
+              document.getElementById('firstperson').style.display = 'block';
               document.getElementById('secondperson').style.display = 'block';
               document.getElementById('usrkid').max = 3;
             }
             else if(i>2){
-              alert('max number');
+              $('#myModal1').modal('show');
               document.getElementById('usrVal').value = 2;
             }
           
@@ -312,12 +333,12 @@
             var i =  document.getElementById('usrVal').value;
             var j= document.getElementById('usrkid').value;
             if(i<1){
-              alert('please choose adult first');
+              $('#myModal2').modal('show');
               document.getElementById('usrkid').value = '';
             }
             if(j>3)
             {
-              alert('Not More Then Three Kids are allowed');
+              $('#myModal1').modal('show');
               document.getElementById('usrkid').value = '';
             }
           }

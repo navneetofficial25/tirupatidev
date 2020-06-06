@@ -56,7 +56,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="compg ">Manufacturer</label>
-                                        <input list="compsg"  class="lis"   id="compg" name="compa" placeholder="Enter Company">
+                                        <input list="compsg" onclick="clear_model();"  class="lis"   id="compg" name="compa" placeholder="Enter Company">
                                         <datalist id="compsg" >
                                         
 
@@ -72,12 +72,8 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="modalsg">Modal</label>
-                                        <input list="modalg" class="lis" id="modalsg" name="moda" placeholder="Enter Model">
+                                        <input list="modalg" onclick="clear_variant();" class="lis" id="modalsg" name="moda" placeholder="Enter Model">
                                         <datalist  id="modalg" >
-                                            <option value="dd">
-                                            <option value="dd">
-                                            <option value="dd">
-                                            
                                         </datalist>
                                     </div>
                                 </div>    
@@ -100,10 +96,6 @@
                                         <label class="adults" for="varig">Varient</label>
                                         <input list="mg" class="lis" id="varig" name="varnt" placeholder="Enter Varient">
                                         <datalist  id="mg" >
-                                            <option value="dd">
-                                            <option value="dd">
-                                            <option value="dd">
-                                            
                                         </datalist>
                                     </div>
                                 </div>
@@ -385,7 +377,7 @@
             // AJAX request
             
             $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getbikeCompany',
+                url:'<?=base_url()?>/frontend/bikeinsurance/getbikeCompany',
                 method: 'post',
                 data: {comp},
                 success: function(response){
@@ -401,7 +393,7 @@
         $("#modalsg").on('input', function (){
             var comp = $(this).val();
             $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getbikeModel',
+                url:'<?=base_url()?>/frontend/bikeinsurance/getbikeModel',
                 method: 'post',
                 data: {comp: comp},
                 success: function(response){
@@ -426,7 +418,7 @@
             var comp = $(this).val();
             // AJAX request
             $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getbikeCompany',
+                url:'<?=base_url()?>/frontend/bikeinsurance/getbikeCompany',
                 method: 'post',
                 data: {comp: comp},
                 success: function(response){
@@ -442,7 +434,7 @@
         $("#modalsi").on('input', function (){
             var comp = $(this).val();
             $.ajax({
-                url:'<?=base_url()?>/frontend/carinsurance/getbikeModel',
+                url:'<?=base_url()?>/frontend/bikeinsurance/getbikeModel',
                 method: 'post',
                 data: {comp: comp},
                 success: function(response){
@@ -479,3 +471,19 @@
 	});
 });
 </script>
+<script>
+function clear_model(){
+var select =document.getElementById("modalg");
+var length = select.options.length;
+for (i = length-1; i >= 0; i--) {
+  select.options[i].remove();
+}
+}
+function clear_variant(){
+var select =document.getElementById("mg");
+var length = select.options.length;
+for (i = length-1; i >= 0; i--) {
+  select.options[i].remove();
+}
+}
+</script>                
