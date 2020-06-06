@@ -5,7 +5,7 @@
                      <div class="banner-text text-center size-banner">
   <?phpprint_r ($companies);?>
                         <div class="contect fliter-heading">
-                            <h1 style="margin-top:40px;"><span style="color:rgb( 239, 69, 84 ); mar-top:40px;">Enough about us,</span> <b>lets talk about you now !</b></h1>
+                            <h1 style="margin-top:40px;"><span style="color:rgb( 239, 69, 84 ); margin-top:40px;">Enough about us,</span> <b>lets talk about you now !</b></h1>
                             <p style="font-size:18px; color:rgb( 95, 96, 96 );">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here. We’ll be sure to get back to you as soon as we can.</p>
                         </div>
                       </div>
@@ -99,25 +99,8 @@
                               
                         </div>
                     </div>  
-                </div>
-                    
+                </div>    
             </div>
-            <div class="modal" id="myModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-      
-        <!-- Modal Header -->
-     
-        <!-- Modal body -->
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <span id="validation" class="form_errors"></span>
-                    </div>
-        
-     
-      </div>
-    </div>
-  </div>
         </div>
         <script>
 
@@ -130,13 +113,23 @@
 	$.ajax({
 		url : post_url,
         type: request_method,
-        
+        dataType:"json",
         data : form_data, 
     }).done(function(response){ //
-		console.log(response);
-        $('#validation').html(response);
-        $('#myModal').modal('show').fadeIn('slow');
-        $("#contactFrm").trigger("reset");
+		if(response.error){
+            console.log(response.name);
+            $('#name_error').html(response.name);
+            $('#email_error').html(response.mail);
+            $('#tel_error').html(response.tel);
+            $('#pack_error').html(response.pack);
+            $('#comp_error').html(response.comp);
+            $('#text_error').html(response.text);
+        }
+        if(!response.error){
+            $('#success_m').html(response.success);
+            $('.text-danger').html('');
+            $('#contactFrm').trigger('reset');
+        }
 	});
 });
 </script>

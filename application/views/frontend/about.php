@@ -71,6 +71,108 @@
                     </div>
                 </div>
             </div>
+
+            <hr />
+<h3 style="text-align: center;">OUR <span style="color: #ff0000;">TEAM</span> </h3>
+<hr />
+
+    <div class="container aboutus ">
+      
+      
+      
+     
+        <div class="flex justify-content-center">
+          
+      
+          <div class="card " >
+            <div class="card-image text-center p-3">
+              <img alt="Health Insurance" src="<?php echo base_url()?>assest/img/avtar.jpg">
+
+            </div>
+    
+            <div class="card-content text-center">
+            <h4>MR. Himanshu Goyal</h4>
+            <p>(Web Developer)</p>
+            <q>Design is the intermediary between information and understanding.</q></br>
+            <a href="#" class=" fa fa-facebook"></a>
+            <a href="#" class=" fa fa-instagram"></a>
+            <a href="#" class=" fa fa-twitter"></a>
+            <a href="#" class=" fa fa-linkedin"></a>
+              
+              
+            </div>
+          </div>
+      
+        
+          <div class="card" >
+            <div class="card-image text-center p-3">
+              <img class="img-responsive" alt="avtar" src="<?php echo base_url()?>assest/img/avtar.jpg">
+
+            </div>
+    
+            <div class="card-content text-center">
+            <h4>MR. Himanshu Goyal</h4>
+            <p>(Web Developer)</p>
+            <q>Design is the intermediary between information and understanding.</q></br>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            </div>
+          </div>
+        
+       
+          <div class="card">
+            <div class="card-image text-center p-3">
+            
+              <img class="img-responsive" alt="avtar" src="<?php echo base_url()?>assest/img/avtar.jpg">
+
+            </div>
+    
+            <div class="card-content text-center">
+            <h4>MR. Himanshu Goyal</h4>
+            <p>(Web Developer)</p>
+            <q>Design is the intermediary between information and understanding.</q></br>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            </div>
+          </div>
+       
+  
+          <div class="card">
+            <div class="card-image text-center p-3">
+              <img class="img-responsive" alt="avtar" src="<?php echo base_url()?>assest/img/avtar.jpg">
+
+            </div>
+    
+            <div class="card-content text-center">
+            <h4>MR. Himanshu Goyal</h4>
+            <p>(Web Developer)</p>
+            <q>Design is the intermediary between information and understanding.</q></br>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-instagram"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            </div>
+          </div>
+      
+        
+          
+        
+
+        </div>
+
+     
+    
+    </div>
+
+
+
+
+
+
             
       <!--          <div class="content-area">
       
