@@ -47,6 +47,10 @@
     <li class="nav-item">
       <a class="nav-link" href="<?php echo base_url(); ?>admin/sociallinks"><i class="fas fa-fw fa-table" ></i><span >Social Links</span></a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/abouts"><i class="fas fa-fw fa-table" ></i><span >About Us</span></a>
+    </li>
+
 
     <li class="nav-item">
       <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">

@@ -224,16 +224,13 @@ $('#formSubmit').click(function() {
         type: 'POST',
         data:{'bname':bname},
         success: function(msg) {
-           // console.log(data);
-            if (msg == 'YES')
-                $('#alert-msg').html('<div class="alert alert-success text-center">Your mail has been sent successfully!</div>');
-            else if (msg == 'NO')
-                $('#alert-msg').html('<div class="alert alert-danger text-center">Error in sending your message! Please try again later.</div>');
-            else
-                $('#alert-msg').html('<div class="alert alert-danger">' + msg + '</div>');
+            location.reload(true)
         }
     });
     return false;
 });
+</script>
+<script>
+$( "#lowinventory" ).append( $( "<tr><td>sexxxx</td><td>yessss</td></tr>" ) );
 </script>
 

@@ -169,7 +169,7 @@ margin-right: 12px;
   border: none;
 }
 .first .card:hover{
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .first .card p{
   font-size: 15px;

@@ -293,13 +293,7 @@ $('#formSubmit').click(function() {
         type: 'POST',
         data:{'vname':vname,'comp':comp,'modals':modals},
         success: function(msg) {
-           // console.log(data);
-            if (msg == 'YES')
-                $('#alert-msg').html('<div class="alert alert-success text-center">Your mail has been sent successfully!</div>');
-            else if (msg == 'NO')
-                $('#alert-msg').html('<div class="alert alert-danger text-center">Error in sending your message! Please try again later.</div>');
-            else
-                $('#alert-msg').html('<div class="alert alert-danger">' + msg + '</div>');
+            location.reload(true)
         }
     });
     return false;

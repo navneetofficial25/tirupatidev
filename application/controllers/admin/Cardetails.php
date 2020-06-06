@@ -43,7 +43,6 @@
         $brand_name = $this->input->post('bname');
         $gradedetails=array('brand_name'=>$brand_name);
         $this->Carmodel->insert_brand($gradedetails);
-        redirect(base_url()."admin/cardetails");
 
             }
 
@@ -99,7 +98,7 @@
         $brand_id = $this->input->post('companies');
         $gradedetails=array('model_name'=>$model_name,'brand_id'=>$brand_id);
         $this->Carmodel->insert_model($gradedetails);
-        redirect(base_url()."admin/cardetails/model");
+        
 
             }
 
