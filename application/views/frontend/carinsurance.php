@@ -232,7 +232,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="vari">Varient</label>
-                                        <input list="new_varis"  class="lis"   name="vari" placeholder="Enter Varient">
+                                        <input list="new_varis"  class="lis"  id="new_vali"  name="vari" placeholder="Enter Varient">
                                         <datalist   id="new_varis" >
                                             
                                         </datalist>
@@ -379,6 +379,10 @@
                 method: 'post',
                 data: {comp},
                 success: function(response){
+                    $('#modalss').find('option').remove();
+                    $('#mvarient').find('option').remove();
+                    $('#modal_list').val('');
+                    $('#vari').val('');
                     console.log(response);
                     response = $.parseJSON(response);
                     $.each(response, function (i,v)
@@ -396,6 +400,8 @@
                 data: {comp: comp},
                 success: function(response){
                     console.log(response);
+                    $('#mvarient').find('option').remove();
+                    $('#vari').val('');
                     response = $.parseJSON(response);
                     $.each(response, function (i,v)
                     {
@@ -420,7 +426,12 @@
                 method: 'post',
                 data: {comp: comp},
                 success: function(response){
+                    $('#modls').find('option').remove();
+                    $('#new_varis').find('option').remove();
+                    $('#new_model').val('');
+                    $('#new_vali').val('');
                     console.log(response);
+                    
                     response = $.parseJSON(response);
                     $.each(response, function (i,v)
                     {
@@ -437,6 +448,8 @@
                 data: {comp: comp},
                 success: function(response){
                     console.log(response);
+                    $('#new_varis').find('option').remove();
+                    $('#new_vali').val('');
                     response = $.parseJSON(response);
                     $.each(response, function (i,v)
                     {

@@ -125,7 +125,7 @@ else{
 
 public function send($data)
 {
-    $to =  'paragikjain786@gmail.com';  // User email pass here
+    $to =  'eniacoder@gmail.com';  // User email pass here
     $subject = 'A New Mail For Bike Insurance';
 
     $from = 'fasthealthup@gmail.com';              // Pass here your mail id
