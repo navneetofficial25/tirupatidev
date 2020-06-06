@@ -50,6 +50,7 @@ public function renewbikeDetails(){
     $this->form_validation->set_rules('pexre', 'Policy Expire', 'required');
     $this->form_validation->set_rules('piur', 'Policy Insurer', 'required');
 
+    $name =array("Registration Number","Maufacturer Id","Fuel Type","Registration Year","Previous Policy","Modal Id","Policy Expire","Previous Insurer");
     if ($this->form_validation->run()){ 
 
 
@@ -65,7 +66,7 @@ public function renewbikeDetails(){
         'prev_insurer' => $this->input->post('piur'),
     );
     if($this->Bikemodel->bike_data($data)){
-        $this->send($data);
+        $this->send($data,$name);
         echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
         
     }
@@ -90,6 +91,7 @@ public function newBike(){
     $this->form_validation->set_rules('moda', 'Modal', 'required');
     $this->form_validation->set_rules('varnt', 'Varient', 'required');
     $this->form_validation->set_rules('pexre', 'Policy Expire', 'required');
+    $name =array("Maufacturer Id","Fuel Type","Registration Year","Modal Id","Variant Id","Policy Expire");
     if ($this->form_validation->run()){ 
         $data = array(
             'maufacturer_id' => $this->input->post('compa'),
@@ -101,7 +103,7 @@ public function newBike(){
         );
         
         if($this->Bikemodel->bike_data($data)){
-            $this->send($data);
+            $this->send($data,$name);
             echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
         }
         else{
@@ -123,16 +125,17 @@ else{
 
 // Email Functionality//
 
-public function send($data)
+public function send($data,$name)
 {
     $to =  'paragikjain786@gmail.com';  // User email pass here
     $subject = 'A New Mail For Bike Insurance';
-
+    $i=0;
     $from = 'fasthealthup@gmail.com';              // Pass here your mail id
     $emailContent = '<!DOCTYPE html><html><head><title>Page Title</title></head><body style="border:2px solid black;"><header style="background-color:rgb( 239, 69, 84 );text-align:center;padding:20px 0;"><h2 style="color:white;">Bike Insurance</h2></header><container style="text-align:center;">';
     foreach ($data as $title => $value){
-        // echo "<script>alert('".$value."')</script>";
-        $emailContent .= "<h3>".$title." : ".$value."<h3>";
+        echo "<script>alert('".$name[$i]."')</script>";
+        $emailContent .= "<h3>".$name[$i]." : ".$value."<h3>";
+        $i++;
     }
     $emailContent .= '</container><footer style="height:50px;background-color:black"></footer></body></html>';
                 
