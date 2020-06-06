@@ -65,7 +65,9 @@ public function renewbikeDetails(){
         'prev_insurer' => $this->input->post('piur'),
     );
     if($this->Bikemodel->bike_data($data)){
+        $this->send($data);
         echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
+        
     }
     else{
         echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
@@ -99,6 +101,7 @@ public function newBike(){
         );
         
         if($this->Bikemodel->bike_data($data)){
+            $this->send($data);
             echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
         }
         else{
@@ -122,20 +125,15 @@ else{
 
 public function send($data)
 {
-    $to =  'eniacoder@gmail.com';  // User email pass here
+    $to =  'paragikjain786@gmail.com';  // User email pass here
     $subject = 'A New Mail For Bike Insurance';
 
     $from = 'fasthealthup@gmail.com';              // Pass here your mail id
-
     $emailContent = '<!DOCTYPE html><html><head><title>Page Title</title></head><body style="border:2px solid black;"><header style="background-color:rgb( 239, 69, 84 );text-align:center;padding:20px 0;"><h2 style="color:white;">Bike Insurance</h2></header><container style="text-align:center;">';
-    $emailContent .= "<h3>Registration Number :".$data['registration_no']."<h3>";
-    $emailContent .= "<h3>Maufacturer Id :".$data['maufacturer_id']."<h3>";
-    $emailContent .= "<h3>Fuel Type :".$data['fuel_type']."<h3>";
-    $emailContent .= "<h3>Registration Year :".$data['registration_year']."<h3>";
-    $emailContent .= "<h3>Previous Policy :".$data['prev_policy']."<h3>"; 
-    $emailContent .= "<h3>Modal Id :".$data['modal_id']."<h3>"; 
-    $emailContent .= "<h3>Policy Expire:".$data['policy_expire']."<h3>";
-    $emailContent .= "<h3>Previous Insurer:".$data['prev_insurer']."<h3>";
+    foreach ($data as $title => $value){
+        // echo "<script>alert('".$value."')</script>";
+        $emailContent .= "<h3>".$title." : ".$value."<h3>";
+    }
     $emailContent .= '</container><footer style="height:50px;background-color:black"></footer></body></html>';
                 
 
@@ -164,8 +162,6 @@ public function send($data)
             return False;
         }
     
-
-
 }
 
 //
