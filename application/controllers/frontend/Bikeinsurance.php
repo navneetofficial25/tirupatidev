@@ -127,7 +127,7 @@ public function send($data)
 
     $from = 'fasthealthup@gmail.com';              // Pass here your mail id
 
-    $emailContent = '<!DOCTYPE html><html><head><title>Page Title</title></head><body style="border:2px solid black;"><header style="background-color:rgb( 239, 69, 84 );text-align:center;padding:20px 0;"><h2 style="color:white;">Car Insurance</h2></header><container style="text-align:center;">';
+    $emailContent = '<!DOCTYPE html><html><head><title>Page Title</title></head><body style="border:2px solid black;"><header style="background-color:rgb( 239, 69, 84 );text-align:center;padding:20px 0;"><h2 style="color:white;">Bike Insurance</h2></header><container style="text-align:center;">';
     $emailContent .= "<h3>Registration Number :".$data['registration_no']."<h3>";
     $emailContent .= "<h3>Maufacturer Id :".$data['maufacturer_id']."<h3>";
     $emailContent .= "<h3>Fuel Type :".$data['fuel_type']."<h3>";

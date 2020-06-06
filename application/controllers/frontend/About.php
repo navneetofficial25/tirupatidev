@@ -3,14 +3,14 @@
         public function __construct()
     {
         parent::__construct();
-   //     $this->load->model('frontend/Homemodel');
+        $this->load->model('admin/Aboutmodel');
     }
 
         public function index(){
-       //     $getsocials['brandslogo'] = $this->Homemodel->fetchaddinventory_api();
+            $data = $this->Aboutmodel->fetch();
             $this->load->view('frontend/template/header');
             $this->load->view('frontend/template/navbar');
-            $this->load->view('frontend/about');
+            $this->load->view('frontend/about',$data);
             $this->load->view('frontend/template/footer');
         }
 

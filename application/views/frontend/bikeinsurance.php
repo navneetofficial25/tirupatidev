@@ -383,6 +383,7 @@
         $("#compg").on('input', function (){
             var comp = $(this).val();
             // AJAX request
+            
             $.ajax({
                 url:'<?=base_url()?>/frontend/carinsurance/getbikeCompany',
                 method: 'post',
