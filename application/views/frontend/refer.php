@@ -37,8 +37,10 @@
                             
                             <h5>Generate your referral link:</h5>
                             <div class="group-form">
-                                <input class="lis" type="tel" name="text-677" value="" size="40" aria-invalid="false" placeholder="Your Phone" required></br>
-                                <input type="submit" value="Generate LinkS" class="bu"  />
+                            <form method="post" action="ref_gen">
+                                <input class="lis" type="tel" name="email" value="" size="40" aria-invalid="false" placeholder="Your Email" required></br>
+                                <input type="submit" name="formSubmit" value="Generate LinkS" class="bu"  />
+                            </form>    
                             </div>
                             <h6 style="margin-top:30px; color:rgb( 190, 190, 190 );">And Shared Via:</h6>
                             <div class="text-center">
