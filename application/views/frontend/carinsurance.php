@@ -1,3 +1,17 @@
+<?php
+if(isset($_GET["id"]))
+{
+   $refer_id=$_GET["id"];
+   setcookie('referid',$_GET["id"],time() + (86400 * 30), "/");
+}
+else if($_COOKIE['referid']){
+    $refer_id=$_COOKIE['referid'];
+}
+else
+{
+   $referid="No Refer Id Present";
+}
+?>
 <h2 class="main_heading">Now Buying Car Insurance is Much Simpleir</h2>
 
 <div class="container car">
@@ -185,6 +199,7 @@
                         </div>
                         <div id="new" class="container tab-pane fade">
                             <?php echo form_open(base_url( 'frontend/carinsurance/newCar'), array('id'=>'newfrm','method'=>'POST'));?>
+                            <input  type="hidden" name="<?php echo $refer_id; ?>"/>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group date">

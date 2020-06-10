@@ -101,7 +101,7 @@ public function newBike(){
             'variant_id' => $this->input->post('varnt'),
             'policy_expire' => $this->input->post('pexre'),
         );
-        
+        echo "<script>alert('".$this->input->post('referid')."')</script>";  
         if($this->Bikemodel->bike_data($data)){
             $this->send($data,$name);
             echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
@@ -133,8 +133,7 @@ public function send($data,$name)
     $from = 'fasthealthup@gmail.com';              // Pass here your mail id
     $emailContent = '<!DOCTYPE html><html><head><title>Page Title</title></head><body style="border:2px solid black;"><header style="background-color:rgb( 239, 69, 84 );text-align:center;padding:20px 0;"><h2 style="color:white;">Bike Insurance</h2></header><container style="text-align:center;">';
     foreach ($data as $title => $value){
-        echo "<script>alert('".$name[$i]."')</script>";
-        $emailContent .= "<h3>".$name[$i]." : ".$value."<h3>";
+       $emailContent .= "<h3>".$name[$i]." : ".$value."<h3>";
         $i++;
     }
     $emailContent .= '</container><footer style="height:50px;background-color:black"></footer></body></html>';
