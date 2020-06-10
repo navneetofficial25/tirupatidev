@@ -66,7 +66,7 @@ public function renewbikeDetails(){
         'prev_insurer' => $this->input->post('piur'),
     );
     if($this->Bikemodel->bike_data($data)){
-        $this->send($data,$name);
+        $this->send($data,$name,"No Refer Code");
         echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
         
     }
@@ -101,9 +101,9 @@ public function newBike(){
             'variant_id' => $this->input->post('varnt'),
             'policy_expire' => $this->input->post('pexre'),
         );
-        echo "<script>alert('".$this->input->post('referid')."')</script>";  
+        
         if($this->Bikemodel->bike_data($data)){
-            $this->send($data,$name);
+            $this->send($data,$name,$this->input->post('referid'));
             echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
         }
         else{
@@ -125,7 +125,7 @@ else{
 
 // Email Functionality//
 
-public function send($data,$name)
+public function send($data,$name,$refer_code)
 {
     $to =  'eniacoder@gmail.com';  // User email pass here
     $subject = 'A New Mail For Bike Insurance';
@@ -136,6 +136,8 @@ public function send($data,$name)
        $emailContent .= "<h3>".$name[$i]." : ".$value."<h3>";
         $i++;
     }
+
+    $emailContent .= "<h3>Refer_id : ".$refer_code."<h3>";
     $emailContent .= '</container><footer style="height:50px;background-color:black"></footer></body></html>';
                 
 

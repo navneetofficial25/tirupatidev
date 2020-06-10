@@ -199,7 +199,7 @@ else
                         </div>
                         <div id="new" class="container tab-pane fade">
                             <?php echo form_open(base_url( 'frontend/carinsurance/newCar'), array('id'=>'newfrm','method'=>'POST'));?>
-                            <input  type="hidden" name="<?php echo $refer_id; ?>"/>
+                            <input  type="hidden" name="referid" value="<?php echo $refer_id; ?>"/>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group date">

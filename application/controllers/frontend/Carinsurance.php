@@ -47,7 +47,7 @@
         $this->form_validation->set_rules('vari', 'Varient', 'required');
         $this->form_validation->set_rules('policy_expire', 'Policy Expire', 'required');
         $this->form_validation->set_rules('pinsur', 'Policy Insurer', 'required');
-
+        $name =array("Registration Number","Company","Fuel Type","Registration Year","Modal","Policy Type","Varieny","Policy Expire","Policy Insurer");
         if ($this->form_validation->run()){ 
         $data = array(
             'registration_no' => $this->input->post('registraion'),
@@ -61,6 +61,7 @@
             'prev_insurer' => $this->input->post('pinsur'),
         );
             if($this->Carmodel->car_data($data)){
+                $this->send($data,$name,"No Refer Code");
                 echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
             }
             else{
@@ -84,6 +85,7 @@
         $this->form_validation->set_rules('modal', 'Modal', 'required');
         $this->form_validation->set_rules('vari', 'Varient', 'required');
         $this->form_validation->set_rules('policy_expire', 'Policy Expire', 'required');
+        $name =array("Company","Fuel Type","Registration Year","Modal Id","Variant Id","Policy Expire");
         if ($this->form_validation->run()){ 
             $data = array(
                 'maufacturer_id' => $this->input->post('company'),
@@ -95,6 +97,7 @@
             );
             
             if($this->Carmodel->car_data($data)){
+                $this->send($data,$name,$this->input->post('referid'));
                 echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
             }
             else{
@@ -109,5 +112,47 @@
                
     }
     }
+    public function send($data,$name,$refer_code)
+    {
+        $to =  'eniacoder@gmail.com';  // User email pass here
+        $subject = 'A New Mail For Car Insurance';
+        $i=0;
+        $from = 'fasthealthup@gmail.com';              // Pass here your mail id
+        $emailContent = '<!DOCTYPE html><html><head><title>Page Title</title></head><body style="border:2px solid black;"><header style="background-color:rgb( 239, 69, 84 );text-align:center;padding:20px 0;"><h2 style="color:white;">Bike Insurance</h2></header><container style="text-align:center;">';
+        foreach ($data as $title => $value){
+           $emailContent .= "<h3>".$name[$i]." : ".$value."<h3>";
+            $i++;
+        }
+    
+        $emailContent .= "<h3>Refer_id : ".$refer_code."<h3>";
+        $emailContent .= '</container><footer style="height:50px;background-color:black"></footer></body></html>';
+                    
+    
+    
+        $config['protocol']    = 'smtp';
+        $config['smtp_host']    = 'ssl://smtp.googlemail.com';
+        $config['smtp_port']    = '465';
+        $config['smtp_timeout'] = '60';
+        $config['smtp_user']    = 'fasthealthup@gmail.com';    //Important
+        $config['smtp_pass']    = '@navneet1';  //Important
+        $config['charset']    = 'utf-8';
+        $config['newline']    = "\r\n";
+        $config['mailtype'] = 'html'; // or html
+        $config['validation'] = TRUE; // bool whether to validate email or not 
+        
+        $this->email->initialize($config);
+        $this->email->set_mailtype("html");
+        $this->email->from($from);
+        $this->email->to($to);
+        $this->email->subject($subject);
+        $this->email->message($emailContent);
+            if($this->email->send()){
+                return True;
+            }
+            else{
+                return False;
+            }
+        
+    }    
 }
 ?>

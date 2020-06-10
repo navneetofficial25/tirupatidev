@@ -1,9 +1,21 @@
-
+<?php
+if(isset($_GET["id"]))
+{
+   $refer_id=$_GET["id"];
+   setcookie('referid',$_GET["id"],time() + (86400 * 30), "/");
+}
+else if($_COOKIE['referid']){
+    $refer_id=$_COOKIE['referid'];
+}
+else
+{
+   $referid="No Refer Id Present";
+}
+?>
 <h2 class="main_heading">Now Buying Health Insurance is Much Simpleir</h2>
 <div class="container health_main">
   <div class="">
-    
-    <div class="box_sh ">
+  <div class="box_sh ">
     <div class="row">
       <div class="col-lg-4 col-xs-12 " style="padding:0px;">
       <img src="<?php echo base_url();?>assest/img/health-insurance-top-up.jpg" >
@@ -38,6 +50,7 @@
       </div>  
       <div class="col-lg-8 col-xs-12"style="padding:0px;"  >
       <?php echo form_open(base_url( 'frontend/healthinsurance/healthData'), array('id'=>'healthform','method'=>'POST'));?>
+      <input  type="hidden" name="referid" value="<?php echo $refer_id; ?>"/>
         <div class="card">
           <div class="card-header">
             <h3 >Personal Details</h3>
