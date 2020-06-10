@@ -26,6 +26,8 @@
                 if($value['email']==$user_data['email'] && $value['Password']==$user_data['password'])
                 {
                     session_start();
+                    $_SESSION["ref_count"]=$value["ref_count"];
+                    $_SESSION["earn"]=$value["earn"];
                     $_SESSION["referid"]=$value["referid"];
                     $login_success=1;
                     break;
@@ -48,13 +50,15 @@
             $data = array(
                 'email' => $this->input->post('email'),
                 'password' => $this->input->post('password'),
-                'referid' => "X112222",
+                'referid' => uniqid(),
+                'earn' => 0,
+                'ref_count' => 0
             );
             if($this->ReferandEarnmodel->signup($data)){
-                echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
+                echo "<script>window.location.href='../login';</script>";
             }
             else{
-                echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
+                echo "<script>alert('wrong username password');window.location.href=''</script>";
             }
         }
 

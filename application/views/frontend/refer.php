@@ -5,7 +5,10 @@ if(!isset($_SESSION["referid"]))
 }
 else
 {
-    $button='<input class="lis" type="tel" name="email" value="'.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder="Your Email" required></br><input type="submit" name="formSubmit" value="Copy Link" class="bu"  />';
+    $button='<input class="lis" type="tel" name="email" value=Total_Refers:'.$_SESSION["ref_count"].' size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
+    <input class="lis" type="tel" name="email" value=Total_earning:'.$_SESSION["earn"].' size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
+    <input class="lis" type="tel" name="email" value="'.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
+    <input type="submit" name="formSubmit" value="Copy Link" class="bu"  />';
 }
 ?>
         <div class="refer-top" style="background-image: url(<?php echo base_url();?>assest/img/refer.jpg)">
