@@ -93,7 +93,7 @@
                 'variant_id' => $this->input->post('vari'),
                 'policy_expire' => $this->input->post('policy_expire'),
             );
-            
+            $this->mail($data);
             if($this->Carmodel->car_data($data)){
                 echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
             }
@@ -108,6 +108,28 @@
         echo "<h6 class='text-danger text-center'>PLease Fill All Fields</h6>";
                
     }
+    }
+
+    public function mail($data){
+        $to = 'Msslife2017@gmail.com';
+
+        $subject = 'Registration Form Of mssblt School';
+        foreach ($data as $key => $value)
+        {
+           
+        $message .= str_replace('_', ' ', $key) . " : " . $value . "\r\n";
+        }
+    
+        $headers = 'From: form@mssbltc.com' . "\r\n" .
+    
+        'Reply-To: form@mssbltc.com' . "\r\n" .
+    
+        'X-Mailer: PHP/' . phpversion();
+    
+       mail($to, $subject, $message, $headers);
+
+       
+        
     }
 }
 ?>

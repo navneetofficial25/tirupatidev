@@ -206,10 +206,7 @@
                                         <label class="adults" for="modalsi">Modal</label>
                                         <input list="modlsi"  class="lis"   id="modalsi" name="moda" placeholder="Enter Model">
                                         <datalist    id="modlsi" >
-                                            <option value="2">
-                                            <option value="3">
-                                            <option value="4">
-                                            <option value="5">
+                                          
                                             
                                         </datalist>
                                     </div>
@@ -233,9 +230,7 @@
                                     <label class="adults" for="varii">Varient</label>
                                         <input list="variis"  class="lis"   id="varii" name="varnt" placeholder="Enter Varient">
                                         <datalist   id="variis" >
-                                            <option value="4">
-                                            <option value="5">
-                                            <option value="7">
+                                          
                                         </datalist>
                                     </div>
                                 </div>
@@ -381,6 +376,10 @@
                 method: 'post',
                 data: {comp},
                 success: function(response){
+                    $('#modalg').find('option').remove();
+                    $('#mg').find('option').remove();
+                    $('#modalsg').val('');
+                    $('#varig').val('');
                     console.log(response);
                     response = $.parseJSON(response);
                     $.each(response, function (i,v)
@@ -397,6 +396,8 @@
                 method: 'post',
                 data: {comp: comp},
                 success: function(response){
+                    $('#mg').find('option').remove();
+                    $('#varig').val('');
                     console.log(response);
                     response = $.parseJSON(response);
                     $.each(response, function (i,v)
@@ -422,6 +423,10 @@
                 method: 'post',
                 data: {comp: comp},
                 success: function(response){
+                    $('#modlsi').find('option').remove();
+                    $('#variis').find('option').remove();
+                    $('#modalsi').val('');
+                    $('#varii').val('');
                     console.log(response);
                     response = $.parseJSON(response);
                     $.each(response, function (i,v)
@@ -438,6 +443,8 @@
                 method: 'post',
                 data: {comp: comp},
                 success: function(response){
+                    $('#variis').find('option').remove();
+                    $('#varii').val('');
                     console.log(response);
                     response = $.parseJSON(response);
                     $.each(response, function (i,v)
