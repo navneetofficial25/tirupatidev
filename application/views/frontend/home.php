@@ -1,4 +1,17 @@
-
+<?php
+if(isset($_GET["id"]))
+{
+   $refer_id=$_GET["id"];
+   setcookie('referid',$_GET["id"],time() + (86400 * 30), "/");
+}
+else if(isset($_COOKIE['referid'])){
+	$refer_id=$_COOKIE['referid'];
+}
+else
+{
+   $referid="No Refer Id Present";
+}
+?>
 <div class="d-inline-block container-fluid banner-padding" style="padding-bottom:30px;">
     <div class="container first ">
       
@@ -122,19 +135,7 @@
         </div>
         <div class="text-center">
         <input type="button"  id="formSubmit" value="submit" data-dismiss="modal">
-                      </div>
-                      <?php
-      if($this->session->flashdata('success'))
-      {
-      echo '<div class="alert alert-success">'.$this->session->flashdata('success').'</div>';
-      }
-      else if($this->session->flashdata('error'))
-      {
-      echo '<div class="alert alert-danger">'.$this->session->flashdata('error').'</div>';
-      }
-
-
-      ?>                         
+                      </div>          
 
       </div>
     </div>
@@ -255,7 +256,9 @@
         </div>
       </div>    
     </section>
+    
     <?php $this->load->view('frontend/Template/footer.php') ?>
+   
 
     <script type="text/javascript">
 $('#formSubmit').click(function() {

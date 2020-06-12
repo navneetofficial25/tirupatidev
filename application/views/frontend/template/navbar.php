@@ -133,11 +133,17 @@
                               <li   class="  nav-item m-1 brk " >
                                 |
                               </li>
+                              <li   class="  nav-item">
+                              
+                              <a  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="nav-link">
+                              Login/Signup
+                              </a>  
+                               
+                            </li>
                             </ul>
                           </div>
                           
-                            
-
+                        
 
 
 

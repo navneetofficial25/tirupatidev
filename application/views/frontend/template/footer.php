@@ -1,4 +1,4 @@
-<div class="shadow-lg mt-3 foot">
+<div class="shadow-lg foot">
       <div class="container">
         <div class="row">
         <?php
@@ -74,5 +74,127 @@
         <p class="reserved">@<?php echo date("Y"); ?> Tirupati Insurance All Rights Reserved. Developed By <span><a href="#" class="lik">hisar fever.</a></span></p>
       </div>
     </section>  
-  </body>  
+    <div class="modal fade login" id="loginModal">
+		      <div class="modal-dialog login animated">
+    		      <div class="modal-content">
+    		         <div class="modal-header signup">
+                   <h4 class="modal-title">Login with</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box">
+                             <div class="content">
+                                <div class="division">
+                                    <div class="line l"></div>
+                                      <span>or</span>
+                                    <div class="line r"></div>
+                                </div>
+                                <div class="error"></div>
+                                <div class="form loginBox">
+                                    <form method="" action="" accept-charset="UTF-8">
+                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                    <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
+                                    </form>
+                                </div>
+                             </div>
+                        </div>
+                        <div class="box">
+                            <div class="content registerBox" style="display:none;">
+                             <div class="form">
+                                <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
+                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                                <input class="btn btn-default btn-register" type="button" value="Create account" name="commit">
+                                </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot login-footer">
+                            <span>Looking to
+                                 <a href="javascript: showRegisterForm();">create an account</a>
+                            ?</span>
+                        </div>
+                        <div class="forgot register-footer" style="display:none">
+                             <span>Already have an account?</span>
+                             <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+                    </div>
+    		      </div>
+<script>
+/*
+ *
+ * login-register modal
+ * Autor: Creative Tim
+ * Web-autor: creative.tim
+ * Web script: https://creative-tim.com
+ * 
+ */
+function showRegisterForm(){
+    $('.loginBox').fadeOut('fast',function(){
+        $('.registerBox').fadeIn('fast');
+        $('.login-footer').fadeOut('fast',function(){
+            $('.register-footer').fadeIn('fast');
+        });
+        $('.modal-title').html('Register with');
+    }); 
+    $('.error').removeClass('alert alert-danger').html('');
+       
+}
+function showLoginForm(){
+    $('#loginModal .registerBox').fadeOut('fast',function(){
+        $('.loginBox').fadeIn('fast');
+        $('.register-footer').fadeOut('fast',function(){
+            $('.login-footer').fadeIn('fast');    
+        });
+        
+        $('.modal-title').html('Login with');
+    });       
+     $('.error').removeClass('alert alert-danger').html(''); 
+}
+
+function openLoginModal(){
+    showLoginForm();
+    setTimeout(function(){
+        $('#loginModal').modal('show');    
+    }, 230);
+    
+}
+function openRegisterModal(){
+    showRegisterForm();
+    setTimeout(function(){
+        $('#loginModal').modal('show');    
+    }, 230);
+    
+}
+
+function loginAjax(){
+    /*   Remove this comments when moving to server
+    $.post( "/login", function( data ) {
+            if(data == 1){
+                window.location.replace("/home");            
+            } else {
+                 shakeModal(); 
+            }
+        });
+    */
+
+/*   Simulate error message from the server   */
+     shakeModal();
+}
+
+function shakeModal(){
+    $('#loginModal .modal-dialog').addClass('shake');
+             $('.error').addClass('alert alert-danger').html("Invalid email/password combination");
+             $('input[type="password"]').val('');
+             setTimeout( function(){ 
+                $('#loginModal .modal-dialog').removeClass('shake'); 
+    }, 1000 ); 
+}
+
+</script>
+
 </html>
