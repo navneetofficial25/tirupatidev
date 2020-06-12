@@ -25,7 +25,8 @@
             foreach ($model_data as $key => $value) {
                 if($value['email']==$user_data['email'] && $value['Password']==$user_data['password'])
                 {
-                  
+                    $_SESSION["email"]=$value["email"];
+                    $_SESSION["name"]=$value["name"];
                     $_SESSION["ref_count"]=$value["ref_count"];
                     $_SESSION["earn"]=$value["earn"];
                     $_SESSION["referid"]=$value["referid"];
@@ -34,10 +35,10 @@
                 }
             }
             if($login_success==1){
-                echo "<script>window.location.href='../refer';</script>";
+                echo "<script>window.location.href='/insurance/';</script>";
             }
             else{
-                echo "<script>alert('wrong username password');window.location.href=''</script>";
+                echo "<script>alert('wrong username password');window.location.href='/insurance/'</script>";
             }
             
 
@@ -47,8 +48,13 @@
         public function signup(){
             $this->load->model('frontend/ReferandEarnmodel');
             $this->input->post('formSubmit');
+            if($this->input->post('password')!=$this->input->post('cpassword')){
+                echo "<script>alert('Password is not matching');window.location.href='/insurance'</script>";
+                return 0;
+            }
             $data = array(
                 'email' => $this->input->post('email'),
+                'name' => $this->input->post('name'),
                 'password' => $this->input->post('password'),
                 'referid' => uniqid(),
                 'earn' => 0,

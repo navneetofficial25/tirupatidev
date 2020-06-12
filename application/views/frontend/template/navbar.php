@@ -1,3 +1,24 @@
+<?php
+if(!isset($_SESSION["referid"]))
+{
+    $button=' <li   class="  nav-item">
+    <a  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="nav-link">
+    Login/Signup
+    </a>  
+  </li> ';
+}
+else{
+  $button='<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  '.$_SESSION["name"].'
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+    <a class="dropdown-item" href="/insurance/frontend/user/dashboard">Dashboard</a>
+    <a class="dropdown-item" href="/insurance/frontend/logout">Log Out</a>
+  </div>
+</li>   '; 
+}
+?>
 <body>
     <nav class="top-nav">
       <div class="container">
@@ -133,22 +154,8 @@
                               <li   class="  nav-item m-1 brk " >
                                 |
                               </li>
-                              <!-- <li   class="  nav-item">
-                              
-                              <a  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="nav-link">
-                              Login/Signup
-                              </a>  
-                               
-                            </li> -->
-                            <!-- <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Hey, Navneet
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Dashboard</a>
-          <a class="dropdown-item" href="#">Log Out</a>
-        </div>
-      </li>    -->
+                      <?php echo $button; ?>
+                           
                             </ul>
                           </div>
                           

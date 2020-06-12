@@ -117,7 +117,7 @@ else
         <div class="modal-body">
         <span id="success_message"></span>
         <form id="myForm">
-          <input type="text" class="lis" id="pname" name="pname"placeholder="Enter Your Name">
+          <input type="text" class="lis" id="pname" name="pname" placeholder="Enter Your Name">
           <span id="name_error" class="text-danger m-0 p-0"></span></br>
           <input type="text" class="lis" id="mob" name="mob" placeholder="Enter Mobile Number">
           <span id="mobile_error" class="text-danger m-0 p-0"></span></br>
@@ -136,7 +136,7 @@ else
         <div class="text-center">
         <input type="button"  id="formSubmit" value="submit" data-dismiss="modal">
                       </div>          
-
+       </form>
       </div>
     </div>
   </div>

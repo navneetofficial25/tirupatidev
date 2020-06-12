@@ -82,36 +82,34 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <div class="box">
-                             <div class="content">
-                                <div class="division">
-                                    <div class="line l"></div>
-                                      <span>or</span>
-                                    <div class="line r"></div>
-                                </div>
-                                <div class="error"></div>
-                                <div class="form loginBox">
-                                    <form method="" action="" accept-charset="UTF-8">
-                                    <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                                    <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                                    <input class="btn btn-default btn-login" type="button" value="Login" onclick="loginAjax()">
-                                    </form>
-                                </div>
-                             </div>
-                        </div>
-                        <div class="box">
-                            <div class="content registerBox" style="display:none;">
-                             <div class="form">
-                                <form method="" html="{:multipart=>true}" data-remote="true" action="" accept-charset="UTF-8">
-                                <input id="email" class="form-control" type="text" placeholder="Email" name="email">
-                                <input id="password" class="form-control" type="password" placeholder="Password" name="password">
-                                <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
-                                <input class="btn btn-default btn-register" type="button" value="Create account" name="commit">
-                                </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+ <div class="division">
+	<div class="line l"></div>
+	<span>or</span>
+	<div class="line r"></div>
+ </div>
+   <div class="box">
+      <div class="form loginBox">
+      <form method="post" action="/insurance/frontend/login/login">
+				<input id="email" class="form-control" type="text" placeholder="Email" name="email" required>
+				<input id="password" class="form-control" type="password" placeholder="Password" name="password" required>
+				<input  type="submit" class="btn btn-default btn-login" value="Login">
+      </form>   
+      </div>
+   </div>
+   <div class="box">
+      <div class="content registerBox" style="display:none;">
+         <div class="form">
+            <form method="post" action="/insurance/frontend/login/signup">
+               <input id="name" class="form-control" type="text" placeholder="Name" name="name" required>
+               <input id="email" class="form-control" type="text" placeholder="Email" name="email" required>
+               <input id="password" class="form-control" type="password" placeholder="Password" name="password" required>
+               <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="cpassword" required>
+               <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit" >
+            </form>
+         </div>
+      </div>
+   </div>
+</div>
                     <div class="modal-footer">
                         <div class="forgot login-footer">
                             <span>Looking to
@@ -171,20 +169,7 @@ function openRegisterModal(){
     
 }
 
-function loginAjax(){
-    /*   Remove this comments when moving to server
-    $.post( "/login", function( data ) {
-            if(data == 1){
-                window.location.replace("/home");            
-            } else {
-                 shakeModal(); 
-            }
-        });
-    */
 
-/*   Simulate error message from the server   */
-     shakeModal();
-}
 
 function shakeModal(){
     $('#loginModal .modal-dialog').addClass('shake');

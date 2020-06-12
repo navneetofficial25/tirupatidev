@@ -1,13 +1,11 @@
 <?php
 if(!isset($_SESSION["referid"]))
 {
-    $button='<a href="login"><input type="submit" name="formSubmit" value="Genrate Link" class="bu" /></a>';
+    $button='<input type="submit" name="formSubmit" onclick="openLoginModal();" value="Genrate Link" class="bu" />';
 }
 else
 {
-    $button='<input class="lis" type="tel" name="email" value=Total_Refers:'.$_SESSION["ref_count"].' size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
-    <input class="lis" type="tel" name="email" value=Total_earning:'.$_SESSION["earn"].' size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
-    <input class="lis" type="tel" name="email" value="'.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
+    $button='<input class="lis" type="tel" name="email" value="'.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
     <input type="submit" name="formSubmit" value="Copy Link" class="bu"  />';
 }
 ?>
