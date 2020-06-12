@@ -1742,3 +1742,15 @@ a{
     border-color: #00A4E4;
     color:  #00A4E4;
 }
+
+/* User Dashoard */
+
+.sidebar_right{
+  width: 90%;
+}
+.sidebar_left{
+  width: 10%;
+}
+.heigth_section{
+  min-height: 400px;
+}

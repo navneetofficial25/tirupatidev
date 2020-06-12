@@ -32,7 +32,12 @@
 
 
 @media only screen and (max-width: 380px) {
-    
+  .sidebar_left{
+    width: 25%;
+  }
+  .sidebar_right{
+    width: 75%;
+  }
     
     .top-nav .refer {
        height: auto;
@@ -155,7 +160,12 @@
     .meu .brk{
       display: none;
     }
-    
+    .sidebar_left{
+      width: 25%;
+    }
+    .sidebar_right{
+      width: 75%;
+    }
     .brands .card{
       width: 140px;
       

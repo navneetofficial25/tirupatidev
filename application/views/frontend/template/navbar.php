@@ -133,13 +133,22 @@
                               <li   class="  nav-item m-1 brk " >
                                 |
                               </li>
-                              <li   class="  nav-item">
+                              <!-- <li   class="  nav-item">
                               
                               <a  data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();" class="nav-link">
                               Login/Signup
                               </a>  
                                
-                            </li>
+                            </li> -->
+                            <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         Hey, Navneet
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="#">Dashboard</a>
+          <a class="dropdown-item" href="#">Log Out</a>
+        </div>
+      </li>    -->
                             </ul>
                           </div>
                           
