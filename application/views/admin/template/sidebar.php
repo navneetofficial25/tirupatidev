@@ -50,6 +50,9 @@
     <li class="nav-item">
       <a class="nav-link" href="<?php echo base_url(); ?>admin/abouts"><i class="fas fa-fw fa-table" ></i><span >About Us</span></a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" href="<?php echo base_url(); ?>admin/refer"><i class="fas fa-fw fa-table" ></i><span >Refer And Earn</span></a>
+    </li>
 
 
     <li class="nav-item">

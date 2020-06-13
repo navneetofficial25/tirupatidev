@@ -9,7 +9,7 @@ else if(isset($_COOKIE['referid'])){
 }
 else
 {
-   $referid="No Refer Id Present";
+   $refer_id="No Refer Id Present";
 }
 ?>
 <h2 class="main_heading">Now Buying Bike Insurance is Much Simpleir</h2>
@@ -24,22 +24,28 @@ else
                             <div class="col-md-12 col-12">
                                 <div class=" small">
                                 <img src="<?= base_url();?>assest/img/save-money.png">
+                                <div style="margin-top : 7px">
                                     <h6>Save Upto 80%*</h6>
                                     <p>Lowest Bike Premiums</p>
+                                </div>
                                 </div>
                             </div>
                             <div class="col-md-12 col-12">
                                 <div class=" small">
                                 <img src="<?= base_url();?>assest/img/life-insurance.png" >
+                                <div style="margin-top : 7px">
                                     <h6>20+ Insurers</h6>
                                     <p>To Choose From</p>
+                                </div>
                                 </div>
                             </div>
                             <div class="col-md-12 col-12">
                                 <div class=" small">
                                 <img src="<?= base_url();?>assest/img/family (1).svg">
+                                <div style="margin-top : 7px">
                                     <h6>10 Thousand+</h6>
                                     <p>Vehicles Insured</p>
+                                </div>
                                 </div>
                             </div>
                         </div>    

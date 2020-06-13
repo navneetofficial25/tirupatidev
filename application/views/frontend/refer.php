@@ -5,7 +5,7 @@ if(!isset($_SESSION["referid"]))
 }
 else
 {
-    $button='<input class="lis" type="tel" name="email" value="'.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
+    $button='<input class="lis" type="tel" name="email" value="'.base_url().'?id='.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
     <input type="submit" name="formSubmit" value="Copy Link" class="bu"  />';
 }
 ?>

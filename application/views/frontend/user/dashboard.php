@@ -23,7 +23,26 @@ else
 <p>Total earning:<?php echo $earning; ?></p>
 <p>Total Clicks:<?php echo $click; ?></p>
 </div>
-
+<div class="container">
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Rfered Date</th>
+      <th scope="col">Refered Person</th>
+      <th scope="col">Money Earned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <?php foreach($history as $value){?>
+    <tr>
+      <th scope="row"><?php echo $value['date'] ; ?></th>
+      <td><?php echo $value['reference'] ; ?></td>
+      <td><?php echo $value['money'] ; ?></td>
+    </tr>
+    <?php } ?>
+  </tbody>
+</table>
+</div>
 </div>
 
 </section>

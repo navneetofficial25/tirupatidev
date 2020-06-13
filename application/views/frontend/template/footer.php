@@ -71,7 +71,7 @@
                       <a href="https://<?=$socials_datas->pinterest_url;?>" target="_blank"><i class="fa fa-pinterest"></i></a><?php }?>
             </div>
 
-        <p class="reserved">@<?php echo date("Y"); ?> Tirupati Insurance All Rights Reserved. Developed By <span><a href="#" class="lik">hisar fever.</a></span></p>
+        <p class="reserved">@<?php echo date("Y"); ?> Tirupati Insurance All Rights Reserved. Developed By <span><a href="#" class="lik">Eniacoder</a></span></p>
       </div>
     </section>  
     <div class="modal fade login" id="loginModal">
