@@ -9,21 +9,312 @@ else
   $click=$_SESSION["earn"];
 }
 ?>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<section class="d-flex heigth_section">
-<div class="bg-dark text-white sidebar_left">
-  <a href="#" class="w3-bar-item w3-button">Wallet</a>
-  <a href="#" class="w3-bar-item w3-button">Edit Profile</a>
+<style>
+
+
+/* Style the tab */
+
+.dash{
+  width: 100%;
+  height: auto;
+}
+.tab {
+ 
+ 
+  background-color: #f1f1f1;
+  width: 100%;
+  height: auto;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 10px 0px 10px 0px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 17px;
+}
+.tabcontent button{
+  width: 10rem;
+  font-size: 1.1rem;
+  padding: 5px;
+  margin-top: 3rem;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  
+  
+  
+
+  width: 100%;
+ 
+  height: auto;
+  background-color: white;
+}
+
+.tabcontent input[type=text], input[type=email], input[type=number], input[type=password]{
+  width: 100%;
+        border-top: none;
+        padding-left: 15px;
+      color: black;
+        outline: none;
+        border-left: none;
+        border-right: none;
+        
+        text-align: left;
+        font-size: 14px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-bottom: 20px;
+
+}
+.tabcontent .card {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+</style>
+<div class="dash">
+  <div class="container">
+  <div class="row">
+
+    <div class="col-md-2" style="padding: 0px;">
+      <div class="tab text-center" >
+        <button class="tablinks" onclick="openCity(event, 'profile')" id="defaultOpen">Profile</button>
+        <button class="tablinks" onclick="openCity(event, 'wallet')">Wallet</button>
+  
+      </div>
+
+    </div>
+
+    <div class="col-md-10" style="padding: 0px;">
+      <div id="profile" class="tabcontent ">
+        <div class="card">
+          <div class="card-header">
+              <h4>Your Profile</h4>
+          </div>
+          <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" placeholder="Your Name..">
+                  <label for="pemail">Primary Email:</label>
+                    <input type="email" id="pemail" placeholder="Primary Email">
+                </div>
+                <div class="col-md-6">
+                <label for="number">Phone Number:</label>
+            <input type="number" id="number" placeholder="Contact Number..">
+            <label for="number">Secondary Mobile Number:</label>
+            <input type="number" id="number" placeholder="Contact Number..">
+                </div>
+            </div>
+
+            <button>Update Profile</button>
+            
+            
+            
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+              <h4>Change Password</h4>
+          </div>
+          <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                  <label for="npass">New Password</label>
+                  <input type="password" id="npass" placeholder="Type New Password">
+                </div>
+                <div class="col-md-6">
+                <label for="ncpass">confirm Password</label>
+                  <input type="text" id="ncpass" placeholder="Confirm Password">
+                </div>
+            </div>
+
+            <button>Change Password</button>
+            
+            
+            
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+              <h4>Bank Details</h4>
+          </div>
+          <div class="card-body">
+
+          <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Account Number</th>
+        <th>IFSC CODE</th>
+        <th>Account Holder</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+        <td><input type="checkbox"></td>
+      </tr>
+     
+    </tbody>
+  </table>
+
+            
+          
+
+            <button>Add Bank</button>
+            <button>Delete</button>
+            
+            
+            
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+              <h4>Add  Bank Account Details</h4>
+          </div>
+          <div class="card-body">
+
+            <div class="row">
+                <div class="col-md-6">
+                  <label for="acnum">Bank Account Number:</label>
+                  <input type="number" id="acnum" placeholder="Enter Your Bank Account Number">
+                </div>
+                <div class="col-md-6">
+                <label for="acnumc">Confirm Account Number:</label>
+                  <input type="number" id="acnumc" placeholder="confirm Bank Account Number">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                  <label for="ifsc">Ifsc Code:</label>
+                  <input type="text" id="ifsc" placeholder="Enter Ifsc Code">
+                </div>
+                <div class="col-md-6">
+                <label for="achname">Account Holder Name:</label>
+                  <input type="text" id="achname" placeholder="Enter Account Holder Name">
+                </div>
+            </div>
+          
+
+            <button>Add</button>
+            
+            
+            
+          </div>
+        </div>
+  
 </div>
 
-<!-- Page Content -->
-<div class="sidebar_right">
-<div class="w3-container">
-<h2>Wallet</h2>
-<p>Total earning:<?php echo $earning; ?></p>
-<p>Total Clicks:<?php echo $click; ?></p>
+<div id="wallet" class="tabcontent">
+
+
+  <div class="card">
+    <div class="card-header">
+      <h4>Your Wallet</h4>
+    </div>  
+    <div class="card-body">
+      <div class="row ">
+        <div class="col-md-6">
+          <p>Total earning:<?php echo $earning; ?></p>
+        </div>
+        <div class="col-md-6">
+          <p>Total Clicks:<?php echo $click; ?></p>
+        </div>
+      </div>
+
+      
+    
+        
+    </div>  
+    
+  </div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="text-center">
+  <button>Refer More</button>
+  </div>      
+        
 </div>
 
+    </div>
+
+  </div>
+  </div>
 </div>
 
-</section>
+
+
+
+
+
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
