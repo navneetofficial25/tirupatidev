@@ -54,7 +54,7 @@ else{
                     
                     <li class="nav-item earn nav-top">
                       
-                      <a  href="<?php echo base_url(); ?>frontend/refer"><p class="refer font m-0">Refer and Earn</p></a>
+                      <a style="text-decoration: none;" href="<?php echo base_url(); ?>frontend/refer"><p class="refer font m-0">Refer and Earn</p></a>
                     </li>
                     
                   </ul>
