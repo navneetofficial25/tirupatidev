@@ -147,13 +147,8 @@ else
 
     <div class="col-md-10" style="padding: 0px;">
       <div id="profile" class="tabcontent ">
-<<<<<<< HEAD
-        <div class="card">
-          <div class="card-header" >
-=======
         <!-- <div class="card">
           <div class="card-header">
->>>>>>> 4e5aa20f1dab1023d71ea4076f4518cb5ff612b1
               <h4>Your Profile</h4>
           </div> -->
           <!-- <div class="card-body">
@@ -280,19 +275,12 @@ else
     <div class="card-body">
       <div class="row ">
         <div class="col-md-6">
-<<<<<<< HEAD
-          <p>Total earning:  <?php echo $earning; ?></p>
-        </div>
-        <div class="col-md-6">
-          <p>Total Clicks:  <?php echo $click; ?></p>
-=======
         <p>Total Earned: <?php $total=0; foreach($history as $value){
             $total += $value['money'] ; 
            } echo $total ;?></p>
         </div>
         <div class="col-md-6">
           <p>Total Refered: <?php  echo count($history);  ?></p>
->>>>>>> 4e5aa20f1dab1023d71ea4076f4518cb5ff612b1
         </div>
       </div>
 
@@ -328,17 +316,6 @@ else
      
     </tbody>
   </table>
-<<<<<<< HEAD
-    </div>
-  </div>
-  
-  <div class="text-center">
-  <button style="margin-bottom:2rem;">Refer More</button>
-  </div>      
-        
-=======
-
->>>>>>> 4e5aa20f1dab1023d71ea4076f4518cb5ff612b1
 </div>
 
     </div>
@@ -346,7 +323,7 @@ else
   </div>
   </div>
 </div>
-
+</div>
 
 
 
