@@ -85,8 +85,21 @@
  <div class="division">
 	<div class="line l"></div>
 	<span>or</span>
-	<div class="line r"></div>
  </div>
+                <?php
+    if($this->session->flashdata('error')){
+      echo "<script>$('#loginModal').modal('show');</script>";
+     echo '<p class="text-danger">'.$this->session->flashdata('error').'</p>';
+    }
+
+?>
+ <?php
+    if($this->session->flashdata('success')){
+      echo "<script>$('#loginModal').modal('show');</script>";
+     echo '<p class="text-success">'.$this->session->flashdata('success').'</p>';
+    }
+
+?>
    <div class="box">
       <div class="form loginBox">
       <form method="post" action="/insurance/frontend/login/login">

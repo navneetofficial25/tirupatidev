@@ -35,10 +35,12 @@
                 }
             }
             if($login_success==1){
-                echo "<script>window.location.href='/insurance/';</script>";
+                // $this->session->set_flashdata('success','Logged In Successfully'); 
+                redirect(base_url()); 
             }
             else{
-                echo "<script>alert('wrong username password');window.location.href='/insurance/'</script>";
+                $this->session->set_flashdata('error','Wrong Username Or Password'); 
+                redirect(base_url()); 
             }
             
 
@@ -48,8 +50,11 @@
         public function signup(){
             $this->load->model('frontend/ReferandEarnmodel');
             $this->input->post('formSubmit');
+            $this->form_validation->set_rules('email', 'Email', 'required|is_unique[referandearn.email]');
+    if ($this->form_validation->run()){ 
             if($this->input->post('password')!=$this->input->post('cpassword')){
-                echo "<script>alert('Password is not matching');window.location.href='/insurance'</script>";
+                $this->session->set_flashdata('error','Password Not Matched'); 
+                redirect(base_url()); 
                 return 0;
             }
             $data = array(
@@ -61,14 +66,19 @@
                 'ref_count' => 0
             );
             if($this->ReferandEarnmodel->signup($data)){
-                echo "<script>window.location.href='../login';</script>";
+                $this->session->set_flashdata('success','Signup Successfull'); 
+                redirect(base_url()); 
             }
             else{
-                echo "<script>alert('wrong username password');window.location.href=''</script>";
+                $this->session->set_flashdata('error','Wrong Username Or Password'); 
+                redirect(base_url()); 
             }
-        }
-
-
+        }else{
+            $this->session->set_flashdata('error','Already Registered'); 
+            redirect(base_url()); 
     }
 
-?>  
+    }  
+    }
+
+ 
