@@ -1,6 +1,12 @@
 
 <div class="container">
-<form>
+  <?php 
+    if($this->session->flashdata('admin_error'))
+    {
+      echo '<p class="text-success">'.$this->session->flashdata('admin_error').'</p>';
+    }
+  ?>
+<form action="refer/insert_data" method="post">
   <div class="form-group">
     <label for="exampleFormControlSelect1">Refer Id</label>
     <input list="refer" name="refer_id" placeholder="Refer ID" class="form-control">
@@ -12,13 +18,13 @@
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Money Earned</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Money Earned">
+    <input type="text" name="money" class="form-control" id="exampleFormControlInput1" placeholder="Money Earned">
   </div>
   <div class="form-group">
     <label for="exampleFormControlInput1">Referance Name</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Referance Name">
+    <input type="text" name="rname" class="form-control" id="exampleFormControlInput1" placeholder="Referance Name">
   </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit"name="formSubmit" class="btn btn-primary">Submit</button>
 </form>
 
 

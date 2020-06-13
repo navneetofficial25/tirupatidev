@@ -20,6 +20,35 @@ class Refer extends CI_Controller {
         $this->load->view('admin/refer',$data);
     }
 
+
+public function insert_data(){
+    $this->load->model('admin/refermodel');
+    $this->input->post('formSubmit');
+    $this->form_validation->set_rules('refer_id', 'Refrence ID', 'required');
+    $this->form_validation->set_rules('rname', 'Refrence Name', 'required');
+    $this->form_validation->set_rules('money', 'Money', 'required');
+    
+    if ($this->form_validation->run()){ 
+        $data = array(
+            'refer_id' => $this->input->post('refer_id'),
+            'reference' => $this->input->post('rname'),
+            'money' => $this->input->post('money'),
+            'date' => date("Y-m-d h:i:s"),
+        );
+        if($this->refermodel->insert($data)){
+            $this->session->set_flashdata('admin_error','Updated Successful'); 
+            redirect(base_url().'admin/refer');
+        }
+        else{
+            $this->session->set_flashdata('admin_error','Error In Updating Please Try Again'); 
+            redirect(base_url().'admin/refer');
+        }    
+    }
+    else{
+        $this->session->set_flashdata('admin_error','Please Fill all fields'); 
+        redirect(base_url().'admin/refer'); 
+    }
+  }
 }
 
 /* End of file Refer.php */
