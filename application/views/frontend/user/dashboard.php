@@ -147,11 +147,16 @@ else
 
     <div class="col-md-10" style="padding: 0px;">
       <div id="profile" class="tabcontent ">
+<<<<<<< HEAD
         <div class="card">
           <div class="card-header" >
+=======
+        <!-- <div class="card">
+          <div class="card-header">
+>>>>>>> 4e5aa20f1dab1023d71ea4076f4518cb5ff612b1
               <h4>Your Profile</h4>
-          </div>
-          <div class="card-body">
+          </div> -->
+          <!-- <div class="card-body">
 
             <div class="row">
                 <div class="col-md-6">
@@ -173,8 +178,8 @@ else
             
             
           </div>
-        </div>
-        <div class="card">
+        </div> -->
+        <!-- <div class="card">
           <div class="card-header">
               <h4>Change Password</h4>
           </div>
@@ -196,7 +201,7 @@ else
             
             
           </div>
-        </div>
+        </div> -->
 
         <div class="card">
           <div class="card-header">
@@ -210,7 +215,7 @@ else
         <th>Account Number</th>
         <th>IFSC CODE</th>
         <th>Account Holder</th>
-        <th>Delete</th>
+
       </tr>
     </thead>
     <tbody>
@@ -218,19 +223,11 @@ else
         <td>John</td>
         <td>Doe</td>
         <td>john@example.com</td>
-        <td><input type="checkbox"></td>
+      
       </tr>
      
     </tbody>
   </table>
-
-            
-          
-
-            <button>Add Bank</button>
-            <button>Delete</button>
-            
-            
             
           </div>
         </div>
@@ -283,10 +280,19 @@ else
     <div class="card-body">
       <div class="row ">
         <div class="col-md-6">
+<<<<<<< HEAD
           <p>Total earning:  <?php echo $earning; ?></p>
         </div>
         <div class="col-md-6">
           <p>Total Clicks:  <?php echo $click; ?></p>
+=======
+        <p>Total Earned: <?php $total=0; foreach($history as $value){
+            $total += $value['money'] ; 
+           } echo $total ;?></p>
+        </div>
+        <div class="col-md-6">
+          <p>Total Refered: <?php  echo count($history);  ?></p>
+>>>>>>> 4e5aa20f1dab1023d71ea4076f4518cb5ff612b1
         </div>
       </div>
 
@@ -306,29 +312,23 @@ else
     <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Refered Date</th>
+        <th>Refered Person</th>
+        <th>Money Earned</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+    <?php foreach($history as $value){?>
+    <tr>
+      <td><?php echo $value['date'] ; ?></th>
+      <td><?php echo $value['reference'] ; ?></td>
+      <td><?php echo $value['money'] ; ?></td>
+    </tr>
+    <?php } ?>
+     
     </tbody>
   </table>
+<<<<<<< HEAD
     </div>
   </div>
   
@@ -336,6 +336,9 @@ else
   <button style="margin-bottom:2rem;">Refer More</button>
   </div>      
         
+=======
+
+>>>>>>> 4e5aa20f1dab1023d71ea4076f4518cb5ff612b1
 </div>
 
     </div>

@@ -182,17 +182,34 @@ else
       
       <div class="container brands py-5">
         <h1>brands we keep</h1>
-        <div class="flex justify-content-center">
-          
-    <?php   foreach($brandslogo as $logo){
-	
-								?>
+        <div class="">
+        <div id="carouselExampleIndicators1_1" class="carousel slide" data-ride="carousel" data-interval='false'>
+						 <div class="carousel-inner ">
+							<div class="carousel-item active ">
+              <div class="flex justify-content-center ">
+        <?php for($i=0; $i<4; $i++) {?>
           <div class="card">
             <div class="card-image">
-            <img src="<?=$logo->image;?>" >
+            <img src="<?=$brandslogo[$i]->image;?>" >
             </div>
           </div>
-        <?php }?>    
+        <?php } ?>
+          </div>
+          </div>
+          <div class="carousel-item">
+          <div class="flex justify-content-center ">
+        <?php for($i=0; $i<4; $i++) {?>
+          <div class="card">
+            <div class="card-image">
+            <img src="<?=$brandslogo[$i]->image;?>" >
+            </div>
+          </div>
+        <?php } ?>
+          </div>
+          </div>
+          </div>
+          </div>
+  
 
 <!--          <div class="col-md">
             <div class="box">
@@ -294,4 +311,7 @@ $('#formSubmit').click(function() {
     return false;
 });
 </script>
-
+<script>
+   $('.carousel').carousel({
+  interval: 2000
+})</script>
