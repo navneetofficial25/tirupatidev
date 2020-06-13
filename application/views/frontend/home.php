@@ -150,13 +150,13 @@ else
           <div class="col-md-6 col-12">
               <div class="lft">
                 <div class="point">
-                  <img src="<?php echo base_url()?>assest/img/icon-3.png">
+                  <img src="<?php echo base_url()?>assest/img/point.svg">
                 
                   <p>Coustomized plans</p>
                 </div>
 
                 <div class="point">
-                  <img src="<?php echo base_url()?>assest/img/icon-3.png">
+                  <img src="<?php echo base_url()?>assest/img/point.svg">
                   <p>Risk Consulting</p>
                 </div>
               </div>
@@ -164,11 +164,11 @@ else
             <div class="col-md-6 col-12 ">
               <div class="rgt ">
                 <div class="point">
-                  <img src="<?php echo base_url()?>assest/img/icon-3.png" >
+                  <img src="<?php echo base_url()?>assest/img/point.svg" >
                   <p>Dedicated Helpline</p>
                 </div>
                 <div class="point">
-                  <img src="<?php echo base_url()?>assest/img/icon-3.png">
+                  <img src="<?php echo base_url()?>assest/img/point.svg">
                   <p>Cost and Quality</p>
                 </div>
               </div>
