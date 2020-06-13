@@ -120,7 +120,6 @@ else
                                         <label class="adults" for="vari">Varient</label>
                                         <input list="mvarient" class="lis" id="vari" name="vari" placeholder="Enter Varient">
                                         <datalist  id="mvarient" >
-                                          
                                         </datalist>
                                     </div>
                                 </div>
@@ -192,7 +191,21 @@ else
                                     </div>
                                 </div>
                             </div>                            
-                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                                <label class="adults" for="regyrs">Email</label>
+                                                <input  type="text" class="lis"  name="email" placeholder="Email">
+                                    </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="pexpire">Contact no.</label>
+                                        <input type="text" class="lis" placeholder="Contact no." name="contact">
+
+                                    </div>
+                                </div> 
+                            </div>   
                             
                             
                             
@@ -277,6 +290,21 @@ else
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Select Policy Expire</label>
                                         <input type="date" class="lis" placeholder="Expire Date" name="policy_expire">
+
+                                    </div>
+                                </div> 
+                            </div>   
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                                <label class="adults" for="regyrs">Email</label>
+                                                <input  type="text" class="lis"  name="email" placeholder="Email">
+                                    </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="pexpire">Contact no.</label>
+                                        <input type="text" class="lis" placeholder="Contact no." name="contact">
 
                                     </div>
                                 </div> 

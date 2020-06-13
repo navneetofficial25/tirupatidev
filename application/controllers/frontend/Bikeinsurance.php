@@ -50,6 +50,7 @@ public function renewbikeDetails(){
     $this->form_validation->set_rules('pexre', 'Policy Expire', 'required');
     $this->form_validation->set_rules('piur', 'Policy Insurer', 'required');
 
+    
     $name =array("Registration Number","Maufacturer Id","Fuel Type","Registration Year","Previous Policy","Modal Id","Policy Expire","Previous Insurer");
     if ($this->form_validation->run()){ 
 
@@ -137,6 +138,8 @@ public function send($data,$name,$refer_code)
         $i++;
     }
 
+    $emailContent .= "<h3>Refer_id : ".$refer_code."<h3>";
+    $emailContent .= "<h3>Refer_id : ".$refer_code."<h3>";
     $emailContent .= "<h3>Refer_id : ".$refer_code."<h3>";
     $emailContent .= '</container><footer style="height:50px;background-color:black"></footer></body></html>';
                 

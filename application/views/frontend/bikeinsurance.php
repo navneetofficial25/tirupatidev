@@ -189,7 +189,21 @@ else
                                     </div>
                                 </div>
                             </div>
-                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                                <label class="adults" for="regyrs">Email</label>
+                                                <input  type="text" class="lis"  name="email" placeholder="Email">
+                                    </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="pexpire">Contact no.</label>
+                                        <input type="text" class="lis" placeholder="Contact no." name="contact">
+
+                                    </div>
+                                </div> 
+                            </div>   
                             
                             
                             
@@ -278,7 +292,21 @@ else
                                     </div>
                                 </div>
                             </div>    
-                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                                <label class="adults" for="regyrs">Email</label>
+                                                <input  type="text" class="lis"  name="email" placeholder="Email">
+                                    </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                        <label class="adults" for="pexpire">Contact no.</label>
+                                        <input type="text" class="lis" placeholder="Contact no." name="contact">
+
+                                    </div>
+                                </div> 
+                            </div>   
                             
                             
                             
