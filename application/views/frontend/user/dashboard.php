@@ -17,11 +17,12 @@ else
 .dash{
   width: 100%;
   height: auto;
+  margin-top: 20px;
 }
 .tab {
  
  
-  background-color: #f1f1f1;
+  background-color:rgb( 44, 44, 44 );
   width: 100%;
   height: auto;
 }
@@ -30,7 +31,7 @@ else
 .tab button {
   display: block;
   background-color: inherit;
-  color: black;
+  color: white;
   padding: 10px 0px 10px 0px;
   width: 100%;
   border: none;
@@ -44,17 +45,17 @@ else
   width: 10rem;
   font-size: 1.1rem;
   padding: 5px;
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color:rgb( 239, 69, 84 );
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: #ccc;
+  background-color:rgb( 239, 69, 84 );
 }
 
 /* Style the tab content */
@@ -67,6 +68,33 @@ else
  
   height: auto;
   background-color: white;
+}
+
+.tabcontent .card-header{
+  background-color: rgb( 44, 44, 44 );
+
+  color: white;
+}
+.tabcontent .card-header h4{
+  text-transform: uppercase;
+  font-weight: lighter;
+}
+.tabcontent button{
+  outline: none;
+  border: none;
+  color: white;
+  background-color: rgb( 239, 69, 84 );
+  border-radius: 5px;
+  
+}
+.tabcontent button:hover{
+
+  background-color: rgb( 44, 44, 44 );
+
+  
+}
+.tabcontent table{
+  width: 100%;
 }
 
 .tabcontent input[type=text], input[type=email], input[type=number], input[type=password]{
@@ -89,6 +117,20 @@ else
   height: auto;
   margin-bottom: 20px;
 }
+
+
+@media only screen and (max-width: 500px){
+  .tabcontent .card {
+  
+  margin-top: 10px;
+}
+}
+
+.tabcontent p{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 18px;
+  
+}
 </style>
 <div class="dash">
   <div class="container">
@@ -105,8 +147,13 @@ else
 
     <div class="col-md-10" style="padding: 0px;">
       <div id="profile" class="tabcontent ">
+<<<<<<< HEAD
+        <div class="card">
+          <div class="card-header" >
+=======
         <!-- <div class="card">
           <div class="card-header">
+>>>>>>> 4e5aa20f1dab1023d71ea4076f4518cb5ff612b1
               <h4>Your Profile</h4>
           </div> -->
           <!-- <div class="card-body">
@@ -160,7 +207,7 @@ else
           <div class="card-header">
               <h4>Bank Details</h4>
           </div>
-          <div class="card-body">
+          <div class="card-body table-responsive">
 
           <table class="table table-bordered">
     <thead>
@@ -233,12 +280,19 @@ else
     <div class="card-body">
       <div class="row ">
         <div class="col-md-6">
+<<<<<<< HEAD
+          <p>Total earning:  <?php echo $earning; ?></p>
+        </div>
+        <div class="col-md-6">
+          <p>Total Clicks:  <?php echo $click; ?></p>
+=======
         <p>Total Earned: <?php $total=0; foreach($history as $value){
             $total += $value['money'] ; 
            } echo $total ;?></p>
         </div>
         <div class="col-md-6">
           <p>Total Refered: <?php  echo count($history);  ?></p>
+>>>>>>> 4e5aa20f1dab1023d71ea4076f4518cb5ff612b1
         </div>
       </div>
 
@@ -248,7 +302,14 @@ else
     </div>  
     
   </div>
-  <table class="table table-bordered">
+
+
+  <div class="card">
+    <div class="card-header">
+        <h4>Refer History</h4>
+    </div>
+    <div class="card-body table-responsive">
+    <table class="table table-bordered">
     <thead>
       <tr>
         <th>Refered Date</th>
@@ -267,7 +328,17 @@ else
      
     </tbody>
   </table>
+<<<<<<< HEAD
+    </div>
+  </div>
+  
+  <div class="text-center">
+  <button style="margin-bottom:2rem;">Refer More</button>
+  </div>      
+        
+=======
 
+>>>>>>> 4e5aa20f1dab1023d71ea4076f4518cb5ff612b1
 </div>
 
     </div>
