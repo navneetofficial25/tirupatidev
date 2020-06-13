@@ -105,11 +105,11 @@ else
 
     <div class="col-md-10" style="padding: 0px;">
       <div id="profile" class="tabcontent ">
-        <div class="card">
+        <!-- <div class="card">
           <div class="card-header">
               <h4>Your Profile</h4>
-          </div>
-          <div class="card-body">
+          </div> -->
+          <!-- <div class="card-body">
 
             <div class="row">
                 <div class="col-md-6">
@@ -131,8 +131,8 @@ else
             
             
           </div>
-        </div>
-        <div class="card">
+        </div> -->
+        <!-- <div class="card">
           <div class="card-header">
               <h4>Change Password</h4>
           </div>
@@ -154,7 +154,7 @@ else
             
             
           </div>
-        </div>
+        </div> -->
 
         <div class="card">
           <div class="card-header">
@@ -168,7 +168,7 @@ else
         <th>Account Number</th>
         <th>IFSC CODE</th>
         <th>Account Holder</th>
-        <th>Delete</th>
+
       </tr>
     </thead>
     <tbody>
@@ -176,19 +176,11 @@ else
         <td>John</td>
         <td>Doe</td>
         <td>john@example.com</td>
-        <td><input type="checkbox"></td>
+      
       </tr>
      
     </tbody>
   </table>
-
-            
-          
-
-            <button>Add Bank</button>
-            <button>Delete</button>
-            
-            
             
           </div>
         </div>
@@ -241,10 +233,12 @@ else
     <div class="card-body">
       <div class="row ">
         <div class="col-md-6">
-          <p>Total earning:<?php echo $earning; ?></p>
+        <p>Total Earned: <?php $total=0; foreach($history as $value){
+            $total += $value['money'] ; 
+           } echo $total ;?></p>
         </div>
         <div class="col-md-6">
-          <p>Total Clicks:<?php echo $click; ?></p>
+          <p>Total Refered: <?php  echo count($history);  ?></p>
         </div>
       </div>
 
@@ -273,10 +267,7 @@ else
      
     </tbody>
   </table>
-  <div class="text-center">
-  <button>Refer More</button>
-  </div>      
-        
+
 </div>
 
     </div>
