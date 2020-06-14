@@ -17,5 +17,10 @@ class ReferandEarnmodel extends CI_Model {
         $response = $q->result_array();
         return $response;
     }
+
+    function update_bank($data,$email){
+        $this->db->where('email',$email);
+        return $this->db->update('referandearn',$data);
+    }
 }
 ?>

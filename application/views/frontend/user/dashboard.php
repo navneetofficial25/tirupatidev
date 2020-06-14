@@ -7,6 +7,9 @@ else
 {
   $earning=$_SESSION["ref_count"];
   $click=$_SESSION["earn"];
+  $bank_acc=$_SESSION["bank_acc"];
+  $ifsc=$_SESSION["ifsc"];
+  $acc_name=$_SESSION["acc_name"];
 }
 ?>
 <style>
@@ -215,9 +218,9 @@ else
     </thead>
     <tbody>
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td><?php echo $bank_acc;?></td>
+        <td><?php echo $ifsc;?></td>
+        <td><?php echo $acc_name;?></td>
       
       </tr>
      
@@ -232,32 +235,38 @@ else
               <h4>Add  Bank Account Details</h4>
           </div>
           <div class="card-body">
-
+          <form action="../login/update_bank" method="Post">
+                <?php 
+                if($this->session->flashdata('dashboard_error'))
+                {
+                  echo '<p class="text-success">'.$this->session->flashdata('dashboard_error').'</p>';
+                }
+                ?>
             <div class="row">
                 <div class="col-md-6">
                   <label for="acnum">Bank Account Number:</label>
-                  <input type="number" id="acnum" placeholder="Enter Your Bank Account Number">
+                  <input type="number" name="bank_acc" id="acnum" placeholder="Enter Your Bank Account Number">
                 </div>
                 <div class="col-md-6">
                 <label for="acnumc">Confirm Account Number:</label>
-                  <input type="number" id="acnumc" placeholder="confirm Bank Account Number">
+                  <input type="number" name="cbank_acc" id="acnumc" placeholder="confirm Bank Account Number">
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-md-6">
                   <label for="ifsc">Ifsc Code:</label>
-                  <input type="text" id="ifsc" placeholder="Enter Ifsc Code">
+                  <input type="text" name="ifsc" id="ifsc" placeholder="Enter Ifsc Code">
                 </div>
                 <div class="col-md-6">
                 <label for="achname">Account Holder Name:</label>
-                  <input type="text" id="achname" placeholder="Enter Account Holder Name">
+                  <input type="text" name="acc_name" id="achname" placeholder="Enter Account Holder Name">
                 </div>
             </div>
           
 
-            <button>Add</button>
-            
+            <input type="submit"name="formSubmit" class="button" value="Add">
+            </form>
             
             
           </div>
