@@ -12,8 +12,8 @@ class Login extends CI_Controller
     {
         if($this->session->userdata('vendorAuth') != "")
         {
-            $this->load->helper('url');
-            redirect(base_url()."login", 'refresh');
+          
+            redirect(base_url()."welcome");
         }
         // login data
         if($this->input->post('vendorLogin'))

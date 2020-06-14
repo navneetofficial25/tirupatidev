@@ -6,7 +6,7 @@
             parent::__construct();
             if(! $this->session->userdata('vendorAuth')){
             redirect('login');}
-            $this->load->model('admin/CardataModel');
+            $this->load->model('admin/cardatamodel');
         }
               
         public function index(){
@@ -14,11 +14,12 @@
             $this->load->view('admin/template/sidebar');
             $this->load->view('admin/template/topbar');
             $this->load->view('admin/cardata');
+            $this->load->view('admin/template/footer');
         }
         
         public function addinventory_api(){
 
-            $getPurchaseData = $this->CardataModel->fetchinventory_api();
+            $getPurchaseData = $this->cardatamodel->fetchinventory_api();
     
             //print_r($getPurchaseData);
     
@@ -38,7 +39,7 @@
                   $this->form_validation->set_rules('deletesliderId','text','required');
                   if($this->form_validation->run() == true)
                   {
-                    $getDeleteStatus = $this->CardataModel->deletecardata($this->input->post('deletesliderId'));
+                    $getDeleteStatus = $this->cardatamodel->deletecardata($this->input->post('deletesliderId'));
                     if($getDeleteStatus['message'] == 'yes')
                     {
                       $this->session->set_flashdata('success','Gallery  deleted successfully');

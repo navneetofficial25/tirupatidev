@@ -17,6 +17,7 @@
                 $this->load->view('admin/template/sidebar');
                 $this->load->view('admin/template/topbar');
                 $this->load->view('admin/callback');
+                $this->load->view('admin/template/footer');
             }
             
             public function callinventory_api(){

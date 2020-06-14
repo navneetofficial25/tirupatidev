@@ -13,8 +13,8 @@ else{
   '.$_SESSION["name"].'
   </a>
   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-    <a class="dropdown-item" href="/insurance/frontend/user/dashboard">Dashboard</a>
-    <a class="dropdown-item" href="/insurance/frontend/logout">Log Out</a>
+    <a class="dropdown-item" href="'.base_url().'/frontend/user/dashboard">Dashboard</a>
+    <a class="dropdown-item" href="'.base_url().'frontend/logout">Log Out</a>
   </div>
 </li>   '; 
 }

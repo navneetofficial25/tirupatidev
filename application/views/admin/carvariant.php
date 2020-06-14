@@ -231,7 +231,7 @@ img {
                             </div>
                         </div>
 
-<?php $this->load->view('admin/Template/footer.php') ?>
+
 <script>
   $(document).ready(function() {
     $('#lowinventory').DataTable( {

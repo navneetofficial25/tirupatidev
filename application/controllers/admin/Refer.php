@@ -18,6 +18,7 @@ class Refer extends CI_Controller {
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/template/topbar');
         $this->load->view('admin/refer',$data);
+        $this->load->view('admin/template/footer');
     }
 
 }

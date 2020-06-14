@@ -14,6 +14,7 @@
                 $this->load->view('admin/template/sidebar');
                 $this->load->view('admin/template/topbar');
                 $this->load->view('admin/contactdata');
+                $this->load->view('admin/template/footer');
             }
             
             public function contactinventory_api(){

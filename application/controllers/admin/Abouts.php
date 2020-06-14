@@ -19,6 +19,7 @@ class Abouts extends CI_Controller {
         $this->load->view('admin/template/sidebar');
         $this->load->view('admin/template/topbar');
         $this->load->view('admin/abooutus.php',$data);
+        $this->load->view('admin/template/footer');
     }
     public function upload(){
         $data['about_desc'] = $this->input->post('about'); 

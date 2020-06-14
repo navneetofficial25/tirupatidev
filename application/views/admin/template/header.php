@@ -37,6 +37,8 @@
         <link href="<?php echo base_url(); ?>admin/assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>admin/assets/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
         <link href="<?php echo base_url(); ?>admin/assets/plugins/summernote/summernote.css" rel="stylesheet" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="<?php echo base_url(); ?>admin/assets/js/jquery.dataTables.min.js"></script>
 
         <script src="<?php echo base_url(); ?>admin/assets/js/modernizr.min.js"></script>
 </head>

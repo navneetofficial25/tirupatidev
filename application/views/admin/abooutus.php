@@ -49,4 +49,4 @@ $(document).ready(function(){
 <!--Delete-->
 
 
-<?php $this->load->view('admin/Template/footer.php') ?>
+

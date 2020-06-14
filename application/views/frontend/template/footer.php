@@ -102,7 +102,7 @@
 ?>
    <div class="box">
       <div class="form loginBox">
-      <form method="post" action="/insurance/frontend/login/login">
+      <form method="post" action="<?php echo base_url() ; ?>frontend/login/login">
 				<input id="email" class="form-control" type="text" placeholder="Email" name="email" required>
 				<input id="password" class="form-control" type="password" placeholder="Password" name="password" required>
 				<input  type="submit" class="btn btn-default btn-login" value="Login">
@@ -112,7 +112,7 @@
    <div class="box">
       <div class="content registerBox" style="display:none;">
          <div class="form">
-            <form method="post" action="/insurance/frontend/login/signup">
+            <form method="post" action="<?php echo base_url() ; ?>frontend/login/signup">
                <input id="name" class="form-control" type="text" placeholder="Name" name="name" required>
                <input id="email" class="form-control" type="text" placeholder="Email" name="email" required>
                <input id="password" class="form-control" type="password" placeholder="Password" name="password" required>

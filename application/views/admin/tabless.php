@@ -154,7 +154,7 @@
         </div>
 
 
-<?php $this->load->view('admin/template/footer.php') ?>   
+   
 
 <script>
   $(document).ready(function() {

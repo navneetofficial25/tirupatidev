@@ -120,7 +120,7 @@ margin-top: -11px;}
 <!--Delete-->
 
 
-<?php $this->load->view('admin/Template/footer.php') ?>
+
 
 <script>
   tinymce.init({
