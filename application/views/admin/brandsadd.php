@@ -1,6 +1,6 @@
-<?php $this->load->view('admin/Template/header.php') ?>
-<?php $this->load->view('admin/Template/sidebar.php') ?>
-<?php $this->load->view('admin/Template/topbar.php') ?>
+<?php $this->load->view('admin/template/header.php') ?>
+<?php $this->load->view('admin/template/sidebar.php') ?>
+<?php $this->load->view('admin/template/topbar.php') ?>
 <style>
 .thunbnail_image{
 height: 86px;

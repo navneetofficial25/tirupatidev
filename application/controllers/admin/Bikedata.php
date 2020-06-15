@@ -6,7 +6,7 @@
             parent::__construct();
             if(! $this->session->userdata('vendorAuth')){
             redirect('login');}
-            $this->load->model('admin/BikedataModel');
+            $this->load->model('admin/Bikedatamodel');
             
         }
               
@@ -20,7 +20,7 @@
         
         public function addinventory_api(){
 
-            $getPurchaseData = $this->BikedataModel->fetchinventory_api();
+            $getPurchaseData = $this->Bikedatamodel->fetchinventory_api();
     
             //print_r($getPurchaseData);
     
@@ -40,7 +40,7 @@
                   $this->form_validation->set_rules('deletesliderId','text','required');
                   if($this->form_validation->run() == true)
                   {
-                    $getDeleteStatus = $this->BikedataModel->deletebikedata($this->input->post('deletesliderId'));
+                    $getDeleteStatus = $this->Bikedatamodel->deletebikedata($this->input->post('deletesliderId'));
                     if($getDeleteStatus['message'] == 'yes')
                     {
                       $this->session->set_flashdata('success','Gallery  deleted successfully');

@@ -273,7 +273,7 @@ else
       </div>    
     </section>
     
-    <?php $this->load->view('frontend/Template/footer.php') ?>
+    <?php $this->load->view('frontend/template/footer.php') ?>
    
 
     <script type="text/javascript">
