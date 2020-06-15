@@ -88,6 +88,7 @@
               $this->load->view('admin/template/sidebar');
               $this->load->view('admin/template/topbar');
               $this->load->view('admin/bikemodel',$data);
+              $this->load->view('admin/template/footer');
           }
 
 
@@ -162,6 +163,7 @@
               $this->load->view('admin/template/sidebar');
               $this->load->view('admin/template/topbar');
               $this->load->view('admin/bikevariant',$data);
+              $this->load->view('admin/template/footer');
           }
           
           public function addvariant(){

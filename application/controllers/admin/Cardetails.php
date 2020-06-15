@@ -3,6 +3,7 @@
 
         public function __construct()
         {
+          
             parent::__construct();
             if(! $this->session->userdata('vendorAuth')){
             redirect('login');}
@@ -87,6 +88,7 @@
               $this->load->view('admin/template/sidebar');
               $this->load->view('admin/template/topbar');
               $this->load->view('admin/carmodel',$data);
+              $this->load->view('admin/template/footer');
           }
 
 
@@ -161,6 +163,7 @@
               $this->load->view('admin/template/sidebar');
               $this->load->view('admin/template/topbar');
               $this->load->view('admin/carvariant',$data);
+              $this->load->view('admin/template/footer');
           }
           
           public function addvariant(){
