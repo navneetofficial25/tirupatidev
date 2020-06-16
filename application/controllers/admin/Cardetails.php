@@ -91,7 +91,7 @@
               $this->load->view('admin/template/footer');
           }
 
-
+jfnkref
           public function addmodel(){
             $this->load->model('admin/Carmodel');
 
