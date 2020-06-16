@@ -114,10 +114,10 @@ else
                 <input type="checkbox" value="none" id="checkbox_1" name="contact1"/>
                 <label for="checkbox_1" class="checkbox"><span class="chk">I agree to the Term and Conditon</span></label>
                 <input type="checkbox" value="none" id="checkbox_2" name="contact2"/>
-                <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my quote and policy details on <i class="fa fa-whatsapp" ></i><span> whatsapp</label>
+                <label for="checkbox_2" class="checkbox"><span class="chk">I want t get my Qoutes and policy details on <i class="fa fa-whatsapp" ></i><span> whatsapp</label>
                 </br>
                 <div class="text-center ">
-                  <button>Get Quote</button> 
+                  <button>Get Qoute</button> 
                 </div> 
                     <?php echo form_close(); ?>
 
@@ -148,17 +148,17 @@ else
                 <div class="col-md-6 col-12">
                   <div class="lft">
                     <div class="point">
-                      <img src="<?php echo base_url();?>assest/img/discount.png">
+                      <img src="<?php echo base_url();?>assest/img/discount.svg">
                     
-                      <h4>80% discouns</h4>
+                      <h4>80% discounts</h4>
                       <hr class="style1">
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
                     </div>
     
                     <div class="point">
-                      <img src="<?php echo base_url();?>assest/img/faster-icon-png-0.png">
-                      <h4>80% discouns</h4>
+                      <img src="<?php echo base_url();?>assest/img/faster.svg">
+                      <h4>UNBIASED EXPERT ADVISE</h4>
                       <hr class="style1">
                       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
@@ -168,15 +168,15 @@ else
                 <div class="col-md-6 col-12 ">
                   <div class="rgt ">
                     <div class="point">
-                      <img src="<?php echo base_url();?>assest/img/PngItem_690697.png" >
-                      <h4>80% discouns</h4>
+                      <img src="<?php echo base_url();?>assest/img/express.svg" >
+                      <h4>EXPRESS CLAIMS SERVICES</h4>
                       <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
                     </div>
                     <div class="point">
-                      <img src="<?php echo base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
-                      <h4>80% discouns</h4>
+                      <img src="<?php echo base_url();?>assest/img/support.svg">
+                      <h4>24*7 CUSTOMER SUPPORT</h4>
                       <hr class="style1">
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
