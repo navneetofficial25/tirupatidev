@@ -31,7 +31,7 @@
 
 
 
-@media only screen and (max-width: 380px) {
+ @media only screen and (max-width: 380px) {
   .sidebar_left{
     width: 25%;
   }
@@ -59,8 +59,8 @@
     }
             
     .first .card{
-      width:  7rem;
-
+    height : 132px;
+        padding: 6px;
       margin: 10px;
       
     }
@@ -174,8 +174,8 @@
       
     }
     .first .card{
-      width:  7rem;
-
+      height : 132px;
+        padding: 12px;
       margin: 10px;
       
     }
@@ -280,7 +280,15 @@
 
 
   
+@media only screen and (max-width: 600px) {
 
+.first a{
+    width : 50%;
+}
+.contact-width{
+  width : 71%;
+}
+}
 
 
 

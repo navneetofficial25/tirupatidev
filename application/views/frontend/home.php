@@ -86,7 +86,7 @@ else
      
       <p class="still my-3"><b>Still in Doubt? Why Don't We Speak On Call?</b></p> 
       <div class="row justify-content-center ">
-        <div class="col-md-2 ">
+        <div class="col-md-2 contact-width">
          <a href="tel:+918950000000"> <button>give us a call</button></a>
         </div>
         <div class="col-md-1">
@@ -94,7 +94,7 @@ else
                 <p>or</p>
             </div>
         </div>
-        <div class="col-md-2">
+        <div class="col-md-2 contact-width">
           
           <button data-toggle="modal" data-target="#myModal" type="button" >get a call back</button> 
           
@@ -243,13 +243,13 @@ else
       <div class="container ">
         <h3>If we have already had the pleasure of assisting you then please</h3>
         <div class="row justify-content-center ">
-          <div class="col-md-2">
+          <div class="col-md-2 contact-width">
             <button>review us</button> 
           </div>  
           <div class="col-md-1">
             <p class="or">or</p>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2 contact-width">
             <button>see review</button> 
           </div> 
         </div>
@@ -273,7 +273,6 @@ else
       </div>    
     </section>
     
-    <?php $this->load->view('frontend/template/footer.php') ?>
    
 
     <script type="text/javascript">

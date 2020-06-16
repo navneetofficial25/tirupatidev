@@ -14,7 +14,7 @@ else
             <div class="overlay2">
                 <div class="container" >
                     <h2>Good Friends Share!</h2>
-                    <p>Get your friend to try HomeLane.com for their home interiors & get 15,000!</p>
+                    <p>Get your friend to try their home interiors & get 15,000!</p>
                 </div>
                 <div class="refer-form">
                 <div class="container refer">

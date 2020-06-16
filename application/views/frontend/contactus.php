@@ -82,8 +82,8 @@
                                             
                                             <p style="color: grey;">Give us a</p>
                                             <h4>Call</h4>
-                                            <p style="color: grey;">+91 925 400 0000 </p>
-                                            <p style="color: grey;">+91 819 893 2943</p>
+                                            <p style="color: grey;">+91 8950000000 </p>
+                                            <!-- <p style="color: grey;">+91 8950000000</p> -->
                                             </div>
                                           
                                         </div>
@@ -95,8 +95,8 @@
                                             
                                             <p style="color: grey;">Drop an</p>
                                             <h4>Email</h4>
-                                            <p style="color: grey;">hisarfever@gmail.com</p>
-                                            <p style="color: grey;">vikaspoonia17@gmail.com</p>
+                                            <p style="color: grey;">Info@tirupatiinsurance.com</p>
+                                            <!-- <p style="color: grey;">Info@tirupatiinsurance.com</p> -->
                                             </div>
                                           
                                         </div>
