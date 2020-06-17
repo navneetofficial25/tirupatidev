@@ -5,8 +5,8 @@ if(!isset($_SESSION["referid"]))
 }
 else
 {
-    $button='<input class="lis" type="tel" name="email" value="'.base_url().'?id='.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder="Your Email" disabled></br>
-    <input type="submit" name="formSubmit" value="Copy Link" class="bu"  />';
+    $button='<input class="lis" type="text" id="copy" value="'.base_url().'?id='.$_SESSION["referid"].'"size="40" aria-invalid="false" placeholder=" " disabled></br>
+    <input type="submit" id="copied" value="Copy Link" class="bu"  />';
 }
 ?>
         <div class="refer-top" style="background-image: url(<?php echo base_url();?>assest/img/refer.jpg)">
@@ -63,4 +63,13 @@ else
             </div>
         </div>
 
-    
+    <script>
+        $( '#copied' ).click( function()
+ {
+    var copyText = document.getElementById("copy");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+ });
+    </script>

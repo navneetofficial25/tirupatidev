@@ -59,7 +59,7 @@
     }
             
     .first .card{
-    height : 132px;
+    /* height : 132px; */
         padding: 6px;
       margin: 10px;
       
@@ -174,8 +174,8 @@
       
     }
     .first .card{
-      height : 132px;
-        padding: 12px;
+      /* height : 132px; */
+        /* padding: 12px; */
       margin: 10px;
       
     }

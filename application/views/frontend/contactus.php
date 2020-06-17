@@ -83,7 +83,7 @@
                                             <p style="color: grey;">Give us a</p>
                                             <h4>Call</h4>
                                             <p style="color: grey;">+91 8950000000 </p>
-                                            <!-- <p style="color: grey;">+91 8950000000</p> -->
+                                            <p style="color: grey;">+91 9206244000 </p>
                                             </div>
                                           
                                         </div>
@@ -96,7 +96,7 @@
                                             <p style="color: grey;">Drop an</p>
                                             <h4>Email</h4>
                                             <p style="color: grey;">Info@tirupatiinsurance.com</p>
-                                            <!-- <p style="color: grey;">Info@tirupatiinsurance.com</p> -->
+                                            <p style="color: grey;">jagdish@tirupatiinsurance.com</p>
                                             </div>
                                           
                                         </div>

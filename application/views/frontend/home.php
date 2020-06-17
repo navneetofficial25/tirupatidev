@@ -19,7 +19,7 @@ else
       
         <div class="flex justify-content-center">
           
-        <a  href="<?php echo base_url()?>frontend/healthinsurance">
+        <a  href="<?php echo base_url()?>health-insurance">
           <div class="card">
             <div class="card-image text-center p-3">
               <img alt="Health Insurance" src="<?php echo base_url()?>assest/img/health-insurance.svg">
@@ -31,7 +31,7 @@ else
             </div>
           </div>
         </a>
-        <a  href="#">
+        <a  href="<?php echo base_url(); ?>coming-soon.php">
           <div class="card">
             <div class="card-image text-center p-3">
               <img class="img-responsive" alt="Term Insurance" src="<?php echo base_url()?>assest/img/term.svg">
@@ -43,7 +43,7 @@ else
             </div>
           </div>
         </a>
-        <a href="<?php echo base_url();?>frontend/carinsurance">
+        <a href="<?php echo base_url();?>car-insurance">
           <div class="card">
             <div class="card-image text-center p-3">
             
@@ -56,7 +56,7 @@ else
             </div>
           </div>
         </a>
-        <a href="<?php echo base_url()?>frontend/bikeinsurance">
+        <a href="<?php echo base_url()?>bike-insurance">
           <div class="card">
             <div class="card-image text-center p-3">
               <img class="img-responsive" alt="Bike Insurance" src="<?php echo base_url()?>assest/img/bike.svg">
@@ -68,7 +68,7 @@ else
             </div>
           </div>
         </a>
-        <a  href="#">
+        <a  href="<?php echo base_url(); ?>coming-soon.php">
           <div class="card">
             <div class="card-image text-center p-3">
               <img class="img-responsive" alt="Travle Insurance" src="<?php echo base_url()?>assest/img/travel-insurance.svg">
@@ -244,13 +244,14 @@ else
         <h3>If we have already had the pleasure of assisting you then please</h3>
         <div class="row justify-content-center ">
           <div class="col-md-2 contact-width">
-            <button>review us</button> 
+            <a target="_blank" href="https://g.page/r/CXcIyC-jkBOsEAI/review
+"><button>review us</button> </a>
           </div>  
           <div class="col-md-1">
             <p class="or">or</p>
           </div>
           <div class="col-md-2 contact-width">
-            <button>see review</button> 
+           <a target="_blank" href="https://g.page/r/CXcIyC-jkBOsEAI"><button>see review</button> </a> 
           </div> 
         </div>
         <h3>to see what our clients feel about us</h3>
@@ -264,7 +265,7 @@ else
             <h3>About <span style="color: rgb( 239, 69, 84 ); font-style: normal;">Tirupati insurance</span></h3></br>
             <p>we are an independent agency and our first priority will always be our coustomers, people, and businesses which we can help. we work with various insurance companies which offer diversity in plans and different coverage option. </p>
             <p>Our experts browse through hundreds of option before preseting the option which suits you best. We take into account deffernt fectors before selecting the best policy for you.</p>
-            </br> <button>Read more...</button>
+            </br> <a href="<?php echo base_url() ; ?>about-us "><button>Read more...</button></a>
           </div>
           <div class="col-md-4">
             <img src="<?php echo base_url()?>assest/img/2668181.png">

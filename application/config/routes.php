@@ -50,6 +50,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'home';
+$route['about-us'] = 'frontend/about';
+$route['contact-us'] = 'frontend/contactus';
+$route['health-insurance'] = 'frontend/healthinsurance';
+$route['car-insurance'] = 'frontend/carinsurance';
+$route['refer-earn'] = 'frontend/refer';
+$route['bike-insurance'] = 'frontend/bikeinsurance';
+
 $route['default_controller/login'] = 'login';
 // $route['car-insurance'] = 'frontend/carinsurance';
 //$route['default_controller/welcome'] = 'admin/welcome';

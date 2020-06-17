@@ -54,7 +54,7 @@ else{
                     
                     <li class="nav-item earn nav-top">
                       
-                      <a style="text-decoration: none;" href="<?php echo base_url(); ?>frontend/refer"><p class="refer font m-0">Refer and Earn</p></a>
+                      <a style="text-decoration: none;" href="<?php echo base_url(); ?>refer-earn"><p class="refer font m-0">Refer and Earn</p></a>
                     </li>
                     
                   </ul>
@@ -113,7 +113,7 @@ else{
                                 |
                               </li>
                               <li class=" nav-item">
-                                <a title="About Us" href="<?php echo base_url(); ?>frontend/about" class="nav-link">
+                                <a title="About Us" href="<?php echo base_url(); ?>about-us" class="nav-link">
                                 About Us
                                 </a>
                               </li>
@@ -121,7 +121,7 @@ else{
                                 |
                               </li>
                               <li class=" nav-item">
-                                <a title="Services & solutions" href="#" class="nav-link">
+                                <a title="Services & solutions" href="<?php echo base_url(); ?>coming-soon.php" class="nav-link">
                                 Services & solutions
                                 </a>
                               </li>
@@ -129,7 +129,7 @@ else{
                                 |
                               </li>
                               <li class=" nav-item">
-                                <a title="Blogs" href="#" class="nav-link">
+                                <a title="Blogs" href="<?php echo base_url(); ?>coming-soon.php" class="nav-link">
                                Blogs
                                 </a>
                               </li>
@@ -137,7 +137,7 @@ else{
                                 |
                               </li>
                               <li class=" nav-item ">
-                                <a title="career" href="#" class="nav-link">
+                                <a title="career" href="<?php echo base_url(); ?>coming-soon.php" class="nav-link">
                                 careers
                                 </a>
                               </li>
@@ -146,7 +146,7 @@ else{
                               </li>
                               <li   class="  nav-item">
                               
-                                <a title="Contact Us" href="<?php echo base_url(); ?>frontend/contactus" class="nav-link">
+                                <a title="Contact Us" href="<?php echo base_url(); ?>contact-us" class="nav-link">
                                 Contact Us
                                 </a>
                                  
