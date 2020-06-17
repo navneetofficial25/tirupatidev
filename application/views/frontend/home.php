@@ -15,7 +15,7 @@ else
 <div class="d-inline-block container-fluid banner-padding" style="padding-bottom:30px;">
     <div class="container first ">
       
-      <p style="margin-top:30px; margin-bottom:30px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best quates for you </p>
+      <p style="margin-top:30px; margin-bottom:30px;"> <span class="save">Save Upto 75%</span> With Our Insurance Plans. </br> we have best Qoutes for you </p>
       
         <div class="flex justify-content-center">
           
@@ -71,12 +71,12 @@ else
         <a  href="<?php echo base_url(); ?>coming-soon.php">
           <div class="card">
             <div class="card-image text-center p-3">
-              <img class="img-responsive" alt="Travle Insurance" src="<?php echo base_url()?>assest/img/travel-insurance.svg">
+              <img class="img-responsive" alt="Travel Insurance" src="<?php echo base_url()?>assest/img/travel-insurance.svg">
 
             </div>
     
             <div class="card-content">
-              <p>Travle Insurance</p>
+              <p>Travel Insurance</p>
             </div>
           </div>
         </a>
@@ -143,7 +143,7 @@ else
     <section class="why">
       <div class="container">
         <h3>Why <span style="color: rgb( 239, 69, 84 ); font-style: normal;">Tirupati insurance ?</span></h3></br>
-        <p>we are an independent  agency and our first priority will always be our coustomers, people, and businesses which we can help. we work with various insurance companies which offer diversity in plans and different coverage option. </p></br></br>
+        <p>we are an independent  agency and our first priority will always be our Customers, people, and businesses which we can help. we work with various insurance companies which offer diversity in plans and different coverage option. </p></br></br>
         <div class="container">    
           <div class="row">
           <div class="col-md-6 col-12">
@@ -151,7 +151,7 @@ else
                 <div class="point">
                   <img src="<?php echo base_url()?>assest/img/point.svg">
                 
-                  <p>Coustomized plans</p>
+                  <p>Customized plans</p>
                 </div>
 
                 <div class="point">

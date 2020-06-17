@@ -539,7 +539,8 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
 .last {
  
     background-color: rgb( 44, 44, 44 );
-    padding-bottom: 0px;
+    width: 100%;
+    height: 140px;
     padding-top: 20px;
    }
    
@@ -548,7 +549,7 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: rgb( 255, 255, 255 );
     text-transform: uppercase;
-    line-height: 1.4;
+    
     text-align: center;
     
    }
@@ -1574,9 +1575,14 @@ a{
 	animation-name: shake;
 }
 
+<<<<<<< HEAD
 .login .modal-dialog{
     /* width: 350px; */
 }
+=======
+
+
+>>>>>>> 05e675bc3b263caf57cb9193f9c6acc7eb7e9f46
 .login .modal-footer{
     border-top: 0;
     margin-top: 0px;

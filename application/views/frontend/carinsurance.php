@@ -211,7 +211,7 @@ else
                             
 
                             <div class="text-center">
-                                <button name="formSubmit">Get Quote</button>
+                                <button name="formSubmit">Get Qoute</button>
                             </div>
                             <?php echo form_close(); ?>
                         </div>
@@ -315,7 +315,7 @@ else
                             
                              
                             <div class="text-center">
-                                <button name="">Get Quote</button>
+                                <button name="">Get Qoute</button>
                             </div>  
                             <?php echo form_close(); ?>
             
@@ -350,9 +350,9 @@ else
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <div class="point">
-                            <img src="<?= base_url();?>assest/img/discount.svg">
+                            <img src="<?= base_url();?>assest/img/discount.png">
                     
-                            <h4>80% discouns</h4>
+                            <h4>80% discounts</h4>
                             <hr class="style1">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
@@ -377,7 +377,7 @@ else
                         </div>
                         <div class="point">
                             <img src="<?= base_url();?>assest/img/264-2640852_simple-wordpress-job-level-1-support-icon.png">
-                            <h4>24*7 COUSTOMER SUPPORT</h4>
+                            <h4>24*7 CUSTOMER SUPPORT</h4>
                             <hr class="style1">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>  
                 
