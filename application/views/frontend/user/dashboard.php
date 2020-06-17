@@ -312,6 +312,10 @@ else
         <th>Refered Date</th>
         <th>Refered Person</th>
         <th>Money Earned</th>
+        <th>Insurance Type</th>
+        <th>Policy Type</th>
+        <th>Total Premium</th>
+        <th>Premium Paid</th>
       </tr>
     </thead>
     <tbody>
@@ -320,6 +324,10 @@ else
       <td><?php echo $value['date'] ; ?></th>
       <td><?php echo $value['reference'] ; ?></td>
       <td><?php echo $value['money'] ; ?></td>
+      <td><?php echo $value['insurance_type'] ; ?></td>
+      <td><?php echo $value['policy_type'] ; ?></td>
+      <td><?php echo $value['total_premium'] ; ?></td>
+      <td><?php echo $value['premium_paid'] ; ?></td>
     </tr>
     <?php } ?>
      

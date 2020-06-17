@@ -3,7 +3,6 @@
             <div class="hdr">
                 <div class="container">
                      <div class="banner-text text-center size-banner">
-  <?phpprint_r ($companies);?>
                         <div class="contect fliter-heading">
                             <h3 style="margin-top:40px;"><span style="color:rgb( 239, 69, 84 ); margin-top:40px;">Enough about us,</span> <b>lets talk about you now !</b></h3>
                             <p style="font-size:15px; color:rgb( 95, 96, 96 );">We would love to work with you and are waiting for you to drop us a line! Please fill out the form below to get in touch with us or request for a quote here. We’ll be sure to get back to you as soon as we can.</p>

@@ -28,12 +28,20 @@ public function insert_data(){
     $this->form_validation->set_rules('refer_id', 'Refrence ID', 'required');
     $this->form_validation->set_rules('rname', 'Refrence Name', 'required');
     $this->form_validation->set_rules('money', 'Money', 'required');
+    // $this->form_validation->set_rules('itpye', 'Isurance Type', 'required');
+    // $this->form_validation->set_rules('ptype', 'Money', 'required');
+    // $this->form_validation->set_rules('tpremium', 'Money', 'required');
+    // $this->form_validation->set_rules('ppaid', 'Money', 'required');
     
     if ($this->form_validation->run()){ 
         $data = array(
             'refer_id' => $this->input->post('refer_id'),
             'reference' => $this->input->post('rname'),
             'money' => $this->input->post('money'),
+            'insurance_type' => $this->input->post('itype'),
+            'policy_type' => $this->input->post('ptype'),
+            'total_premium' => $this->input->post('tpremium'),
+            'premium_paid' => $this->input->post('ppaid'),
             'date' => date("Y-m-d h:i:s"),
         );
         if($this->refermodel->insert($data)){
