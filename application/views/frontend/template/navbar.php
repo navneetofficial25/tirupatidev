@@ -121,7 +121,7 @@ else{
                                 |
                               </li>
                               <li class=" nav-item">
-                                <a title="Services & solutions" href="<?php echo base_url(); ?>coming-soon.php" class="nav-link">
+                                <a title="Services & solutions" href="<?php echo base_url(); ?>frontend/service" class="nav-link">
                                 Services & solutions
                                 </a>
                               </li>
@@ -129,7 +129,7 @@ else{
                                 |
                               </li>
                               <li class=" nav-item">
-                                <a title="Blogs" href="<?php echo base_url(); ?>coming-soon.php" class="nav-link">
+                                <a title="Blogs" href="<?php echo base_url(); ?>frontend/blog" class="nav-link">
                                Blogs
                                 </a>
                               </li>
@@ -137,7 +137,7 @@ else{
                                 |
                               </li>
                               <li class=" nav-item ">
-                                <a title="career" href="<?php echo base_url(); ?>coming-soon.php" class="nav-link">
+                                <a title="career" href="<?php echo base_url(); ?>frontend/career" class="nav-link">
                                 careers
                                 </a>
                               </li>

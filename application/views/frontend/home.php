@@ -31,7 +31,7 @@ else
             </div>
           </div>
         </a>
-        <a  href="<?php echo base_url(); ?>coming-soon.php">
+        <a  href="<?php echo base_url(); ?>frontend/term">
           <div class="card">
             <div class="card-image text-center p-3">
               <img class="img-responsive" alt="Term Insurance" src="<?php echo base_url()?>assest/img/term.svg">
@@ -68,7 +68,7 @@ else
             </div>
           </div>
         </a>
-        <a  href="<?php echo base_url(); ?>coming-soon.php">
+        <a  href="<?php echo base_url(); ?>frontend/travel">
           <div class="card">
             <div class="card-image text-center p-3">
               <img class="img-responsive" alt="Travel Insurance" src="<?php echo base_url()?>assest/img/travel-insurance.svg">
