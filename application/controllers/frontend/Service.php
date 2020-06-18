@@ -8,7 +8,7 @@ class Service extends CI_Controller {
 
     public function index()
     {
-        $data['content'] = "We Soon Lunching Service Insurance Till Then You can Check Out Other Insurance";
+        $data['content'] = "We Soon Lunching Service Page Till Then You can Check Out Other Insurance";
         $this->load->view('frontend/template/header');
         $this->load->view('frontend/template/navbar');
         $this->load->view('frontend/service',$data);
