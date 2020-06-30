@@ -9,9 +9,9 @@
             <img alt="Health Insurance" src="<?php echo base_url()?>assest/img/avtar.jpg">
          </div>
          <div class="card-content text-center">
-            <h4>MR. Himanshu Goyal</h4>
-            <p>(Web Developer)</p>
-            <q>Design is the intermediary between information and understanding.</q></br>
+            <h4>MR. Jagdish Singh</h4>
+            <p>(CEO)</p>
+            <q>.</q></br>
             <a href="#" class=" fa fa-facebook"></a>
             <a href="#" class=" fa fa-instagram"></a>
             <a href="#" class=" fa fa-twitter"></a>
@@ -23,9 +23,9 @@
             <img class="img-responsive" alt="avtar" src="<?php echo base_url()?>assest/img/avtar.jpg">
          </div>
          <div class="card-content text-center">
-            <h4>MR. Himanshu Goyal</h4>
-            <p>(Web Developer)</p>
-            <q>Design is the intermediary between information and understanding.</q></br>
+            <h4>MR. Pradeep Pilania</h4>
+            <p>(Misc. Insurance Expert)</p>
+            <q>.</q></br>
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-twitter"></a>
@@ -37,9 +37,9 @@
             <img class="img-responsive" alt="avtar" src="<?php echo base_url()?>assest/img/avtar.jpg">
          </div>
          <div class="card-content text-center">
-            <h4>MR. Himanshu Goyal</h4>
-            <p>(Web Developer)</p>
-            <q>Design is the intermediary between information and understanding.</q></br>
+            <h4>MR. Ankit Sharma</h4>
+            <p>(Motor Insurance Expert)</p>
+            <q>.</q></br>
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-twitter"></a>
@@ -51,9 +51,9 @@
             <img class="img-responsive" alt="avtar" src="<?php echo base_url()?>assest/img/avtar.jpg">
          </div>
          <div class="card-content text-center">
-            <h4>MR. Himanshu Goyal</h4>
-            <p>(Web Developer)</p>
-            <q>Design is the intermediary between information and understanding.</q></br>
+            <h4>Ms. Renu Thakral</h4>
+            <p>(Life Insurance)</p>
+            <q>.</q></br>
             <a href="#" class="fa fa-facebook"></a>
             <a href="#" class="fa fa-instagram"></a>
             <a href="#" class="fa fa-twitter"></a>

@@ -27,9 +27,9 @@
             foreach ($getPurchaseData as $key => $value) { 
 //                $short_desc_vl=$lst_desc.'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit">Read More</a>';
     
-                $arrya_json[] = array($value->registration_no,$value->brand_name,$value->model_name,$value->variant_name,$value->fuel_type,$value->registration_year,$value->policy_expire,$value->prev_policy,$value->prev_insurer,'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value->id.'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-               <a class="delete_sliders" data-id="'.$value->id.'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
-                }
+                $arrya_json[] = array($value['registration_no'],$value['maufacturer_id'],$value['modal_id'],$value['variant_id'],$value['fuel_type'],$value['registration_year'],$value['policy_expire'],$value['prev_policy'],$value['prev_insurer'],'<a class="edit" href="'.base_url().'admin/brands/galleryedit/'.$value['id'].'" data-toggle="tooltip" data-original-title="Edit"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+               <a class="delete_sliders" data-id="'.$value['id'].'"  style="color: red;cursor: pointer;" data-toggle="tooltip" data-original-title="Delete"><i class="fa fa-trash" aria-hidden="true"></i></a>' );
+                 }
                  echo json_encode(array('data'=>$arrya_json));
             }
             

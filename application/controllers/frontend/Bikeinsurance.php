@@ -66,6 +66,7 @@ public function renewbikeDetails(){
         'policy_expire' => $this->input->post('pexre'),
         'prev_insurer' => $this->input->post('piur'),
     );
+  
     if($this->Bikemodel->bike_data($data)){
         $this->send($data,$name,"No Refer Code");
         echo "<h6 class='text-success text-center'>Successfully Submited</h6>";

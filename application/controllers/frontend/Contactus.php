@@ -7,8 +7,8 @@
 
         public function index(){
             $this->load->model('frontend/Contactmodel');
-                $data['company'] = $this->Contactmodel->fetchins();
-                $this->load->view('frontend/template/header');
+            $data['company'] = $this->Contactmodel->fetchins();
+            $this->load->view('frontend/template/header');
             $this->load->view('frontend/template/navbar');
             $this->load->view('frontend/contactus',$data);
             $this->load->view('frontend/template/footer');

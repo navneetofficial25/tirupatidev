@@ -60,6 +60,7 @@
             'policy_expire' => $this->input->post('policy_expire'),
             'prev_insurer' => $this->input->post('pinsur'),
         );
+
             if($this->Carmodel->car_data($data)){
                 $this->send($data,$name,"No Refer Code");
                 echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
@@ -95,10 +96,11 @@
                 'variant_id' => $this->input->post('vari'),
                 'policy_expire' => $this->input->post('policy_expire'),
             );
-            $this->mail($data);
+            
+            
             if($this->Carmodel->car_data($data)){
                 $this->send($data,$name,$this->input->post('referid'));
-                echo "<h6 class='text-success text-center'>Successfully Submited</h6>";
+                echo "<h6 class='text-success texpirepolr'>Successfully Submited</h6>";
             }
             else{
                 echo "<h6 class='text-danger text-center'>Error In Submission</h6>";
@@ -114,10 +116,9 @@
     }
     public function send($data,$name,$refer_code)
     {
-        $to =  'eniacoder@gmail.com';  // User email pass here
-        $subject = 'A New Mail For Car Insurance';
-        $i=0;
-        $from = 'fasthealthup@gmail.com';              // Pass here your mail id
+        $to = 'navneetofficial25@gmail.com';
+
+$subject = 'Registration Form Of mssblt School';
         $emailContent = '<!DOCTYPE html><html><head><title>Page Title</title></head><body style="border:2px solid black;"><header style="background-color:rgb( 239, 69, 84 );text-align:center;padding:20px 0;"><h2 style="color:white;">Bike Insurance</h2></header><container style="text-align:center;">';
         foreach ($data as $title => $value){
            $emailContent .= "<h3>".$name[$i]." : ".$value."<h3>";
@@ -126,33 +127,11 @@
     
         $emailContent .= "<h3>Refer_id : ".$refer_code."<h3>";
         $emailContent .= '</container><footer style="height:50px;background-color:black"></footer></body></html>';
-                    
-    
-    
-        $config['protocol']    = 'smtp';
-        $config['smtp_host']    = 'ssl://smtp.googlemail.com';
-        $config['smtp_port']    = '465';
-        $config['smtp_timeout'] = '60';
-        $config['smtp_user']    = 'fasthealthup@gmail.com';    //Important
-        $config['smtp_pass']    = '@navneet1';  //Important
-        $config['charset']    = 'utf-8';
-        $config['newline']    = "\r\n";
-        $config['mailtype'] = 'html'; // or html
-        $config['validation'] = TRUE; // bool whether to validate email or not 
+        $headers = 'From: form@mssbltc.com' . "\r\n".'Content-type:text/html;charset=UTF-8' . "\r\n" .'Reply-To: form@mssbltc.com' . "\r\n" .'X-Mailer: PHP/' . phpversion(); 
+       mail($to, $subject, $emailContent, $headers);
+     
+
         
-        $this->email->initialize($config);
-        $this->email->set_mailtype("html");
-        $this->email->from($from);
-        $this->email->to($to);
-        $this->email->subject($subject);
-        $this->email->message($emailContent);
-            if($this->email->send()){
-                return True;
-            }
-            else{
-                return False;
-            }
-        
-    }    
+    }  
 }
 ?>

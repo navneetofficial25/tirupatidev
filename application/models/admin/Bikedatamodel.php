@@ -23,16 +23,7 @@ class BikedataModel extends CI_Model{
         //return $getuser = $this->db->select('*')->from('tbl_subject')->get()->result();
     }*/
     public function fetchinventory_api() {
-      //$deleteid='1';
-      //$this->db->where('delete_status',$deleteid);
-      $this->db->select('bike_brand.*,bike_insurance.*,bike_model.*,bike_variant.*');
-      $this->db->from('bike_insurance');
-      $this->db->join('bike_brand','bike_brand.id=bike_insurance.maufacturer_id','left');
-      $this->db->join('bike_model','bike_model.id=bike_insurance.modal_id','left');
-      $this->db->join('bike_variant','bike_variant.id=bike_insurance.variant_id','left');
-      $query = $this->db->get();
-      return $query->result();
-
+     return $this->db->get('bike_insurance')->result_array();
 
       //return $getuser = $this->db->select('*')->from('tbl_subject')->get()->result();
   }
