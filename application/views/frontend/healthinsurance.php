@@ -67,7 +67,7 @@ else
                 <div class="col-md-6">
                   <div class="date">
                     <label class="adults" for="usr">Adults</label>
-                    <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="Adult(s)-21 yeasrs and above">
+                    <input type="number" min="0"  oninput="getNo()" id="usrVal" name="anum" placeholder="Adult(s)-21 years and above">
                                                                     
                   </div>
                   <div id="firstperson" style="display:none" class="form-group date"> 
@@ -197,19 +197,19 @@ else
             
                 <h2>Frequently Asked  </h2>
                 <p class="co">Common Questions</p>
-                <div class="container qes">
+                
                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                   <div class="panel panel-default">
-                    <div class="panel-heading p-3 mb-3" role="tab" id="heading0">
+                    <div class="panel-heading p-2 mb-3" role="tab" id="heading0">
                       <h3 class="panel-title">
-                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
+                        <a class="collapsed " role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse0" aria-expanded="true" aria-controls="collapse0">
                           What sort of businesses do your work with?
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                       <div id="collapse0" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading0">
-                        <div class="panel-body px-3 mb-4">
+                        <div class="panel-body  mb-2">
                           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. </p>
         
                         </div>
@@ -218,7 +218,7 @@ else
                   </div>
                   
                   <div class="panel panel-default">
-                    <div class="panel-heading p-3 mb-3" role="tab" id="heading1">
+                    <div class="panel-heading p-2 mb-3" role="tab" id="heading1">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
                           What services does Tirupati Insurance Provide?
@@ -227,7 +227,7 @@ else
                     </div>
                     <div class="container">
                     <div id="collapse1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading1">
-                      <div class="panel-body px-3 mb-4">
+                      <div class="panel-body  mb-2">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
                       </div>
                     </div>
@@ -235,7 +235,7 @@ else
                   </div>
                   
                   <div class="panel panel-default">
-                    <div class="panel-heading p-3 mb-3" role="tab" id="heading2">
+                    <div class="panel-heading p-2 mb-3" role="tab" id="heading2">
                       <h3 class="panel-title">
                         <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="true" aria-controls="collapse2">
                           What locations do you service and what are your hours of operation?
@@ -244,7 +244,7 @@ else
                     </div>
                     <div class="container">
                     <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading2">
-                      <div class="panel-body px-3 mb-4">
+                      <div class="panel-body  mb-2">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
                       </div>
                     </div>
@@ -252,23 +252,23 @@ else
                   </div>
                   
                   <div class="panel panel-default">
-                    <div class="panel-heading p-3 mb-3" role="tab" id="heading3">
+                    <div class="panel-heading p-2 mb-3" role="tab" id="heading3">
                       <h3 class="panel-title">
-                        <a class="collapsed" role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
+                        <a class="collapsed " role="button" title="" data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="true" aria-controls="collapse3">
                           What competitive advantage does Tirupati Insurance offer it's clients ?
                         </a>
                       </h3>
                     </div>
                     <div class="container">
                     <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading3">
-                      <div class="panel-body px-3 mb-4">
+                      <div class="panel-body mb-2">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan lacus vel facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
                       </div>
                     </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              
             </div>
             <div class="modal" id="myModal">
               <div class="modal-dialog">

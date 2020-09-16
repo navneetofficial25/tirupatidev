@@ -94,7 +94,7 @@ else
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="modal">Modal</label>
-                                        <input list="modalss" onclick="clear_variant();" class="lis" id="modal_list" name="modl" placeholder="Enter Model">
+                                        <input list="modalss" onclick="clear_variant();" class="lis" id="modal_list" name="modl" placeholder="Enter Modal">
                                         <datalist  id="modalss" >
                                            
                                         </datalist>
@@ -141,8 +141,8 @@ else
                                 <div class="col-md-6">
                                     <div class="form-group date">
                                         <label class="adults" for="pexpire">Select Policy Expire</label>
-                                        <input type="date" class="lis" placeholder="Expire Date"  id="" name="policy_expire">
-
+                                        
+                                        <input type="text"  id="my_date_picker" placeholder="DD-MM-YYYY" name="policy_expire" class="lis" readonly required>
                                     </div>
                                 </div>
                             </div>
@@ -221,8 +221,18 @@ else
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group date">
-                                        <label class="adults" for="comps">Manufacturer</label>
-                                                <input list="compnies"  class="lis"   id="new_company" name="company" placeholder="Not Expire">
+                                        
+                                    <label class="adults" >Registration</label>
+                                                <input  type="text" class="lis"  name="registration" placeholder="Enter Registration">
+  
+  
+                                                
+                                    </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                    <label class="adults" for="comps">Manufacturer</label>
+                                                <input list="compnies"  class="lis"   id="new_company" name="company" placeholder="Enter Manufacturer">
                                                 <datalist id="compnies">
                                                 <?php
                             foreach($company as $companies){
@@ -231,27 +241,23 @@ else
                             }
                             ?> 
                                                 </datalist> 
-                    
-  
-  
-                                                
-                                    </div>
-                                </div>   
-                                <div class="col-md-6">
-                                    <div class="form-group date">
-                                        <label class="adults" for="modals">Modal</label>
-                                        <input list="modls"  class="lis" id="new_model" name="modal" placeholder="Enter Model">
-                                        <datalist    id="modls" >
-                                
-                                            
-                                        </datalist>
                                     </div>
                                 </div> 
                             </div> 
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group date">
-                                        <label class="adults" for="types">Fuel type</label>
+                                    <label class="adults" for="modals">Modal</label>
+                                        <input list="modls"  class="lis" id="new_model" name="modal" placeholder="Enter Modal">
+                                        <datalist    id="modls" >
+                                
+                                            
+                                        </datalist>
+                                    </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                    <label class="adults" for="types">Fuel type</label>
                                         <input list="typs"  class="lis"  name="fuel_type" placeholder="Enter Fuel Type">
                                         <datalist   id="typs" >
                                             <option selected disabled value="Select" >
@@ -261,21 +267,21 @@ else
                                             <option value="CNG/LPG Externally Fitted">
                                         </datalist>
                                     </div>
-                                </div>   
-                                <div class="col-md-6">
-                                    <div class="form-group date">
-                                        <label class="adults" for="vari">Varient</label>
-                                        <input list="new_varis"  class="lis"  id="new_vali"  name="vari" placeholder="Enter Varient">
-                                        <datalist   id="new_varis" >
-                                            
-                                        </datalist>
-                                    </div>
                                 </div> 
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group date">
-                                                <label class="adults" for="regyrs">Registration year</label>
+                                    <label class="adults" for="vari">Varient</label>
+                                        <input list="new_varis"  class="lis"  id="new_vali"  name="vari" placeholder="Enter Varient">
+                                        <datalist   id="new_varis" >
+                                            
+                                        </datalist>
+                                    </div>
+                                </div>   
+                                <div class="col-md-6">
+                                    <div class="form-group date">
+                                    <label class="adults" for="regyrs">Registration year</label>
                                                 <input list="regyr"  class="lis"  name="regyr" placeholder="Select Year">
                                                 <datalist  id="regyr">
                                                     
@@ -284,12 +290,6 @@ else
                                                     <?php } ?>
                                                     
                                                     </datalist>
-                                    </div>
-                                </div>   
-                                <div class="col-md-6">
-                                    <div class="form-group date">
-                                        <label class="adults" for="pexpire">Select Policy Expire</label>
-                                        <input type="date" class="lis" placeholder="Expire Date" name="policy_expire">
 
                                     </div>
                                 </div> 

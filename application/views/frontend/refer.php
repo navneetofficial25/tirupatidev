@@ -1,3 +1,55 @@
+<style>
+    .step{
+  width: 100%;
+  height: auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.step h3{
+    text-align: center;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.step .flex {
+  display: flex;
+  flex-wrap: nowrap;
+    margin-top: 3rem;
+}
+.step .flex i{
+  font-size: 50px;
+  margin-bottom: 1rem;
+}
+.step .flex p{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+}
+.step .style1 {
+
+border-top: 2px solid grey;
+margin-top: 30px;
+
+}
+.log_refer{
+    width: 100%;
+    height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: rgba(237, 237, 237);
+}
+.log_refer h3{
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: grey;
+}
+.log_refer a{
+    text-decoration: none;
+    transition: .5s;
+}
+.log_refer a:hover{
+    color: rgb( 95, 96, 96 );
+}
+</style>
 <?php
 if(!isset($_SESSION["referid"]))
 {
@@ -29,13 +81,10 @@ else
                                     <input class="lis" type="email" name="email" value="" size="40"  placeholder="Your Friend's Mail" required></br>
                                     <input class="lis" type="tel" name="tel-331" value="" size="40" aria-invalid="false" placeholder="Your Friend's Phone Number" required></br>
                                     
-                                    <select class="lis" class="lis" required>
-                                        <option >Select City</option>
-                                        <option value="#">A</option>
-                                        <option value="#">B</option>
-                                        <option value="#">C</option>
-                                        <option value="#">D</option>
-                                    </select></br>
+                                    
+                                    <input class="lis" type="text" name="city" value="" size="40" aria-invalid="false" placeholder="Enter City" required></br>
+                                        
+                                    
                                     <input class="lis" type="tel" name="text-677" value="" size="40" aria-invalid="false" placeholder="Your Phone" required></br>
                                     <input type="submit" value="Send Invite" class="bu"  />
                                 </form>    
@@ -63,4 +112,49 @@ else
             </div>
         </div>
 
+    <div class="step">
+        <div class="container">
+            <h3>in 3 Easy Steps</h3>
+            
+            <div class="flex justify-content-center">
+                <div class="col-md-2">
+                    
+                    <center><i class="fa fa-users" aria-hidden="true"></i></center>
+                    <p>Refer Your Friends</p>
+                       
+                </div>
+                <div class="col-md-2">
+                    
+                        <hr class="style1">
+                    
+                </div>
+                <div class="col-md-2">
+                    
+                    <center><i class="fa fa-shield" aria-hidden="true"></i></center>
+                        <p>They Insured with Us</p>
+                        
+                    
+                </div>
+                <div class="col-md-2">
+                    
+                        <hr class="style1">
+                    
+                </div>
+                <div class="col-md-2">
+                    
+                    <center><i class="fa fa-inr" aria-hidden="true"></i></center>
+                        <p>We Pay You</p>
+                    
+                </div>
+                
+
+            </div>
+            
+        </div>
+    </div>
+    <div class="log_refer">
+        <div class="container">
+            <h3><span style="color: rgb( 239, 69, 84 );"><a data-toggle="modal" href="javascript:void(0)" onclick="openLoginModal();">Log in</a></span> to view referral bonus received.</h3>
+        </div>
+    </div>
     

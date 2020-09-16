@@ -4,7 +4,7 @@
     © 2018. All rights reserved.
 
     <p style="color:rgba(197, 190, 190, 0.61);">
- POWERED BY <a target="_blank" href="http://www.eniacoder.com/" style="text-decoration:none; color:rgba(197, 190, 190, 0.61);">ENIACODER</a></p>
+ POWERED BY <a target="_blank" href="https://www.hisarfever.com/" style="text-decoration:none; color:rgba(197, 190, 190, 0.61);">Hisar Fever</a></p>
 </footer>
 
 </div>

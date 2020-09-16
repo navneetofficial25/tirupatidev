@@ -100,9 +100,18 @@
     }
 
 ?>
+
+<?php
+  // needed for sessions.
+if(isset($_SESSION['url'])) 
+   $url = $_SESSION['url']; // holds url for last page visited.
+else 
+   $url = "index.php";
+
+?>   
    <div class="box">
       <div class="form loginBox">
-      <form method="post" action="<?php echo base_url() ; ?>frontend/login/login">
+      <form method="post" action="<?php $url ; ?> ">
 				<input id="email" class="form-control" type="text" placeholder="Email" name="email" required>
 				<input id="password" class="form-control" type="password" placeholder="Password" name="password" required>
 				<input  type="submit" class="btn btn-default btn-login" value="Login">
@@ -125,7 +134,8 @@
 </div>
                     <div class="modal-footer">
                         <div class="forgot login-footer">
-                            <span>Looking to
+                          <span style="float: left;"><a href="">Forgot password?</a> </span>
+                            <span style="float: right;">Looking to
                                  <a href="javascript: showRegisterForm();">create an account</a>
                             ?</span>
                         </div>
@@ -134,7 +144,8 @@
                              <a href="javascript: showLoginForm();">Login</a>
                         </div>
                     </div>
-    		      </div>
+              </div>
+         
 <script>
 /*
  *

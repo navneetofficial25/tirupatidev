@@ -12,4 +12,22 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assest/css/style.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assest/css/responsive.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link href= 
+'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.css'
+          rel='stylesheet'> 
+      
+    
+      
+    <script src= 
+"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" > 
+    </script>
+    <script> 
+        $(document).ready(function() { 
+          
+            $(function() { 
+                $( "#my_date_picker" ).datepicker(); 
+            }); 
+        }) 
+    </script> 
+  
     </head>

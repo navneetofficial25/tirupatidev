@@ -6,7 +6,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Welcome to Eniacode</title>
+        <title>Welcome to Tirupati Insurance</title>
         <link href="<?php echo base_url(); ?>admin/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>admin/assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="<?php echo base_url(); ?>admin/assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -108,7 +108,7 @@
         </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-info setForgetSubmit">Send</button/>
+        <button type="submit" class="btn btn-info setForgetSubmit">Send</button>
         </div>
         </div>
         </form>
