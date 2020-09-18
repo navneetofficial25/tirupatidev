@@ -26,7 +26,7 @@
             foreach ($model_data as $key => $value) {
                 if($value['email']==$user_data['email'] && $value['Password']==$user_data['password'])
                 {
-                    $_SESSION['url'] = $_SERVER['REQUEST_URI'];
+                   
                     $_SESSION["email"]=$value["email"];
                     $_SESSION["name"]=$value["name"];
                     $_SESSION["ref_count"]=$value["ref_count"];
